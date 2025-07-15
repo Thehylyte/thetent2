@@ -212,7 +212,11 @@ export default function Index() {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-tent-blue/20 via-tent-purple/20 to-tent-pink/20 rounded-3xl border border-border/50"></div>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F57d19e9adf25432b881206e1f3dc0261?format=webp&width=800"
+                alt="Artists enjoying The Tent VIP experience"
+                className="aspect-square object-cover rounded-3xl border border-border/50"
+              />
             </div>
           </div>
         </div>
