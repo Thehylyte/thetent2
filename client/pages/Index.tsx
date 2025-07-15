@@ -129,9 +129,8 @@ export default function Index() {
                   Exclusive Products
                 </h3>
                 <p className="text-muted-foreground">
-                  Access to premium merchandise, limited-edition festival gear,
-                  and exclusive artist collaborations available only to VIP
-                  guests.
+                  Receive seeded products, services from some the newest and
+                  most innovative brands
                 </p>
               </CardContent>
             </Card>
