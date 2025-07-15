@@ -54,6 +54,14 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* The Tent brand colors */
+    --tent-blue: 195 100% 50%;
+    --tent-purple: 280 65% 35%;
+    --tent-orange: 35 100% 55%;
+    --tent-pink: 330 85% 60%;
+    --tent-yellow: 45 100% 60%;
+    --tent-deep-purple: 270 50% 25%;
   }
 
   .dark {
@@ -92,6 +100,14 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* The Tent brand colors - dark mode */
+    --tent-blue: 195 100% 60%;
+    --tent-purple: 280 65% 45%;
+    --tent-orange: 35 100% 65%;
+    --tent-pink: 330 85% 70%;
+    --tent-yellow: 45 100% 70%;
+    --tent-deep-purple: 270 50% 35%;
   }
 }
 
