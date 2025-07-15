@@ -57,6 +57,15 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // The Tent brand colors
+        tent: {
+          blue: "hsl(var(--tent-blue))",
+          purple: "hsl(var(--tent-purple))",
+          orange: "hsl(var(--tent-orange))",
+          pink: "hsl(var(--tent-pink))",
+          yellow: "hsl(var(--tent-yellow))",
+          "deep-purple": "hsl(var(--tent-deep-purple))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
