@@ -11,11 +11,11 @@ export default function Index() {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-tent-orange via-tent-pink to-tent-purple rounded-sm"></div>
-                <div className="absolute inset-0.5 bg-background rounded-sm"></div>
-                <div className="absolute inset-1 bg-gradient-to-br from-tent-blue via-tent-purple to-tent-orange rounded-sm"></div>
-              </div>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Fb017979ff0b141cd8af8f8de2687b8cb?format=webp&width=800"
+                alt="The Tent Logo"
+                className="w-8 h-8"
+              />
               <span className="text-2xl font-bold bg-gradient-to-r from-tent-blue via-tent-purple to-tent-pink bg-clip-text text-transparent">
                 THE TENT
               </span>
