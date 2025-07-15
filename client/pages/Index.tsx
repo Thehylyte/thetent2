@@ -40,7 +40,7 @@ export default function Index() {
                 Contact
               </a>
               <Button className="bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90">
-                Book VIP Access
+                Book Access
               </Button>
             </div>
           </div>
