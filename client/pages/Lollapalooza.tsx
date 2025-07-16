@@ -401,68 +401,6 @@ export default function Lollapalooza() {
         </div>
       </section>
 
-      {/* Featured Products and Services */}
-      <section className="py-16 px-6">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-tent-orange via-tent-pink to-tent-purple bg-clip-text text-transparent">
-              EVENT FEATURED PRODUCTS AND SERVICES
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Discover the exclusive brands and premium services available at
-              The Tent during Lollapalooza 2025
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-              <Card
-                key={item}
-                className="group hover:shadow-lg transition-all duration-300 border-tent-blue/20 hover:border-tent-blue/40 bg-background/80 backdrop-blur-sm"
-              >
-                <CardContent className="p-6">
-                  <div className="aspect-square bg-gradient-to-br from-tent-blue/10 via-tent-purple/10 to-tent-pink/10 rounded-xl border border-border/50 flex items-center justify-center mb-4 group-hover:from-tent-blue/20 group-hover:via-tent-purple/20 group-hover:to-tent-pink/20 transition-all duration-300">
-                    <div className="text-center">
-                      <div className="w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-tent-blue to-tent-purple rounded-lg flex items-center justify-center">
-                        <Sparkles className="w-6 h-6 text-white" />
-                      </div>
-                      <p className="text-sm font-medium text-muted-foreground">
-                        Product {item}
-                      </p>
-                      <p className="text-xs text-muted-foreground/80">
-                        Coming Soon
-                      </p>
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <h3 className="font-semibold text-sm mb-1">
-                      Featured Brand
-                    </h3>
-                    <p className="text-xs text-muted-foreground">
-                      Premium Service
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <p className="text-muted-foreground mb-6">
-              Exclusive partnerships and premium services available at
-              Lollapalooza
-            </p>
-            <Button
-              variant="outline"
-              className="border-tent-purple/30 hover:bg-tent-purple/10 text-tent-purple"
-            >
-              <Crown className="w-4 h-4 mr-2" />
-              View All Partners
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* Location Details */}
       <section className="py-16 px-6 bg-gradient-to-r from-tent-blue/10 via-tent-purple/10 to-tent-pink/10">
         <div className="container mx-auto">
