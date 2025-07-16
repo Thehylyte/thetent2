@@ -246,7 +246,7 @@ export default function ArtistRegistration() {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium mb-2">
-                        Manager/Agent Name
+                        Manager/Agent Name *
                       </label>
                       <input
                         type="text"
@@ -256,7 +256,7 @@ export default function ArtistRegistration() {
                     </div>
                     <div>
                       <label className="block text-sm font-medium mb-2">
-                        Management Email
+                        Management Email *
                       </label>
                       <input
                         type="email"
