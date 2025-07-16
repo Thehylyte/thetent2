@@ -61,9 +61,9 @@ export default function Index() {
               Festival Experience
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              The ultimate hospitality sanctuary for artists and entertainers at
-              live music festivals. Discover exclusive products, luxury
-              recovery, and unparalleled relaxation.
+              The Tent is the ultimate hospitality sanctuary for artists and
+              entertainers at live music festivals. Discover exclusive products,
+              luxury recovery, and unparalleled relaxation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
