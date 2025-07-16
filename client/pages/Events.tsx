@@ -205,6 +205,8 @@ export default function Events() {
                         onClick={() => {
                           if (event.name === "Lollapalooza") {
                             window.location.href = "/events/lollapalooza";
+                          } else if (event.name === "Riot Fest") {
+                            window.location.href = "/events/riot-fest";
                           }
                         }}
                       >
