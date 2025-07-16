@@ -20,7 +20,7 @@ export default function Events() {
       description:
         "In the heart of Chicago, The Tent brings luxury hospitality to one of America's premier music festivals.",
       image:
-        "https://images.unsplash.com/photo-1571609762754-3676b0ad4c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F2bc66643592a4bdeb30f109da17a6bf6?format=webp&width=800",
       status: "confirmed",
       capacity: "Premium Experience",
       featured: true,
