@@ -271,8 +271,8 @@ export default function RiotFest() {
               Book Your Cut
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Schedule your premium grooming session with Funk's Barber Shop,
-              exclusively available at The Tent during Riot Fest
+              Schedule your premium grooming session with The Idle Hand
+              Collective available at The Tent during Riot Fest
             </p>
           </div>
 
