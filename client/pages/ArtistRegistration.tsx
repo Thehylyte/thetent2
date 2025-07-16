@@ -195,7 +195,7 @@ export default function ArtistRegistration() {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium mb-2">
-                        Artist/Stage Name *
+                        Artist/Stage Name
                       </label>
                       <input
                         type="text"
@@ -205,7 +205,7 @@ export default function ArtistRegistration() {
                     </div>
                     <div>
                       <label className="block text-sm font-medium mb-2">
-                        Legal Name *
+                        Legal Name
                       </label>
                       <input
                         type="text"
@@ -217,7 +217,7 @@ export default function ArtistRegistration() {
                   <div className="grid md:grid-cols-2 gap-4 mt-4">
                     <div>
                       <label className="block text-sm font-medium mb-2">
-                        Email Address *
+                        Email Address
                       </label>
                       <input
                         type="email"
@@ -227,7 +227,7 @@ export default function ArtistRegistration() {
                     </div>
                     <div>
                       <label className="block text-sm font-medium mb-2">
-                        Phone Number *
+                        Phone Number
                       </label>
                       <input
                         type="tel"
