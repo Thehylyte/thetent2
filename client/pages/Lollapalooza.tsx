@@ -319,7 +319,7 @@ export default function Lollapalooza() {
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F8313ca84f1924d03bcd638a406dde85d?format=webp&width=800"
                     alt="Barber Services"
-                    className="w-12 h-12 rounded-full object-cover"
+                    className="w-12 h-12 object-cover"
                   />
                   <h3 className="text-2xl font-bold">
                     Reserve Your Appointment
