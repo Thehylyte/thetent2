@@ -14,44 +14,6 @@ export default function Events() {
   const events = [
     {
       id: 1,
-      name: "Coachella Valley Music and Arts Festival",
-      location: "Indio, California",
-      dates: "April 11-13 & 18-20, 2025",
-      description:
-        "Join us at the most iconic music festival in the world. The Tent will provide premium hospitality services for artists and VIP guests.",
-      image:
-        "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      status: "confirmed",
-      capacity: "Artist & VIP Services",
-      featured: true,
-    },
-    {
-      id: 2,
-      name: "Electric Daisy Carnival",
-      location: "Las Vegas, Nevada",
-      dates: "May 16-18, 2025",
-      description:
-        "Experience the magic of EDC with The Tent's exclusive recovery and relaxation services under the electric sky.",
-      image:
-        "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      status: "confirmed",
-      capacity: "VIP Hospitality Hub",
-      featured: true,
-    },
-    {
-      id: 3,
-      name: "Bonnaroo Music & Arts Festival",
-      location: "Manchester, Tennessee",
-      dates: "June 12-15, 2025",
-      description:
-        "The farm comes alive with music, and The Tent provides the perfect sanctuary for artists to recharge between sets.",
-      image:
-        "https://images.unsplash.com/photo-1506157786151-b8491531f063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      status: "confirmed",
-      capacity: "Artist Lounge Services",
-    },
-    {
-      id: 4,
       name: "Lollapalooza",
       location: "Chicago, Illinois",
       dates: "July 31 - August 3, 2025",
@@ -60,31 +22,69 @@ export default function Events() {
       image:
         "https://images.unsplash.com/photo-1571609762754-3676b0ad4c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       status: "confirmed",
-      capacity: "Premium VIP Experience",
+      capacity: "Premium Experience",
+      featured: true,
+    },
+    {
+      id: 2,
+      name: "Riot Fest",
+      location: "Chicago, Illinois",
+      dates: "September 19-21, 2025",
+      description:
+        "Join the punk rock revolution with The Tent's exclusive hospitality services for artists and fans at the ultimate alternative music festival.",
+      image:
+        "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      status: "confirmed",
+      capacity: "Artist & VIP Services",
+      featured: true,
+    },
+    {
+      id: 3,
+      name: "Sea.Hear.Now",
+      location: "Asbury Park, New Jersey",
+      dates: "September 13-14, 2025",
+      description:
+        "Experience music by the ocean with The Tent's beachside hospitality sanctuary for artists and entertainers at this unique coastal festival.",
+      image:
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      status: "confirmed",
+      capacity: "Beachside Lounge Services",
+    },
+    {
+      id: 4,
+      name: "Louder Than Life",
+      location: "Louisville, Kentucky",
+      dates: "September 26-28, 2025",
+      description:
+        "Rock out with The Tent's premium recovery and relaxation services at the ultimate rock and metal festival experience.",
+      image:
+        "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      status: "confirmed",
+      capacity: "Rock Artist Hub",
     },
     {
       id: 5,
-      name: "Austin City Limits Music Festival",
-      location: "Austin, Texas",
-      dates: "October 3-5 & 10-12, 2025",
+      name: "Country Calling",
+      location: "Nashville, Tennessee",
+      dates: "October 10-12, 2025",
       description:
-        "Keep it weird with The Tent's signature hospitality services in the live music capital of the world.",
+        "Experience the heart of country music with The Tent's signature hospitality services in Music City's premier country festival.",
       image:
         "https://images.unsplash.com/photo-1558443279-f3dccf4f67c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       status: "pending",
-      capacity: "Artist Recovery Services",
+      capacity: "Country Artist Services",
     },
     {
       id: 6,
-      name: "Ultra Music Festival",
-      location: "Miami, Florida",
-      dates: "March 28-30, 2025",
+      name: "Music Midtown",
+      location: "Atlanta, Georgia",
+      dates: "September 6-7, 2025",
       description:
-        "Bring the heat with The Tent's cooling sanctuary and premium amenities at the world's premier electronic music festival.",
+        "The Tent brings Southern hospitality to new heights with premium artist services in the heart of Atlanta's music scene.",
       image:
         "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       status: "planning",
-      capacity: "EDM Artist Hub",
+      capacity: "Southern Hospitality Hub",
     },
   ];
 
