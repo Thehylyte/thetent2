@@ -227,7 +227,7 @@ export default function Index() {
                 />
               </div>
               {/* Duplicate for seamless scroll */}
-              <div className="flex items-center space-x-16 min-w-full">
+              <div className="flex items-center space-x-24 min-w-full shrink-0">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F932e0b5c87df4bf4aa16268253c67118?format=webp&width=800"
                   alt="AG1"
