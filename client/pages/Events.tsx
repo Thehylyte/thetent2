@@ -58,7 +58,7 @@ export default function Events() {
       description:
         "Experience the heart of country music with The Tent's signature hospitality services in Music City's premier country festival.",
       image:
-        "https://images.unsplash.com/photo-1558443279-f3dccf4f67c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Fe46d91fb74dd4a7baea55983f80217c8?format=webp&width=800",
       status: "pending",
       capacity: "Country Artist Services",
     },
