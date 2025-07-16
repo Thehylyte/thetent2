@@ -52,18 +52,6 @@ export default function Events() {
     },
     {
       id: 4,
-      name: "Louder Than Life",
-      location: "Louisville, Kentucky",
-      dates: "September 26-28, 2025",
-      description:
-        "Rock out with The Tent's premium recovery and relaxation services at the ultimate rock and metal festival experience.",
-      image:
-        "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      status: "confirmed",
-      capacity: "Rock Artist Hub",
-    },
-    {
-      id: 5,
       name: "Country Calling",
       location: "Nashville, Tennessee",
       dates: "October 10-12, 2025",
@@ -73,18 +61,6 @@ export default function Events() {
         "https://images.unsplash.com/photo-1558443279-f3dccf4f67c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       status: "pending",
       capacity: "Country Artist Services",
-    },
-    {
-      id: 6,
-      name: "Music Midtown",
-      location: "Atlanta, Georgia",
-      dates: "September 6-7, 2025",
-      description:
-        "The Tent brings Southern hospitality to new heights with premium artist services in the heart of Atlanta's music scene.",
-      image:
-        "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      status: "planning",
-      capacity: "Southern Hospitality Hub",
     },
   ];
 
