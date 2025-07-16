@@ -230,44 +230,173 @@ export default function Lollapalooza() {
         </div>
       </section>
 
-      {/* Schedule Section */}
+      {/* Haircut Reservation Section */}
       <section className="py-16 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
+            <div className="flex justify-center mb-8">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F17b6bd82c5ea4b40a78583dced3ffee5?format=webp&width=800"
+                alt="Funk's Barber Shop"
+                className="h-16"
+              />
+            </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-tent-pink to-tent-orange bg-clip-text text-transparent">
-              Daily Schedule
+              Book Your Cut
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Your day-by-day guide to The Tent services at Lollapalooza 2025
+              Schedule your premium grooming session with Funk's Barber Shop,
+              exclusively available at The Tent during Lollapalooza
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {schedule.map((day, index) => (
-              <Card
-                key={index}
-                className="border-tent-purple/20 hover:border-tent-purple/40 transition-colors"
-              >
-                <CardHeader>
-                  <h3 className="text-2xl font-bold text-tent-purple">
-                    {day.day}
+          <div className="max-w-2xl mx-auto">
+            <Card className="border-tent-purple/20 bg-background/80 backdrop-blur-sm">
+              <CardHeader>
+                <div className="flex items-center justify-center space-x-3 mb-4">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F8313ca84f1924d03bcd638a406dde85d?format=webp&width=800"
+                    alt="Barber Services"
+                    className="w-12 h-12 rounded-full object-cover"
+                  />
+                  <h3 className="text-2xl font-bold">
+                    Reserve Your Appointment
                   </h3>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    {day.events.map((event, eventIndex) => (
-                      <div
-                        key={eventIndex}
-                        className="flex items-center space-x-3"
-                      >
-                        <Clock className="w-4 h-4 text-tent-blue flex-shrink-0" />
-                        <span className="text-muted-foreground">{event}</span>
-                      </div>
-                    ))}
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium mb-2">
+                      First Name *
+                    </label>
+                    <input
+                      type="text"
+                      className="w-full px-4 py-3 border border-border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent"
+                      placeholder="Enter your first name"
+                    />
                   </div>
-                </CardContent>
-              </Card>
-            ))}
+                  <div>
+                    <label className="block text-sm font-medium mb-2">
+                      Last Name *
+                    </label>
+                    <input
+                      type="text"
+                      className="w-full px-4 py-3 border border-border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent"
+                      placeholder="Enter your last name"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium mb-2">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    className="w-full px-4 py-3 border border-border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium mb-2">
+                    Phone Number *
+                  </label>
+                  <input
+                    type="tel"
+                    className="w-full px-4 py-3 border border-border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent"
+                    placeholder="(555) 123-4567"
+                  />
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium mb-2">
+                      Preferred Date *
+                    </label>
+                    <select className="w-full px-4 py-3 border border-border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent">
+                      <option value="">Select a date</option>
+                      <option value="2025-07-31">Thursday, July 31</option>
+                      <option value="2025-08-01">Friday, August 1</option>
+                      <option value="2025-08-02">Saturday, August 2</option>
+                      <option value="2025-08-03">Sunday, August 3</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium mb-2">
+                      Preferred Time *
+                    </label>
+                    <select className="w-full px-4 py-3 border border-border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent">
+                      <option value="">Select time</option>
+                      <option value="10:00">10:00 AM</option>
+                      <option value="11:00">11:00 AM</option>
+                      <option value="12:00">12:00 PM</option>
+                      <option value="13:00">1:00 PM</option>
+                      <option value="14:00">2:00 PM</option>
+                      <option value="15:00">3:00 PM</option>
+                      <option value="16:00">4:00 PM</option>
+                      <option value="17:00">5:00 PM</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium mb-2">
+                    Service Type *
+                  </label>
+                  <select className="w-full px-4 py-3 border border-border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent">
+                    <option value="">Select service</option>
+                    <option value="haircut">Premium Haircut</option>
+                    <option value="haircut-beard">Haircut + Beard Trim</option>
+                    <option value="beard-trim">Beard Trim Only</option>
+                    <option value="shave">Hot Towel Shave</option>
+                    <option value="full-service">Full Grooming Package</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium mb-2">
+                    Special Requests (Optional)
+                  </label>
+                  <textarea
+                    rows={3}
+                    className="w-full px-4 py-3 border border-border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent resize-none"
+                    placeholder="Any specific styling requests or preferences..."
+                  ></textarea>
+                </div>
+
+                <div className="flex items-center space-x-3">
+                  <input
+                    type="checkbox"
+                    id="terms"
+                    className="w-4 h-4 text-tent-purple border-border rounded focus:ring-tent-purple"
+                  />
+                  <label
+                    htmlFor="terms"
+                    className="text-sm text-muted-foreground"
+                  >
+                    I agree to the terms and conditions and understand that this
+                    is a premium service
+                  </label>
+                </div>
+
+                <Button
+                  size="lg"
+                  className="w-full bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90 text-lg py-6"
+                >
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Reserve My Appointment
+                </Button>
+
+                <div className="text-center text-sm text-muted-foreground">
+                  <p>
+                    Appointments are subject to availability. You will receive a
+                    confirmation email within 24 hours.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
