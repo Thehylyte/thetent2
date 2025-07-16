@@ -28,6 +28,12 @@ export default function Index() {
                 Experience
               </a>
               <a
+                href="/events"
+                className="text-foreground/80 hover:text-foreground transition-colors"
+              >
+                Events
+              </a>
+              <a
                 href="#services"
                 className="text-foreground/80 hover:text-foreground transition-colors"
               >
