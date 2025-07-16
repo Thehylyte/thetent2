@@ -104,6 +104,12 @@ export default function Events() {
                 Events
               </a>
               <a
+                href="/artist-registration"
+                className="text-foreground/80 hover:text-foreground transition-colors"
+              >
+                Artists
+              </a>
+              <a
                 href="#services"
                 className="text-foreground/80 hover:text-foreground transition-colors"
               >
