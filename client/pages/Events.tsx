@@ -53,8 +53,8 @@ export default function Events() {
     {
       id: 4,
       name: "Country Calling",
-      location: "Nashville, Tennessee",
-      dates: "October 10-12, 2025",
+      location: "Ocean City, MD",
+      dates: "October 3-5, 2025",
       description:
         "Experience the heart of country music with The Tent's signature hospitality services in Music City's premier country festival.",
       image:
