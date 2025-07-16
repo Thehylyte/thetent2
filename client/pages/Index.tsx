@@ -172,14 +172,9 @@ export default function Index() {
       {/* Brand Partners Scrolling Section */}
       <section className="py-12 px-6 overflow-hidden">
         <div className="container mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-muted-foreground">
-              Trusted by Industry Leaders
-            </h2>
-          </div>
           <div className="relative">
             <div className="flex animate-scroll">
-              <div className="flex items-center space-x-16 min-w-full">
+              <div className="flex items-center space-x-24 min-w-full shrink-0">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F932e0b5c87df4bf4aa16268253c67118?format=webp&width=800"
                   alt="AG1"
