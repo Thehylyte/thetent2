@@ -196,6 +196,11 @@ export default function Events() {
                       <Button
                         variant="outline"
                         className="group/btn border-tent-blue/30 hover:bg-tent-blue/10"
+                        onClick={() => {
+                          if (event.name === "Lollapalooza") {
+                            window.location.href = "/events/lollapalooza";
+                          }
+                        }}
                       >
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
