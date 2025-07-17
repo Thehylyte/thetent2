@@ -182,9 +182,7 @@ export default function Founders() {
               Founders
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Meet the visionaries behind The Tent – three industry veterans who
-              came together to revolutionize the festival hospitality experience
-              for artists and entertainers.
+              Meet the visionaries behind The Tent.
             </p>
           </div>
         </div>
