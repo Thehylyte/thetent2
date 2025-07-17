@@ -17,53 +17,7 @@ import {
 } from "lucide-react";
 
 export default function Founders() {
-  const founders = [
-    {
-      name: "Alex Johnson",
-      title: "Co-Founder & CEO",
-      bio: "Former festival director with 15+ years in music industry. Led operations at major festivals across North America before founding The Tent to revolutionize artist hospitality.",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
-      linkedin: "#",
-      twitter: "#",
-      email: "alex@thetent.com",
-      achievements: [
-        "Billboard Music Awards Judge",
-        "Festival Industry Pioneer",
-        "Artist Advocate",
-      ],
-    },
-    {
-      name: "Jordan Martinez",
-      title: "Co-Founder & Creative Director",
-      bio: "Award-winning hospitality designer and former touring musician. Combines artistic vision with operational excellence to create unforgettable experiences for performers.",
-      image:
-        "https://images.unsplash.com/photo-1494790108755-2616b612c2b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
-      linkedin: "#",
-      twitter: "#",
-      email: "jordan@thetent.com",
-      achievements: [
-        "Grammy Nominee",
-        "Hospitality Design Awards",
-        "Touring Veteran",
-      ],
-    },
-    {
-      name: "Taylor Chen",
-      title: "Co-Founder & Head of Partnerships",
-      bio: "Former music industry executive specializing in brand partnerships and artist relations. Built relationships with top-tier artists and premium brands worldwide.",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
-      linkedin: "#",
-      twitter: "#",
-      email: "taylor@thetent.com",
-      achievements: [
-        "Billboard 40 Under 40",
-        "Brand Partnership Expert",
-        "Artist Relations Leader",
-      ],
-    },
-  ];
+  const founders = [];
 
   const milestones = [
     {
