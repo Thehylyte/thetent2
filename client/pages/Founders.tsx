@@ -205,7 +205,7 @@ export default function Founders() {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Ff9dfc48c8a584cd29d1db1860cfcd5f6?format=webp&width=800"
                   alt="The Tent founders"
-                  className="w-full aspect-video object-cover rounded-2xl border border-border/50 shadow-lg"
+                  className="w-full h-auto object-contain rounded-2xl border border-border/50 shadow-lg"
                 />
               </div>
               <div className="grid grid-cols-2 gap-4">
