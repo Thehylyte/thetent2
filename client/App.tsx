@@ -11,6 +11,7 @@ import Events from "./pages/Events";
 import Lollapalooza from "./pages/Lollapalooza";
 import RiotFest from "./pages/RiotFest";
 import ArtistRegistration from "./pages/ArtistRegistration";
+import Founders from "./pages/Founders";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
