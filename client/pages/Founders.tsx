@@ -288,11 +288,11 @@ export default function Founders() {
               <CardContent>
                 <div className="space-y-4">
                   {[
-                    "1. Taylor Swift",
-                    "2. Billie Eilish",
-                    "3. Adele",
-                    "4. Arctic Monkeys",
-                    "5. The 1975",
+                    "1. Post Malone",
+                    "2. Justin Timberlake",
+                    "3. Morgan Wallen",
+                    "4. Jon Summit",
+                    "5. Dom Dolla",
                   ].map((artist, index) => (
                     <div
                       key={index}
