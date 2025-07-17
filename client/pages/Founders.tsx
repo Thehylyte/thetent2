@@ -418,8 +418,7 @@ export default function Founders() {
                 </div>
                 <h3 className="text-xl font-bold mb-4">Music Community</h3>
                 <p className="text-muted-foreground">
-                  We're not just a service provider – we're part of the music
-                  family, supporting the culture that brings people together.
+                  Supporting the culture that brings people together.
                 </p>
               </CardContent>
             </Card>
