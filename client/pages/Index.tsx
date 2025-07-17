@@ -193,7 +193,7 @@ export default function Index() {
                 playsInline
               >
                 <source
-                  src="https://cdn.builder.io/o/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Fc664055cb7e74c0fb36238b11ec8320e?alt=media&token=0964c930-93b3-4648-a089-755ae202ac41&apiKey=669056b1b03f448b9ee2fa2d9e73b3a1"
+                  src="https://cdn.builder.io/o/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F8438eca6c3a04d81adece5dcedfaa883?alt=media&token=de9839fc-593d-4536-8706-34ae9107fbbe&apiKey=669056b1b03f448b9ee2fa2d9e73b3a1"
                   type="video/mp4"
                 />
                 Your browser does not support the video tag.
