@@ -13,9 +13,13 @@ import {
   Heart,
   Shield,
   Crown,
+  Menu,
+  X,
 } from "lucide-react";
+import { useState } from "react";
 
 export default function Lollapalooza() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const services = [
     {
       icon: Sparkles,
