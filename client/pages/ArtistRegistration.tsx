@@ -11,9 +11,13 @@ import {
   Sparkles,
   ArrowRight,
   CheckCircle,
+  Menu,
+  X,
 } from "lucide-react";
+import { useState } from "react";
 
 export default function ArtistRegistration() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const festivals = [
     {
       name: "Lollapalooza",
