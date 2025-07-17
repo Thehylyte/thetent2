@@ -102,6 +102,12 @@ export default function ArtistRegistration() {
                 Artists
               </a>
               <a
+                href="/founders"
+                className="text-foreground/80 hover:text-foreground transition-colors"
+              >
+                Founders
+              </a>
+              <a
                 href="#services"
                 className="text-foreground/80 hover:text-foreground transition-colors"
               >
@@ -117,7 +123,75 @@ export default function ArtistRegistration() {
                 Book Access
               </Button>
             </div>
+
+            {/* Mobile menu button */}
+            <button
+              className="md:hidden p-2 rounded-md hover:bg-tent-blue/10 transition-colors"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
           </div>
+
+          {/* Mobile dropdown menu */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden mt-4 pb-4 border-t border-border/50">
+              <div className="flex flex-col space-y-4 pt-4">
+                <a
+                  href="/"
+                  className="text-foreground/80 hover:text-foreground transition-colors px-2 py-1"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Home
+                </a>
+                <a
+                  href="/events"
+                  className="text-foreground/80 hover:text-foreground transition-colors px-2 py-1"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Events
+                </a>
+                <a
+                  href="/artist-registration"
+                  className="text-foreground font-medium px-2 py-1"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Artists
+                </a>
+                <a
+                  href="/founders"
+                  className="text-foreground/80 hover:text-foreground transition-colors px-2 py-1"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Founders
+                </a>
+                <a
+                  href="#services"
+                  className="text-foreground/80 hover:text-foreground transition-colors px-2 py-1"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Services
+                </a>
+                <a
+                  href="#contact"
+                  className="text-foreground/80 hover:text-foreground transition-colors px-2 py-1"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Contact
+                </a>
+                <Button
+                  className="bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90 mt-2 mx-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Book Access
+                </Button>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
