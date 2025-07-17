@@ -8,9 +8,13 @@ import {
   Users,
   Clock,
   ArrowRight,
+  Menu,
+  X,
 } from "lucide-react";
+import { useState } from "react";
 
 export default function Events() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const events = [
     {
       id: 1,
