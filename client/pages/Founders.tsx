@@ -14,9 +14,13 @@ import {
   Linkedin,
   Twitter,
   Mail,
+  Menu,
+  X,
 } from "lucide-react";
+import { useState } from "react";
 
 export default function Founders() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const founders = [];
 
   const milestones = [
