@@ -108,6 +108,18 @@ export default function Lollapalooza() {
                 Events
               </a>
               <a
+                href="/artist-registration"
+                className="text-foreground/80 hover:text-foreground transition-colors"
+              >
+                Artists
+              </a>
+              <a
+                href="/founders"
+                className="text-foreground/80 hover:text-foreground transition-colors"
+              >
+                Founders
+              </a>
+              <a
                 href="#services"
                 className="text-foreground/80 hover:text-foreground transition-colors"
               >
