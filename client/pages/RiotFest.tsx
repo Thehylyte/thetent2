@@ -262,8 +262,8 @@ export default function RiotFest() {
           <div className="text-center mb-16">
             <div className="flex justify-center mb-8">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F17b6bd82c5ea4b40a78583dced3ffee5?format=webp&width=800"
-                alt="Funk's Barber Shop"
+                src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F33620c51e79f4fd7a60c09e98f764404?format=webp&width=800"
+                alt="The Idle Hand Collective"
                 className="h-16"
               />
             </div>
