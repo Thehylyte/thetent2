@@ -69,8 +69,11 @@ export default function Index() {
               >
                 Contact
               </a>
-              <Button className="bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90">
-                Book Access
+              <Button
+                className="bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90"
+                asChild
+              >
+                <a href="/events">Book Access</a>
               </Button>
             </div>
 
@@ -135,9 +138,11 @@ export default function Index() {
                 </a>
                 <Button
                   className="bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90 mt-2 mx-2"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  asChild
                 >
-                  Book Access
+                  <a href="/events" onClick={() => setIsMobileMenuOpen(false)}>
+                    Book Access
+                  </a>
                 </Button>
               </div>
             </div>
