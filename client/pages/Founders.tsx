@@ -398,7 +398,26 @@ export default function Founders() {
           <div className="relative">
             <div className="flex animate-scroll-gallery">
               <div className="flex space-x-6 min-w-full shrink-0">
-                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
+                {/* Image 1 */}
+                <div className="flex-shrink-0 w-80 h-60 rounded-2xl border border-border/50 overflow-hidden group hover:shadow-lg transition-all duration-300">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F2ae4d1e8d6954e639c4141f978aa57bb?format=webp&width=800"
+                    alt="The Tent founders at event"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
+                {/* Image 2 */}
+                <div className="flex-shrink-0 w-80 h-60 rounded-2xl border border-border/50 overflow-hidden group hover:shadow-lg transition-all duration-300">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F75af3084783146148e7a665ea35bb404?format=webp&width=800"
+                    alt="The Tent team with artists"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
+                {/* Remaining placeholders */}
+                {[3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
                   <div
                     key={item}
                     className="flex-shrink-0 w-80 h-60 bg-gradient-to-br from-tent-blue/10 via-tent-purple/10 to-tent-pink/10 rounded-2xl border border-border/50 flex items-center justify-center group hover:from-tent-blue/20 hover:via-tent-purple/20 hover:to-tent-pink/20 transition-all duration-300"
