@@ -154,11 +154,32 @@ export default function Founders() {
                   The Tent
                 </span>
               </h2>
-              <p className="text-xl text-muted-foreground mb-6">
-                It all started at a rainy festival in 2019. Three industry
-                professionals found themselves huddled together, watching
-                exhausted artists struggle to find proper rest and recovery
-                between performances.
+              <p className="text-lg text-muted-foreground mb-6">
+                Quickly after meeting several years ago in Nashville, Tennessee,
+                we discovered a shared passion for live music and unforgettable
+                experiences. After years of traveling to see our favorite
+                artists, we realized we wanted to leverage our extensive
+                backgrounds in hospitality and entertainment to give back to the
+                musicians who had created countless cherished memories for us.
+              </p>
+              <p className="text-lg text-muted-foreground mb-6">
+                Through our industry connections, we had the privilege of
+                meeting and collaborating with some of our favorite musicians
+                and entertainers at various festivals. It was during these
+                events that we recognized a gap in the festival experience for
+                the artists on stage.
+              </p>
+              <p className="text-lg text-muted-foreground mb-6">
+                We often witnessed bands arriving for soundchecks, only to spend
+                their downtime waiting in their buses or in underwhelming artist
+                lounges, where activities were minimal. This observation
+                inspired the creation of our tent.
+              </p>
+              <p className="text-lg text-muted-foreground mb-6">
+                Music festivals offer amazing experiences for fans through brand
+                activations and interactive opportunities. We aimed to create a
+                similar, enjoyable environment for artists to enhance their
+                festival experience as well.
               </p>
               <p className="text-lg text-muted-foreground mb-6">
                 That's when we realized the music industry was missing something
