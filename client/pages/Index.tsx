@@ -182,23 +182,22 @@ export default function Index() {
             </div>
           </div>
 
-          {/* Hero Visual */}
+          {/* Hero Video */}
           <div className="relative max-w-6xl mx-auto">
-            <div className="aspect-video bg-gradient-to-br from-tent-blue/20 via-tent-purple/20 to-tent-pink/20 rounded-3xl border border-border/50 backdrop-blur-sm overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-tent-blue/10 via-transparent to-tent-pink/10"></div>
-              <div className="relative h-full flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 mx-auto mb-6 relative">
-                    <div className="absolute inset-0 bg-gradient-to-br from-tent-orange via-tent-pink to-tent-purple rounded-full animate-pulse"></div>
-                    <div className="absolute inset-2 bg-background rounded-full flex items-center justify-center">
-                      <Crown className="w-8 h-8 text-tent-purple" />
-                    </div>
-                  </div>
-                  <p className="text-3xl font-bold text-foreground/60">
-                    Your VIP Experience Awaits
-                  </p>
-                </div>
-              </div>
+            <div className="aspect-video rounded-3xl border border-border/50 overflow-hidden shadow-2xl">
+              <video
+                className="w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+              >
+                <source
+                  src="https://cdn.builder.io/o/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Fc664055cb7e74c0fb36238b11ec8320e?alt=media&token=0964c930-93b3-4648-a089-755ae202ac41&apiKey=669056b1b03f448b9ee2fa2d9e73b3a1"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>
