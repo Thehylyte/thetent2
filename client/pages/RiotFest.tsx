@@ -279,12 +279,7 @@ export default function RiotFest() {
           <div className="max-w-2xl mx-auto">
             <Card className="border-tent-purple/20 bg-background/80 backdrop-blur-sm">
               <CardHeader>
-                <div className="flex items-center justify-center space-x-3 mb-4">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F8313ca84f1924d03bcd638a406dde85d?format=webp&width=800"
-                    alt="Barber Services"
-                    className="w-12 h-12 object-cover"
-                  />
+                <div className="flex items-center justify-center mb-4">
                   <h3 className="text-2xl font-bold">
                     Reserve Your Appointment
                   </h3>
