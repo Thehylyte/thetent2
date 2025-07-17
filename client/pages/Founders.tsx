@@ -253,11 +253,11 @@ export default function Founders() {
               <CardContent>
                 <div className="space-y-4">
                   {[
-                    "1. The Beatles",
-                    "2. Led Zeppelin",
-                    "3. Pink Floyd",
-                    "4. Queen",
-                    "5. The Rolling Stones",
+                    "1. Bruce Springsteen",
+                    "2. Green Day",
+                    "3. Morgan Wallen/ Luke Combs tied",
+                    "4. The Gaslight Anthem",
+                    "5. Creed",
                   ].map((artist, index) => (
                     <div
                       key={index}
