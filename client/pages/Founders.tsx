@@ -200,13 +200,26 @@ export default function Founders() {
                 </span>
               </div>
             </div>
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                alt="Festival scene"
-                className="w-full aspect-video object-cover rounded-3xl border border-border/50 shadow-xl"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-3xl"></div>
+            <div className="space-y-4">
+              <div className="grid grid-cols-1 gap-4">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Ff9dfc48c8a584cd29d1db1860cfcd5f6?format=webp&width=800"
+                  alt="The Tent founders"
+                  className="w-full aspect-video object-cover rounded-2xl border border-border/50 shadow-lg"
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Ff4a967152e2b4a938ed84a51b81f72b2?format=webp&width=800"
+                  alt="The Tent founders"
+                  className="w-full aspect-square object-cover rounded-2xl border border-border/50 shadow-lg"
+                />
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F4a951d9cd77b4a6bb4fd0049c0f58329?format=webp&width=800"
+                  alt="The Tent founders"
+                  className="w-full aspect-square object-cover rounded-2xl border border-border/50 shadow-lg"
+                />
+              </div>
             </div>
           </div>
         </div>
