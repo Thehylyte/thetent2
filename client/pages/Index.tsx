@@ -40,6 +40,12 @@ export default function Index() {
                 Artists
               </a>
               <a
+                href="/founders"
+                className="text-foreground/80 hover:text-foreground transition-colors"
+              >
+                Founders
+              </a>
+              <a
                 href="#services"
                 className="text-foreground/80 hover:text-foreground transition-colors"
               >
