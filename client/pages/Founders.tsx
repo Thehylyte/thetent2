@@ -225,6 +225,92 @@ export default function Founders() {
         </div>
       </section>
 
+      {/* Top 5 Favorite Artists */}
+      <section className="py-16 px-6">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-tent-orange via-tent-pink to-tent-purple bg-clip-text text-transparent">
+              Our Musical Inspirations
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              The artists who inspired us to create The Tent experience
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Jared Gladstone's Top 5 */}
+            <Card className="border-tent-blue/20 hover:border-tent-blue/40 transition-colors bg-background/80 backdrop-blur-sm">
+              <CardHeader>
+                <div className="text-center">
+                  <h3 className="text-2xl font-bold text-tent-blue mb-2">
+                    Jared Gladstone
+                  </h3>
+                  <p className="text-muted-foreground">
+                    My Top 5 Favorite Bands or Artists
+                  </p>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  {[
+                    "1. The Beatles",
+                    "2. Led Zeppelin",
+                    "3. Pink Floyd",
+                    "4. Queen",
+                    "5. The Rolling Stones",
+                  ].map((artist, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center p-4 rounded-lg bg-tent-blue/5 hover:bg-tent-blue/10 transition-colors"
+                    >
+                      <div className="w-8 h-8 bg-gradient-to-br from-tent-blue to-tent-purple rounded-full flex items-center justify-center mr-4">
+                        <Music className="w-4 h-4 text-white" />
+                      </div>
+                      <span className="text-lg font-medium">{artist}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Chelsea Smith's Top 5 */}
+            <Card className="border-tent-pink/20 hover:border-tent-pink/40 transition-colors bg-background/80 backdrop-blur-sm">
+              <CardHeader>
+                <div className="text-center">
+                  <h3 className="text-2xl font-bold text-tent-pink mb-2">
+                    Chelsea Smith
+                  </h3>
+                  <p className="text-muted-foreground">
+                    My Top 5 Favorite Bands or Artists
+                  </p>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  {[
+                    "1. Taylor Swift",
+                    "2. Billie Eilish",
+                    "3. Adele",
+                    "4. Arctic Monkeys",
+                    "5. The 1975",
+                  ].map((artist, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center p-4 rounded-lg bg-tent-pink/5 hover:bg-tent-pink/10 transition-colors"
+                    >
+                      <div className="w-8 h-8 bg-gradient-to-br from-tent-pink to-tent-orange rounded-full flex items-center justify-center mr-4">
+                        <Music className="w-4 h-4 text-white" />
+                      </div>
+                      <span className="text-lg font-medium">{artist}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Image Gallery */}
       <section className="py-16 px-6 overflow-hidden">
         <div className="container mx-auto">
