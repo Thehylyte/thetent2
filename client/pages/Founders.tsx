@@ -225,6 +225,66 @@ export default function Founders() {
         </div>
       </section>
 
+      {/* Image Gallery */}
+      <section className="py-16 px-6 overflow-hidden">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-tent-blue to-tent-purple bg-clip-text text-transparent">
+              Our Journey in Photos
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Behind the scenes moments from The Tent experience
+            </p>
+          </div>
+
+          <div className="relative">
+            <div className="flex animate-scroll-gallery">
+              <div className="flex space-x-6 min-w-full shrink-0">
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
+                  <div
+                    key={item}
+                    className="flex-shrink-0 w-80 h-60 bg-gradient-to-br from-tent-blue/10 via-tent-purple/10 to-tent-pink/10 rounded-2xl border border-border/50 flex items-center justify-center group hover:from-tent-blue/20 hover:via-tent-purple/20 hover:to-tent-pink/20 transition-all duration-300"
+                  >
+                    <div className="text-center">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-tent-blue to-tent-purple rounded-full flex items-center justify-center">
+                        <Sparkles className="w-8 h-8 text-white" />
+                      </div>
+                      <p className="text-lg font-medium text-muted-foreground">
+                        Gallery Image {item}
+                      </p>
+                      <p className="text-sm text-muted-foreground/80">
+                        Coming Soon
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              {/* Duplicate for seamless scroll */}
+              <div className="flex space-x-6 min-w-full shrink-0">
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
+                  <div
+                    key={`duplicate-${item}`}
+                    className="flex-shrink-0 w-80 h-60 bg-gradient-to-br from-tent-blue/10 via-tent-purple/10 to-tent-pink/10 rounded-2xl border border-border/50 flex items-center justify-center group hover:from-tent-blue/20 hover:via-tent-purple/20 hover:to-tent-pink/20 transition-all duration-300"
+                  >
+                    <div className="text-center">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-tent-blue to-tent-purple rounded-full flex items-center justify-center">
+                        <Sparkles className="w-8 h-8 text-white" />
+                      </div>
+                      <p className="text-lg font-medium text-muted-foreground">
+                        Gallery Image {item}
+                      </p>
+                      <p className="text-sm text-muted-foreground/80">
+                        Coming Soon
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Values Section */}
       <section className="py-16 px-6 bg-gradient-to-r from-tent-blue/10 via-tent-purple/10 to-tent-pink/10">
         <div className="container mx-auto">
