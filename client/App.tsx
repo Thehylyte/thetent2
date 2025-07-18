@@ -11,6 +11,8 @@ import Events from "./pages/Events";
 import Lollapalooza from "./pages/Lollapalooza";
 import RiotFest from "./pages/RiotFest";
 import ArtistRegistration from "./pages/ArtistRegistration";
+import ArtistLogin from "./pages/ArtistLogin";
+import ArtistDashboard from "./pages/ArtistDashboard";
 import Founders from "./pages/Founders";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
