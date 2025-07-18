@@ -39,8 +39,8 @@ export default function Contact() {
       icon: Mail,
       title: "Email Us",
       description: "Get in touch via email for general inquiries",
-      contact: "hello@accessthetent.com",
-      action: "mailto:hello@accessthetent.com",
+      contact: "hello@thetent.club",
+      action: "mailto:hello@thetent.club",
       color: "tent-purple",
     },
     {
