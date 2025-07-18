@@ -108,7 +108,7 @@ export default function ArtistRegistration() {
                 Founders
               </a>
               <a
-                href="#services"
+                href="/services"
                 className="text-foreground/80 hover:text-foreground transition-colors"
               >
                 Services
@@ -170,7 +170,7 @@ export default function ArtistRegistration() {
                   Founders
                 </a>
                 <a
-                  href="#services"
+                  href="/services"
                   className="text-foreground/80 hover:text-foreground transition-colors px-2 py-1"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
