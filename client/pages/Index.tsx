@@ -10,6 +10,7 @@ import {
   Crown,
   Menu,
   X,
+  Instagram,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -473,15 +474,26 @@ export default function Index() {
                 THE TENT
               </span>
             </div>
-            <div className="flex space-x-6 text-muted-foreground">
-              <a href="#" className="hover:text-foreground transition-colors">
-                Privacy
-              </a>
-              <a href="#" className="hover:text-foreground transition-colors">
-                Terms
-              </a>
-              <a href="#" className="hover:text-foreground transition-colors">
-                Contact
+            <div className="flex items-center space-x-6 text-muted-foreground">
+              <div className="flex space-x-6">
+                <a href="#" className="hover:text-foreground transition-colors">
+                  Privacy
+                </a>
+                <a href="#" className="hover:text-foreground transition-colors">
+                  Terms
+                </a>
+                <a href="#" className="hover:text-foreground transition-colors">
+                  Contact
+                </a>
+              </div>
+              <a
+                href="https://instagram.com/accessthetent"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-4 p-2 rounded-full hover:bg-tent-purple/10 transition-colors group"
+                aria-label="Follow us on Instagram @accessthetent"
+              >
+                <Instagram className="w-5 h-5 text-muted-foreground group-hover:text-tent-purple transition-colors" />
               </a>
             </div>
           </div>
