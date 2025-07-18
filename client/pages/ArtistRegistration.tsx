@@ -252,9 +252,18 @@ export default function ArtistRegistration() {
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-tent-pink to-tent-orange bg-clip-text text-transparent">
                 Register as an Artist
               </h2>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-xl text-muted-foreground mb-4">
                 Complete your registration to access The Tent at your upcoming
                 festival performances
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Already registered?{" "}
+                <a
+                  href="/artist-login"
+                  className="text-tent-purple hover:text-tent-pink transition-colors font-medium"
+                >
+                  Sign in to your dashboard
+                </a>
               </p>
             </div>
 
