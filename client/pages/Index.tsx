@@ -53,6 +53,12 @@ export default function Index() {
                 Artists
               </a>
               <a
+                href="/artist-login"
+                className="text-foreground/80 hover:text-foreground transition-colors"
+              >
+                Artist Login
+              </a>
+              <a
                 href="/founders"
                 className="text-foreground/80 hover:text-foreground transition-colors"
               >
