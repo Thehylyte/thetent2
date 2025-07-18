@@ -89,7 +89,7 @@ export default function RiotFest() {
                 Services
               </a>
               <a
-                href="#contact"
+                href="/contact"
                 className="text-foreground/80 hover:text-foreground transition-colors"
               >
                 Contact
@@ -152,7 +152,7 @@ export default function RiotFest() {
                   Services
                 </a>
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="text-foreground/80 hover:text-foreground transition-colors px-2 py-1"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
