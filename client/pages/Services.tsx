@@ -101,7 +101,7 @@ export default function Services() {
       title: "Fashion & Styling",
       description:
         "Personal styling services and access to premium fashion brands.",
-      provider: "State & Liberty & Rhone",
+      provider: "Premium Fashion Partners",
       image:
         "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     },
@@ -112,8 +112,7 @@ export default function Services() {
     { name: "Baha Mar", category: "Hospitality" },
     { name: "Jabra", category: "Technology" },
     { name: "Nike", category: "Athletic" },
-    { name: "Rhone", category: "Fashion" },
-    { name: "State & Liberty", category: "Fashion" },
+
     { name: "Ving Vodka", category: "Beverage" },
     { name: "Funk's Barber Shop", category: "Grooming" },
     { name: "Idle Hand Collective", category: "Grooming" },
