@@ -94,8 +94,11 @@ export default function RiotFest() {
               >
                 Contact
               </a>
-              <Button className="bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90">
-                Book Access
+              <Button
+                className="bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90"
+                asChild
+              >
+                <a href="/artist-login">Artist Login</a>
               </Button>
             </div>
 
@@ -160,9 +163,14 @@ export default function RiotFest() {
                 </a>
                 <Button
                   className="bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90 mt-2 mx-2"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  asChild
                 >
-                  Book Access
+                  <a
+                    href="/artist-login"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Artist Login
+                  </a>
                 </Button>
               </div>
             </div>
