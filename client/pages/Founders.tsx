@@ -501,8 +501,53 @@ export default function Founders() {
                   />
                 </div>
 
+                {/* Image 3 Duplicate */}
+                <div className="flex-shrink-0 w-80 h-60 rounded-2xl border border-border/50 overflow-hidden group hover:shadow-lg transition-all duration-300">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F93e41add8c5a40408c06183691e709fb?format=webp&width=800"
+                    alt="The Tent experience with artists"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
+                {/* Image 4 Duplicate */}
+                <div className="flex-shrink-0 w-80 h-60 rounded-2xl border border-border/50 overflow-hidden group hover:shadow-lg transition-all duration-300">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F6278bfe574ba46b3b0416bdf124a6305?format=webp&width=800"
+                    alt="The Tent team backstage"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
+                {/* Image 5 Duplicate */}
+                <div className="flex-shrink-0 w-80 h-60 rounded-2xl border border-border/50 overflow-hidden group hover:shadow-lg transition-all duration-300">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F80925f4c7248438cb19363b307cbc470?format=webp&width=800"
+                    alt="The Tent with special guests"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
+                {/* Image 6 Duplicate */}
+                <div className="flex-shrink-0 w-80 h-60 rounded-2xl border border-border/50 overflow-hidden group hover:shadow-lg transition-all duration-300">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F1f78bcbfa1f84c52b022c9c9351b3291?format=webp&width=800"
+                    alt="The Tent exclusive moments"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
+                {/* Image 7 Duplicate */}
+                <div className="flex-shrink-0 w-80 h-60 rounded-2xl border border-border/50 overflow-hidden group hover:shadow-lg transition-all duration-300">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Fbcd178d8b5044d2fa19f981c91d6619f?format=webp&width=800"
+                    alt="The Tent founders and team"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
                 {/* Remaining placeholders */}
-                {[3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
+                {[8, 9, 10].map((item) => (
                   <div
                     key={`duplicate-${item}`}
                     className="flex-shrink-0 w-80 h-60 bg-gradient-to-br from-tent-blue/10 via-tent-purple/10 to-tent-pink/10 rounded-2xl border border-border/50 flex items-center justify-center group hover:from-tent-blue/20 hover:via-tent-purple/20 hover:to-tent-pink/20 transition-all duration-300"
