@@ -81,6 +81,21 @@ export default function Events() {
     }
   };
 
+  const getEventDetailUrl = (eventName: string) => {
+    switch (eventName) {
+      case "Lollapalooza":
+        return "/events/lollapalooza";
+      case "Riot Fest":
+        return "/events/riot-fest";
+      case "Sea.Hear.Now":
+        return "/events"; // No detail page yet, stay on events page
+      case "Country Calling":
+        return "/events"; // No detail page yet, stay on events page
+      default:
+        return "/events";
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-tent-blue/5">
       {/* Navigation */}
@@ -275,16 +290,12 @@ export default function Events() {
                       <Button
                         variant="outline"
                         className="group/btn border-tent-blue/30 hover:bg-tent-blue/10"
-                        onClick={() => {
-                          if (event.name === "Lollapalooza") {
-                            window.location.href = "/events/lollapalooza";
-                          } else if (event.name === "Riot Fest") {
-                            window.location.href = "/events/riot-fest";
-                          }
-                        }}
+                        asChild
                       >
-                        Learn More
-                        <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                        <a href={getEventDetailUrl(event.name)}>
+                          Learn More
+                          <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                        </a>
                       </Button>
                     </div>
                   </CardContent>
@@ -345,8 +356,9 @@ export default function Events() {
                     variant="outline"
                     size="sm"
                     className="w-full border-tent-purple/30 hover:bg-tent-purple/10 text-tent-purple"
+                    asChild
                   >
-                    View Details
+                    <a href={getEventDetailUrl(event.name)}>View Details</a>
                   </Button>
                 </CardContent>
               </Card>
