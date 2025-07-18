@@ -201,7 +201,7 @@ export default function Services() {
                 className="bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90"
                 asChild
               >
-                <a href="/events">Book Access</a>
+                <a href="/artist-login">Artist Login</a>
               </Button>
             </div>
 
@@ -268,8 +268,11 @@ export default function Services() {
                   className="bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90 mt-2 mx-2"
                   asChild
                 >
-                  <a href="/events" onClick={() => setIsMobileMenuOpen(false)}>
-                    Book Access
+                  <a
+                    href="/artist-login"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Artist Login
                   </a>
                 </Button>
               </div>
