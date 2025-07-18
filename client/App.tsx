@@ -13,6 +13,7 @@ import RiotFest from "./pages/RiotFest";
 import ArtistRegistration from "./pages/ArtistRegistration";
 import Founders from "./pages/Founders";
 import Services from "./pages/Services";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
