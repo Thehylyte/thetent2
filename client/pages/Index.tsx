@@ -273,11 +273,6 @@ export default function Index() {
                 />
 
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F7151841591214dd4bc50551b9b5afeb8?format=webp&width=800"
-                  alt="State & Liberty"
-                  className="h-12 opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
-                />
-                <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F6fa25cdebc2e4ef38ad36d822d724269?format=webp&width=800"
                   alt="Ving Vodka"
                   className="h-12 opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
@@ -321,11 +316,6 @@ export default function Index() {
                   className="h-12 opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
                 />
 
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F7151841591214dd4bc50551b9b5afeb8?format=webp&width=800"
-                  alt="State & Liberty"
-                  className="h-12 opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
-                />
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F6fa25cdebc2e4ef38ad36d822d724269?format=webp&width=800"
                   alt="Ving Vodka"
