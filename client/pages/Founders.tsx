@@ -97,12 +97,6 @@ export default function Founders() {
               >
                 Events
               </a>
-              <a
-                href="/artist-registration"
-                className="text-foreground/80 hover:text-foreground transition-colors"
-              >
-                Artists
-              </a>
               <a href="/founders" className="text-foreground font-medium">
                 Founders
               </a>
@@ -156,13 +150,6 @@ export default function Founders() {
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Events
-                </a>
-                <a
-                  href="/artist-registration"
-                  className="text-foreground/80 hover:text-foreground transition-colors px-2 py-1"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Artists
                 </a>
                 <a
                   href="/founders"
