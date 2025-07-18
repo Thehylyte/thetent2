@@ -96,12 +96,6 @@ export default function ArtistRegistration() {
                 Events
               </a>
               <a
-                href="/artist-registration"
-                className="text-foreground font-medium"
-              >
-                Artists
-              </a>
-              <a
                 href="/founders"
                 className="text-foreground/80 hover:text-foreground transition-colors"
               >
@@ -157,13 +151,6 @@ export default function ArtistRegistration() {
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Events
-                </a>
-                <a
-                  href="/artist-registration"
-                  className="text-foreground font-medium px-2 py-1"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Artists
                 </a>
                 <a
                   href="/founders"
