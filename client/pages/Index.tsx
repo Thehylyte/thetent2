@@ -189,8 +189,8 @@ export default function Index() {
           </div>
 
           {/* Hero Video */}
-          <div className="relative max-w-6xl mx-auto">
-            <div className="aspect-video rounded-3xl border border-border/50 overflow-hidden shadow-2xl">
+          <div className="relative w-full md:max-w-6xl md:mx-auto">
+            <div className="aspect-video md:rounded-3xl border-0 md:border md:border-border/50 overflow-hidden md:shadow-2xl">
               <video
                 className="w-full h-full object-cover"
                 autoPlay
