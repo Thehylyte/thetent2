@@ -299,40 +299,16 @@ export default function Founders() {
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-4">
-                <div className="relative">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Ff4a967152e2b4a938ed84a51b81f72b2?format=webp&width=800"
-                    alt="Jared Gladstone, The Tent co-founder"
-                    className="w-full aspect-square object-cover rounded-2xl border border-border/50 shadow-lg"
-                  />
-                  <div className="absolute bottom-3 left-3 right-3">
-                    <div className="bg-background/90 backdrop-blur-sm border border-border/50 rounded-lg px-3 py-2">
-                      <p className="text-sm font-semibold text-tent-blue text-center">
-                        Jared Gladstone
-                      </p>
-                      <p className="text-xs text-muted-foreground text-center">
-                        Co-Founder
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="relative">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F4a951d9cd77b4a6bb4fd0049c0f58329?format=webp&width=800"
-                    alt="Chelsea Smith, The Tent co-founder"
-                    className="w-full aspect-square object-cover rounded-2xl border border-border/50 shadow-lg"
-                  />
-                  <div className="absolute bottom-3 left-3 right-3">
-                    <div className="bg-background/90 backdrop-blur-sm border border-border/50 rounded-lg px-3 py-2">
-                      <p className="text-sm font-semibold text-tent-pink text-center">
-                        Chelsea Smith
-                      </p>
-                      <p className="text-xs text-muted-foreground text-center">
-                        Co-Founder
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Ff4a967152e2b4a938ed84a51b81f72b2?format=webp&width=800"
+                  alt="Jared Gladstone, The Tent co-founder"
+                  className="w-full aspect-square object-cover rounded-2xl border border-border/50 shadow-lg"
+                />
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F4a951d9cd77b4a6bb4fd0049c0f58329?format=webp&width=800"
+                  alt="Chelsea Smith, The Tent co-founder"
+                  className="w-full aspect-square object-cover rounded-2xl border border-border/50 shadow-lg"
+                />
               </div>
             </div>
           </div>
