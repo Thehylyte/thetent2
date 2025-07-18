@@ -144,12 +144,6 @@ export default function Contact() {
                 Events
               </a>
               <a
-                href="/artist-registration"
-                className="text-foreground/80 hover:text-foreground transition-colors"
-              >
-                Artists
-              </a>
-              <a
                 href="/founders"
                 className="text-foreground/80 hover:text-foreground transition-colors"
               >
@@ -202,13 +196,6 @@ export default function Contact() {
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Events
-                </a>
-                <a
-                  href="/artist-registration"
-                  className="text-foreground/80 hover:text-foreground transition-colors px-2 py-1"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Artists
                 </a>
                 <a
                   href="/founders"
