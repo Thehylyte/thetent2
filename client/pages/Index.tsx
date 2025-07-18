@@ -271,11 +271,7 @@ export default function Index() {
                   alt="Nike"
                   className="h-12 opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
                 />
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F94e22145274e4dc1b364dbd01ccb88ac?format=webp&width=800"
-                  alt="Rhone"
-                  className="h-12 opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
-                />
+
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F7151841591214dd4bc50551b9b5afeb8?format=webp&width=800"
                   alt="State & Liberty"
@@ -324,11 +320,7 @@ export default function Index() {
                   alt="Nike"
                   className="h-12 opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
                 />
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F94e22145274e4dc1b364dbd01ccb88ac?format=webp&width=800"
-                  alt="Rhone"
-                  className="h-12 opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
-                />
+
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F7151841591214dd4bc50551b9b5afeb8?format=webp&width=800"
                   alt="State & Liberty"
