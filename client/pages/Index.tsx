@@ -169,15 +169,6 @@ export default function Index() {
               entertainers at live music festivals. Discover exclusive products,
               luxury recovery, and unparalleled relaxation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90 text-lg px-8 py-6"
-              >
-                <Sparkles className="w-5 h-5 mr-2" />
-                Enter The Tent
-              </Button>
-            </div>
           </div>
 
           {/* Hero Video */}
