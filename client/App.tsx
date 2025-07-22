@@ -10,6 +10,7 @@ import Index from "./pages/Index";
 import Events from "./pages/Events";
 import Lollapalooza from "./pages/Lollapalooza";
 import RiotFest from "./pages/RiotFest";
+import SeaHearNow from "./pages/SeaHearNow";
 import ArtistRegistration from "./pages/ArtistRegistration";
 import ArtistLogin from "./pages/ArtistLogin";
 import ArtistDashboard from "./pages/ArtistDashboard";
@@ -27,7 +28,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
+                                        <Route path="/" element={<Index />} />
           <Route path="/events" element={<Events />} />
           <Route path="/events/lollapalooza" element={<Lollapalooza />} />
           <Route path="/events/riot-fest" element={<RiotFest />} />
