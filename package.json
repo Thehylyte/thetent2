@@ -37,6 +37,12 @@
     "mobile:clean": "npx cap clean && npm run mobile:sync"
   },
   "dependencies": {
+    "@capacitor/app": "^7.0.1",
+    "@capacitor/core": "^7.4.2",
+    "@capacitor/keyboard": "^7.0.1",
+    "@capacitor/network": "^7.0.1",
+    "@capacitor/splash-screen": "^7.0.1",
+    "@capacitor/status-bar": "^7.0.1",
     "express": "^4.18.2",
     "zod": "^3.23.8"
   },
