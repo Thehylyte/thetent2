@@ -569,13 +569,28 @@ export default function ArtistDashboard() {
                     <div className="grid md:grid-cols-2 gap-6">
                       {/* Barber Shop Service */}
                       <div className="p-6 border border-tent-orange/20 rounded-lg bg-gradient-to-br from-tent-orange/5 to-tent-pink/5">
+                        {/* Partner Logos */}
+                        <div className="flex items-center justify-center space-x-6 mb-4 p-3 bg-white/50 rounded-lg">
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F8d6b812a5232493694cbb0b580a2e5d1?format=webp&width=800"
+                            alt="Funk's Barber Shop"
+                            className="h-8 w-auto object-contain"
+                          />
+                          <div className="w-px h-8 bg-gray-300"></div>
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Ff2cef598a35d45fe94196352c93f9416?format=webp&width=800"
+                            alt="The Idle Hand Collective"
+                            className="h-8 w-auto object-contain"
+                          />
+                        </div>
+
                         <div className="flex items-center space-x-4 mb-4">
                           <div className="w-12 h-12 bg-gradient-to-br from-tent-orange to-tent-pink rounded-lg flex items-center justify-center">
                             <Scissors className="w-6 h-6 text-white" />
                           </div>
                           <div>
                             <h4 className="text-lg font-bold text-tent-orange">Barber Shop</h4>
-                            <p className="text-sm text-muted-foreground">Premium grooming experience</p>
+                            <p className="text-sm text-muted-foreground">Premium grooming experience from Funk's Barber Shop or The Idle Hand Collective</p>
                           </div>
                         </div>
 
