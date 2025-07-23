@@ -349,7 +349,7 @@ export default function ArtistDashboard() {
             </div>
 
             {/* New Reservation Form */}
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2" data-booking-form>
               <Card className="border-tent-purple/20">
                 <CardHeader>
                   <h3 className="text-2xl font-bold flex items-center">
