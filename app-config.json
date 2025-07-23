@@ -1,0 +1,40 @@
+{
+  "name": "The Tent",
+  "displayName": "The Tent - VIP Festival Experience",
+  "description": "Exclusive VIP hospitality services for artists at music festivals. Access premium amenities, personalized concierge services, and luxury accommodations.",
+  "version": "1.0.0",
+  "bundleId": "club.thetent.app",
+  "author": "The Tent, LLC",
+  "website": "https://thetent.club",
+  "supportEmail": "hello@thetent.club",
+  "category": "Lifestyle",
+  "keywords": [
+    "music festival",
+    "VIP",
+    "hospitality",
+    "artist services",
+    "luxury",
+    "festival experience",
+    "concierge",
+    "entertainment"
+  ],
+  "appStore": {
+    "subtitle": "VIP Festival Hospitality",
+    "shortDescription": "Exclusive VIP services for artists at music festivals",
+    "fullDescription": "The Tent provides exclusive VIP hospitality services for artists performing at major music festivals. Our comprehensive platform offers:\n\n• Priority access to premium amenities\n• Personalized concierge services\n• Luxury grooming and wellness services\n• Exclusive lounge access\n• Festival scheduling and coordination\n• Professional styling services\n\nDesigned specifically for touring artists, The Tent ensures your festival experience is seamless, comfortable, and memorable. From the moment you arrive to your final performance, our dedicated team provides white-glove service tailored to your needs.\n\nFeatures:\n- Artist registration and verification\n- Service booking and scheduling\n- Real-time festival coordination\n- Exclusive partner brand access\n- Mobile-optimized dashboard\n\nJoin the exclusive community of artists who trust The Tent for their festival hospitality needs.",
+    "privacyPolicyUrl": "https://thetent.club/privacy",
+    "termsOfServiceUrl": "https://thetent.club/terms"
+  },
+  "screenshots": {
+    "iPhone": [],
+    "iPad": [],
+    "android": []
+  },
+  "colors": {
+    "primary": "#6366f1",
+    "secondary": "#8b5cf6", 
+    "accent": "#ec4899",
+    "warning": "#f59e0b",
+    "background": "#ffffff"
+  }
+}
