@@ -1,19 +1,32 @@
-import { Capacitor } from "@capacitor/core";
-import { SplashScreen } from "@capacitor/splash-screen";
-import { StatusBar, Style } from "@capacitor/status-bar";
-import { App } from "@capacitor/app";
-import { Keyboard } from "@capacitor/keyboard";
-import { Network } from "@capacitor/network";
+// Mobile app initialization with conditional imports for web compatibility
+
+// Check if we're in a Capacitor environment
+const isCapacitorAvailable = () => {
+  return typeof window !== 'undefined' && 
+         window.Capacitor && 
+         window.Capacitor.isNativePlatform && 
+         window.Capacitor.isNativePlatform();
+};
 
 // Mobile app initialization
 export const initializeMobileApp = async () => {
-  if (!Capacitor.isNativePlatform()) {
-    return; // Skip initialization for web
+  // Early return for web environments
+  if (!isCapacitorAvailable()) {
+    console.log('🌐 Running in web environment - skipping mobile initialization');
+    return;
   }
 
-  console.log("🚀 Initializing mobile app...");
+  console.log('🚀 Initializing mobile app...');
 
   try {
+    // Dynamic imports only when in Capacitor environment
+    const { Capacitor } = await import('@capacitor/core');
+    const { SplashScreen } = await import('@capacitor/splash-screen');
+    const { StatusBar, Style } = await import('@capacitor/status-bar');
+    const { App } = await import('@capacitor/app');
+    const { Keyboard } = await import('@capacitor/keyboard');
+    const { Network } = await import('@capacitor/network');
+
     // Configure status bar
     if (Capacitor.getPlatform() === "ios") {
       await StatusBar.setStyle({ style: Style.Default });
@@ -55,11 +68,15 @@ export const initializeMobileApp = async () => {
 
 // Utility functions for mobile app
 export const getMobileInfo = async () => {
-  if (!Capacitor.isNativePlatform()) {
+  if (!isCapacitorAvailable()) {
     return null;
   }
 
   try {
+    const { Capacitor } = await import('@capacitor/core');
+    const { App } = await import('@capacitor/app');
+    const { Network } = await import('@capacitor/network');
+
     const appInfo = await App.getInfo();
     const networkStatus = await Network.getStatus();
 
@@ -78,21 +95,28 @@ export const getMobileInfo = async () => {
 };
 
 // Check if running in mobile app
-export const isMobileApp = () => Capacitor.isNativePlatform();
+export const isMobileApp = () => isCapacitorAvailable();
 
 // Get platform-specific safe area information
-export const getSafeAreaInfo = () => {
-  if (!Capacitor.isNativePlatform()) {
+export const getSafeAreaInfo = async () => {
+  if (!isCapacitorAvailable()) {
     return { top: 0, bottom: 0, left: 0, right: 0 };
   }
 
-  // For now, return standard safe areas
-  // In a real app, you'd use the Safe Area plugin
-  const platform = Capacitor.getPlatform();
+  try {
+    const { Capacitor } = await import('@capacitor/core');
+    
+    // For now, return standard safe areas
+    // In a real app, you'd use the Safe Area plugin
+    const platform = Capacitor.getPlatform();
 
-  if (platform === "ios") {
-    return { top: 44, bottom: 34, left: 0, right: 0 }; // Standard iPhone safe areas
-  } else {
-    return { top: 24, bottom: 0, left: 0, right: 0 }; // Standard Android status bar
+    if (platform === "ios") {
+      return { top: 44, bottom: 34, left: 0, right: 0 }; // Standard iPhone safe areas
+    } else {
+      return { top: 24, bottom: 0, left: 0, right: 0 }; // Standard Android status bar
+    }
+  } catch (error) {
+    console.error("Error getting safe area info:", error);
+    return { top: 0, bottom: 0, left: 0, right: 0 };
   }
 };
