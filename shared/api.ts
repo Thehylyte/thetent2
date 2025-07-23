@@ -32,4 +32,8 @@ export interface ArtistRegistrationResponse {
   success: boolean;
   message: string;
   registrationId?: string;
+  loginCredentials?: {
+    email: string;
+    password: string;
+  };
 }
