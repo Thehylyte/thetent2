@@ -28,7 +28,7 @@ export default function ArtistDashboard() {
   const [artistName, setArtistName] = useState("");
   const [artistEmail, setArtistEmail] = useState("");
   const [selectedFestival, setSelectedFestival] = useState("");
-  const [selectedService, setSelectedService] = useState("");
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
   const [showBarberDetails, setShowBarberDetails] = useState(false);
