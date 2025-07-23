@@ -116,6 +116,22 @@ export default function ArtistDashboard() {
       time: "11:00 AM",
       status: "pending",
     },
+    {
+      id: 3,
+      festival: "Sea.Hear.Now",
+      service: "Barber Shop",
+      date: "September 13, 2025",
+      time: "3:30 PM",
+      status: "confirmed",
+    },
+    {
+      id: 4,
+      festival: "Lollapalooza",
+      service: "Normatec Chairs",
+      date: "August 2, 2025",
+      time: "5:00 PM",
+      status: "confirmed",
+    },
   ];
 
   const timeSlots = [
