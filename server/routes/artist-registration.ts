@@ -5,7 +5,7 @@ import { sendRegistrationNotifications } from "../services/email";
 // In-memory storage for demo purposes (in production, use a proper database)
 const registrations: (ArtistRegistrationRequest & { id: string; timestamp: Date })[] = [];
 
-export const handleArtistRegistration: RequestHandler = (req, res) => {
+export const handleArtistRegistration: RequestHandler = async (req, res) => {
   try {
     const registrationData: ArtistRegistrationRequest = req.body;
     
