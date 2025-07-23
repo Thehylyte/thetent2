@@ -38,6 +38,16 @@ const generateArtistConfirmationEmail = (
           <p><strong>Selected Festivals:</strong> ${registration.selectedFestivals.join(', ') || 'None selected'}</p>
           <p><strong>Submitted:</strong> ${registration.timestamp.toLocaleString()}</p>
         </div>
+
+        <div style="background: #dcfce7; border: 2px solid #16a34a; padding: 20px; border-radius: 8px; margin: 20px 0;">
+          <h3 style="margin-top: 0; color: #15803d;">🔐 Your Login Credentials</h3>
+          <p style="margin: 10px 0;"><strong>Login Email:</strong> ${loginCredentials.email}</p>
+          <p style="margin: 10px 0;"><strong>Password:</strong> <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 4px; font-family: monospace;">${loginCredentials.password}</code></p>
+          <p style="margin: 10px 0; color: #15803d;"><strong>Login URL:</strong> <a href="${process.env.FRONTEND_URL || 'http://localhost:5173'}/artist-login" style="color: #16a34a; text-decoration: none; font-weight: bold;">Access Your Dashboard</a></p>
+          <div style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 10px; margin-top: 15px;">
+            <p style="margin: 0; color: #92400e; font-size: 14px;"><strong>Important:</strong> Save these credentials securely. You'll need them to access your artist dashboard and manage your festival reservations.</p>
+          </div>
+        </div>
         
         <h3 style="color: #333;">What happens next?</h3>
         <ol style="color: #555; line-height: 1.6;">
@@ -201,7 +211,7 @@ export const sendEmail = async (emailData: { to: string; from: string; subject: 
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
   console.log('📄 TEXT CONTENT:');
   console.log(emailData.text);
-  console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
+  console.log('━━━━━━━━━━━━━━━━━━��━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
   
   // Simulate email sending delay
   await new Promise(resolve => setTimeout(resolve, 100));
