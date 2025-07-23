@@ -17,6 +17,7 @@ import ArtistDashboard from "./pages/ArtistDashboard";
 import Founders from "./pages/Founders";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
+import AdminRegistrations from "./pages/AdminRegistrations";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
