@@ -171,10 +171,13 @@ export default function ArtistDashboard() {
 
   const handleReservation = () => {
     if (selectedFestival && selectedService && selectedDate && selectedTime) {
-      // Here you would normally make an API call to save the reservation
-      alert(
-        `Reservation requested for ${selectedService} at ${selectedFestival} on ${selectedDate} at ${selectedTime}. You will receive a confirmation email shortly!`,
-      );
+      // Enhanced confirmation message for premium services
+      const isPremiumService = selectedService === "Barber Shop" || selectedService === "Normatec Chairs";
+      const confirmationMessage = isPremiumService
+        ? `Premium ${selectedService} reservation requested at ${selectedFestival} on ${selectedDate} at ${selectedTime}. Our partner team will contact you within 2 hours to confirm your exclusive appointment!`
+        : `Reservation requested for ${selectedService} at ${selectedFestival} on ${selectedDate} at ${selectedTime}. You will receive a confirmation email shortly!`;
+
+      alert(confirmationMessage);
 
       // Reset form
       setSelectedFestival("");
