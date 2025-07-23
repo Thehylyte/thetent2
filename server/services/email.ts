@@ -8,7 +8,10 @@ const EMAIL_CONFIG = {
 };
 
 // Email templates
-const generateArtistConfirmationEmail = (registration: ArtistRegistrationRequest & { id: string; timestamp: Date }) => {
+const generateArtistConfirmationEmail = (
+  registration: ArtistRegistrationRequest & { id: string; timestamp: Date },
+  loginCredentials: { email: string; password: string }
+) => {
   return {
     to: registration.email,
     from: EMAIL_CONFIG.fromEmail,
@@ -198,7 +201,7 @@ export const sendEmail = async (emailData: { to: string; from: string; subject: 
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
   console.log('📄 TEXT CONTENT:');
   console.log(emailData.text);
-  console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━���━━━━━━━━━━━━━━━━━\n');
+  console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
   
   // Simulate email sending delay
   await new Promise(resolve => setTimeout(resolve, 100));
