@@ -38,6 +38,101 @@ export default function ArtistRegistration() {
   });
 
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
+
+  // Form validation function
+  const validateForm = () => {
+    const errors: Record<string, string> = {};
+
+    if (!formData.artistName.trim()) {
+      errors.artistName = "Artist name is required";
+    }
+
+    if (!formData.legalName.trim()) {
+      errors.legalName = "Legal name is required";
+    }
+
+    if (!formData.email.trim()) {
+      errors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      errors.email = "Please enter a valid email address";
+    }
+
+    if (!formData.phone.trim()) {
+      errors.phone = "Phone number is required";
+    }
+
+    if (!formData.managerName.trim()) {
+      errors.managerName = "Manager/Agent name is required";
+    }
+
+    if (!formData.managementEmail.trim()) {
+      errors.managementEmail = "Management email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.managementEmail)) {
+      errors.managementEmail = "Please enter a valid email address";
+    }
+
+    if (!formData.genre) {
+      errors.genre = "Please select a genre";
+    }
+
+    if (!formData.yearsActive) {
+      errors.yearsActive = "Please select years active";
+    }
+
+    if (!formData.agreeToTerms) {
+      errors.agreeToTerms = "You must agree to the terms and conditions";
+    }
+
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
+  // Form submission function
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitError("");
+
+    try {
+      const response = await fetch('/api/artist-registration', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Registration failed');
+      }
+
+      setSubmitSuccess(true);
+      // Reset form after successful submission
+      setFormData({
+        artistName: "",
+        legalName: "",
+        email: "",
+        phone: "",
+        managerName: "",
+        managementEmail: "",
+        genre: "",
+        yearsActive: "",
+        selectedFestivals: [],
+        specialRequests: "",
+        agreeToTerms: false
+      });
+    } catch (error) {
+      setSubmitError("Registration failed. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   const festivals = [
     {
       name: "Lollapalooza",
