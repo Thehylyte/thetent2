@@ -149,6 +149,57 @@ export default function ArtistDashboard() {
     "6:00 PM",
   ];
 
+  const barberServices = [
+    {
+      id: "signature-cut",
+      name: "Signature Cut",
+      description: "Complete hair styling with premium products",
+      duration: "45 min",
+      price: "Complimentary",
+      icon: "✂️"
+    },
+    {
+      id: "beard-trim",
+      name: "Beard Trim & Shape",
+      description: "Professional beard grooming and shaping",
+      duration: "25 min",
+      price: "Complimentary",
+      icon: "🪒"
+    },
+    {
+      id: "hot-towel-shave",
+      name: "Hot Towel Shave",
+      description: "Traditional hot towel straight razor shave",
+      duration: "35 min",
+      price: "Complimentary",
+      icon: "🔥"
+    },
+    {
+      id: "cut-and-shave",
+      name: "The Full Service",
+      description: "Complete cut, beard trim, and hot towel finish",
+      duration: "60 min",
+      price: "Complimentary",
+      icon: "👑"
+    },
+    {
+      id: "styling-only",
+      name: "Styling & Finish",
+      description: "Hair styling with premium products (no cut)",
+      duration: "20 min",
+      price: "Complimentary",
+      icon: "💫"
+    },
+    {
+      id: "grooming-kit",
+      name: "VIP Grooming Kit",
+      description: "Take-home premium grooming products",
+      duration: "5 min",
+      price: "Complimentary",
+      icon: "🎁"
+    }
+  ];
+
   useEffect(() => {
     // Check if user is logged in
     const isLoggedIn = localStorage.getItem("artistLoggedIn");
