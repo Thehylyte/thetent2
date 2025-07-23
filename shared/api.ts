@@ -10,3 +10,26 @@
 export interface DemoResponse {
   message: string;
 }
+
+/**
+ * Artist registration request and response types
+ */
+export interface ArtistRegistrationRequest {
+  artistName: string;
+  legalName: string;
+  email: string;
+  phone: string;
+  managerName: string;
+  managementEmail: string;
+  genre: string;
+  yearsActive: string;
+  selectedFestivals: string[];
+  specialRequests: string;
+  agreeToTerms: boolean;
+}
+
+export interface ArtistRegistrationResponse {
+  success: boolean;
+  message: string;
+  registrationId?: string;
+}
