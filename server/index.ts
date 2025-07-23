@@ -17,19 +17,19 @@ export function createServer() {
 
   console.log("📦 Setting up API routes...");
 
-  // Example API routes
-  app.get("/api/ping", (_req, res) => {
+  // API routes (without /api prefix since middleware adds it)
+  app.get("/ping", (_req, res) => {
     res.json({ message: "Hello from Express server v2!" });
   });
 
-  app.get("/api/demo", handleDemo);
+  app.get("/demo", handleDemo);
 
   console.log("🎨 Registering artist registration routes...");
   console.log("handleArtistRegistration:", typeof handleArtistRegistration);
   console.log("handleGetRegistrations:", typeof handleGetRegistrations);
 
-  app.post("/api/artist-registration", handleArtistRegistration);
-  app.get("/api/artist-registrations", handleGetRegistrations);
+  app.post("/artist-registration", handleArtistRegistration);
+  app.get("/artist-registrations", handleGetRegistrations);
 
   console.log("✅ Express server created with routes registered");
   return app;
