@@ -31,6 +31,8 @@ export default function ArtistDashboard() {
   const [selectedService, setSelectedService] = useState("");
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
+  const [showBarberDetails, setShowBarberDetails] = useState(false);
+  const [selectedBarberService, setSelectedBarberService] = useState("");
 
   const upcomingFestivals = [
     {
