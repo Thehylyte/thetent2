@@ -1,5 +1,10 @@
 {
-  "name": "fusion-starter",
+  "name": "the-tent-app",
+  "displayName": "The Tent",
+  "description": "VIP festival hospitality for artists",
+  "version": "1.0.0",
+  "author": "The Tent, LLC",
+  "homepage": "https://thetent.club",
   "private": true,
   "type": "module",
   "pkg": {
