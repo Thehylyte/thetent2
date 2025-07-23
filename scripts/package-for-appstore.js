@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-console.log('📱 Creating App Store Deployment Package...\n');
+console.log("📱 Creating App Store Deployment Package...\n");
 
 // Create deployment package directory
-const packageDir = 'app-store-package';
-const timestamp = new Date().toISOString().split('T')[0];
+const packageDir = "app-store-package";
+const timestamp = new Date().toISOString().split("T")[0];
 const fullPackageDir = `${packageDir}-${timestamp}`;
 
 if (!fs.existsSync(fullPackageDir)) {
@@ -22,34 +22,36 @@ const appMetadata = {
   version: "1.0.0",
   build: "1",
   category: "Lifestyle",
-  description: "Exclusive VIP hospitality services for artists performing at major music festivals.",
-  keywords: "music festival, VIP, hospitality, artist services, luxury, festival experience, concierge, entertainment",
+  description:
+    "Exclusive VIP hospitality services for artists performing at major music festivals.",
+  keywords:
+    "music festival, VIP, hospitality, artist services, luxury, festival experience, concierge, entertainment",
   supportEmail: "hello@thetent.club",
   privacyPolicy: "https://thetent.club/privacy",
   termsOfService: "https://thetent.club/terms",
   website: "https://thetent.club",
-  
+
   // App Store specific
   appStoreInfo: {
     primaryLanguage: "English (U.S.)",
     contentRating: "4+",
     pricing: "Free",
     availability: "All countries/regions",
-    
+
     // Required screenshots sizes
     screenshotRequirements: {
       "iPhone 6.7": "1290 x 2796 pixels", // iPhone 14 Pro Max
       "iPhone 6.1": "1179 x 2556 pixels", // iPhone 14
       "iPhone 5.5": "1242 x 2208 pixels", // iPhone 8 Plus
-      "iPad Pro 12.9": "2048 x 2732 pixels"
-    }
-  }
+      "iPad Pro 12.9": "2048 x 2732 pixels",
+    },
+  },
 };
 
 // Create app metadata file
 fs.writeFileSync(
-  path.join(fullPackageDir, 'app-metadata.json'),
-  JSON.stringify(appMetadata, null, 2)
+  path.join(fullPackageDir, "app-metadata.json"),
+  JSON.stringify(appMetadata, null, 2),
 );
 
 // Create deployment checklist
@@ -125,7 +127,10 @@ npm run mobile:ios
 \`\`\`
 `;
 
-fs.writeFileSync(path.join(fullPackageDir, 'DEPLOYMENT_CHECKLIST.md'), deploymentChecklist);
+fs.writeFileSync(
+  path.join(fullPackageDir, "DEPLOYMENT_CHECKLIST.md"),
+  deploymentChecklist,
+);
 
 // Create App Store description
 const appStoreDescription = `The Tent provides exclusive VIP hospitality services for artists performing at major music festivals.
@@ -163,7 +168,10 @@ UPCOMING FESTIVALS:
 
 Experience the difference that luxury hospitality makes. Download The Tent today and elevate your festival experience.`;
 
-fs.writeFileSync(path.join(fullPackageDir, 'app-store-description.txt'), appStoreDescription);
+fs.writeFileSync(
+  path.join(fullPackageDir, "app-store-description.txt"),
+  appStoreDescription,
+);
 
 // Create build instructions
 const buildInstructions = `# iOS Build Instructions
@@ -258,7 +266,10 @@ Or manually open: \`ios/App/App.xcodeproj\`
 - App Store Review Guidelines: https://developer.apple.com/app-store/review/guidelines/
 `;
 
-fs.writeFileSync(path.join(fullPackageDir, 'BUILD_INSTRUCTIONS.md'), buildInstructions);
+fs.writeFileSync(
+  path.join(fullPackageDir, "BUILD_INSTRUCTIONS.md"),
+  buildInstructions,
+);
 
 // Create icon requirements file
 const iconRequirements = `# App Icon Requirements
@@ -294,18 +305,21 @@ If you need to generate icons manually:
 3. Replace files in ios/App/App/Assets.xcassets/AppIcon.appiconset/
 `;
 
-fs.writeFileSync(path.join(fullPackageDir, 'ICON_REQUIREMENTS.md'), iconRequirements);
+fs.writeFileSync(
+  path.join(fullPackageDir, "ICON_REQUIREMENTS.md"),
+  iconRequirements,
+);
 
 // Copy essential files if they exist
 const filesToCopy = [
-  { src: 'capacitor.config.ts', dest: 'capacitor.config.ts' },
-  { src: 'app-config.json', dest: 'app-config.json' },
-  { src: 'resources/icon.svg', dest: 'resources/icon.svg' },
-  { src: 'resources/splash.svg', dest: 'resources/splash.svg' },
-  { src: 'MOBILE_APP.md', dest: 'MOBILE_APP.md' }
+  { src: "capacitor.config.ts", dest: "capacitor.config.ts" },
+  { src: "app-config.json", dest: "app-config.json" },
+  { src: "resources/icon.svg", dest: "resources/icon.svg" },
+  { src: "resources/splash.svg", dest: "resources/splash.svg" },
+  { src: "MOBILE_APP.md", dest: "MOBILE_APP.md" },
 ];
 
-filesToCopy.forEach(file => {
+filesToCopy.forEach((file) => {
   if (fs.existsSync(file.src)) {
     const destDir = path.dirname(path.join(fullPackageDir, file.dest));
     if (!fs.existsSync(destDir)) {
@@ -334,8 +348,8 @@ else
 fi
 `;
 
-fs.writeFileSync(path.join(fullPackageDir, 'create-zip.sh'), zipScript);
-fs.chmodSync(path.join(fullPackageDir, 'create-zip.sh'), 0o755);
+fs.writeFileSync(path.join(fullPackageDir, "create-zip.sh"), zipScript);
+fs.chmodSync(path.join(fullPackageDir, "create-zip.sh"), 0o755);
 
 // Create final README
 const packageReadme = `# The Tent - App Store Deployment Package
@@ -382,23 +396,23 @@ Generated: ${new Date().toISOString()}
 Ready to submit to the App Store! 🎉
 `;
 
-fs.writeFileSync(path.join(fullPackageDir, 'README.md'), packageReadme);
+fs.writeFileSync(path.join(fullPackageDir, "README.md"), packageReadme);
 
 console.log(`✅ App Store deployment package created: ${fullPackageDir}/`);
-console.log('\n📋 Package includes:');
-console.log('   • Complete deployment checklist');
-console.log('   • Step-by-step build instructions');
-console.log('   • App Store description and metadata');
-console.log('   • Icon requirements and assets');
-console.log('   • Configuration files');
+console.log("\n📋 Package includes:");
+console.log("   • Complete deployment checklist");
+console.log("   • Step-by-step build instructions");
+console.log("   • App Store description and metadata");
+console.log("   • Icon requirements and assets");
+console.log("   • Configuration files");
 
-console.log('\n🚀 Next steps:');
+console.log("\n🚀 Next steps:");
 console.log(`   1. Review the contents of ${fullPackageDir}/`);
-console.log('   2. Follow DEPLOYMENT_CHECKLIST.md');
-console.log('   3. Open the iOS project with: npm run mobile:ios');
-console.log('   4. Build and upload to App Store Connect');
+console.log("   2. Follow DEPLOYMENT_CHECKLIST.md");
+console.log("   3. Open the iOS project with: npm run mobile:ios");
+console.log("   4. Build and upload to App Store Connect");
 
-console.log('\n📦 To create a ZIP for easy sharing:');
+console.log("\n📦 To create a ZIP for easy sharing:");
 console.log(`   cd ${fullPackageDir} && ./create-zip.sh`);
 
-console.log('\n🎪 Ready to launch The Tent on the App Store!');
+console.log("\n🎪 Ready to launch The Tent on the App Store!");

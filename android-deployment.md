@@ -21,12 +21,14 @@ npm run mobile:android
 ### 2. Configure App in Android Studio
 
 1. **App Identity**
+
    - Application ID: `club.thetent.app`
    - App Name: `The Tent`
    - Version Name: `1.0.0`
    - Version Code: `1`
 
 2. **Build Configuration**
+
    - Target SDK: 34 (Android 14)
    - Minimum SDK: 22 (Android 5.1)
    - Compile SDK: 34
@@ -46,6 +48,7 @@ npm run mobile:android
 ### 4. Google Play Console Setup
 
 1. **Create App**
+
    - App Name: "The Tent"
    - Default Language: English (US)
    - App Category: Lifestyle
@@ -59,6 +62,7 @@ npm run mobile:android
 ### 5. App Metadata
 
 **Play Store Description:**
+
 ```
 Experience exclusive VIP hospitality services designed specifically for artists performing at major music festivals.
 
@@ -92,7 +96,8 @@ Join the exclusive community of artists who trust The Tent for their festival ho
 
 **Feature Graphic:** 1024 x 500 pixels
 **App Icon:** 512 x 512 pixels
-**Screenshots:** 
+**Screenshots:**
+
 - Phone: 1080 x 1920 pixels (minimum 2, maximum 8)
 - Tablet: 1200 x 1920 pixels (optional)
 
@@ -114,6 +119,7 @@ Join the exclusive community of artists who trust The Tent for their festival ho
 ### 9. Release Management
 
 **Release Tracks:**
+
 - **Internal Testing:** Team testing
 - **Closed Testing:** Beta testers
 - **Open Testing:** Public beta
@@ -126,7 +132,7 @@ Join the exclusive community of artists who trust The Tent for their festival ho
 - **Target Android Version:** Android 5.1+ (API 22+)
 - **Device Support:** Phones and tablets
 - **Orientation:** Portrait (primary)
-- **Permissions:** 
+- **Permissions:**
   - `android.permission.INTERNET`
   - `android.permission.ACCESS_NETWORK_STATE`
 - **Privacy Policy Required:** Yes (https://thetent.club/privacy)

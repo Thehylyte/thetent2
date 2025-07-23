@@ -11,21 +11,21 @@
   "privacyPolicy": "https://thetent.club/privacy",
   "termsOfService": "https://thetent.club/terms",
   "website": "https://thetent.club",
-  
+
   "appStoreInfo": {
     "primaryLanguage": "English (U.S.)",
     "contentRating": "4+",
     "pricing": "Free",
     "availability": "All countries/regions",
-    
+
     "screenshotRequirements": {
       "iPhone 6.7": "1290 x 2796 pixels",
-      "iPhone 6.1": "1179 x 2556 pixels", 
+      "iPhone 6.1": "1179 x 2556 pixels",
       "iPhone 5.5": "1242 x 2208 pixels",
       "iPad Pro 12.9": "2048 x 2732 pixels"
     }
   },
-  
+
   "technicalDetails": {
     "platform": "iOS",
     "minimumOSVersion": "13.0",

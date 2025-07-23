@@ -1,11 +1,11 @@
-import type { CapacitorConfig } from '@capacitor/cli';
+import type { CapacitorConfig } from "@capacitor/cli";
 
 const config: CapacitorConfig = {
-  appId: 'club.thetent.app',
-  appName: 'The Tent',
-  webDir: 'dist/spa',
+  appId: "club.thetent.app",
+  appName: "The Tent",
+  webDir: "dist/spa",
   server: {
-    androidScheme: 'https'
+    androidScheme: "https",
   },
   plugins: {
     SplashScreen: {
@@ -24,16 +24,16 @@ const config: CapacitorConfig = {
       useDialog: true,
     },
     StatusBar: {
-      style: 'default',
-      backgroundColor: '#6366f1'
-    }
+      style: "default",
+      backgroundColor: "#6366f1",
+    },
   },
   ios: {
-    contentInset: 'automatic'
+    contentInset: "automatic",
   },
   android: {
-    allowMixedContent: true
-  }
+    allowMixedContent: true,
+  },
 };
 
 export default config;

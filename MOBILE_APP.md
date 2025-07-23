@@ -7,12 +7,14 @@ The Tent mobile app is a native iOS and Android application built using Capacito
 ## Architecture
 
 ### Technology Stack
+
 - **Frontend**: React + TypeScript + Tailwind CSS
 - **Mobile Framework**: Capacitor 7.x
 - **Build Tool**: Vite
 - **Platforms**: iOS 13.0+, Android 5.1+ (API 22+)
 
 ### Project Structure
+
 ```
 ├── client/                 # React web application
 ├── ios/                   # iOS native project (generated)
@@ -27,6 +29,7 @@ The Tent mobile app is a native iOS and Android application built using Capacito
 ## Features
 
 ### Core Functionality
+
 - ✅ Artist registration and authentication
 - ✅ Festival service booking
 - ✅ VIP amenity access
@@ -35,6 +38,7 @@ The Tent mobile app is a native iOS and Android application built using Capacito
 - ✅ Mobile-optimized navigation
 
 ### Mobile-Specific Features
+
 - ✅ Native splash screen
 - ✅ Status bar configuration
 - ✅ Safe area handling
@@ -45,6 +49,7 @@ The Tent mobile app is a native iOS and Android application built using Capacito
 ## Development Workflow
 
 ### Prerequisites
+
 - Node.js 18+
 - npm or yarn
 - iOS: Xcode 14+ (macOS required)
@@ -85,6 +90,7 @@ npm run mobile:sync
 ## App Store Information
 
 ### App Identity
+
 - **Name**: The Tent
 - **Subtitle**: VIP Festival Hospitality
 - **Bundle ID**: club.thetent.app
@@ -93,9 +99,11 @@ npm run mobile:sync
 - **Target Audience**: 17+ (Business/Professional)
 
 ### Description
+
 The Tent provides exclusive VIP hospitality services for artists performing at major music festivals. Our mobile app offers seamless access to premium amenities, personalized concierge services, and luxury accommodations designed specifically for touring musicians.
 
 ### Key Features for App Store
+
 - 🎪 **Exclusive Access**: VIP amenities at major festivals
 - 👤 **Personal Concierge**: Dedicated support team
 - 💆 **Wellness Services**: Grooming and relaxation facilities
@@ -104,6 +112,7 @@ The Tent provides exclusive VIP hospitality services for artists performing at m
 - 🔒 **Secure Platform**: Verified artist-only access
 
 ### Screenshots Strategy
+
 1. **Hero Screen**: Main dashboard with festival selection
 2. **Service Booking**: VIP amenities booking interface
 3. **Artist Profile**: Registration and verification flow
@@ -113,18 +122,21 @@ The Tent provides exclusive VIP hospitality services for artists performing at m
 ## Privacy & Security
 
 ### Data Collection
+
 - Artist registration information
 - Festival preferences and bookings
 - Usage analytics (anonymized)
 - Network connectivity status
 
 ### Privacy Compliance
+
 - GDPR compliant
-- CCPA compliant  
+- CCPA compliant
 - Privacy Policy: https://thetent.club/privacy
 - Terms of Service: https://thetent.club/terms
 
 ### Security Features
+
 - HTTPS-only communication
 - Secure credential storage
 - Encrypted data transmission
@@ -133,12 +145,14 @@ The Tent provides exclusive VIP hospitality services for artists performing at m
 ## Performance Optimization
 
 ### Web Performance
+
 - Code splitting and lazy loading
 - Optimized image delivery
 - Minimal bundle size
 - Fast loading animations
 
 ### Mobile Performance
+
 - Native navigation transitions
 - Efficient memory usage
 - Battery optimization
@@ -147,25 +161,28 @@ The Tent provides exclusive VIP hospitality services for artists performing at m
 ## Deployment
 
 ### iOS App Store
+
 - **Account**: Apple Developer Program ($99/year)
 - **Review Time**: 24-48 hours typically
 - **Requirements**: Xcode, macOS, signing certificates
 - **Distribution**: App Store Connect
 
 ### Google Play Store
+
 - **Account**: Google Play Console ($25 one-time)
 - **Review Time**: 3-7 days typically
 - **Requirements**: Android Studio, signing key
 - **Distribution**: Google Play Console
 
 ### Automated Deployment
+
 Use the deployment script for streamlined builds:
 
 ```bash
 # Deploy to iOS
 ./scripts/deploy-mobile.sh ios
 
-# Deploy to Android  
+# Deploy to Android
 ./scripts/deploy-mobile.sh android
 
 # Prepare both platforms
@@ -175,12 +192,14 @@ Use the deployment script for streamlined builds:
 ## Monitoring & Analytics
 
 ### Performance Monitoring
+
 - App launch time tracking
 - Screen load performance
 - Network request monitoring
 - Crash reporting
 
 ### User Analytics
+
 - Registration funnel analysis
 - Feature usage tracking
 - Festival booking patterns
@@ -189,12 +208,14 @@ Use the deployment script for streamlined builds:
 ## Maintenance
 
 ### Regular Updates
+
 - **Security patches**: Monthly
 - **Feature updates**: Quarterly
 - **Platform updates**: As needed
 - **Content updates**: Ongoing
 
 ### Platform Compatibility
+
 - iOS: Support latest 3 major versions
 - Android: Support API 22+ (covers 95%+ devices)
 - Regular testing on popular devices
@@ -202,11 +223,13 @@ Use the deployment script for streamlined builds:
 ## Support & Documentation
 
 ### Developer Resources
+
 - [Capacitor Documentation](https://capacitorjs.com/docs)
 - [iOS Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/)
 - [Android Design Guidelines](https://material.io/design)
 
 ### Troubleshooting
+
 - Check `ios-deployment.md` for iOS-specific issues
 - Check `android-deployment.md` for Android-specific issues
 - Review Capacitor logs for native bridge issues

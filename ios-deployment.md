@@ -21,12 +21,14 @@ npm run mobile:ios
 ### 2. Configure App in Xcode
 
 1. **App Identity**
+
    - Bundle Identifier: `club.thetent.app`
    - Display Name: `The Tent`
    - Version: `1.0.0`
    - Build Number: `1`
 
 2. **Team & Signing**
+
    - Select your Apple Developer Team
    - Enable "Automatically manage signing"
 
@@ -37,11 +39,13 @@ npm run mobile:ios
 ### 3. App Store Connect Setup
 
 1. **Create App Record**
+
    - App Name: "The Tent"
    - SKU: `thetent-ios-app`
    - Bundle ID: `club.thetent.app`
 
 2. **App Information**
+
    - Primary Category: Lifestyle
    - Secondary Category: Entertainment
    - Content Rights: Does not use third-party content
@@ -53,12 +57,13 @@ npm run mobile:ios
 ### 4. App Metadata
 
 **App Store Description:**
+
 ```
-The Tent provides exclusive VIP hospitality services for artists performing at major music festivals. 
+The Tent provides exclusive VIP hospitality services for artists performing at major music festivals.
 
 Features:
 • Priority access to premium amenities
-• Personalized concierge services  
+• Personalized concierge services
 • Luxury grooming and wellness services
 • Exclusive lounge access
 • Festival scheduling and coordination
@@ -73,7 +78,7 @@ Designed specifically for touring artists, The Tent ensures your festival experi
 ### 5. Screenshots Required
 
 - **6.7" iPhone (iPhone 14 Pro Max)**: 3 screenshots minimum
-- **6.1" iPhone (iPhone 14)**: 3 screenshots minimum  
+- **6.1" iPhone (iPhone 14)**: 3 screenshots minimum
 - **5.5" iPhone (iPhone 8 Plus)**: 3 screenshots minimum
 - **12.9" iPad Pro**: 3 screenshots minimum
 

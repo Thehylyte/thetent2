@@ -1,8 +1,8 @@
 // Simple app icon generation script
 // In production, you'd use a proper icon generation tool like @capacitor/assets
 
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 // SVG icon template for The Tent
 const iconSvg = `
@@ -38,13 +38,15 @@ const iconSvg = `
 `;
 
 // Create icons directory if it doesn't exist
-const iconsDir = path.join(__dirname, '..', 'resources', 'icons');
+const iconsDir = path.join(__dirname, "..", "resources", "icons");
 if (!fs.existsSync(iconsDir)) {
   fs.mkdirSync(iconsDir, { recursive: true });
 }
 
 // Write the SVG icon
-fs.writeFileSync(path.join(iconsDir, 'icon.svg'), iconSvg);
+fs.writeFileSync(path.join(iconsDir, "icon.svg"), iconSvg);
 
-console.log('✅ App icon SVG generated at resources/icons/icon.svg');
-console.log('📱 To generate all required sizes, use: npm install -g @capacitor/assets && npx capacitor-assets generate');
+console.log("✅ App icon SVG generated at resources/icons/icon.svg");
+console.log(
+  "📱 To generate all required sizes, use: npm install -g @capacitor/assets && npx capacitor-assets generate",
+);
