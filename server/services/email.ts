@@ -2,15 +2,15 @@ import { ArtistRegistrationRequest } from "@shared/api";
 
 // Email configuration (in production, use environment variables)
 const EMAIL_CONFIG = {
-  adminEmail: 'jg@thetent.club',
-  fromEmail: 'noreply@thetent.club',
-  appName: 'The Tent'
+  adminEmail: "jg@thetent.club",
+  fromEmail: "noreply@thetent.club",
+  appName: "The Tent",
 };
 
 // Email templates
 const generateArtistConfirmationEmail = (
   registration: ArtistRegistrationRequest & { id: string; timestamp: Date },
-  loginCredentials: { email: string; password: string }
+  loginCredentials: { email: string; password: string },
 ) => {
   return {
     to: registration.email,
@@ -35,7 +35,7 @@ const generateArtistConfirmationEmail = (
           <p><strong>Artist Name:</strong> ${registration.artistName}</p>
           <p><strong>Email:</strong> ${registration.email}</p>
           <p><strong>Genre:</strong> ${registration.genre}</p>
-          <p><strong>Selected Festivals:</strong> ${registration.selectedFestivals.join(', ') || 'None selected'}</p>
+          <p><strong>Selected Festivals:</strong> ${registration.selectedFestivals.join(", ") || "None selected"}</p>
           <p><strong>Submitted:</strong> ${registration.timestamp.toLocaleString()}</p>
         </div>
 
@@ -43,7 +43,7 @@ const generateArtistConfirmationEmail = (
           <h3 style="margin-top: 0; color: #15803d;">🔐 Your Login Credentials</h3>
           <p style="margin: 10px 0;"><strong>Login Email:</strong> ${loginCredentials.email}</p>
           <p style="margin: 10px 0;"><strong>Password:</strong> <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 4px; font-family: monospace;">${loginCredentials.password}</code></p>
-          <p style="margin: 10px 0; color: #15803d;"><strong>Login URL:</strong> <a href="${process.env.FRONTEND_URL || 'http://localhost:5173'}/artist-login" style="color: #16a34a; text-decoration: none; font-weight: bold;">Access Your Dashboard</a></p>
+          <p style="margin: 10px 0; color: #15803d;"><strong>Login URL:</strong> <a href="${process.env.FRONTEND_URL || "http://localhost:5173"}/artist-login" style="color: #16a34a; text-decoration: none; font-weight: bold;">Access Your Dashboard</a></p>
           <div style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 10px; margin-top: 15px;">
             <p style="margin: 0; color: #92400e; font-size: 14px;"><strong>Important:</strong> Save these credentials securely. You'll need them to access your artist dashboard and manage your festival reservations.</p>
           </div>
@@ -80,13 +80,13 @@ Registration Details:
 - Artist Name: ${registration.artistName}
 - Email: ${registration.email}
 - Genre: ${registration.genre}
-- Selected Festivals: ${registration.selectedFestivals.join(', ') || 'None selected'}
+- Selected Festivals: ${registration.selectedFestivals.join(", ") || "None selected"}
 - Submitted: ${registration.timestamp.toLocaleString()}
 
 🔐 YOUR LOGIN CREDENTIALS:
 - Login Email: ${loginCredentials.email}
 - Password: ${loginCredentials.password}
-- Login URL: ${process.env.FRONTEND_URL || 'http://localhost:5173'}/artist-login
+- Login URL: ${process.env.FRONTEND_URL || "http://localhost:5173"}/artist-login
 
 IMPORTANT: Save these credentials securely. You'll need them to access your artist dashboard and manage your festival reservations.
 
@@ -98,11 +98,13 @@ What happens next?
 Need assistance? Contact our artist relations team at hello@thetent.club
 
 © 2024 The Tent. Elevating festival experiences worldwide.
-    `
+    `,
   };
 };
 
-const generateAdminNotificationEmail = (registration: ArtistRegistrationRequest & { id: string; timestamp: Date }) => {
+const generateAdminNotificationEmail = (
+  registration: ArtistRegistrationRequest & { id: string; timestamp: Date },
+) => {
   return {
     to: EMAIL_CONFIG.adminEmail,
     from: EMAIL_CONFIG.fromEmail,
@@ -144,18 +146,23 @@ const generateAdminNotificationEmail = (registration: ArtistRegistrationRequest 
         
         <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 20px 0;">
           <h3 style="margin-top: 0; color: #333;">Festival Selections</h3>
-          ${registration.selectedFestivals.length > 0 
-            ? `<ul style="margin: 0; padding-left: 20px;">${registration.selectedFestivals.map(festival => `<li>${festival}</li>`).join('')}</ul>`
-            : '<p style="color: #666; margin: 0;">No festivals selected</p>'
+          ${
+            registration.selectedFestivals.length > 0
+              ? `<ul style="margin: 0; padding-left: 20px;">${registration.selectedFestivals.map((festival) => `<li>${festival}</li>`).join("")}</ul>`
+              : '<p style="color: #666; margin: 0;">No festivals selected</p>'
           }
         </div>
         
-        ${registration.specialRequests ? `
+        ${
+          registration.specialRequests
+            ? `
         <div style="background: #fefce8; padding: 20px; border-radius: 8px; margin: 20px 0;">
           <h3 style="margin-top: 0; color: #333;">Special Requests</h3>
           <p style="margin: 0; white-space: pre-wrap;">${registration.specialRequests}</p>
         </div>
-        ` : ''}
+        `
+            : ""
+        }
         
         <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 15px; margin: 20px 0;">
           <p style="margin: 0; color: #1e40af;">
@@ -193,69 +200,92 @@ Management Contact:
 - Management Email: ${registration.managementEmail}
 
 Festival Selections:
-${registration.selectedFestivals.length > 0 
-  ? registration.selectedFestivals.map(festival => `- ${festival}`).join('\n')
-  : 'No festivals selected'
+${
+  registration.selectedFestivals.length > 0
+    ? registration.selectedFestivals
+        .map((festival) => `- ${festival}`)
+        .join("\n")
+    : "No festivals selected"
 }
 
-${registration.specialRequests ? `Special Requests:\n${registration.specialRequests}\n` : ''}
+${registration.specialRequests ? `Special Requests:\n${registration.specialRequests}\n` : ""}
 
 Action Required: Please verify this artist's credentials and festival performance schedule within 48 hours.
 
 © 2024 The Tent. Admin Notification System
-    `
+    `,
   };
 };
 
 // Email sending service (mock implementation for demo)
-export const sendEmail = async (emailData: { to: string; from: string; subject: string; html: string; text: string }) => {
+export const sendEmail = async (emailData: {
+  to: string;
+  from: string;
+  subject: string;
+  html: string;
+  text: string;
+}) => {
   // In production, integrate with email service like SendGrid, AWS SES, or Nodemailer
-  console.log('\n🚀 EMAIL NOTIFICATION SENT:');
-  console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+  console.log("\n🚀 EMAIL NOTIFICATION SENT:");
+  console.log(
+    "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+  );
   console.log(`📧 TO: ${emailData.to}`);
   console.log(`📤 FROM: ${emailData.from}`);
   console.log(`📋 SUBJECT: ${emailData.subject}`);
-  console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-  console.log('📄 TEXT CONTENT:');
+  console.log(
+    "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+  );
+  console.log("📄 TEXT CONTENT:");
   console.log(emailData.text);
-  console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
-  
+  console.log(
+    "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n",
+  );
+
   // Simulate email sending delay
-  await new Promise(resolve => setTimeout(resolve, 100));
-  
-  return { success: true, messageId: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}` };
+  await new Promise((resolve) => setTimeout(resolve, 100));
+
+  return {
+    success: true,
+    messageId: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+  };
 };
 
 // Main email notification function
 export const sendRegistrationNotifications = async (
   registration: ArtistRegistrationRequest & { id: string; timestamp: Date },
-  loginCredentials: { email: string; password: string }
+  loginCredentials: { email: string; password: string },
 ) => {
   try {
-    console.log(`\n📨 Sending registration notifications for ${registration.artistName}...`);
-    
+    console.log(
+      `\n📨 Sending registration notifications for ${registration.artistName}...`,
+    );
+
     // Send confirmation email to artist
-    const artistEmail = generateArtistConfirmationEmail(registration, loginCredentials);
+    const artistEmail = generateArtistConfirmationEmail(
+      registration,
+      loginCredentials,
+    );
     const artistResult = await sendEmail(artistEmail);
-    
+
     // Send notification email to admin
     const adminEmail = generateAdminNotificationEmail(registration);
     const adminResult = await sendEmail(adminEmail);
-    
+
     console.log(`✅ Registration notifications sent successfully`);
     console.log(`   Artist confirmation: ${artistResult.messageId}`);
     console.log(`   Admin notification: ${adminResult.messageId}\n`);
-    
+
     return {
       success: true,
       artistEmailId: artistResult.messageId,
-      adminEmailId: adminResult.messageId
+      adminEmailId: adminResult.messageId,
     };
   } catch (error) {
-    console.error('❌ Failed to send registration notifications:', error);
+    console.error("❌ Failed to send registration notifications:", error);
     return {
       success: false,
-      error: error instanceof Error ? error.message : 'Unknown error'
+      error: error instanceof Error ? error.message : "Unknown error",
     };
   }
 };

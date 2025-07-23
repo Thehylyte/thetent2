@@ -1,5 +1,10 @@
 import { Button } from "../components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
 import {
   Users,
@@ -11,7 +16,7 @@ import {
   RefreshCw,
   Eye,
   Menu,
-  X
+  X,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -41,11 +46,11 @@ export default function AdminRegistrations() {
   const fetchRegistrations = async () => {
     setLoading(true);
     setError("");
-    
+
     try {
-      const response = await fetch('/api/artist-registrations');
+      const response = await fetch("/api/artist-registrations");
       const data = await response.json();
-      
+
       if (data.success) {
         setRegistrations(data.registrations);
       } else {
@@ -164,7 +169,9 @@ export default function AdminRegistrations() {
             <div className="flex items-center justify-center gap-6 text-sm">
               <div className="flex items-center">
                 <Users className="w-4 h-4 mr-2 text-tent-purple" />
-                <span className="font-medium">{registrations.length} Total Registrations</span>
+                <span className="font-medium">
+                  {registrations.length} Total Registrations
+                </span>
               </div>
               <div className="flex items-center">
                 <Clock className="w-4 h-4 mr-2 text-tent-blue" />
@@ -195,7 +202,9 @@ export default function AdminRegistrations() {
           {!loading && !error && registrations.length === 0 && (
             <div className="text-center py-12">
               <Users className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">No Registrations Yet</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                No Registrations Yet
+              </h3>
               <p className="text-muted-foreground">
                 Artist registrations will appear here once submitted.
               </p>
@@ -205,12 +214,19 @@ export default function AdminRegistrations() {
           {!loading && !error && registrations.length > 0 && (
             <div className="space-y-6">
               {registrations.map((registration) => (
-                <Card key={registration.id} className="border-tent-blue/20 hover:border-tent-blue/40 transition-colors">
+                <Card
+                  key={registration.id}
+                  className="border-tent-blue/20 hover:border-tent-blue/40 transition-colors"
+                >
                   <CardHeader>
                     <div className="flex items-center justify-between">
                       <div>
-                        <CardTitle className="text-xl font-bold">{registration.artistName}</CardTitle>
-                        <p className="text-muted-foreground">{registration.legalName}</p>
+                        <CardTitle className="text-xl font-bold">
+                          {registration.artistName}
+                        </CardTitle>
+                        <p className="text-muted-foreground">
+                          {registration.legalName}
+                        </p>
                       </div>
                       <div className="flex items-center space-x-2">
                         <Badge className="bg-tent-purple/20 text-tent-purple border-tent-purple/30">
@@ -223,7 +239,7 @@ export default function AdminRegistrations() {
                           className="border-tent-blue/30 hover:bg-tent-blue/10"
                         >
                           <Eye className="w-4 h-4 mr-1" />
-                          {expandedCards.has(registration.id) ? 'Less' : 'More'}
+                          {expandedCards.has(registration.id) ? "Less" : "More"}
                         </Button>
                       </div>
                     </div>
@@ -240,23 +256,34 @@ export default function AdminRegistrations() {
                       </div>
                       <div className="flex items-center">
                         <Music className="w-4 h-4 mr-2 text-tent-purple" />
-                        <span className="text-sm">{registration.yearsActive} years active</span>
+                        <span className="text-sm">
+                          {registration.yearsActive} years active
+                        </span>
                       </div>
                       <div className="flex items-center">
                         <Calendar className="w-4 h-4 mr-2 text-tent-orange" />
-                        <span className="text-sm">{formatDate(registration.timestamp)}</span>
+                        <span className="text-sm">
+                          {formatDate(registration.timestamp)}
+                        </span>
                       </div>
                     </div>
 
                     {registration.selectedFestivals.length > 0 && (
                       <div className="mb-4">
-                        <h4 className="font-medium mb-2">Selected Festivals:</h4>
+                        <h4 className="font-medium mb-2">
+                          Selected Festivals:
+                        </h4>
                         <div className="flex flex-wrap gap-2">
-                          {registration.selectedFestivals.map((festival, index) => (
-                            <Badge key={index} className="bg-tent-orange/20 text-tent-orange border-tent-orange/30">
-                              {festival}
-                            </Badge>
-                          ))}
+                          {registration.selectedFestivals.map(
+                            (festival, index) => (
+                              <Badge
+                                key={index}
+                                className="bg-tent-orange/20 text-tent-orange border-tent-orange/30"
+                              >
+                                {festival}
+                              </Badge>
+                            ),
+                          )}
                         </div>
                       </div>
                     )}
@@ -264,16 +291,20 @@ export default function AdminRegistrations() {
                     {expandedCards.has(registration.id) && (
                       <div className="border-t border-border/50 pt-4 space-y-4">
                         <div>
-                          <h4 className="font-medium mb-2">Management Contact:</h4>
+                          <h4 className="font-medium mb-2">
+                            Management Contact:
+                          </h4>
                           <div className="grid md:grid-cols-2 gap-2 text-sm text-muted-foreground">
                             <div>Manager: {registration.managerName}</div>
                             <div>Email: {registration.managementEmail}</div>
                           </div>
                         </div>
-                        
+
                         {registration.specialRequests && (
                           <div>
-                            <h4 className="font-medium mb-2">Special Requests:</h4>
+                            <h4 className="font-medium mb-2">
+                              Special Requests:
+                            </h4>
                             <p className="text-sm text-muted-foreground bg-background/50 p-3 rounded-lg">
                               {registration.specialRequests}
                             </p>
@@ -282,7 +313,10 @@ export default function AdminRegistrations() {
 
                         <div className="flex items-center justify-between text-xs text-muted-foreground">
                           <span>Registration ID: {registration.id}</span>
-                          <span>Terms Agreed: {registration.agreeToTerms ? '✓' : '✗'}</span>
+                          <span>
+                            Terms Agreed:{" "}
+                            {registration.agreeToTerms ? "✓" : "✗"}
+                          </span>
                         </div>
                       </div>
                     )}
@@ -311,7 +345,8 @@ export default function AdminRegistrations() {
             </Badge>
           </div>
           <p className="text-muted-foreground">
-            &copy; 2024 The Tent. Admin Dashboard - Artist Registration Management
+            &copy; 2024 The Tent. Admin Dashboard - Artist Registration
+            Management
           </p>
         </div>
       </footer>

@@ -21,7 +21,10 @@ export default function ArtistRegistration() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState("");
-  const [loginCredentials, setLoginCredentials] = useState<{email: string; password: string} | null>(null);
+  const [loginCredentials, setLoginCredentials] = useState<{
+    email: string;
+    password: string;
+  } | null>(null);
 
   // Form state
   const [formData, setFormData] = useState({
@@ -35,7 +38,7 @@ export default function ArtistRegistration() {
     yearsActive: "",
     selectedFestivals: [] as string[],
     specialRequests: "",
-    agreeToTerms: false
+    agreeToTerms: false,
   });
 
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
@@ -100,16 +103,16 @@ export default function ArtistRegistration() {
     setSubmitError("");
 
     try {
-      const response = await fetch('/api/artist-registration', {
-        method: 'POST',
+      const response = await fetch("/api/artist-registration", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
 
       if (!response.ok) {
-        throw new Error('Registration failed');
+        throw new Error("Registration failed");
       }
 
       const result = await response.json();
@@ -129,7 +132,7 @@ export default function ArtistRegistration() {
         yearsActive: "",
         selectedFestivals: [],
         specialRequests: "",
-        agreeToTerms: false
+        agreeToTerms: false,
       });
     } catch (error) {
       setSubmitError("Registration failed. Please try again.");
@@ -393,17 +396,29 @@ export default function ArtistRegistration() {
                   <div className="bg-green-500/20 border border-green-300 text-green-700 px-4 py-3 rounded-lg">
                     <div className="flex items-center">
                       <CheckCircle className="w-5 h-5 mr-2" />
-                      <span className="font-medium">Registration Successful!</span>
+                      <span className="font-medium">
+                        Registration Successful!
+                      </span>
                     </div>
                     <p className="text-sm mt-1">
-                      Thank you for registering. Check your email for login credentials and further instructions.
+                      Thank you for registering. Check your email for login
+                      credentials and further instructions.
                     </p>
                     {loginCredentials && (
                       <div className="mt-3 p-3 bg-white/50 rounded border border-green-400">
-                        <p className="font-medium text-sm mb-2">🔐 Your Login Credentials:</p>
+                        <p className="font-medium text-sm mb-2">
+                          🔐 Your Login Credentials:
+                        </p>
                         <div className="text-xs space-y-1">
-                          <p><strong>Email:</strong> {loginCredentials.email}</p>
-                          <p><strong>Password:</strong> <code className="bg-gray-100 px-1 rounded">{loginCredentials.password}</code></p>
+                          <p>
+                            <strong>Email:</strong> {loginCredentials.email}
+                          </p>
+                          <p>
+                            <strong>Password:</strong>{" "}
+                            <code className="bg-gray-100 px-1 rounded">
+                              {loginCredentials.password}
+                            </code>
+                          </p>
                           <p className="mt-2">
                             <a
                               href="/artist-login"
@@ -426,320 +441,407 @@ export default function ArtistRegistration() {
                 )}
 
                 <form onSubmit={handleSubmit} className="space-y-8">
-                {/* Personal Information */}
-                <div>
-                  <h4 className="text-lg font-semibold mb-4 text-tent-purple">
-                    Personal Details
-                  </h4>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium mb-2">
-                        Artist/Stage Name
-                      </label>
-                      <input
-                        type="text"
-                        value={formData.artistName}
-                        onChange={(e) => setFormData({...formData, artistName: e.target.value})}
-                        className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
-                          formErrors.artistName ? 'border-red-500' : 'border-border'
-                        }`}
-                        placeholder="Your stage or artist name"
-                      />
-                      {formErrors.artistName && (
-                        <p className="text-red-500 text-sm mt-1">{formErrors.artistName}</p>
-                      )}
+                  {/* Personal Information */}
+                  <div>
+                    <h4 className="text-lg font-semibold mb-4 text-tent-purple">
+                      Personal Details
+                    </h4>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium mb-2">
+                          Artist/Stage Name
+                        </label>
+                        <input
+                          type="text"
+                          value={formData.artistName}
+                          onChange={(e) =>
+                            setFormData({
+                              ...formData,
+                              artistName: e.target.value,
+                            })
+                          }
+                          className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
+                            formErrors.artistName
+                              ? "border-red-500"
+                              : "border-border"
+                          }`}
+                          placeholder="Your stage or artist name"
+                        />
+                        {formErrors.artistName && (
+                          <p className="text-red-500 text-sm mt-1">
+                            {formErrors.artistName}
+                          </p>
+                        )}
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium mb-2">
+                          Legal Name
+                        </label>
+                        <input
+                          type="text"
+                          value={formData.legalName}
+                          onChange={(e) =>
+                            setFormData({
+                              ...formData,
+                              legalName: e.target.value,
+                            })
+                          }
+                          className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
+                            formErrors.legalName
+                              ? "border-red-500"
+                              : "border-border"
+                          }`}
+                          placeholder="Your legal name"
+                        />
+                        {formErrors.legalName && (
+                          <p className="text-red-500 text-sm mt-1">
+                            {formErrors.legalName}
+                          </p>
+                        )}
+                      </div>
                     </div>
-                    <div>
-                      <label className="block text-sm font-medium mb-2">
-                        Legal Name
-                      </label>
-                      <input
-                        type="text"
-                        value={formData.legalName}
-                        onChange={(e) => setFormData({...formData, legalName: e.target.value})}
-                        className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
-                          formErrors.legalName ? 'border-red-500' : 'border-border'
-                        }`}
-                        placeholder="Your legal name"
-                      />
-                      {formErrors.legalName && (
-                        <p className="text-red-500 text-sm mt-1">{formErrors.legalName}</p>
-                      )}
+                    <div className="grid md:grid-cols-2 gap-4 mt-4">
+                      <div>
+                        <label className="block text-sm font-medium mb-2">
+                          Email Address
+                        </label>
+                        <input
+                          type="email"
+                          value={formData.email}
+                          onChange={(e) =>
+                            setFormData({ ...formData, email: e.target.value })
+                          }
+                          className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
+                            formErrors.email
+                              ? "border-red-500"
+                              : "border-border"
+                          }`}
+                          placeholder="your.email@example.com"
+                        />
+                        {formErrors.email && (
+                          <p className="text-red-500 text-sm mt-1">
+                            {formErrors.email}
+                          </p>
+                        )}
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium mb-2">
+                          Phone Number
+                        </label>
+                        <input
+                          type="tel"
+                          value={formData.phone}
+                          onChange={(e) =>
+                            setFormData({ ...formData, phone: e.target.value })
+                          }
+                          className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
+                            formErrors.phone
+                              ? "border-red-500"
+                              : "border-border"
+                          }`}
+                          placeholder="(555) 123-4567"
+                        />
+                        {formErrors.phone && (
+                          <p className="text-red-500 text-sm mt-1">
+                            {formErrors.phone}
+                          </p>
+                        )}
+                      </div>
                     </div>
                   </div>
-                  <div className="grid md:grid-cols-2 gap-4 mt-4">
-                    <div>
-                      <label className="block text-sm font-medium mb-2">
-                        Email Address
-                      </label>
-                      <input
-                        type="email"
-                        value={formData.email}
-                        onChange={(e) => setFormData({...formData, email: e.target.value})}
-                        className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
-                          formErrors.email ? 'border-red-500' : 'border-border'
-                        }`}
-                        placeholder="your.email@example.com"
-                      />
-                      {formErrors.email && (
-                        <p className="text-red-500 text-sm mt-1">{formErrors.email}</p>
-                      )}
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium mb-2">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                        className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
-                          formErrors.phone ? 'border-red-500' : 'border-border'
-                        }`}
-                        placeholder="(555) 123-4567"
-                      />
-                      {formErrors.phone && (
-                        <p className="text-red-500 text-sm mt-1">{formErrors.phone}</p>
-                      )}
-                    </div>
-                  </div>
-                </div>
 
-                {/* Management Information */}
-                <div>
-                  <h4 className="text-lg font-semibold mb-4 text-tent-purple">
-                    Management Contact
-                  </h4>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium mb-2">
-                        Manager/Agent Name *
-                      </label>
-                      <input
-                        type="text"
-                        value={formData.managerName}
-                        onChange={(e) => setFormData({...formData, managerName: e.target.value})}
-                        className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
-                          formErrors.managerName ? 'border-red-500' : 'border-border'
-                        }`}
-                        placeholder="Manager or agent name"
-                      />
-                      {formErrors.managerName && (
-                        <p className="text-red-500 text-sm mt-1">{formErrors.managerName}</p>
-                      )}
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium mb-2">
-                        Management Email *
-                      </label>
-                      <input
-                        type="email"
-                        value={formData.managementEmail}
-                        onChange={(e) => setFormData({...formData, managementEmail: e.target.value})}
-                        className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
-                          formErrors.managementEmail ? 'border-red-500' : 'border-border'
-                        }`}
-                        placeholder="management@example.com"
-                      />
-                      {formErrors.managementEmail && (
-                        <p className="text-red-500 text-sm mt-1">{formErrors.managementEmail}</p>
-                      )}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Performance Information */}
-                <div>
-                  <h4 className="text-lg font-semibold mb-4 text-tent-purple">
-                    Performance Details
-                  </h4>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium mb-2">
-                        Genre *
-                      </label>
-                      <select
-                        value={formData.genre}
-                        onChange={(e) => setFormData({...formData, genre: e.target.value})}
-                        className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
-                          formErrors.genre ? 'border-red-500' : 'border-border'
-                        }`}>
-                        <option value="">Select your genre</option>
-                        <option value="rock">Rock</option>
-                        <option value="pop">Pop</option>
-                        <option value="hip-hop">Hip Hop</option>
-                        <option value="electronic">Electronic</option>
-                        <option value="country">Country</option>
-                        <option value="folk">Folk</option>
-                        <option value="jazz">Jazz</option>
-                        <option value="classical">Classical</option>
-                        <option value="other">Other</option>
-                      </select>
-                      {formErrors.genre && (
-                        <p className="text-red-500 text-sm mt-1">{formErrors.genre}</p>
-                      )}
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium mb-2">
-                        Years Active *
-                      </label>
-                      <select
-                        value={formData.yearsActive}
-                        onChange={(e) => setFormData({...formData, yearsActive: e.target.value})}
-                        className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
-                          formErrors.yearsActive ? 'border-red-500' : 'border-border'
-                        }`}>
-                        <option value="">Select experience level</option>
-                        <option value="0-2">0-2 years</option>
-                        <option value="3-5">3-5 years</option>
-                        <option value="6-10">6-10 years</option>
-                        <option value="10+">10+ years</option>
-                      </select>
-                      {formErrors.yearsActive && (
-                        <p className="text-red-500 text-sm mt-1">{formErrors.yearsActive}</p>
-                      )}
+                  {/* Management Information */}
+                  <div>
+                    <h4 className="text-lg font-semibold mb-4 text-tent-purple">
+                      Management Contact
+                    </h4>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium mb-2">
+                          Manager/Agent Name *
+                        </label>
+                        <input
+                          type="text"
+                          value={formData.managerName}
+                          onChange={(e) =>
+                            setFormData({
+                              ...formData,
+                              managerName: e.target.value,
+                            })
+                          }
+                          className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
+                            formErrors.managerName
+                              ? "border-red-500"
+                              : "border-border"
+                          }`}
+                          placeholder="Manager or agent name"
+                        />
+                        {formErrors.managerName && (
+                          <p className="text-red-500 text-sm mt-1">
+                            {formErrors.managerName}
+                          </p>
+                        )}
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium mb-2">
+                          Management Email *
+                        </label>
+                        <input
+                          type="email"
+                          value={formData.managementEmail}
+                          onChange={(e) =>
+                            setFormData({
+                              ...formData,
+                              managementEmail: e.target.value,
+                            })
+                          }
+                          className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
+                            formErrors.managementEmail
+                              ? "border-red-500"
+                              : "border-border"
+                          }`}
+                          placeholder="management@example.com"
+                        />
+                        {formErrors.managementEmail && (
+                          <p className="text-red-500 text-sm mt-1">
+                            {formErrors.managementEmail}
+                          </p>
+                        )}
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                {/* Festival Selection */}
-                <div>
-                  <h4 className="text-lg font-semibold mb-4 text-tent-purple">
-                    Festival Reservations
-                  </h4>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Select the festivals where you're performing and would like
-                    to reserve The Tent services:
-                  </p>
-                  <div className="space-y-4">
-                    {festivals.map((festival, index) => (
-                      <Card key={index} className="border-border/50">
-                        <CardContent className="p-4">
-                          <div className="flex items-center justify-between">
-                            <div className="flex items-center space-x-4">
-                              <input
-                                type="checkbox"
-                                id={`festival-${index}`}
-                                checked={formData.selectedFestivals.includes(festival.name)}
-                                onChange={(e) => {
-                                  if (e.target.checked) {
-                                    setFormData({
-                                      ...formData,
-                                      selectedFestivals: [...formData.selectedFestivals, festival.name]
-                                    });
-                                  } else {
-                                    setFormData({
-                                      ...formData,
-                                      selectedFestivals: formData.selectedFestivals.filter(f => f !== festival.name)
-                                    });
-                                  }
-                                }}
-                                className="w-5 h-5 text-tent-purple border-border rounded focus:ring-tent-purple"
-                              />
-                              <div>
-                                <h5 className="font-semibold">
-                                  {festival.name}
-                                </h5>
-                                <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-                                  <div className="flex items-center">
-                                    <MapPin className="w-4 h-4 mr-1" />
-                                    {festival.location}
-                                  </div>
-                                  <div className="flex items-center">
-                                    <Calendar className="w-4 h-4 mr-1" />
-                                    {festival.dates}
+                  {/* Performance Information */}
+                  <div>
+                    <h4 className="text-lg font-semibold mb-4 text-tent-purple">
+                      Performance Details
+                    </h4>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium mb-2">
+                          Genre *
+                        </label>
+                        <select
+                          value={formData.genre}
+                          onChange={(e) =>
+                            setFormData({ ...formData, genre: e.target.value })
+                          }
+                          className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
+                            formErrors.genre
+                              ? "border-red-500"
+                              : "border-border"
+                          }`}
+                        >
+                          <option value="">Select your genre</option>
+                          <option value="rock">Rock</option>
+                          <option value="pop">Pop</option>
+                          <option value="hip-hop">Hip Hop</option>
+                          <option value="electronic">Electronic</option>
+                          <option value="country">Country</option>
+                          <option value="folk">Folk</option>
+                          <option value="jazz">Jazz</option>
+                          <option value="classical">Classical</option>
+                          <option value="other">Other</option>
+                        </select>
+                        {formErrors.genre && (
+                          <p className="text-red-500 text-sm mt-1">
+                            {formErrors.genre}
+                          </p>
+                        )}
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium mb-2">
+                          Years Active *
+                        </label>
+                        <select
+                          value={formData.yearsActive}
+                          onChange={(e) =>
+                            setFormData({
+                              ...formData,
+                              yearsActive: e.target.value,
+                            })
+                          }
+                          className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
+                            formErrors.yearsActive
+                              ? "border-red-500"
+                              : "border-border"
+                          }`}
+                        >
+                          <option value="">Select experience level</option>
+                          <option value="0-2">0-2 years</option>
+                          <option value="3-5">3-5 years</option>
+                          <option value="6-10">6-10 years</option>
+                          <option value="10+">10+ years</option>
+                        </select>
+                        {formErrors.yearsActive && (
+                          <p className="text-red-500 text-sm mt-1">
+                            {formErrors.yearsActive}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Festival Selection */}
+                  <div>
+                    <h4 className="text-lg font-semibold mb-4 text-tent-purple">
+                      Festival Reservations
+                    </h4>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Select the festivals where you're performing and would
+                      like to reserve The Tent services:
+                    </p>
+                    <div className="space-y-4">
+                      {festivals.map((festival, index) => (
+                        <Card key={index} className="border-border/50">
+                          <CardContent className="p-4">
+                            <div className="flex items-center justify-between">
+                              <div className="flex items-center space-x-4">
+                                <input
+                                  type="checkbox"
+                                  id={`festival-${index}`}
+                                  checked={formData.selectedFestivals.includes(
+                                    festival.name,
+                                  )}
+                                  onChange={(e) => {
+                                    if (e.target.checked) {
+                                      setFormData({
+                                        ...formData,
+                                        selectedFestivals: [
+                                          ...formData.selectedFestivals,
+                                          festival.name,
+                                        ],
+                                      });
+                                    } else {
+                                      setFormData({
+                                        ...formData,
+                                        selectedFestivals:
+                                          formData.selectedFestivals.filter(
+                                            (f) => f !== festival.name,
+                                          ),
+                                      });
+                                    }
+                                  }}
+                                  className="w-5 h-5 text-tent-purple border-border rounded focus:ring-tent-purple"
+                                />
+                                <div>
+                                  <h5 className="font-semibold">
+                                    {festival.name}
+                                  </h5>
+                                  <div className="flex items-center space-x-4 text-sm text-muted-foreground">
+                                    <div className="flex items-center">
+                                      <MapPin className="w-4 h-4 mr-1" />
+                                      {festival.location}
+                                    </div>
+                                    <div className="flex items-center">
+                                      <Calendar className="w-4 h-4 mr-1" />
+                                      {festival.dates}
+                                    </div>
                                   </div>
                                 </div>
                               </div>
+                              <Badge
+                                className={
+                                  festival.status === "available"
+                                    ? "bg-green-500/20 text-green-700 border-green-300"
+                                    : "bg-yellow-500/20 text-yellow-700 border-yellow-300"
+                                }
+                              >
+                                {festival.status === "available"
+                                  ? "Available"
+                                  : "Limited"}
+                              </Badge>
                             </div>
-                            <Badge
-                              className={
-                                festival.status === "available"
-                                  ? "bg-green-500/20 text-green-700 border-green-300"
-                                  : "bg-yellow-500/20 text-yellow-700 border-yellow-300"
-                              }
-                            >
-                              {festival.status === "available"
-                                ? "Available"
-                                : "Limited"}
-                            </Badge>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    ))}
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </div>
                   </div>
-                </div>
 
-                {/* Additional Information */}
-                <div>
-                  <h4 className="text-lg font-semibold mb-4 text-tent-purple">
-                    Additional Information
-                  </h4>
+                  {/* Additional Information */}
                   <div>
-                    <label className="block text-sm font-medium mb-2">
-                      Special Requirements or Requests
-                    </label>
-                    <textarea
-                      rows={4}
-                      value={formData.specialRequests}
-                      onChange={(e) => setFormData({...formData, specialRequests: e.target.value})}
-                      className="w-full px-4 py-3 border border-border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent resize-none"
-                      placeholder="Any special dietary requirements, accessibility needs, or specific services you'd like to request..."
-                    ></textarea>
+                    <h4 className="text-lg font-semibold mb-4 text-tent-purple">
+                      Additional Information
+                    </h4>
+                    <div>
+                      <label className="block text-sm font-medium mb-2">
+                        Special Requirements or Requests
+                      </label>
+                      <textarea
+                        rows={4}
+                        value={formData.specialRequests}
+                        onChange={(e) =>
+                          setFormData({
+                            ...formData,
+                            specialRequests: e.target.value,
+                          })
+                        }
+                        className="w-full px-4 py-3 border border-border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent resize-none"
+                        placeholder="Any special dietary requirements, accessibility needs, or specific services you'd like to request..."
+                      ></textarea>
+                    </div>
                   </div>
-                </div>
 
-                {/* Agreement */}
-                <div className="flex items-start space-x-3">
-                  <input
-                    type="checkbox"
-                    id="terms"
-                    checked={formData.agreeToTerms}
-                    onChange={(e) => setFormData({...formData, agreeToTerms: e.target.checked})}
-                    className={`w-5 h-5 text-tent-purple border rounded focus:ring-tent-purple mt-1 ${
-                      formErrors.agreeToTerms ? 'border-red-500' : 'border-border'
-                    }`}
-                  />
-                  <label
-                    htmlFor="terms"
-                    className="text-sm text-muted-foreground"
+                  {/* Agreement */}
+                  <div className="flex items-start space-x-3">
+                    <input
+                      type="checkbox"
+                      id="terms"
+                      checked={formData.agreeToTerms}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          agreeToTerms: e.target.checked,
+                        })
+                      }
+                      className={`w-5 h-5 text-tent-purple border rounded focus:ring-tent-purple mt-1 ${
+                        formErrors.agreeToTerms
+                          ? "border-red-500"
+                          : "border-border"
+                      }`}
+                    />
+                    <label
+                      htmlFor="terms"
+                      className="text-sm text-muted-foreground"
+                    >
+                      I agree to The Tent's terms and conditions and understand
+                      that registration is subject to verification of artist
+                      credentials and festival performance confirmation. I
+                      authorize The Tent to contact festival organizers to
+                      verify my scheduled performances.
+                    </label>
+                    {formErrors.agreeToTerms && (
+                      <p className="text-red-500 text-sm mt-1 ml-8">
+                        {formErrors.agreeToTerms}
+                      </p>
+                    )}
+                  </div>
+
+                  <Button
+                    type="submit"
+                    size="lg"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90 text-lg py-6 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    I agree to The Tent's terms and conditions and understand
-                    that registration is subject to verification of artist
-                    credentials and festival performance confirmation. I
-                    authorize The Tent to contact festival organizers to verify
-                    my scheduled performances.
-                  </label>
-                  {formErrors.agreeToTerms && (
-                    <p className="text-red-500 text-sm mt-1 ml-8">{formErrors.agreeToTerms}</p>
-                  )}
-                </div>
+                    {isSubmitting ? (
+                      <>
+                        <div className="w-5 h-5 mr-2 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                        Submitting...
+                      </>
+                    ) : (
+                      <>
+                        <Star className="w-5 h-5 mr-2" />
+                        Submit Artist Registration
+                      </>
+                    )}
+                  </Button>
 
-                <Button
-                  type="submit"
-                  size="lg"
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90 text-lg py-6 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="w-5 h-5 mr-2 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                      Submitting...
-                    </>
-                  ) : (
-                    <>
-                      <Star className="w-5 h-5 mr-2" />
-                      Submit Artist Registration
-                    </>
-                  )}
-                </Button>
-
-                <div className="text-center text-sm text-muted-foreground">
-                  <p>
-                    Registration is subject to verification. You will receive
-                    confirmation within 48 hours.
-                  </p>
-                </div>
+                  <div className="text-center text-sm text-muted-foreground">
+                    <p>
+                      Registration is subject to verification. You will receive
+                      confirmation within 48 hours.
+                    </p>
+                  </div>
                 </form>
               </CardContent>
             </Card>
