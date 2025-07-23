@@ -115,9 +115,13 @@ export default function ArtistRegistration() {
         // Try to get the error message from the server response
         try {
           const errorData = await response.json();
-          throw new Error(errorData.message || `Server error: ${response.status}`);
+          throw new Error(
+            errorData.message || `Server error: ${response.status}`,
+          );
         } catch {
-          throw new Error(`Registration failed with status: ${response.status}`);
+          throw new Error(
+            `Registration failed with status: ${response.status}`,
+          );
         }
       }
 
@@ -141,7 +145,10 @@ export default function ArtistRegistration() {
         agreeToTerms: false,
       });
     } catch (error) {
-      const errorMessage = error instanceof Error ? error.message : "Registration failed. Please try again.";
+      const errorMessage =
+        error instanceof Error
+          ? error.message
+          : "Registration failed. Please try again.";
       setSubmitError(errorMessage);
       console.error("Registration error:", error);
     } finally {
