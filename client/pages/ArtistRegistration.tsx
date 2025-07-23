@@ -21,6 +21,7 @@ export default function ArtistRegistration() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState("");
+  const [loginCredentials, setLoginCredentials] = useState<{email: string; password: string} | null>(null);
 
   // Form state
   const [formData, setFormData] = useState({
