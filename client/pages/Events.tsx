@@ -90,7 +90,7 @@ export default function Events() {
       case "Sea.Hear.Now":
         return "/events/sea-hear-now";
       case "Country Calling":
-        return "/events"; // No detail page yet, stay on events page
+        return "/events/country-calling";
       default:
         return "/events";
     }
