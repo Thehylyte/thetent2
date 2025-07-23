@@ -396,8 +396,25 @@ export default function ArtistRegistration() {
                       <span className="font-medium">Registration Successful!</span>
                     </div>
                     <p className="text-sm mt-1">
-                      Thank you for registering. You will receive confirmation within 48 hours.
+                      Thank you for registering. Check your email for login credentials and further instructions.
                     </p>
+                    {loginCredentials && (
+                      <div className="mt-3 p-3 bg-white/50 rounded border border-green-400">
+                        <p className="font-medium text-sm mb-2">🔐 Your Login Credentials:</p>
+                        <div className="text-xs space-y-1">
+                          <p><strong>Email:</strong> {loginCredentials.email}</p>
+                          <p><strong>Password:</strong> <code className="bg-gray-100 px-1 rounded">{loginCredentials.password}</code></p>
+                          <p className="mt-2">
+                            <a
+                              href="/artist-login"
+                              className="text-tent-purple hover:text-tent-pink font-medium underline"
+                            >
+                              → Login to Your Dashboard
+                            </a>
+                          </p>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 )}
 
