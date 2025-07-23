@@ -18,6 +18,8 @@ import {
   ArrowRight,
   Menu,
   X,
+  Zap,
+  Sparkles,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 
