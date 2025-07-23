@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">The Tent</string>
+    <string name="title_activity_main">The Tent</string>
+    <string name="package_name">club.thetent.app</string>
+    <string name="custom_url_scheme">club.thetent.app</string>
+</resources>
