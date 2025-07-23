@@ -207,18 +207,20 @@ export default function ArtistDashboard() {
   };
 
   const handleReservation = () => {
-    if (selectedFestival && selectedService && selectedDate && selectedTime) {
-      // Enhanced confirmation message for premium services
-      const isPremiumService = selectedService === "Barber Shop" || selectedService === "Normatec Chairs";
-      const confirmationMessage = isPremiumService
-        ? `Premium ${selectedService} reservation requested at ${selectedFestival} on ${selectedDate} at ${selectedTime}. Our partner team will contact you within 2 hours to confirm your exclusive appointment!`
-        : `Reservation requested for ${selectedService} at ${selectedFestival} on ${selectedDate} at ${selectedTime}. You will receive a confirmation email shortly!`;
+    if (selectedFestival && selectedServices.length > 0 && selectedDate && selectedTime) {
+      // Enhanced confirmation message for multiple services
+      const servicesList = selectedServices.join(", ");
+      const hasBarberService = selectedServices.some(service => service.includes("Barber Shop"));
+
+      const confirmationMessage = hasBarberService
+        ? `Reservation requested for ${servicesList} at ${selectedFestival} on ${selectedDate} at ${selectedTime}. Our partner team will contact you within 2 hours to confirm your exclusive appointments!`
+        : `Reservation requested for ${servicesList} at ${selectedFestival} on ${selectedDate} at ${selectedTime}. You will receive a confirmation email shortly!`;
 
       alert(confirmationMessage);
 
       // Reset form
       setSelectedFestival("");
-      setSelectedService("");
+      setSelectedServices([]);
       setSelectedDate("");
       setSelectedTime("");
     }
