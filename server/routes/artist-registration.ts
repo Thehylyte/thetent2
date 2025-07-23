@@ -63,12 +63,19 @@ export const handleArtistRegistration: RequestHandler = async (req, res) => {
     
     // Generate a unique registration ID
     const registrationId = `REG-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
-    
+
+    // Generate login credentials
+    const loginPassword = generatePassword(12);
+    const hashedPassword = hashPassword(loginPassword);
+    const loginEmail = registrationData.email; // Use their registration email as login
+
     // Store the registration (in production, save to database)
     const newRegistration = {
       ...registrationData,
       id: registrationId,
-      timestamp: new Date()
+      timestamp: new Date(),
+      hashedPassword,
+      loginEmail
     };
     
     registrations.push(newRegistration);
