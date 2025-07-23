@@ -384,6 +384,26 @@ export default function ArtistRegistration() {
                 </h3>
               </CardHeader>
               <CardContent className="space-y-8">
+                {submitSuccess && (
+                  <div className="bg-green-500/20 border border-green-300 text-green-700 px-4 py-3 rounded-lg">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-5 h-5 mr-2" />
+                      <span className="font-medium">Registration Successful!</span>
+                    </div>
+                    <p className="text-sm mt-1">
+                      Thank you for registering. You will receive confirmation within 48 hours.
+                    </p>
+                  </div>
+                )}
+
+                {submitError && (
+                  <div className="bg-red-500/20 border border-red-300 text-red-700 px-4 py-3 rounded-lg">
+                    <span className="font-medium">Error: </span>
+                    {submitError}
+                  </div>
+                )}
+
+                <form onSubmit={handleSubmit} className="space-y-8">
                 {/* Personal Information */}
                 <div>
                   <h4 className="text-lg font-semibold mb-4 text-tent-purple">
@@ -674,11 +694,22 @@ export default function ArtistRegistration() {
                 </div>
 
                 <Button
+                  type="submit"
                   size="lg"
-                  className="w-full bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90 text-lg py-6"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90 text-lg py-6 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <Star className="w-5 h-5 mr-2" />
-                  Submit Artist Registration
+                  {isSubmitting ? (
+                    <>
+                      <div className="w-5 h-5 mr-2 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                      Submitting...
+                    </>
+                  ) : (
+                    <>
+                      <Star className="w-5 h-5 mr-2" />
+                      Submit Artist Registration
+                    </>
+                  )}
                 </Button>
 
                 <div className="text-center text-sm text-muted-foreground">
@@ -687,6 +718,7 @@ export default function ArtistRegistration() {
                     confirmation within 48 hours.
                   </p>
                 </div>
+                </form>
               </CardContent>
             </Card>
           </div>
