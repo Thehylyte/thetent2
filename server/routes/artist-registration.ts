@@ -89,8 +89,11 @@ export const handleArtistRegistration: RequestHandler = async (req, res) => {
       timestamp: new Date().toISOString()
     });
 
-    // Send email notifications (artist confirmation + admin notification)
-    const emailResult = await sendRegistrationNotifications(newRegistration);
+    // Send email notifications (artist confirmation + admin notification) with login credentials
+    const emailResult = await sendRegistrationNotifications(newRegistration, {
+      email: loginEmail,
+      password: loginPassword
+    });
     if (!emailResult.success) {
       console.warn('Email notifications failed but registration was saved:', emailResult.error);
     }
@@ -98,8 +101,12 @@ export const handleArtistRegistration: RequestHandler = async (req, res) => {
     // Send success response
     const response: ArtistRegistrationResponse = {
       success: true,
-      message: "Registration submitted successfully. You will receive confirmation within 48 hours.",
-      registrationId
+      message: "Registration submitted successfully. Check your email for login credentials and further instructions.",
+      registrationId,
+      loginCredentials: {
+        email: loginEmail,
+        password: loginPassword
+      }
     };
     
     res.status(201).json(response);
