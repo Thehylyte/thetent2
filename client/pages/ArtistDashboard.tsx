@@ -496,6 +496,95 @@ export default function ArtistDashboard() {
                     )}
                 </CardContent>
               </Card>
+
+              {/* Additional Services Section - Only show if user has reservations */}
+              {myReservations.length > 0 && (
+                <Card className="border-tent-orange/20 mt-6">
+                  <CardHeader>
+                    <h3 className="text-2xl font-bold flex items-center">
+                      <Sparkles className="w-6 h-6 mr-2 text-tent-orange" />
+                      Premium Add-On Services
+                    </h3>
+                    <p className="text-muted-foreground">
+                      Enhance your festival experience with our exclusive partner services
+                    </p>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid md:grid-cols-2 gap-6">
+                      {/* Barber Shop Service */}
+                      <div className="p-6 border border-tent-orange/20 rounded-lg bg-gradient-to-br from-tent-orange/5 to-tent-pink/5">
+                        <div className="flex items-center space-x-4 mb-4">
+                          <div className="w-12 h-12 bg-gradient-to-br from-tent-orange to-tent-pink rounded-lg flex items-center justify-center">
+                            <Scissors className="w-6 h-6 text-white" />
+                          </div>
+                          <div>
+                            <h4 className="text-lg font-bold text-tent-orange">Barber Shop</h4>
+                            <p className="text-sm text-muted-foreground">Premium grooming experience</p>
+                          </div>
+                        </div>
+                        <ul className="space-y-2 text-sm text-muted-foreground mb-4">
+                          <li>• Professional haircuts & styling</li>
+                          <li>• Beard trimming & grooming</li>
+                          <li>• Premium grooming products</li>
+                          <li>• Quick 30-minute service</li>
+                        </ul>
+                        <Button
+                          variant="outline"
+                          className="w-full border-tent-orange/30 text-tent-orange hover:bg-tent-orange/10"
+                          onClick={() => {
+                            setSelectedService("Barber Shop");
+                            // Scroll to booking form
+                            document.querySelector('[data-booking-form]')?.scrollIntoView({ behavior: 'smooth' });
+                          }}
+                        >
+                          Book Barber Service
+                        </Button>
+                      </div>
+
+                      {/* Normatec Chairs Service */}
+                      <div className="p-6 border border-tent-blue/20 rounded-lg bg-gradient-to-br from-tent-blue/5 to-tent-purple/5">
+                        <div className="flex items-center space-x-4 mb-4">
+                          <div className="w-12 h-12 bg-gradient-to-br from-tent-blue to-tent-purple rounded-lg flex items-center justify-center">
+                            <Zap className="w-6 h-6 text-white" />
+                          </div>
+                          <div>
+                            <h4 className="text-lg font-bold text-tent-blue">Normatec Chairs</h4>
+                            <p className="text-sm text-muted-foreground">Advanced recovery therapy</p>
+                          </div>
+                        </div>
+                        <ul className="space-y-2 text-sm text-muted-foreground mb-4">
+                          <li>• Compression therapy technology</li>
+                          <li>• Muscle recovery & circulation</li>
+                          <li>• Pre & post-performance sessions</li>
+                          <li>• Relaxing 30-minute treatment</li>
+                        </ul>
+                        <Button
+                          variant="outline"
+                          className="w-full border-tent-blue/30 text-tent-blue hover:bg-tent-blue/10"
+                          onClick={() => {
+                            setSelectedService("Normatec Chairs");
+                            // Scroll to booking form
+                            document.querySelector('[data-booking-form]')?.scrollIntoView({ behavior: 'smooth' });
+                          }}
+                        >
+                          Book Recovery Session
+                        </Button>
+                      </div>
+                    </div>
+
+                    <div className="mt-6 p-4 bg-gradient-to-r from-tent-purple/10 to-tent-pink/10 rounded-lg border border-tent-purple/20">
+                      <div className="flex items-center space-x-2 mb-2">
+                        <Crown className="w-5 h-5 text-tent-purple" />
+                        <span className="font-semibold text-tent-purple">VIP Member Benefits</span>
+                      </div>
+                      <p className="text-sm text-muted-foreground">
+                        As a VIP member, enjoy priority booking and exclusive access to our premium partner services.
+                        All services are available at participating festivals.
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              )}
             </div>
 
             {/* My Reservations */}
