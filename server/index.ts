@@ -18,6 +18,7 @@ export function createServer() {
 
   app.get("/api/demo", handleDemo);
   app.post("/api/artist-registration", handleArtistRegistration);
+  app.get("/api/artist-registrations", handleGetRegistrations);
 
   return app;
 }
