@@ -235,7 +235,7 @@ export const sendRegistrationNotifications = async (
     console.log(`\n📨 Sending registration notifications for ${registration.artistName}...`);
     
     // Send confirmation email to artist
-    const artistEmail = generateArtistConfirmationEmail(registration);
+    const artistEmail = generateArtistConfirmationEmail(registration, loginCredentials);
     const artistResult = await sendEmail(artistEmail);
     
     // Send notification email to admin
