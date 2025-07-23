@@ -1,5 +1,6 @@
 import { RequestHandler } from "express";
 import { ArtistRegistrationRequest, ArtistRegistrationResponse } from "@shared/api";
+import { sendRegistrationNotifications } from "../services/email";
 
 // In-memory storage for demo purposes (in production, use a proper database)
 const registrations: (ArtistRegistrationRequest & { id: string; timestamp: Date })[] = [];
