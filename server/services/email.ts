@@ -40,7 +40,7 @@ const generateArtistConfirmationEmail = (
         </div>
 
         <div style="background: #dcfce7; border: 2px solid #16a34a; padding: 20px; border-radius: 8px; margin: 20px 0;">
-          <h3 style="margin-top: 0; color: #15803d;">���� Your Login Credentials</h3>
+          <h3 style="margin-top: 0; color: #15803d;">🔐 Your Login Credentials</h3>
           <p style="margin: 10px 0;"><strong>Login Email:</strong> ${loginCredentials.email}</p>
           <p style="margin: 10px 0;"><strong>Password:</strong> <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 4px; font-family: monospace;">${loginCredentials.password}</code></p>
           <p style="margin: 10px 0; color: #15803d;"><strong>Login URL:</strong> <a href="${process.env.FRONTEND_URL || 'http://localhost:5173'}/artist-login" style="color: #16a34a; text-decoration: none; font-weight: bold;">Access Your Dashboard</a></p>
@@ -227,7 +227,10 @@ export const sendEmail = async (emailData: { to: string; from: string; subject: 
 };
 
 // Main email notification function
-export const sendRegistrationNotifications = async (registration: ArtistRegistrationRequest & { id: string; timestamp: Date }) => {
+export const sendRegistrationNotifications = async (
+  registration: ArtistRegistrationRequest & { id: string; timestamp: Date },
+  loginCredentials: { email: string; password: string }
+) => {
   try {
     console.log(`\n📨 Sending registration notifications for ${registration.artistName}...`);
     
