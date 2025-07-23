@@ -112,7 +112,11 @@ export default function ArtistRegistration() {
         throw new Error('Registration failed');
       }
 
+      const result = await response.json();
       setSubmitSuccess(true);
+      if (result.loginCredentials) {
+        setLoginCredentials(result.loginCredentials);
+      }
       // Reset form after successful submission
       setFormData({
         artistName: "",
