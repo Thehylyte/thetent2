@@ -18,6 +18,26 @@ import { useState } from "react";
 
 export default function ArtistRegistration() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+
+  // Form state
+  const [formData, setFormData] = useState({
+    artistName: "",
+    legalName: "",
+    email: "",
+    phone: "",
+    managerName: "",
+    managementEmail: "",
+    genre: "",
+    yearsActive: "",
+    selectedFestivals: [] as string[],
+    specialRequests: "",
+    agreeToTerms: false
+  });
+
+  const [formErrors, setFormErrors] = useState<Record<string, string>>({});
   const festivals = [
     {
       name: "Lollapalooza",
@@ -281,9 +301,16 @@ export default function ArtistRegistration() {
                       </label>
                       <input
                         type="text"
-                        className="w-full px-4 py-3 border border-border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent"
+                        value={formData.artistName}
+                        onChange={(e) => setFormData({...formData, artistName: e.target.value})}
+                        className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
+                          formErrors.artistName ? 'border-red-500' : 'border-border'
+                        }`}
                         placeholder="Your stage or artist name"
                       />
+                      {formErrors.artistName && (
+                        <p className="text-red-500 text-sm mt-1">{formErrors.artistName}</p>
+                      )}
                     </div>
                     <div>
                       <label className="block text-sm font-medium mb-2">
@@ -291,9 +318,16 @@ export default function ArtistRegistration() {
                       </label>
                       <input
                         type="text"
-                        className="w-full px-4 py-3 border border-border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent"
+                        value={formData.legalName}
+                        onChange={(e) => setFormData({...formData, legalName: e.target.value})}
+                        className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
+                          formErrors.legalName ? 'border-red-500' : 'border-border'
+                        }`}
                         placeholder="Your legal name"
                       />
+                      {formErrors.legalName && (
+                        <p className="text-red-500 text-sm mt-1">{formErrors.legalName}</p>
+                      )}
                     </div>
                   </div>
                   <div className="grid md:grid-cols-2 gap-4 mt-4">
@@ -303,9 +337,16 @@ export default function ArtistRegistration() {
                       </label>
                       <input
                         type="email"
-                        className="w-full px-4 py-3 border border-border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent"
+                        value={formData.email}
+                        onChange={(e) => setFormData({...formData, email: e.target.value})}
+                        className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
+                          formErrors.email ? 'border-red-500' : 'border-border'
+                        }`}
                         placeholder="your.email@example.com"
                       />
+                      {formErrors.email && (
+                        <p className="text-red-500 text-sm mt-1">{formErrors.email}</p>
+                      )}
                     </div>
                     <div>
                       <label className="block text-sm font-medium mb-2">
@@ -313,9 +354,16 @@ export default function ArtistRegistration() {
                       </label>
                       <input
                         type="tel"
-                        className="w-full px-4 py-3 border border-border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                        className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
+                          formErrors.phone ? 'border-red-500' : 'border-border'
+                        }`}
                         placeholder="(555) 123-4567"
                       />
+                      {formErrors.phone && (
+                        <p className="text-red-500 text-sm mt-1">{formErrors.phone}</p>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -332,9 +380,16 @@ export default function ArtistRegistration() {
                       </label>
                       <input
                         type="text"
-                        className="w-full px-4 py-3 border border-border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent"
+                        value={formData.managerName}
+                        onChange={(e) => setFormData({...formData, managerName: e.target.value})}
+                        className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
+                          formErrors.managerName ? 'border-red-500' : 'border-border'
+                        }`}
                         placeholder="Manager or agent name"
                       />
+                      {formErrors.managerName && (
+                        <p className="text-red-500 text-sm mt-1">{formErrors.managerName}</p>
+                      )}
                     </div>
                     <div>
                       <label className="block text-sm font-medium mb-2">
@@ -342,9 +397,16 @@ export default function ArtistRegistration() {
                       </label>
                       <input
                         type="email"
-                        className="w-full px-4 py-3 border border-border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent"
+                        value={formData.managementEmail}
+                        onChange={(e) => setFormData({...formData, managementEmail: e.target.value})}
+                        className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
+                          formErrors.managementEmail ? 'border-red-500' : 'border-border'
+                        }`}
                         placeholder="management@example.com"
                       />
+                      {formErrors.managementEmail && (
+                        <p className="text-red-500 text-sm mt-1">{formErrors.managementEmail}</p>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -359,7 +421,12 @@ export default function ArtistRegistration() {
                       <label className="block text-sm font-medium mb-2">
                         Genre *
                       </label>
-                      <select className="w-full px-4 py-3 border border-border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent">
+                      <select
+                        value={formData.genre}
+                        onChange={(e) => setFormData({...formData, genre: e.target.value})}
+                        className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
+                          formErrors.genre ? 'border-red-500' : 'border-border'
+                        }`}>
                         <option value="">Select your genre</option>
                         <option value="rock">Rock</option>
                         <option value="pop">Pop</option>
@@ -371,18 +438,29 @@ export default function ArtistRegistration() {
                         <option value="classical">Classical</option>
                         <option value="other">Other</option>
                       </select>
+                      {formErrors.genre && (
+                        <p className="text-red-500 text-sm mt-1">{formErrors.genre}</p>
+                      )}
                     </div>
                     <div>
                       <label className="block text-sm font-medium mb-2">
                         Years Active *
                       </label>
-                      <select className="w-full px-4 py-3 border border-border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent">
+                      <select
+                        value={formData.yearsActive}
+                        onChange={(e) => setFormData({...formData, yearsActive: e.target.value})}
+                        className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
+                          formErrors.yearsActive ? 'border-red-500' : 'border-border'
+                        }`}>
                         <option value="">Select experience level</option>
                         <option value="0-2">0-2 years</option>
                         <option value="3-5">3-5 years</option>
                         <option value="6-10">6-10 years</option>
                         <option value="10+">10+ years</option>
                       </select>
+                      {formErrors.yearsActive && (
+                        <p className="text-red-500 text-sm mt-1">{formErrors.yearsActive}</p>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -405,6 +483,20 @@ export default function ArtistRegistration() {
                               <input
                                 type="checkbox"
                                 id={`festival-${index}`}
+                                checked={formData.selectedFestivals.includes(festival.name)}
+                                onChange={(e) => {
+                                  if (e.target.checked) {
+                                    setFormData({
+                                      ...formData,
+                                      selectedFestivals: [...formData.selectedFestivals, festival.name]
+                                    });
+                                  } else {
+                                    setFormData({
+                                      ...formData,
+                                      selectedFestivals: formData.selectedFestivals.filter(f => f !== festival.name)
+                                    });
+                                  }
+                                }}
                                 className="w-5 h-5 text-tent-purple border-border rounded focus:ring-tent-purple"
                               />
                               <div>
@@ -452,6 +544,8 @@ export default function ArtistRegistration() {
                     </label>
                     <textarea
                       rows={4}
+                      value={formData.specialRequests}
+                      onChange={(e) => setFormData({...formData, specialRequests: e.target.value})}
                       className="w-full px-4 py-3 border border-border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent resize-none"
                       placeholder="Any special dietary requirements, accessibility needs, or specific services you'd like to request..."
                     ></textarea>
@@ -463,7 +557,11 @@ export default function ArtistRegistration() {
                   <input
                     type="checkbox"
                     id="terms"
-                    className="w-5 h-5 text-tent-purple border-border rounded focus:ring-tent-purple mt-1"
+                    checked={formData.agreeToTerms}
+                    onChange={(e) => setFormData({...formData, agreeToTerms: e.target.checked})}
+                    className={`w-5 h-5 text-tent-purple border rounded focus:ring-tent-purple mt-1 ${
+                      formErrors.agreeToTerms ? 'border-red-500' : 'border-border'
+                    }`}
                   />
                   <label
                     htmlFor="terms"
@@ -475,6 +573,9 @@ export default function ArtistRegistration() {
                     authorize The Tent to contact festival organizers to verify
                     my scheduled performances.
                   </label>
+                  {formErrors.agreeToTerms && (
+                    <p className="text-red-500 text-sm mt-1 ml-8">{formErrors.agreeToTerms}</p>
+                  )}
                 </div>
 
                 <Button
