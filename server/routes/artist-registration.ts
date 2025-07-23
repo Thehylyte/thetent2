@@ -95,3 +95,36 @@ export const handleArtistRegistration: RequestHandler = (req, res) => {
 
 // Export function to get all registrations (for admin purposes)
 export const getAllRegistrations = () => registrations;
+
+// Admin endpoint to view all registrations
+export const handleGetRegistrations: RequestHandler = (req, res) => {
+  try {
+    const formattedRegistrations = registrations.map(reg => ({
+      id: reg.id,
+      artistName: reg.artistName,
+      legalName: reg.legalName,
+      email: reg.email,
+      phone: reg.phone,
+      managerName: reg.managerName,
+      managementEmail: reg.managementEmail,
+      genre: reg.genre,
+      yearsActive: reg.yearsActive,
+      selectedFestivals: reg.selectedFestivals,
+      specialRequests: reg.specialRequests,
+      timestamp: reg.timestamp,
+      agreeToTerms: reg.agreeToTerms
+    }));
+
+    res.status(200).json({
+      success: true,
+      count: registrations.length,
+      registrations: formattedRegistrations
+    });
+  } catch (error) {
+    console.error('Error fetching registrations:', error);
+    res.status(500).json({
+      success: false,
+      message: "Error fetching registrations"
+    });
+  }
+};
