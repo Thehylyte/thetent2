@@ -81,6 +81,22 @@ export default function ArtistDashboard() {
       duration: "Flexible",
       color: "tent-purple",
     },
+    {
+      id: "barbershop",
+      name: "Barber Shop",
+      icon: Scissors,
+      description: "Premium barber services & grooming",
+      duration: "30 min",
+      color: "tent-orange",
+    },
+    {
+      id: "normatec",
+      name: "Normatec Chairs",
+      icon: Zap,
+      description: "Recovery compression therapy",
+      duration: "30 min",
+      color: "tent-blue",
+    },
   ];
 
   const myReservations = [
