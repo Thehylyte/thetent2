@@ -4,7 +4,12 @@ import { sendRegistrationNotifications } from "../services/email";
 import { generatePassword, hashPassword } from "../utils/password";
 
 // In-memory storage for demo purposes (in production, use a proper database)
-const registrations: (ArtistRegistrationRequest & { id: string; timestamp: Date })[] = [];
+const registrations: (ArtistRegistrationRequest & {
+  id: string;
+  timestamp: Date;
+  hashedPassword: string;
+  loginEmail: string;
+})[] = [];
 
 export const handleArtistRegistration: RequestHandler = async (req, res) => {
   try {
