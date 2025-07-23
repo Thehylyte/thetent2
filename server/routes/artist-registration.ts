@@ -66,7 +66,7 @@ export const handleArtistRegistration: RequestHandler = (req, res) => {
     };
     
     registrations.push(newRegistration);
-    
+
     // Log registration for demo purposes
     console.log('New artist registration:', {
       id: registrationId,
@@ -75,7 +75,13 @@ export const handleArtistRegistration: RequestHandler = (req, res) => {
       festivals: registrationData.selectedFestivals,
       timestamp: new Date().toISOString()
     });
-    
+
+    // Send email notifications (artist confirmation + admin notification)
+    const emailResult = await sendRegistrationNotifications(newRegistration);
+    if (!emailResult.success) {
+      console.warn('Email notifications failed but registration was saved:', emailResult.error);
+    }
+
     // Send success response
     const response: ArtistRegistrationResponse = {
       success: true,
