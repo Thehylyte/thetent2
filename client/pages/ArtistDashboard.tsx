@@ -578,23 +578,90 @@ export default function ArtistDashboard() {
                             <p className="text-sm text-muted-foreground">Premium grooming experience</p>
                           </div>
                         </div>
-                        <ul className="space-y-2 text-sm text-muted-foreground mb-4">
-                          <li>• Professional haircuts & styling</li>
-                          <li>• Beard trimming & grooming</li>
-                          <li>• Premium grooming products</li>
-                          <li>• Quick 30-minute service</li>
-                        </ul>
-                        <Button
-                          variant="outline"
-                          className="w-full border-tent-orange/30 text-tent-orange hover:bg-tent-orange/10"
-                          onClick={() => {
-                            setSelectedService("Barber Shop");
-                            // Scroll to booking form
-                            document.querySelector('[data-booking-form]')?.scrollIntoView({ behavior: 'smooth' });
-                          }}
-                        >
-                          Book Barber Service
-                        </Button>
+
+                        {!showBarberDetails ? (
+                          <>
+                            <ul className="space-y-2 text-sm text-muted-foreground mb-4">
+                              <li>• Professional haircuts & styling</li>
+                              <li>• Beard trimming & grooming</li>
+                              <li>• Premium grooming products</li>
+                              <li>• VIP treatment & finishing</li>
+                            </ul>
+                            <Button
+                              variant="outline"
+                              className="w-full border-tent-orange/30 text-tent-orange hover:bg-tent-orange/10"
+                              onClick={() => setShowBarberDetails(true)}
+                            >
+                              Book Barber Service
+                              <ArrowRight className="w-4 h-4 ml-2" />
+                            </Button>
+                          </>
+                        ) : (
+                          <div className="space-y-4">
+                            <div className="flex items-center justify-between">
+                              <h5 className="font-semibold text-tent-orange">Choose Your Service</h5>
+                              <Button
+                                variant="ghost"
+                                size="sm"
+                                onClick={() => {
+                                  setShowBarberDetails(false);
+                                  setSelectedBarberService("");
+                                }}
+                                className="text-muted-foreground hover:text-foreground"
+                              >
+                                <X className="w-4 h-4" />
+                              </Button>
+                            </div>
+
+                            <div className="space-y-3 max-h-64 overflow-y-auto">
+                              {barberServices.map((service) => (
+                                <div
+                                  key={service.id}
+                                  className={`p-3 border rounded-lg cursor-pointer transition-all ${
+                                    selectedBarberService === service.id
+                                      ? "border-tent-orange bg-tent-orange/10"
+                                      : "border-border hover:border-tent-orange/40"
+                                  }`}
+                                  onClick={() => setSelectedBarberService(service.id)}
+                                >
+                                  <div className="flex items-start space-x-3">
+                                    <span className="text-lg">{service.icon}</span>
+                                    <div className="flex-1">
+                                      <div className="flex items-center justify-between">
+                                        <h6 className="font-medium text-sm">{service.name}</h6>
+                                        <span className="text-xs text-tent-orange font-medium">{service.price}</span>
+                                      </div>
+                                      <p className="text-xs text-muted-foreground mt-1">{service.description}</p>
+                                      <div className="flex items-center mt-2">
+                                        <Clock className="w-3 h-3 mr-1 text-muted-foreground" />
+                                        <span className="text-xs text-muted-foreground">{service.duration}</span>
+                                        {selectedBarberService === service.id && (
+                                          <CheckCircle className="w-4 h-4 ml-auto text-tent-orange" />
+                                        )}
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+
+                            {selectedBarberService && (
+                              <Button
+                                className="w-full bg-gradient-to-r from-tent-orange to-tent-pink hover:from-tent-orange/90 hover:to-tent-pink/90"
+                                onClick={() => {
+                                  const selectedServiceDetails = barberServices.find(s => s.id === selectedBarberService);
+                                  setSelectedService(`Barber Shop - ${selectedServiceDetails?.name}`);
+                                  setShowBarberDetails(false);
+                                  setSelectedBarberService("");
+                                  document.querySelector('[data-booking-form]')?.scrollIntoView({ behavior: 'smooth' });
+                                }}
+                              >
+                                Continue to Booking
+                                <Calendar className="w-4 h-4 ml-2" />
+                              </Button>
+                            )}
+                          </div>
+                        )}
                       </div>
 
                       {/* Normatec Chairs Service */}
