@@ -60,14 +60,6 @@ export default function ArtistDashboard() {
 
   const services = [
     {
-      id: "grooming",
-      name: "Professional Grooming",
-      icon: Scissors,
-      description: "Haircuts and styling services",
-      duration: "45 min",
-      color: "tent-blue",
-    },
-    {
       id: "wellness",
       name: "Recovery & Wellness",
       icon: Heart,
@@ -90,14 +82,6 @@ export default function ArtistDashboard() {
       description: "Premium barber services & grooming",
       duration: "30 min",
       color: "tent-orange",
-    },
-    {
-      id: "normatec",
-      name: "Normatec Chairs",
-      icon: Zap,
-      description: "Recovery compression therapy",
-      duration: "30 min",
-      color: "tent-blue",
     },
   ];
 
