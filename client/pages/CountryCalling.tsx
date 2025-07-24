@@ -247,6 +247,14 @@ export default function CountryCalling() {
               <Guitar className="w-4 h-4 mr-2" />
               Country Music Festival
             </Badge>
+            {/* Country Calling Logo */}
+            <div className="mb-8">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F26b8027a38904d98b8cd653c90ef7c84?format=webp&width=800"
+                alt="Country Calling Logo"
+                className="h-32 md:h-40 w-auto mx-auto object-contain"
+              />
+            </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 bg-clip-text text-transparent leading-tight">
               Country Calling
             </h1>
