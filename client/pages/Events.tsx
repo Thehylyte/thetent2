@@ -12,6 +12,7 @@ import {
   X,
 } from "lucide-react";
 import { useState } from "react";
+import SEO from "../components/SEO";
 
 export default function Events() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -111,7 +112,14 @@ export default function Events() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-tent-blue/5">
+    <>
+      <SEO
+        title="Events - Music Festivals | The Tent"
+        description="Explore upcoming music festivals where The Tent provides premium VIP hospitality services. From Lollapalooza to Sea Hear Now, elevate your festival experience with luxury amenities."
+        keywords="music festivals, Lollapalooza, Riot Fest, Sea Hear Now, Country Calling, Oceans Calling, festival events, VIP festival experience"
+        url="https://thetent.club/events"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-background via-background to-tent-blue/5">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
         <div className="container mx-auto px-6 py-4">
@@ -447,6 +455,7 @@ export default function Events() {
           </div>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   );
 }
