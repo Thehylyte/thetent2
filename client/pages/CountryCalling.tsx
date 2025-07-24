@@ -20,6 +20,7 @@ import {
   X,
 } from "lucide-react";
 import { useState } from "react";
+import SEO from "../components/SEO";
 
 export default function CountryCalling() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -100,7 +101,15 @@ export default function CountryCalling() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-amber-50">
+    <>
+      <SEO
+        title="Country Calling Festival - VIP Hospitality | The Tent"
+        description="Experience The Tent's premium VIP hospitality at Country Calling Festival in Ocean City, MD. Authentic southern hospitality meets luxury amenities at Maryland's premier country festival."
+        keywords="Country Calling, country music festival, Ocean City MD, VIP country festival, southern hospitality, coastal country festival, October 2025"
+        url="https://thetent.club/events/country-calling"
+        image="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F26b8027a38904d98b8cd653c90ef7c84?format=webp&width=1200"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-background via-background to-amber-50">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
         <div className="container mx-auto px-6 py-4">
@@ -611,6 +620,7 @@ export default function CountryCalling() {
           </div>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   );
 }
