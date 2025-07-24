@@ -22,6 +22,7 @@ import {
   X,
 } from "lucide-react";
 import { useState } from "react";
+import SEO from "../components/SEO";
 
 export default function Services() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -147,7 +148,14 @@ export default function Services() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-tent-blue/5">
+    <>
+      <SEO
+        title="Services - Premium Festival Hospitality | The Tent"
+        description="Discover The Tent's comprehensive hospitality services including exclusive products, recovery & wellness, luxury relaxation, professional grooming, and premium dining at major music festivals."
+        keywords="festival services, VIP amenities, artist recovery, luxury hospitality, professional grooming, wellness services, festival VIP, concierge services"
+        url="https://thetent.club/services"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-background via-background to-tent-blue/5">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
         <div className="container mx-auto px-6 py-4">
@@ -556,6 +564,7 @@ export default function Services() {
           </div>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   );
 }
