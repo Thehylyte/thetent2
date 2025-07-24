@@ -80,7 +80,7 @@ export default function Events() {
     },
   ];
 
-    const getStatusColor = (status: string) => {
+  const getStatusColor = (status: string) => {
     switch (status) {
       case "confirmed":
         return "bg-green-500/20 text-green-700 border-green-300";
@@ -301,7 +301,7 @@ export default function Events() {
                         <Users className="w-4 h-4 mr-2 text-tent-blue" />
                         <span className="font-medium">{event.capacity}</span>
                       </div>
-                                            <Button
+                      <Button
                         variant="outline"
                         className="group/btn border-tent-blue/30 hover:bg-tent-blue/10"
                         asChild
@@ -366,7 +366,7 @@ export default function Events() {
                   <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
                     {event.description}
                   </p>
-                                    <Button
+                  <Button
                     variant="outline"
                     size="sm"
                     className="w-full border-tent-purple/30 hover:bg-tent-purple/10 text-tent-purple"

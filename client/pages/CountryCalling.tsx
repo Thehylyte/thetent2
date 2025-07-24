@@ -95,8 +95,8 @@ export default function CountryCalling() {
 
   const availableDates = [
     "October 3, 2025",
-    "October 4, 2025", 
-    "October 5, 2025"
+    "October 4, 2025",
+    "October 5, 2025",
   ];
 
   return (
@@ -270,7 +270,8 @@ export default function CountryCalling() {
             </div>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8">
               Experience the heart of country music with The Tent's signature
-              hospitality services at Maryland's premier country festival by the sea.
+              hospitality services at Maryland's premier country festival by the
+              sea.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -307,7 +308,8 @@ export default function CountryCalling() {
               Country VIP Services
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Authentic southern hospitality meets luxury amenities for the ultimate country festival experience
+              Authentic southern hospitality meets luxury amenities for the
+              ultimate country festival experience
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -349,7 +351,10 @@ export default function CountryCalling() {
               "Southern Comfort Spa",
               "Country Roads Apparel",
             ].map((brand, index) => (
-              <Card key={index} className="border-amber-200 hover:border-amber-300 transition-colors">
+              <Card
+                key={index}
+                className="border-amber-200 hover:border-amber-300 transition-colors"
+              >
                 <CardContent className="p-6 text-center">
                   <div className="w-12 h-12 bg-gradient-to-br from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Sparkles className="w-6 h-6 text-white" />
@@ -453,12 +458,17 @@ export default function CountryCalling() {
                 className="border-amber-200 hover:border-amber-300 transition-colors"
               >
                 <CardHeader>
-                  <h3 className="text-xl font-bold text-amber-800">{day.day}</h3>
+                  <h3 className="text-xl font-bold text-amber-800">
+                    {day.day}
+                  </h3>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
                     {day.events.map((event, eventIndex) => (
-                      <li key={eventIndex} className="flex items-start space-x-3">
+                      <li
+                        key={eventIndex}
+                        className="flex items-start space-x-3"
+                      >
                         <div className="w-2 h-2 bg-amber-600 rounded-full mt-2 flex-shrink-0"></div>
                         <span className="text-sm text-muted-foreground">
                           {event}
@@ -481,15 +491,18 @@ export default function CountryCalling() {
               Ocean City, Maryland
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Where country music meets coastal charm - experience authentic country culture 
-              with ocean views and Maryland's famous hospitality.
+              Where country music meets coastal charm - experience authentic
+              country culture with ocean views and Maryland's famous
+              hospitality.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="border-amber-200">
               <CardContent className="p-6 text-center">
                 <TreePine className="w-12 h-12 text-amber-600 mx-auto mb-4" />
-                <h3 className="font-bold mb-2 text-amber-800">Coastal Country Vibes</h3>
+                <h3 className="font-bold mb-2 text-amber-800">
+                  Coastal Country Vibes
+                </h3>
                 <p className="text-sm text-muted-foreground">
                   Unique blend of country music and beachside atmosphere
                 </p>
@@ -524,8 +537,8 @@ export default function CountryCalling() {
             Ready for Country Calling?
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join The Tent at Maryland's premier country festival. Register now for 
-            exclusive VIP access and authentic southern hospitality.
+            Join The Tent at Maryland's premier country festival. Register now
+            for exclusive VIP access and authentic southern hospitality.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -568,10 +581,7 @@ export default function CountryCalling() {
               </span>
             </div>
             <div className="flex space-x-6 text-muted-foreground">
-              <a
-                href="/"
-                className="hover:text-foreground transition-colors"
-              >
+              <a href="/" className="hover:text-foreground transition-colors">
                 Home
               </a>
               <a
@@ -586,7 +596,10 @@ export default function CountryCalling() {
               >
                 Artists
               </a>
-              <a href="/contact" className="hover:text-foreground transition-colors">
+              <a
+                href="/contact"
+                className="hover:text-foreground transition-colors"
+              >
                 Contact
               </a>
             </div>

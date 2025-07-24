@@ -97,8 +97,8 @@ export default function OceansCalling() {
 
   const availableDates = [
     "September 26, 2025",
-    "September 27, 2025", 
-    "September 28, 2025"
+    "September 27, 2025",
+    "September 28, 2025",
   ];
 
   return (
@@ -263,8 +263,9 @@ export default function OceansCalling() {
               </div>
             </div>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Where music meets the ocean. Experience The Tent's premier beachside
-              hospitality at Maryland's most spectacular coastal music festival.
+              Where music meets the ocean. Experience The Tent's premier
+              beachside hospitality at Maryland's most spectacular coastal music
+              festival.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -301,7 +302,8 @@ export default function OceansCalling() {
               Oceanfront VIP Services
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Immerse yourself in luxury with our exclusive beachfront hospitality designed for ocean-loving artists
+              Immerse yourself in luxury with our exclusive beachfront
+              hospitality designed for ocean-loving artists
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -343,7 +345,10 @@ export default function OceansCalling() {
               "Ocean Wellness Spa",
               "Tidal Wave Surfboards",
             ].map((brand, index) => (
-              <Card key={index} className="border-cyan-200 hover:border-cyan-300 transition-colors">
+              <Card
+                key={index}
+                className="border-cyan-200 hover:border-cyan-300 transition-colors"
+              >
                 <CardContent className="p-6 text-center">
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Sparkles className="w-6 h-6 text-white" />
@@ -452,7 +457,10 @@ export default function OceansCalling() {
                 <CardContent>
                   <ul className="space-y-3">
                     {day.events.map((event, eventIndex) => (
-                      <li key={eventIndex} className="flex items-start space-x-3">
+                      <li
+                        key={eventIndex}
+                        className="flex items-start space-x-3"
+                      >
                         <div className="w-2 h-2 bg-cyan-600 rounded-full mt-2 flex-shrink-0"></div>
                         <span className="text-sm text-muted-foreground">
                           {event}
@@ -475,15 +483,18 @@ export default function OceansCalling() {
               Ocean City, Maryland
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Experience the perfect blend of world-class music and pristine Atlantic coastline 
-              at one of the East Coast's premier beachfront destinations.
+              Experience the perfect blend of world-class music and pristine
+              Atlantic coastline at one of the East Coast's premier beachfront
+              destinations.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="border-cyan-200">
               <CardContent className="p-6 text-center">
                 <Anchor className="w-12 h-12 text-cyan-600 mx-auto mb-4" />
-                <h3 className="font-bold mb-2 text-cyan-800">Beachfront Festival</h3>
+                <h3 className="font-bold mb-2 text-cyan-800">
+                  Beachfront Festival
+                </h3>
                 <p className="text-sm text-muted-foreground">
                   Direct beach access with stages on the sand and ocean views
                 </p>
@@ -492,7 +503,9 @@ export default function OceansCalling() {
             <Card className="border-cyan-200">
               <CardContent className="p-6 text-center">
                 <Fish className="w-12 h-12 text-cyan-600 mx-auto mb-4" />
-                <h3 className="font-bold mb-2 text-cyan-800">Coastal Convenience</h3>
+                <h3 className="font-bold mb-2 text-cyan-800">
+                  Coastal Convenience
+                </h3>
                 <p className="text-sm text-muted-foreground">
                   Easy boardwalk access with ocean-to-stage transportation
                 </p>
@@ -501,7 +514,9 @@ export default function OceansCalling() {
             <Card className="border-cyan-200">
               <CardContent className="p-6 text-center">
                 <Shield className="w-12 h-12 text-cyan-600 mx-auto mb-4" />
-                <h3 className="font-bold mb-2 text-cyan-800">VIP Beach Security</h3>
+                <h3 className="font-bold mb-2 text-cyan-800">
+                  VIP Beach Security
+                </h3>
                 <p className="text-sm text-muted-foreground">
                   Private beachfront entrance and exclusive coastal VIP areas
                 </p>
@@ -518,8 +533,9 @@ export default function OceansCalling() {
             Ready for Oceans Calling?
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join The Tent at Maryland's premier ocean music festival. Register now for 
-            exclusive beachfront VIP access and coastal luxury hospitality.
+            Join The Tent at Maryland's premier ocean music festival. Register
+            now for exclusive beachfront VIP access and coastal luxury
+            hospitality.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -562,10 +578,7 @@ export default function OceansCalling() {
               </span>
             </div>
             <div className="flex space-x-6 text-muted-foreground">
-              <a
-                href="/"
-                className="hover:text-foreground transition-colors"
-              >
+              <a href="/" className="hover:text-foreground transition-colors">
                 Home
               </a>
               <a
@@ -580,7 +593,10 @@ export default function OceansCalling() {
               >
                 Artists
               </a>
-              <a href="/contact" className="hover:text-foreground transition-colors">
+              <a
+                href="/contact"
+                className="hover:text-foreground transition-colors"
+              >
                 Contact
               </a>
             </div>
