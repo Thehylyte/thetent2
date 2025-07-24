@@ -277,11 +277,13 @@ export default function Events() {
                     className="group overflow-hidden border-tent-blue/20 hover:border-tent-blue/40 transition-all duration-300 hover:shadow-2xl"
                   >
                     <div className="aspect-video overflow-hidden">
-                      <img
-                        src={event.image}
-                        alt={event.name}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
+                      <a href={getEventDetailUrl(event.name)} className="block w-full h-full">
+                        <img
+                          src={event.image}
+                          alt={event.name}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </a>
                     </div>
                     <CardHeader className="pb-4">
                       <div className="flex items-center justify-between mb-2">
@@ -343,11 +345,13 @@ export default function Events() {
                   className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-tent-purple/30"
                 >
                   <div className="aspect-video overflow-hidden">
-                    <img
-                      src={event.image}
-                      alt={event.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
+                    <a href={getEventDetailUrl(event.name)} className="block w-full h-full">
+                      <img
+                        src={event.image}
+                        alt={event.name}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </a>
                   </div>
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between mb-3">
