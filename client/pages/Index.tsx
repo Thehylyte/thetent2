@@ -13,12 +13,20 @@ import {
   Instagram,
 } from "lucide-react";
 import { useState } from "react";
+import SEO from "../components/SEO";
 
 export default function Index() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-tent-blue/5">
+    <>
+      <SEO
+        title="The Tent - Premium VIP Festival Hospitality for Artists"
+        description="Elevate your festival experience with The Tent's exclusive VIP hospitality services. Professional recovery, luxury amenities, and concierge services for artists at major music festivals."
+        keywords="festival hospitality, VIP services, artist amenities, music festival, luxury hospitality, artist services, festival VIP, entertainment hospitality, Lollapalooza, Riot Fest, Sea Hear Now"
+        url="https://thetent.club/"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-background via-background to-tent-blue/5">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
         <div className="container mx-auto px-6 py-4">
@@ -462,6 +470,7 @@ export default function Index() {
           </div>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   );
 }
