@@ -152,7 +152,7 @@ export default function Services() {
       <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
+            <a href="/" className="flex items-center space-x-2">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Fb017979ff0b141cd8af8f8de2687b8cb?format=webp&width=800"
                 alt="The Tent Logo"
@@ -161,7 +161,7 @@ export default function Services() {
               <span className="text-2xl font-bold bg-gradient-to-r from-tent-blue via-tent-purple to-tent-pink bg-clip-text text-transparent">
                 THE TENT
               </span>
-            </div>
+            </a>
             <div className="hidden md:flex items-center space-x-8">
               <a
                 href="/"
