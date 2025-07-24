@@ -103,6 +103,8 @@ export default function Events() {
         return "/events/sea-hear-now";
       case "Country Calling":
         return "/events/country-calling";
+      case "Oceans Calling":
+        return "/events/oceans-calling";
       default:
         return "/events";
     }
