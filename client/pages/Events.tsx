@@ -66,6 +66,18 @@ export default function Events() {
       status: "pending",
       capacity: "Country Artist Services",
     },
+    {
+      id: 5,
+      name: "Oceans Calling",
+      location: "Ocean City, MD",
+      dates: "September 26-28, 2025",
+      description:
+        "Where music meets the ocean. Experience The Tent's premier beachside hospitality at Maryland's most spectacular coastal music festival.",
+      image:
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      status: "confirmed",
+      capacity: "Oceanfront VIP Services",
+    },
   ];
 
     const getStatusColor = (status: string) => {
