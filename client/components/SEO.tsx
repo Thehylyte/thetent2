@@ -30,7 +30,9 @@ export default function SEO({
   noIndex = false,
 }: SEOProps) {
   const siteTitle = "The Tent";
-  const fullTitle = title.includes(siteTitle) ? title : `${title} | ${siteTitle}`;
+  const fullTitle = title.includes(siteTitle)
+    ? title
+    : `${title} | ${siteTitle}`;
 
   return (
     <Helmet>
@@ -40,14 +42,14 @@ export default function SEO({
       <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
       <link rel="canonical" href={url} />
-      
+
       {/* Robots */}
       {noIndex ? (
         <meta name="robots" content="noindex, nofollow" />
       ) : (
         <meta name="robots" content="index, follow" />
       )}
-      
+
       {/* Open Graph */}
       <meta property="og:type" content={type} />
       <meta property="og:title" content={fullTitle} />
@@ -55,7 +57,7 @@ export default function SEO({
       <meta property="og:image" content={image} />
       <meta property="og:url" content={url} />
       <meta property="og:site_name" content={siteTitle} />
-      
+
       {/* Article specific meta tags */}
       {type === "article" && publishedTime && (
         <meta property="article:published_time" content={publishedTime} />
@@ -69,17 +71,19 @@ export default function SEO({
       {type === "article" && section && (
         <meta property="article:section" content={section} />
       )}
-      {type === "article" && tags && tags.map((tag, index) => (
-        <meta key={index} property="article:tag" content={tag} />
-      ))}
-      
+      {type === "article" &&
+        tags &&
+        tags.map((tag, index) => (
+          <meta key={index} property="article:tag" content={tag} />
+        ))}
+
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <meta name="twitter:url" content={url} />
-      
+
       {/* Additional Meta Tags */}
       <meta name="theme-color" content="#3B82F6" />
       <meta name="msapplication-TileColor" content="#3B82F6" />
