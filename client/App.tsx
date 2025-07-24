@@ -14,6 +14,7 @@ import Lollapalooza from "./pages/Lollapalooza";
 import RiotFest from "./pages/RiotFest";
 import SeaHearNow from "./pages/SeaHearNow";
 import CountryCalling from "./pages/CountryCalling";
+import OceansCalling from "./pages/OceansCalling";
 import ArtistRegistration from "./pages/ArtistRegistration";
 import ArtistLogin from "./pages/ArtistLogin";
 import ArtistDashboard from "./pages/ArtistDashboard";
