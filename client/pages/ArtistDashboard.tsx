@@ -451,11 +451,17 @@ export default function ArtistDashboard() {
                           <div
                             key={service.id}
                             className={`p-4 border rounded-lg cursor-pointer transition-all ${
-                              selectedService === service.name
+                              selectedServices.includes(service.name)
                                 ? `border-${service.color} bg-${service.color}/5`
                                 : "border-border hover:border-tent-purple/40"
                             }`}
-                            onClick={() => setSelectedService(service.name)}
+                            onClick={() => {
+                              if (selectedServices.includes(service.name)) {
+                                setSelectedServices(selectedServices.filter(s => s !== service.name));
+                              } else {
+                                setSelectedServices([...selectedServices, service.name]);
+                              }
+                            }}
                           >
                             <div className="flex items-center space-x-4">
                               <div
@@ -471,7 +477,7 @@ export default function ArtistDashboard() {
                                   {service.description} • {service.duration}
                                 </p>
                               </div>
-                              {selectedService === service.name && (
+                              {selectedServices.includes(service.name) && (
                                 <CheckCircle className="w-5 h-5 text-tent-purple" />
                               )}
                             </div>
@@ -482,7 +488,7 @@ export default function ArtistDashboard() {
                   )}
 
                   {/* Date & Time Selection */}
-                  {selectedService && (
+                  {selectedServices.length > 0 && (
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <label
@@ -525,7 +531,7 @@ export default function ArtistDashboard() {
 
                   {/* Submit Button */}
                   {selectedFestival &&
-                    selectedService &&
+                    selectedServices.length > 0 &&
                     selectedDate &&
                     selectedTime && (
                       <Button
@@ -651,7 +657,8 @@ export default function ArtistDashboard() {
                                 className="w-full bg-gradient-to-r from-tent-orange to-tent-pink hover:from-tent-orange/90 hover:to-tent-pink/90"
                                 onClick={() => {
                                   const selectedServiceDetails = barberServices.find(s => s.id === selectedBarberService);
-                                  setSelectedService(`Barber Shop - ${selectedServiceDetails?.name}`);
+                                  const serviceName = `Barber Shop - ${selectedServiceDetails?.name}`;
+                                  setSelectedServices([...selectedServices, serviceName]);
                                   setShowBarberDetails(false);
                                   setSelectedBarberService("");
                                   document.querySelector('[data-booking-form]')?.scrollIntoView({ behavior: 'smooth' });
@@ -686,7 +693,7 @@ export default function ArtistDashboard() {
                           variant="outline"
                           className="w-full border-tent-blue/30 text-tent-blue hover:bg-tent-blue/10"
                           onClick={() => {
-                            setSelectedService("Normatec Chairs");
+                            setSelectedServices([...selectedServices, "Normatec Chairs"]);
                             // Scroll to booking form
                             document.querySelector('[data-booking-form]')?.scrollIntoView({ behavior: 'smooth' });
                           }}
