@@ -22,6 +22,7 @@ import ArtistDashboard from "./pages/ArtistDashboard";
 import Founders from "./pages/Founders";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
+import BrandPartnership from "./pages/BrandPartnership";
 import AdminRegistrations from "./pages/AdminRegistrations";
 import NotFound from "./pages/NotFound";
 
