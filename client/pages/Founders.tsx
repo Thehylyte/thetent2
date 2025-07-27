@@ -22,6 +22,7 @@ import { useScrollFade } from "../hooks/useScrollFade";
 
 export default function Founders() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { navStyle } = useScrollFade();
   const founders = [];
 
   const milestones = [
