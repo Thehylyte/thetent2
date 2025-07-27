@@ -22,6 +22,7 @@ import { useScrollFade } from "../hooks/useScrollFade";
 
 export default function BrandPartnership() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { navStyle } = useScrollFade();
   const [formData, setFormData] = useState({
     companyName: "",
     product: "",
