@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import SEO from "../components/SEO";
+import { useScrollFade } from "../hooks/useScrollFade";
 
 export default function Services() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
