@@ -22,6 +22,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useScrollFade } from "../hooks/useScrollFade";
 
 export default function ArtistDashboard() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
