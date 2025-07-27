@@ -37,63 +37,79 @@ export default function BrandPartnership() {
       name: "Lollapalooza",
       location: "Chicago, IL",
       dates: "July 31 - August 3, 2025",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F2bc66643592a4bdeb30f109da17a6bf6?format=webp&width=800",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F2bc66643592a4bdeb30f109da17a6bf6?format=webp&width=800",
     },
     {
       name: "Riot Fest",
-      location: "Chicago, IL", 
+      location: "Chicago, IL",
       dates: "September 19-21, 2025",
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image:
+        "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     },
     {
       name: "Sea.Hear.Now",
       location: "Asbury Park, NJ",
-      dates: "September 13-14, 2025", 
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      dates: "September 13-14, 2025",
+      image:
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     },
     {
       name: "Country Calling",
       location: "Ocean City, MD",
       dates: "October 3-5, 2025",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F26b8027a38904d98b8cd653c90ef7c84?format=webp&width=800",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F26b8027a38904d98b8cd653c90ef7c84?format=webp&width=800",
     },
     {
       name: "Oceans Calling",
       location: "Ocean City, MD",
       dates: "September 26-28, 2025",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image:
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     },
   ];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleFestivalToggle = (festivalName: string) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       selectedFestivals: prev.selectedFestivals.includes(festivalName)
-        ? prev.selectedFestivals.filter(f => f !== festivalName)
-        : [...prev.selectedFestivals, festivalName]
+        ? prev.selectedFestivals.filter((f) => f !== festivalName)
+        : [...prev.selectedFestivals, festivalName],
     }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    if (!formData.companyName || !formData.contactName || !formData.contactEmail || formData.selectedFestivals.length === 0) {
-      alert("Please fill in all required fields and select at least one festival.");
+
+    if (
+      !formData.companyName ||
+      !formData.contactName ||
+      !formData.contactEmail ||
+      formData.selectedFestivals.length === 0
+    ) {
+      alert(
+        "Please fill in all required fields and select at least one festival.",
+      );
       return;
     }
 
     // Here you would typically send the data to your backend
     console.log("Partnership application:", formData);
-    alert(`Thank you ${formData.contactName}! Your brand partnership application for ${formData.companyName} has been submitted. We'll be in touch within 48 hours to discuss opportunities at ${formData.selectedFestivals.join(", ")}.`);
-    
+    alert(
+      `Thank you ${formData.contactName}! Your brand partnership application for ${formData.companyName} has been submitted. We'll be in touch within 48 hours to discuss opportunities at ${formData.selectedFestivals.join(", ")}.`,
+    );
+
     // Reset form
     setFormData({
       companyName: "",
@@ -250,7 +266,9 @@ export default function BrandPartnership() {
                 Become a Brand Partner
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
-                Join our exclusive network of premium brands and showcase your products to artists, entertainers, and VIP guests at major music festivals across the country.
+                Join our exclusive network of premium brands and showcase your
+                products to artists, entertainers, and VIP guests at major music
+                festivals across the country.
               </p>
             </div>
           </div>
@@ -268,9 +286,12 @@ export default function BrandPartnership() {
                   <div className="w-16 h-16 bg-gradient-to-br from-tent-blue to-tent-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Music className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-4">Direct Artist Access</h3>
+                  <h3 className="text-xl font-bold mb-4">
+                    Direct Artist Access
+                  </h3>
                   <p className="text-muted-foreground">
-                    Connect directly with top-tier artists and entertainers in an exclusive, relaxed environment.
+                    Connect directly with top-tier artists and entertainers in
+                    an exclusive, relaxed environment.
                   </p>
                 </CardContent>
               </Card>
@@ -279,9 +300,12 @@ export default function BrandPartnership() {
                   <div className="w-16 h-16 bg-gradient-to-br from-tent-purple to-tent-pink rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Crown className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-4">Premium Brand Exposure</h3>
+                  <h3 className="text-xl font-bold mb-4">
+                    Premium Brand Exposure
+                  </h3>
                   <p className="text-muted-foreground">
-                    Showcase your products in our luxury hospitality environment to a highly engaged audience.
+                    Showcase your products in our luxury hospitality environment
+                    to a highly engaged audience.
                   </p>
                 </CardContent>
               </Card>
@@ -290,9 +314,12 @@ export default function BrandPartnership() {
                   <div className="w-16 h-16 bg-gradient-to-br from-tent-pink to-tent-orange rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Calendar className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-4">Multi-Festival Network</h3>
+                  <h3 className="text-xl font-bold mb-4">
+                    Multi-Festival Network
+                  </h3>
                   <p className="text-muted-foreground">
-                    Access multiple festivals throughout the year with a single partnership agreement.
+                    Access multiple festivals throughout the year with a single
+                    partnership agreement.
                   </p>
                 </CardContent>
               </Card>
@@ -305,9 +332,12 @@ export default function BrandPartnership() {
           <div className="container mx-auto max-w-4xl">
             <Card className="border-tent-purple/20">
               <CardHeader>
-                <h2 className="text-3xl font-bold text-center mb-4">Partnership Application</h2>
+                <h2 className="text-3xl font-bold text-center mb-4">
+                  Partnership Application
+                </h2>
                 <p className="text-muted-foreground text-center">
-                  Tell us about your brand and which festivals you're interested in partnering with.
+                  Tell us about your brand and which festivals you're interested
+                  in partnering with.
                 </p>
               </CardHeader>
               <CardContent>
@@ -315,7 +345,10 @@ export default function BrandPartnership() {
                   {/* Company Information */}
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="companyName" className="block text-sm font-medium mb-2">
+                      <label
+                        htmlFor="companyName"
+                        className="block text-sm font-medium mb-2"
+                      >
                         Company Name *
                       </label>
                       <div className="relative">
@@ -333,7 +366,10 @@ export default function BrandPartnership() {
                       </div>
                     </div>
                     <div>
-                      <label htmlFor="product" className="block text-sm font-medium mb-2">
+                      <label
+                        htmlFor="product"
+                        className="block text-sm font-medium mb-2"
+                      >
                         Product/Service *
                       </label>
                       <div className="relative">
@@ -355,7 +391,10 @@ export default function BrandPartnership() {
                   {/* Contact Information */}
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="contactName" className="block text-sm font-medium mb-2">
+                      <label
+                        htmlFor="contactName"
+                        className="block text-sm font-medium mb-2"
+                      >
                         Contact Name *
                       </label>
                       <div className="relative">
@@ -373,7 +412,10 @@ export default function BrandPartnership() {
                       </div>
                     </div>
                     <div>
-                      <label htmlFor="contactTitle" className="block text-sm font-medium mb-2">
+                      <label
+                        htmlFor="contactTitle"
+                        className="block text-sm font-medium mb-2"
+                      >
                         Contact Title
                       </label>
                       <div className="relative">
@@ -393,7 +435,10 @@ export default function BrandPartnership() {
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="contactPhone" className="block text-sm font-medium mb-2">
+                      <label
+                        htmlFor="contactPhone"
+                        className="block text-sm font-medium mb-2"
+                      >
                         Contact Phone
                       </label>
                       <div className="relative">
@@ -410,7 +455,10 @@ export default function BrandPartnership() {
                       </div>
                     </div>
                     <div>
-                      <label htmlFor="contactEmail" className="block text-sm font-medium mb-2">
+                      <label
+                        htmlFor="contactEmail"
+                        className="block text-sm font-medium mb-2"
+                      >
                         Contact Email *
                       </label>
                       <div className="relative">
@@ -452,7 +500,9 @@ export default function BrandPartnership() {
                               className="w-12 h-12 rounded-lg object-cover"
                             />
                             <div className="flex-1">
-                              <h4 className="font-semibold text-sm">{festival.name}</h4>
+                              <h4 className="font-semibold text-sm">
+                                {festival.name}
+                              </h4>
                               <p className="text-xs text-muted-foreground">
                                 {festival.location}
                               </p>
@@ -460,7 +510,9 @@ export default function BrandPartnership() {
                                 {festival.dates}
                               </p>
                             </div>
-                            {formData.selectedFestivals.includes(festival.name) && (
+                            {formData.selectedFestivals.includes(
+                              festival.name,
+                            ) && (
                               <CheckCircle className="w-5 h-5 text-tent-purple" />
                             )}
                           </div>
@@ -471,7 +523,10 @@ export default function BrandPartnership() {
 
                   {/* Additional Message */}
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium mb-2"
+                    >
                       Additional Information
                     </label>
                     <textarea
@@ -535,7 +590,10 @@ export default function BrandPartnership() {
                 >
                   Founders
                 </a>
-                <a href="/contact" className="hover:text-foreground transition-colors">
+                <a
+                  href="/contact"
+                  className="hover:text-foreground transition-colors"
+                >
                   Contact
                 </a>
               </div>

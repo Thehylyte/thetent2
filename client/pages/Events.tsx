@@ -277,7 +277,10 @@ export default function Events() {
                     className="group overflow-hidden border-tent-blue/20 hover:border-tent-blue/40 transition-all duration-300 hover:shadow-2xl"
                   >
                     <div className="aspect-video overflow-hidden">
-                      <a href={getEventDetailUrl(event.name)} className="block w-full h-full">
+                      <a
+                        href={getEventDetailUrl(event.name)}
+                        className="block w-full h-full"
+                      >
                         <img
                           src={event.image}
                           alt={event.name}
@@ -345,7 +348,10 @@ export default function Events() {
                   className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-tent-purple/30"
                 >
                   <div className="aspect-video overflow-hidden">
-                    <a href={getEventDetailUrl(event.name)} className="block w-full h-full">
+                    <a
+                      href={getEventDetailUrl(event.name)}
+                      className="block w-full h-full"
+                    >
                       <img
                         src={event.image}
                         alt={event.name}
@@ -447,10 +453,16 @@ export default function Events() {
                 >
                   Events
                 </a>
-                <a href="/contact" className="hover:text-foreground transition-colors">
+                <a
+                  href="/contact"
+                  className="hover:text-foreground transition-colors"
+                >
                   Contact
                 </a>
-                <a href="/brand-partnership" className="hover:text-foreground transition-colors">
+                <a
+                  href="/brand-partnership"
+                  className="hover:text-foreground transition-colors"
+                >
                   Brand Partners
                 </a>
               </div>

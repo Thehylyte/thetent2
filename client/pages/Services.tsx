@@ -556,10 +556,16 @@ export default function Services() {
                 >
                   Founders
                 </a>
-                <a href="/contact" className="hover:text-foreground transition-colors">
+                <a
+                  href="/contact"
+                  className="hover:text-foreground transition-colors"
+                >
                   Contact
                 </a>
-                <a href="/brand-partnership" className="hover:text-foreground transition-colors">
+                <a
+                  href="/brand-partnership"
+                  className="hover:text-foreground transition-colors"
+                >
                   Brand Partners
                 </a>
               </div>
