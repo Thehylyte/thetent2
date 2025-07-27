@@ -451,6 +451,12 @@ export default function Index() {
                     Privacy
                   </a>
                   <a
+                    href="/brand-partnership"
+                    className="hover:text-foreground transition-colors"
+                  >
+                    Become a Brand Partner
+                  </a>
+                  <a
                     href="#"
                     className="hover:text-foreground transition-colors"
                   >
