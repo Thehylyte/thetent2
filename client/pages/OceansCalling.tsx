@@ -22,6 +22,7 @@ import {
   X,
 } from "lucide-react";
 import { useState } from "react";
+import { useScrollFade } from "../hooks/useScrollFade";
 
 export default function OceansCalling() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
