@@ -106,7 +106,10 @@ export default function OceansCalling() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-50/30 via-blue-50/20 to-teal-50/30">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+      <nav
+        className="fixed top-0 w-full z-50 transition-all duration-300 ease-in-out"
+        style={navStyle}
+      >
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
