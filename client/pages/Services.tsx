@@ -181,28 +181,28 @@ export default function Services() {
               <div className="hidden md:flex items-center space-x-8">
                 <a
                   href="/"
-                  className="text-foreground/80 hover:text-foreground transition-colors"
+                  className={`${textColor} transition-colors`}
                 >
                   Home
                 </a>
                 <a
                   href="/events"
-                  className="text-foreground/80 hover:text-foreground transition-colors"
+                  className={`${textColor} transition-colors`}
                 >
                   Events
                 </a>
                 <a
                   href="/founders"
-                  className="text-foreground/80 hover:text-foreground transition-colors"
+                  className={`${textColor} transition-colors`}
                 >
                   Founders
                 </a>
-                <a href="/services" className="text-foreground font-medium">
+                <a href="/services" className={`${textColor.replace('/80', '')} font-medium transition-colors`}>
                   Services
                 </a>
                 <a
                   href="/contact"
-                  className="text-foreground/80 hover:text-foreground transition-colors"
+                  className={`${textColor} transition-colors`}
                 >
                   Contact
                 </a>
