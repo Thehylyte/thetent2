@@ -55,27 +55,10 @@ export const useScrollFade = () => {
     }
   };
 
-  // Get logo text color (keep gradient initially, fade to white)
-  const getLogoTextStyle = () => {
-    if (scrollY <= 50) {
-      return {};
-    } else {
-      const textOpacity = Math.min((scrollY - 50) / 150, 1);
-      return {
-        background: `linear-gradient(to right, rgba(255,255,255,${0.8 + textOpacity * 0.2}), rgba(255,255,255,${0.8 + textOpacity * 0.2}))`,
-        WebkitBackgroundClip: 'text',
-        backgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
-        color: 'transparent',
-      };
-    }
-  };
-
   return {
     scrollY,
     isScrolled,
     navStyle: getNavStyle(),
     textColor: getTextColor(),
-    logoTextStyle: getLogoTextStyle(),
   };
 };
