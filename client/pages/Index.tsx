@@ -18,7 +18,7 @@ import { useScrollFade } from "../hooks/useScrollFade";
 
 export default function Index() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { navStyle } = useScrollFade();
+  const { navStyle, textColor, logoTextStyle } = useScrollFade();
 
   return (
     <>
