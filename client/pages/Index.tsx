@@ -107,28 +107,28 @@ export default function Index() {
                 <div className="flex flex-col space-y-4 pt-4">
                   <a
                     href="#experience"
-                    className="text-foreground/80 hover:text-foreground transition-colors px-2 py-1"
+                    className={`${textColor} transition-colors px-2 py-1`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Experience
                   </a>
                   <a
                     href="/events"
-                    className="text-foreground/80 hover:text-foreground transition-colors px-2 py-1"
+                    className={`${textColor} transition-colors px-2 py-1`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Events
                   </a>
                   <a
                     href="/founders"
-                    className="text-foreground/80 hover:text-foreground transition-colors px-2 py-1"
+                    className={`${textColor} transition-colors px-2 py-1`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Founders
                   </a>
                   <a
                     href="/services"
-                    className="text-foreground/80 hover:text-foreground transition-colors px-2 py-1"
+                    className={`${textColor} transition-colors px-2 py-1`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Services
