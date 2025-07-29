@@ -26,7 +26,7 @@ import { useScrollFade } from "../hooks/useScrollFade";
 
 export default function ArtistDashboard() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { navStyle, textColor, logoTextStyle } = useScrollFade();
+  const { navStyle, textColor } = useScrollFade();
   const [artistName, setArtistName] = useState("");
   const [artistEmail, setArtistEmail] = useState("");
   const [selectedFestival, setSelectedFestival] = useState("");
