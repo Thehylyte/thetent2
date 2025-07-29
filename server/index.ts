@@ -19,9 +19,19 @@ export function createServer() {
     res.json({ message: "Hello from Express server v2!" });
   });
 
+  app.get("/test", (_req, res) => {
+    res.json({ message: "Test endpoint working!" });
+  });
+
   app.get("/demo", handleDemo);
   app.post("/artist-registration", handleArtistRegistration);
   app.get("/artist-registrations", handleGetRegistrations);
+
+  // Add a catch-all route to log unhandled requests
+  app.use("*", (req, res) => {
+    console.log("🚨 Unhandled route:", req.method, req.originalUrl);
+    res.status(404).json({ error: "Route not found", path: req.originalUrl });
+  });
 
   return app;
 }
