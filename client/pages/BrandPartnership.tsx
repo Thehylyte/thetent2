@@ -326,6 +326,53 @@ export default function BrandPartnership() {
           </div>
         </section>
 
+        {/* Detailed Benefits Section */}
+        <section className="py-16 px-6">
+          <div className="container mx-auto max-w-5xl">
+            <div className="bg-gradient-to-r from-tent-purple/5 via-tent-blue/5 to-tent-pink/5 rounded-3xl p-8 md:p-12 border border-tent-purple/10">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-tent-purple to-tent-blue bg-clip-text text-transparent">
+                  Why Partner with The Tent?
+                </h2>
+              </div>
+              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
+                <p className="text-lg md:text-xl mb-6">
+                  Partnering with The Tent provides your brand with{" "}
+                  <span className="font-semibold text-tent-purple">
+                    direct access to some of the most influential talent in the world
+                  </span>{" "}
+                  at affordable price points that deliver exceptional ROI. Our exclusive
+                  hospitality environment creates authentic, relaxed interactions between
+                  your products and top-tier artists, influencers, and industry professionals
+                  who shape culture and drive consumer trends.
+                </p>
+                <p className="text-lg md:text-xl mb-6">
+                  Through our partnerships, brands gain access to{" "}
+                  <span className="font-semibold text-tent-blue">
+                    premium content opportunities
+                  </span>{" "}
+                  that can be utilized across social media platforms to showcase products
+                  and services in organic, high-engagement settings. Our artists naturally
+                  create and share content featuring partner products, providing authentic
+                  endorsements and valuable user-generated content that resonates with
+                  millions of followers.
+                </p>
+                <p className="text-lg md:text-xl">
+                  Beyond exposure, The Tent facilitates{" "}
+                  <span className="font-semibold text-tent-pink">
+                    direct product education opportunities
+                  </span>{" "}
+                  where brands can personally introduce their innovations to influential
+                  talent in a premium, distraction-free environment. This hands-on approach
+                  ensures artists fully understand and appreciate your products, leading to
+                  more authentic advocacy and long-term brand relationships that extend far
+                  beyond festival grounds.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Form Section */}
         <section className="py-16 px-6">
           <div className="container mx-auto max-w-4xl">
