@@ -15,6 +15,8 @@ const registrations: (ArtistRegistrationRequest & {
 })[] = [];
 
 export const handleArtistRegistration: RequestHandler = async (req, res) => {
+  console.log("🎵 Artist registration request received:", req.method, req.url);
+  console.log("📝 Request body:", req.body);
   try {
     const registrationData: ArtistRegistrationRequest = req.body;
 
