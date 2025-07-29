@@ -254,20 +254,23 @@ export default function ArtistDashboard() {
                 alt="The Tent Logo"
                 className="w-8 h-8"
               />
-              <span className="text-2xl font-bold bg-gradient-to-r from-tent-blue via-tent-purple to-tent-pink bg-clip-text text-transparent">
+              <span
+                className="text-2xl font-bold bg-gradient-to-r from-tent-blue via-tent-purple to-tent-pink bg-clip-text text-transparent transition-all duration-300"
+                style={logoTextStyle}
+              >
                 THE TENT
               </span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a
                 href="/artist-dashboard"
-                className="text-foreground font-medium"
+                className={`${textColor.replace('/80', '')} font-medium transition-colors`}
               >
                 Dashboard
               </a>
               <a
                 href="/events"
-                className="text-foreground/80 hover:text-foreground transition-colors"
+                className={`${textColor} transition-colors`}
               >
                 Events
               </a>
