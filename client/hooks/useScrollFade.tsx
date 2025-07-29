@@ -26,7 +26,7 @@ export const useScrollFade = () => {
   // Get background style based on scroll position
   const getNavStyle = () => {
     const opacity = getBackgroundOpacity();
-    
+
     if (scrollY <= 50) {
       // Initial state - semi-transparent background with blur
       return {
@@ -44,9 +44,38 @@ export const useScrollFade = () => {
     }
   };
 
+  // Get text color styles based on scroll position
+  const getTextColor = () => {
+    if (scrollY <= 50) {
+      // Initial state - default colors
+      return 'text-foreground/80 hover:text-foreground';
+    } else {
+      // Scrolled state - white text
+      return 'text-white/80 hover:text-white';
+    }
+  };
+
+  // Get logo text color (keep gradient initially, fade to white)
+  const getLogoTextStyle = () => {
+    if (scrollY <= 50) {
+      return {};
+    } else {
+      const textOpacity = Math.min((scrollY - 50) / 150, 1);
+      return {
+        background: `linear-gradient(to right, rgba(255,255,255,${0.8 + textOpacity * 0.2}), rgba(255,255,255,${0.8 + textOpacity * 0.2}))`,
+        WebkitBackgroundClip: 'text',
+        backgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        color: 'transparent',
+      };
+    }
+  };
+
   return {
     scrollY,
     isScrolled,
     navStyle: getNavStyle(),
+    textColor: getTextColor(),
+    logoTextStyle: getLogoTextStyle(),
   };
 };
