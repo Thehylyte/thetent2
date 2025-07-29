@@ -125,10 +125,7 @@ export default function CountryCalling() {
                   alt="The Tent Logo"
                   className="w-8 h-8"
                 />
-                <span
-                  className="text-2xl font-bold bg-gradient-to-r from-tent-blue via-tent-purple to-tent-pink bg-clip-text text-transparent transition-all duration-300"
-                  style={logoTextStyle}
-                >
+                <span className="text-2xl font-bold bg-gradient-to-r from-tent-blue via-tent-purple to-tent-pink bg-clip-text text-transparent">
                   THE TENT
                 </span>
               </div>
