@@ -52,31 +52,31 @@ export default function Index() {
               <div className="hidden md:flex items-center space-x-8">
                 <a
                   href="#experience"
-                  className="text-foreground/80 hover:text-foreground transition-colors"
+                  className={`${textColor} transition-colors`}
                 >
                   Experience
                 </a>
                 <a
                   href="/events"
-                  className="text-foreground/80 hover:text-foreground transition-colors"
+                  className={`${textColor} transition-colors`}
                 >
                   Events
                 </a>
                 <a
                   href="/founders"
-                  className="text-foreground/80 hover:text-foreground transition-colors"
+                  className={`${textColor} transition-colors`}
                 >
                   Founders
                 </a>
                 <a
                   href="/services"
-                  className="text-foreground/80 hover:text-foreground transition-colors"
+                  className={`${textColor} transition-colors`}
                 >
                   Services
                 </a>
                 <a
                   href="/contact"
-                  className="text-foreground/80 hover:text-foreground transition-colors"
+                  className={`${textColor} transition-colors`}
                 >
                   Contact
                 </a>
