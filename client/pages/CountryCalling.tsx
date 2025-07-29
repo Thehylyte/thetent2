@@ -113,10 +113,10 @@ export default function CountryCalling() {
       />
       <div className="min-h-screen bg-gradient-to-br from-background via-background to-amber-50">
         {/* Navigation */}
-      <nav
-        className="fixed top-0 w-full z-50 transition-all duration-300 ease-in-out"
-        style={navStyle}
-      >
+        <nav
+          className="fixed top-0 w-full z-50 transition-all duration-300 ease-in-out"
+          style={navStyle}
+        >
           <div className="container mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
@@ -130,16 +130,10 @@ export default function CountryCalling() {
                 </span>
               </div>
               <div className="hidden md:flex items-center space-x-8">
-                <a
-                  href="/"
-                  className={`${textColor} transition-colors`}
-                >
+                <a href="/" className={`${textColor} transition-colors`}>
                   Home
                 </a>
-                <a
-                  href="/events"
-                  className={`${textColor} transition-colors`}
-                >
+                <a href="/events" className={`${textColor} transition-colors`}>
                   Events
                 </a>
                 <a

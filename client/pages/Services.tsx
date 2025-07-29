@@ -159,10 +159,10 @@ export default function Services() {
       />
       <div className="min-h-screen bg-gradient-to-br from-background via-background to-tent-blue/5">
         {/* Navigation */}
-      <nav
-        className="fixed top-0 w-full z-50 transition-all duration-300 ease-in-out"
-        style={navStyle}
-      >
+        <nav
+          className="fixed top-0 w-full z-50 transition-all duration-300 ease-in-out"
+          style={navStyle}
+        >
           <div className="container mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
               <a href="/" className="flex items-center space-x-2">
@@ -172,20 +172,14 @@ export default function Services() {
                   className="w-8 h-8"
                 />
                 <span className="text-2xl font-bold bg-gradient-to-r from-tent-blue via-tent-purple to-tent-pink bg-clip-text text-transparent">
-                THE TENT
-              </span>
+                  THE TENT
+                </span>
               </a>
               <div className="hidden md:flex items-center space-x-8">
-                <a
-                  href="/"
-                  className={`${textColor} transition-colors`}
-                >
+                <a href="/" className={`${textColor} transition-colors`}>
                   Home
                 </a>
-                <a
-                  href="/events"
-                  className={`${textColor} transition-colors`}
-                >
+                <a href="/events" className={`${textColor} transition-colors`}>
                   Events
                 </a>
                 <a
@@ -194,13 +188,13 @@ export default function Services() {
                 >
                   Founders
                 </a>
-                <a href="/services" className={`${textColor.replace('/80', '')} font-medium transition-colors`}>
+                <a
+                  href="/services"
+                  className={`${textColor.replace("/80", "")} font-medium transition-colors`}
+                >
                   Services
                 </a>
-                <a
-                  href="/contact"
-                  className={`${textColor} transition-colors`}
-                >
+                <a href="/contact" className={`${textColor} transition-colors`}>
                   Contact
                 </a>
                 <Button

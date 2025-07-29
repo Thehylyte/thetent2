@@ -20,7 +20,7 @@ export const useScrollFade = () => {
   const getBackgroundOpacity = () => {
     if (scrollY <= 50) return 0.8;
     if (scrollY >= 200) return 1;
-    return 0.8 + (scrollY - 50) / 150 * 0.2;
+    return 0.8 + ((scrollY - 50) / 150) * 0.2;
   };
 
   // Get background style based on scroll position
@@ -31,14 +31,14 @@ export const useScrollFade = () => {
       // Initial state - semi-transparent background with blur
       return {
         backgroundColor: `hsl(var(--background) / 0.8)`,
-        backdropFilter: 'blur(12px)',
-        borderBottom: '1px solid hsl(var(--border) / 0.5)',
+        backdropFilter: "blur(12px)",
+        borderBottom: "1px solid hsl(var(--border) / 0.5)",
       };
     } else {
       // Scrolled state - fade to black
       return {
         backgroundColor: `rgba(0, 0, 0, ${opacity})`,
-        backdropFilter: scrollY > 100 ? 'blur(12px)' : 'blur(8px)',
+        backdropFilter: scrollY > 100 ? "blur(12px)" : "blur(8px)",
         borderBottom: `1px solid rgba(255, 255, 255, ${Math.min(opacity * 0.2, 0.2)})`,
       };
     }
@@ -48,10 +48,10 @@ export const useScrollFade = () => {
   const getTextColor = () => {
     if (scrollY <= 50) {
       // Initial state - default colors
-      return 'text-foreground/80 hover:text-foreground';
+      return "text-foreground/80 hover:text-foreground";
     } else {
       // Scrolled state - white text
-      return 'text-white/80 hover:text-white';
+      return "text-white/80 hover:text-white";
     }
   };
 

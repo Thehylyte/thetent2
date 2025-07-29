@@ -90,19 +90,16 @@ export default function Founders() {
               </span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <a
-                href="/"
-                className={`${textColor} transition-colors`}
-              >
+              <a href="/" className={`${textColor} transition-colors`}>
                 Home
               </a>
-              <a
-                href="/events"
-                className={`${textColor} transition-colors`}
-              >
+              <a href="/events" className={`${textColor} transition-colors`}>
                 Events
               </a>
-              <a href="/founders" className={`${textColor.replace('/80', '')} font-medium transition-colors`}>
+              <a
+                href="/founders"
+                className={`${textColor.replace("/80", "")} font-medium transition-colors`}
+              >
                 Founders
               </a>
               <a

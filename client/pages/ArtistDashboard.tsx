@@ -142,7 +142,7 @@ export default function ArtistDashboard() {
       description: "Complete hair styling with premium products",
       duration: "45 min",
       price: "Complimentary",
-      icon: "✂️"
+      icon: "✂️",
     },
     {
       id: "beard-trim",
@@ -150,7 +150,7 @@ export default function ArtistDashboard() {
       description: "Professional beard grooming and shaping",
       duration: "25 min",
       price: "Complimentary",
-      icon: "🪒"
+      icon: "🪒",
     },
     {
       id: "hot-towel-shave",
@@ -158,7 +158,7 @@ export default function ArtistDashboard() {
       description: "Traditional hot towel straight razor shave",
       duration: "35 min",
       price: "Complimentary",
-      icon: "🔥"
+      icon: "🔥",
     },
     {
       id: "cut-and-shave",
@@ -166,7 +166,7 @@ export default function ArtistDashboard() {
       description: "Complete cut, beard trim, and hot towel finish",
       duration: "60 min",
       price: "Complimentary",
-      icon: "👑"
+      icon: "👑",
     },
     {
       id: "styling-only",
@@ -174,7 +174,7 @@ export default function ArtistDashboard() {
       description: "Hair styling with premium products (no cut)",
       duration: "20 min",
       price: "Complimentary",
-      icon: "💫"
+      icon: "💫",
     },
     {
       id: "grooming-kit",
@@ -182,8 +182,8 @@ export default function ArtistDashboard() {
       description: "Take-home premium grooming products",
       duration: "5 min",
       price: "Complimentary",
-      icon: "🎁"
-    }
+      icon: "🎁",
+    },
   ];
 
   useEffect(() => {
@@ -209,10 +209,17 @@ export default function ArtistDashboard() {
   };
 
   const handleReservation = () => {
-    if (selectedFestival && selectedServices.length > 0 && selectedDate && selectedTime) {
+    if (
+      selectedFestival &&
+      selectedServices.length > 0 &&
+      selectedDate &&
+      selectedTime
+    ) {
       // Enhanced confirmation message for multiple services
       const servicesList = selectedServices.join(", ");
-      const hasBarberService = selectedServices.some(service => service.includes("Barber Shop"));
+      const hasBarberService = selectedServices.some((service) =>
+        service.includes("Barber Shop"),
+      );
 
       const confirmationMessage = hasBarberService
         ? `Reservation requested for ${servicesList} at ${selectedFestival} on ${selectedDate} at ${selectedTime}. Our partner team will contact you within 2 hours to confirm your exclusive appointments!`
@@ -261,14 +268,11 @@ export default function ArtistDashboard() {
             <div className="hidden md:flex items-center space-x-8">
               <a
                 href="/artist-dashboard"
-                className={`${textColor.replace('/80', '')} font-medium transition-colors`}
+                className={`${textColor.replace("/80", "")} font-medium transition-colors`}
               >
                 Dashboard
               </a>
-              <a
-                href="/events"
-                className={`${textColor} transition-colors`}
-              >
+              <a href="/events" className={`${textColor} transition-colors`}>
                 Events
               </a>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
@@ -462,9 +466,16 @@ export default function ArtistDashboard() {
                             }`}
                             onClick={() => {
                               if (selectedServices.includes(service.name)) {
-                                setSelectedServices(selectedServices.filter(s => s !== service.name));
+                                setSelectedServices(
+                                  selectedServices.filter(
+                                    (s) => s !== service.name,
+                                  ),
+                                );
                               } else {
-                                setSelectedServices([...selectedServices, service.name]);
+                                setSelectedServices([
+                                  ...selectedServices,
+                                  service.name,
+                                ]);
                               }
                             }}
                           >
@@ -559,7 +570,8 @@ export default function ArtistDashboard() {
                       Premium Add-On Services
                     </h3>
                     <p className="text-muted-foreground">
-                      Enhance your festival experience with our exclusive partner services
+                      Enhance your festival experience with our exclusive
+                      partner services
                     </p>
                   </CardHeader>
                   <CardContent>
@@ -586,8 +598,13 @@ export default function ArtistDashboard() {
                             <Scissors className="w-6 h-6 text-white" />
                           </div>
                           <div>
-                            <h4 className="text-lg font-bold text-tent-orange">Barber Shop</h4>
-                            <p className="text-sm text-muted-foreground">Premium grooming experience from Funk's Barber Shop or The Idle Hand Collective</p>
+                            <h4 className="text-lg font-bold text-tent-orange">
+                              Barber Shop
+                            </h4>
+                            <p className="text-sm text-muted-foreground">
+                              Premium grooming experience from Funk's Barber
+                              Shop or The Idle Hand Collective
+                            </p>
                           </div>
                         </div>
 
@@ -611,7 +628,9 @@ export default function ArtistDashboard() {
                         ) : (
                           <div className="space-y-4">
                             <div className="flex items-center justify-between">
-                              <h5 className="font-semibold text-tent-orange">Choose Your Service</h5>
+                              <h5 className="font-semibold text-tent-orange">
+                                Choose Your Service
+                              </h5>
                               <Button
                                 variant="ghost"
                                 size="sm"
@@ -634,20 +653,33 @@ export default function ArtistDashboard() {
                                       ? "border-tent-orange bg-tent-orange/10"
                                       : "border-border hover:border-tent-orange/40"
                                   }`}
-                                  onClick={() => setSelectedBarberService(service.id)}
+                                  onClick={() =>
+                                    setSelectedBarberService(service.id)
+                                  }
                                 >
                                   <div className="flex items-start space-x-3">
-                                    <span className="text-lg">{service.icon}</span>
+                                    <span className="text-lg">
+                                      {service.icon}
+                                    </span>
                                     <div className="flex-1">
                                       <div className="flex items-center justify-between">
-                                        <h6 className="font-medium text-sm">{service.name}</h6>
-                                        <span className="text-xs text-tent-orange font-medium">{service.price}</span>
+                                        <h6 className="font-medium text-sm">
+                                          {service.name}
+                                        </h6>
+                                        <span className="text-xs text-tent-orange font-medium">
+                                          {service.price}
+                                        </span>
                                       </div>
-                                      <p className="text-xs text-muted-foreground mt-1">{service.description}</p>
+                                      <p className="text-xs text-muted-foreground mt-1">
+                                        {service.description}
+                                      </p>
                                       <div className="flex items-center mt-2">
                                         <Clock className="w-3 h-3 mr-1 text-muted-foreground" />
-                                        <span className="text-xs text-muted-foreground">{service.duration}</span>
-                                        {selectedBarberService === service.id && (
+                                        <span className="text-xs text-muted-foreground">
+                                          {service.duration}
+                                        </span>
+                                        {selectedBarberService ===
+                                          service.id && (
                                           <CheckCircle className="w-4 h-4 ml-auto text-tent-orange" />
                                         )}
                                       </div>
@@ -661,12 +693,20 @@ export default function ArtistDashboard() {
                               <Button
                                 className="w-full bg-gradient-to-r from-tent-orange to-tent-pink hover:from-tent-orange/90 hover:to-tent-pink/90"
                                 onClick={() => {
-                                  const selectedServiceDetails = barberServices.find(s => s.id === selectedBarberService);
+                                  const selectedServiceDetails =
+                                    barberServices.find(
+                                      (s) => s.id === selectedBarberService,
+                                    );
                                   const serviceName = `Barber Shop - ${selectedServiceDetails?.name}`;
-                                  setSelectedServices([...selectedServices, serviceName]);
+                                  setSelectedServices([
+                                    ...selectedServices,
+                                    serviceName,
+                                  ]);
                                   setShowBarberDetails(false);
                                   setSelectedBarberService("");
-                                  document.querySelector('[data-booking-form]')?.scrollIntoView({ behavior: 'smooth' });
+                                  document
+                                    .querySelector("[data-booking-form]")
+                                    ?.scrollIntoView({ behavior: "smooth" });
                                 }}
                               >
                                 Continue to Booking
@@ -684,8 +724,12 @@ export default function ArtistDashboard() {
                             <Zap className="w-6 h-6 text-white" />
                           </div>
                           <div>
-                            <h4 className="text-lg font-bold text-tent-blue">Normatec Chairs</h4>
-                            <p className="text-sm text-muted-foreground">Advanced recovery therapy</p>
+                            <h4 className="text-lg font-bold text-tent-blue">
+                              Normatec Chairs
+                            </h4>
+                            <p className="text-sm text-muted-foreground">
+                              Advanced recovery therapy
+                            </p>
                           </div>
                         </div>
                         <ul className="space-y-2 text-sm text-muted-foreground mb-4">
@@ -698,9 +742,14 @@ export default function ArtistDashboard() {
                           variant="outline"
                           className="w-full border-tent-blue/30 text-tent-blue hover:bg-tent-blue/10"
                           onClick={() => {
-                            setSelectedServices([...selectedServices, "Normatec Chairs"]);
+                            setSelectedServices([
+                              ...selectedServices,
+                              "Normatec Chairs",
+                            ]);
                             // Scroll to booking form
-                            document.querySelector('[data-booking-form]')?.scrollIntoView({ behavior: 'smooth' });
+                            document
+                              .querySelector("[data-booking-form]")
+                              ?.scrollIntoView({ behavior: "smooth" });
                           }}
                         >
                           Book Recovery Session
@@ -711,11 +760,14 @@ export default function ArtistDashboard() {
                     <div className="mt-6 p-4 bg-gradient-to-r from-tent-purple/10 to-tent-pink/10 rounded-lg border border-tent-purple/20">
                       <div className="flex items-center space-x-2 mb-2">
                         <Crown className="w-5 h-5 text-tent-purple" />
-                        <span className="font-semibold text-tent-purple">VIP Member Benefits</span>
+                        <span className="font-semibold text-tent-purple">
+                          VIP Member Benefits
+                        </span>
                       </div>
                       <p className="text-sm text-muted-foreground">
-                        As a VIP member, enjoy priority booking and exclusive access to our premium partner services.
-                        All services are available at participating festivals.
+                        As a VIP member, enjoy priority booking and exclusive
+                        access to our premium partner services. All services are
+                        available at participating festivals.
                       </p>
                     </div>
                   </CardContent>

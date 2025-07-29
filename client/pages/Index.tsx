@@ -43,8 +43,8 @@ export default function Index() {
                   className="w-8 h-8"
                 />
                 <span className="text-2xl font-bold bg-gradient-to-r from-tent-blue via-tent-purple to-tent-pink bg-clip-text text-transparent">
-                THE TENT
-              </span>
+                  THE TENT
+                </span>
               </div>
               <div className="hidden md:flex items-center space-x-8">
                 <a
@@ -53,10 +53,7 @@ export default function Index() {
                 >
                   Experience
                 </a>
-                <a
-                  href="/events"
-                  className={`${textColor} transition-colors`}
-                >
+                <a href="/events" className={`${textColor} transition-colors`}>
                   Events
                 </a>
                 <a
@@ -71,10 +68,7 @@ export default function Index() {
                 >
                   Services
                 </a>
-                <a
-                  href="/contact"
-                  className={`${textColor} transition-colors`}
-                >
+                <a href="/contact" className={`${textColor} transition-colors`}>
                   Contact
                 </a>
                 <Button
