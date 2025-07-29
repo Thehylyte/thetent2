@@ -26,7 +26,7 @@ import { useScrollFade } from "../hooks/useScrollFade";
 
 export default function OceansCalling() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { navStyle } = useScrollFade();
+  const { navStyle, textColor, logoTextStyle } = useScrollFade();
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
 
