@@ -483,6 +483,11 @@ export default function Index() {
               <p>
                 &copy; 2024 The Tent. Elevating festival experiences worldwide.
               </p>
+              <p className="text-xs mt-2">
+                <a href="/admin/registrations" className="text-muted-foreground/60 hover:text-foreground transition-colors">
+                  Admin
+                </a>
+              </p>
             </div>
           </div>
         </footer>
