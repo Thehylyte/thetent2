@@ -149,16 +149,27 @@ export default function Index() {
         </nav>
 
         {/* Hero Section */}
-        <section className="pt-24 pb-16 px-6" style={{ backgroundColor: '#2e2e2e' }}>
+        <section
+          className="pt-24 pb-16 px-6"
+          style={{ backgroundColor: "#2e2e2e" }}
+        >
           <div className="container mx-auto">
             <div className="text-center mb-16">
-
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase" style={{ fontFamily: 'Monument Grotesk, sans-serif', color: '#F8F5EE' }}>
+              <h1
+                className="text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase"
+                style={{
+                  fontFamily: "Monument Grotesk, sans-serif",
+                  color: "#F8F5EE",
+                }}
+              >
                 ELEVATE YOUR
                 <br />
                 FESTIVAL EXPERIENCE
               </h1>
-              <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-8 uppercase" style={{ color: '#f8f5ee' }}>
+              <p
+                className="text-xl md:text-2xl max-w-3xl mx-auto mb-8 uppercase"
+                style={{ color: "#f8f5ee" }}
+              >
                 the ultimate hospitality sanctuary
               </p>
             </div>
@@ -479,7 +490,10 @@ export default function Index() {
                 &copy; 2024 The Tent. Elevating festival experiences worldwide.
               </p>
               <p className="text-xs mt-2">
-                <a href="/admin/registrations" className="text-muted-foreground/60 hover:text-foreground transition-colors">
+                <a
+                  href="/admin/registrations"
+                  className="text-muted-foreground/60 hover:text-foreground transition-colors"
+                >
                   Admin
                 </a>
               </p>

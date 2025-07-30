@@ -52,7 +52,9 @@ export default function AdminRegistrations() {
 
       if (!response.ok) {
         if (response.status === 404) {
-          setError("Admin API is currently unavailable due to deployment configuration. Please check the DEPLOYMENT_FIX.md guide or contact technical support. Registrations are being handled manually at jg@thetent.club");
+          setError(
+            "Admin API is currently unavailable due to deployment configuration. Please check the DEPLOYMENT_FIX.md guide or contact technical support. Registrations are being handled manually at jg@thetent.club",
+          );
           return;
         }
         throw new Error(`HTTP ${response.status}`);
@@ -63,11 +65,15 @@ export default function AdminRegistrations() {
       if (data.success) {
         setRegistrations(data.registrations);
       } else {
-        setError("Failed to fetch registrations: " + (data.message || "Unknown error"));
+        setError(
+          "Failed to fetch registrations: " + (data.message || "Unknown error"),
+        );
       }
     } catch (err) {
       console.error("Admin fetch error:", err);
-      setError("Error connecting to server. API endpoints may not be available in this deployment configuration.");
+      setError(
+        "Error connecting to server. API endpoints may not be available in this deployment configuration.",
+      );
     } finally {
       setLoading(false);
     }
