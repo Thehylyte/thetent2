@@ -112,6 +112,13 @@ export default function ArtistRegistration() {
       });
 
       if (!response.ok) {
+        // Handle 404 - API endpoint not available
+        if (response.status === 404) {
+          throw new Error(
+            "Registration service is currently unavailable. This appears to be a deployment configuration issue. Please contact support at jg@thetent.club to complete your registration."
+          );
+        }
+
         // Try to get the error message from the server response
         try {
           const errorData = await response.json();
