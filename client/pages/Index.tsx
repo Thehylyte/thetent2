@@ -357,7 +357,7 @@ export default function Index() {
         </section>
 
         {/* Experience Showcase */}
-        <section className="py-16 px-6 bg-gradient-to-r from-tent-purple/10 via-tent-blue/10 to-tent-pink/10">
+        <section className="py-16 px-6" style={{ backgroundColor: "#F8F5EE" }}>
           <div className="container mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
