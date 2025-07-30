@@ -1,18 +1,23 @@
 # API 404 Error Fix - Deployment Configuration
 
 ## Problem
+
 The artist registration form is returning a 404 error because the Express API server is not running in the production environment.
 
 ## Root Cause
+
 The current deployment only serves the static React build without the backend Express server that handles API routes like `/api/artist-registration`.
 
 ## Solutions
 
 ### Option 1: Full-Stack Deployment (Recommended)
+
 Deploy both the React frontend and Express backend together.
 
 **For Fly.io deployment:**
+
 1. Create a `Dockerfile` in the root directory:
+
 ```dockerfile
 FROM node:18-alpine
 
@@ -41,6 +46,7 @@ CMD ["npm", "start"]
 ```
 
 2. Create/update `fly.toml`:
+
 ```toml
 app = "the-tent-app"
 primary_region = "iad"
@@ -60,14 +66,17 @@ primary_region = "iad"
 ```
 
 ### Option 2: Serverless Functions
+
 Use Netlify Functions (current setup) or Vercel API routes.
 
 **For Netlify (already configured):**
+
 - The `/api/*` routes are redirected to `/.netlify/functions/api`
 - The function exists at `netlify/functions/api.ts`
 - Deploy to Netlify instead of Fly.io
 
 ### Option 3: Quick Fix - Mock API (Temporary)
+
 Add a client-side fallback for development/testing:
 
 ```typescript
@@ -78,22 +87,24 @@ const mockResponse = {
   registrationId: Date.now().toString(),
   loginCredentials: {
     email: "jg@thetent.club",
-    password: "Contact support for login access"
-  }
+    password: "Contact support for login access",
+  },
 };
 
 // Simulate API delay
-await new Promise(resolve => setTimeout(resolve, 1000));
+await new Promise((resolve) => setTimeout(resolve, 1000));
 const result = mockResponse;
 ```
 
 ## Immediate Action Required
+
 1. **For production**: Deploy to Netlify (API functions already configured) or set up full-stack deployment on Fly.io
 2. **For testing**: The registration form now shows a helpful error message and contact information
 3. **For support**: Direct users to contact jg@thetent.club for manual registration
 
 ## Current Status
+
 ✅ Added better error handling with user-friendly messages  
 ✅ Added fallback success state for better UX  
 ⚠️ API endpoints need proper deployment configuration  
-📧 Users are directed to contact support for registration  
+📧 Users are directed to contact support for registration

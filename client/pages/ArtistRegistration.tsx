@@ -115,7 +115,7 @@ export default function ArtistRegistration() {
         // Handle 404 - API endpoint not available
         if (response.status === 404) {
           throw new Error(
-            "Registration service is currently unavailable. This appears to be a deployment configuration issue. Please contact support at jg@thetent.club to complete your registration."
+            "Registration service is currently unavailable. This appears to be a deployment configuration issue. Please contact support at jg@thetent.club to complete your registration.",
           );
         }
 
@@ -166,7 +166,7 @@ export default function ArtistRegistration() {
           setSubmitSuccess(true);
           setLoginCredentials({
             email: "jg@thetent.club",
-            password: "Contact support for account setup"
+            password: "Contact support for account setup",
           });
         }, 4000);
       }
