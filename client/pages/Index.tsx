@@ -365,14 +365,14 @@ export default function Index() {
                   <Star className="w-4 h-4 mr-2" />
                   Artist Endorsed
                 </Badge>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#2E2E2E" }}>
                   Where Music Legends
-                  <span className="bg-gradient-to-r from-tent-blue to-tent-purple bg-clip-text text-transparent">
+                  <span style={{ color: "#2E2E2E" }}>
                     {" "}
                     Recharge
                   </span>
                 </h2>
-                <p className="text-xl text-muted-foreground mb-8">
+                <p className="text-xl mb-8" style={{ color: "#2E2E2E" }}>
                   Join the artists, entertainers, and industry professionals who
                   trust The Tent for their festival recovery and relaxation
                   needs. Experience the difference that luxury hospitality
