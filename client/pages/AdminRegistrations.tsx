@@ -49,15 +49,25 @@ export default function AdminRegistrations() {
 
     try {
       const response = await fetch("/api/artist-registrations");
+
+      if (!response.ok) {
+        if (response.status === 404) {
+          setError("Admin API is currently unavailable due to deployment configuration. Please check the DEPLOYMENT_FIX.md guide or contact technical support. Registrations are being handled manually at jg@thetent.club");
+          return;
+        }
+        throw new Error(`HTTP ${response.status}`);
+      }
+
       const data = await response.json();
 
       if (data.success) {
         setRegistrations(data.registrations);
       } else {
-        setError("Failed to fetch registrations");
+        setError("Failed to fetch registrations: " + (data.message || "Unknown error"));
       }
     } catch (err) {
-      setError("Error connecting to server");
+      console.error("Admin fetch error:", err);
+      setError("Error connecting to server. API endpoints may not be available in this deployment configuration.");
     } finally {
       setLoading(false);
     }
