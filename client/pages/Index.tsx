@@ -152,10 +152,7 @@ export default function Index() {
         <section className="pt-24 pb-16 px-6" style={{ backgroundColor: '#2e2e2e' }}>
           <div className="container mx-auto">
             <div className="text-center mb-16">
-              <Badge className="mb-6 bg-gradient-to-r from-tent-orange/20 to-tent-pink/20 text-tent-purple border-tent-purple/30">
-                <Crown className="w-4 h-4 mr-2" />
-                Exclusive VIP Experience
-              </Badge>
+
               <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase" style={{ fontFamily: 'Monument Grotesk, sans-serif', color: '#F8F5EE' }}>
                 ELEVATE YOUR
                 <br />
