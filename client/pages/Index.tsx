@@ -149,7 +149,7 @@ export default function Index() {
         </nav>
 
         {/* Hero Section */}
-        <section className="pt-24 pb-16 px-6">
+        <section className="pt-24 pb-16 px-6" style={{ backgroundColor: '#2e2e2e' }}>
           <div className="container mx-auto">
             <div className="text-center mb-16">
               <Badge className="mb-6 bg-gradient-to-r from-tent-orange/20 to-tent-pink/20 text-tent-purple border-tent-purple/30">
