@@ -161,7 +161,7 @@ export default function Index() {
                 <br />
                 FESTIVAL EXPERIENCE
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8">
+              <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-8" style={{ color: '#2e2e2e' }}>
                 The Tent is the ultimate hospitality sanctuary for artists and
                 entertainers at live music festivals. Discover exclusive
                 products, luxury recovery, and unparalleled relaxation.
