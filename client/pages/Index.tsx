@@ -28,7 +28,7 @@ export default function Index() {
         keywords="festival hospitality, VIP services, artist amenities, music festival, luxury hospitality, artist services, festival VIP, entertainment hospitality, Lollapalooza, Riot Fest, Sea Hear Now"
         url="https://thetent.club/"
       />
-      <div className="min-h-screen bg-gradient-to-br from-background via-background to-tent-blue/5">
+      <div className="min-h-screen">
         {/* Navigation */}
         <nav
           className="fixed top-0 w-full z-50 transition-all duration-300 ease-in-out"
