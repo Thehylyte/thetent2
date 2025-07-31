@@ -315,7 +315,7 @@ export default function ArtistLogin() {
                     <span className="w-full border-t border-border" />
                   </div>
                   <div className="relative flex justify-center text-sm">
-                    <span className="bg-background px-2 text-muted-foreground">
+                    <span className="bg-background px-2" style={{ color: "#F8F5EE" }}>
                       Don't have an account?
                     </span>
                   </div>
