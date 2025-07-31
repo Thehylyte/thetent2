@@ -287,7 +287,7 @@ export default function Services() {
                 <Crown className="w-4 h-4 mr-2" />
                 Premium Services
               </Badge>
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "700" }}>
                 Elevate Your
                 <br />
                 Festival Experience
