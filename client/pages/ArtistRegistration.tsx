@@ -866,7 +866,8 @@ export default function ArtistRegistration() {
                     type="submit"
                     size="lg"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90 text-lg py-6 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full text-lg py-6 disabled:opacity-50 disabled:cursor-not-allowed hover:opacity-90 transition-opacity"
+                    style={{ backgroundColor: "#2E2E2E" }}
                   >
                     {isSubmitting ? (
                       <>
