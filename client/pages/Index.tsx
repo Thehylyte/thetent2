@@ -157,7 +157,7 @@ export default function Index() {
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F9e636fb1c64143d5a2e54ea7e5e98639?format=webp&width=800"
                 alt="The Tent Logo"
-                className="mb-6 mx-auto w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl px-4 sm:px-0"
+                className="mb-6 mx-auto w-full max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl px-4 sm:px-0"
               />
               <p
                 className="text-xl md:text-2xl max-w-3xl mx-auto mb-8 uppercase"
@@ -168,8 +168,8 @@ export default function Index() {
             </div>
 
             {/* Hero Video */}
-            <div className="relative w-full md:max-w-6xl md:mx-auto">
-              <div className="aspect-video md:rounded-3xl border-0 md:border md:border-border/50 overflow-hidden md:shadow-2xl">
+            <div className="relative w-full">
+              <div className="aspect-video overflow-hidden">
                 <video
                   className="w-full h-full object-cover"
                   autoPlay
