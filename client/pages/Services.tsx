@@ -441,7 +441,7 @@ export default function Services() {
                         />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold">{service.title}</h3>
+                        <h3 className="text-xl font-bold" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "700" }}>{service.title}</h3>
                         <p className="text-sm text-tent-purple font-medium">
                           {service.provider}
                         </p>
