@@ -322,7 +322,7 @@ export default function Founders() {
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Jared Gladstone's Top 5 */}
-            <Card className="border-tent-blue/20 hover:border-tent-blue/40 transition-colors bg-background/80 backdrop-blur-sm">
+            <Card className="border-tent-blue/20 hover:border-tent-blue/40 transition-colors" style={{ backgroundColor: "#F8F5EE" }}>
               <CardHeader>
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-tent-blue mb-2">
@@ -357,7 +357,7 @@ export default function Founders() {
             </Card>
 
             {/* Chelsea Smith's Top 5 */}
-            <Card className="border-tent-pink/20 hover:border-tent-pink/40 transition-colors bg-background/80 backdrop-blur-sm">
+            <Card className="border-tent-pink/20 hover:border-tent-pink/40 transition-colors" style={{ backgroundColor: "#F8F5EE" }}>
               <CardHeader>
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-tent-pink mb-2">
