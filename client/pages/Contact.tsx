@@ -485,7 +485,7 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {officeLocations.map((location, index) => (
               <Card
                 key={index}
