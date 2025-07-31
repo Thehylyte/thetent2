@@ -947,10 +947,10 @@ export default function ArtistRegistration() {
       {/* CTA Section */}
       <section className="py-16 px-6 bg-gradient-to-r from-tent-purple/10 via-tent-blue/10 to-tent-pink/10">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-tent-purple via-tent-blue to-tent-pink bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#F8F5EE" }}>
             Questions About Registration?
           </h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 max-w-2xl mx-auto" style={{ color: "#F8F5EE" }}>
             Our artist relations team is here to help with your registration and
             answer any questions about The Tent services.
           </p>
