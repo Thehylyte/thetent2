@@ -332,10 +332,8 @@ export default function Services() {
                   className={`border-${service.color}/20 hover:border-${service.color}/40 transition-all duration-300 group`}
                 >
                   <CardHeader className="text-center pb-4">
-                    <div
-                      className={`w-16 h-16 bg-gradient-to-br from-${service.color} to-${service.color === "tent-blue" ? "tent-purple" : service.color === "tent-purple" ? "tent-pink" : "tent-orange"} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}
-                    >
-                      <service.icon className="w-8 h-8 text-white" />
+                    <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <service.icon className="w-8 h-8" style={{ color: "#6E6353" }} />
                     </div>
                     <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                     <p className="text-muted-foreground">
