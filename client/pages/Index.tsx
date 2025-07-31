@@ -435,10 +435,7 @@ export default function Index() {
           <div className="container mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <Badge className="mb-6 bg-tent-purple/20 text-tent-purple border-tent-purple/30">
-                  <Star className="w-4 h-4 mr-2" />
-                  Artist Endorsed
-                </Badge>
+
                 <h2
                   className="text-4xl md:text-5xl font-bold mb-6"
                   style={{ color: "#2E2E2E" }}
