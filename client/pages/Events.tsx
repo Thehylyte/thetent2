@@ -135,7 +135,10 @@ export default function Events() {
                   alt="The Tent Logo"
                   className="w-8 h-8"
                 />
-                <span className="text-2xl font-bold" style={{ color: "#A2B29F" }}>
+                <span
+                  className="text-2xl font-bold"
+                  style={{ color: "#A2B29F" }}
+                >
                   THE TENT
                 </span>
               </div>
@@ -250,14 +253,23 @@ export default function Events() {
         <section className="pt-24 pb-16 px-6">
           <div className="container mx-auto">
             <div className="text-center mb-16">
-              <Badge className="mb-6 bg-gradient-to-r from-tent-orange/10 to-tent-pink/10 border-tent-purple/20 hover:from-tent-orange/20 hover:to-tent-pink/20" style={{ color: "#A2B29F" }}>
+              <Badge
+                className="mb-6 bg-gradient-to-r from-tent-orange/10 to-tent-pink/10 border-tent-purple/20 hover:from-tent-orange/20 hover:to-tent-pink/20"
+                style={{ color: "#A2B29F" }}
+              >
                 <Calendar className="w-4 h-4 mr-2" />
                 2025 Festival Season
               </Badge>
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase" style={{ color: "#F8F5EE" }}>
+              <h1
+                className="text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase"
+                style={{ color: "#F8F5EE" }}
+              >
                 Upcoming Events
               </h1>
-              <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-8" style={{ color: "#F8F5EE" }}>
+              <p
+                className="text-xl md:text-2xl max-w-3xl mx-auto mb-8"
+                style={{ color: "#F8F5EE" }}
+              >
                 Join The Tent at the most prestigious music festivals across the
                 country. Your sanctuary awaits at every stage.
               </p>
@@ -268,7 +280,6 @@ export default function Events() {
         {/* Featured Events */}
         <section className="pb-8 px-6">
           <div className="container mx-auto">
-
             <div className="grid lg:grid-cols-2 gap-8 mb-16">
               {events
                 .filter((event) => event.featured)
@@ -337,7 +348,10 @@ export default function Events() {
         {/* All Events Grid */}
         <section className="pb-16 px-6">
           <div className="container mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center uppercase" style={{ color: "#A2B29F" }}>
+            <h2
+              className="text-3xl md:text-4xl font-bold mb-8 text-center uppercase"
+              style={{ color: "#A2B29F" }}
+            >
               All Scheduled Events
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -402,10 +416,16 @@ export default function Events() {
         {/* CTA Section */}
         <section className="py-16 px-6" style={{ backgroundColor: "#F8F5EE" }}>
           <div className="container mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 uppercase" style={{ color: "#2E2E2E" }}>
+            <h2
+              className="text-4xl md:text-5xl font-bold mb-6 uppercase"
+              style={{ color: "#2E2E2E" }}
+            >
               Don't Miss Out
             </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto" style={{ color: "#2E2E2E" }}>
+            <p
+              className="text-xl mb-8 max-w-2xl mx-auto"
+              style={{ color: "#2E2E2E" }}
+            >
               Secure your spot at The Tent for the upcoming festival season.
               Premium hospitality experiences are limited and fill up fast.
             </p>
@@ -440,9 +460,12 @@ export default function Events() {
                   alt="The Tent Logo"
                   className="w-6 h-6"
                 />
-                <span className="text-xl font-bold" style={{ color: "#A2B29F" }}>
-                THE TENT
-              </span>
+                <span
+                  className="text-xl font-bold"
+                  style={{ color: "#A2B29F" }}
+                >
+                  THE TENT
+                </span>
               </div>
               <div className="flex space-x-6 text-muted-foreground">
                 <a href="/" className="hover:text-foreground transition-colors">

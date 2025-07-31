@@ -57,7 +57,7 @@ export default function RiotFest() {
                 THE TENT
               </span>
             </div>
-                        <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center space-x-8">
               <a
                 href="/"
                 className="text-foreground/80 hover:text-foreground transition-colors"
@@ -70,25 +70,25 @@ export default function RiotFest() {
               >
                 Events
               </a>
-                            <a
+              <a
                 href="/founders"
                 className="text-foreground/80 hover:text-foreground transition-colors"
               >
                 Founders
               </a>
-                            <a
+              <a
                 href="/services"
                 className="text-foreground/80 hover:text-foreground transition-colors"
               >
                 Services
               </a>
-                            <a
+              <a
                 href="/contact"
                 className="text-foreground/80 hover:text-foreground transition-colors"
               >
                 Contact
               </a>
-                            <Button
+              <Button
                 className="hover:opacity-90 transition-opacity"
                 style={{ backgroundColor: "#A2B29F" }}
                 asChild
@@ -128,33 +128,36 @@ export default function RiotFest() {
                 >
                   Events
                 </a>
-                                <a
+                <a
                   href="/founders"
                   className="text-foreground/80 hover:text-foreground transition-colors px-2 py-1"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Founders
                 </a>
-                                <a
+                <a
                   href="/services"
                   className="text-foreground/80 hover:text-foreground transition-colors px-2 py-1"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Services
                 </a>
-                                <a
+                <a
                   href="/contact"
                   className="text-foreground/80 hover:text-foreground transition-colors px-2 py-1"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Contact
                 </a>
-                                <Button
+                <Button
                   className="hover:opacity-90 transition-opacity mt-2 mx-2"
                   style={{ backgroundColor: "#A2B29F" }}
                   asChild
                 >
-                  <a href="/artist-login" onClick={() => setIsMobileMenuOpen(false)}>
+                  <a
+                    href="/artist-login"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
                     Artist Login
                   </a>
                 </Button>

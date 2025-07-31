@@ -147,7 +147,10 @@ export default function BrandPartnership() {
                   alt="The Tent Logo"
                   className="w-8 h-8"
                 />
-                <span className="text-2xl font-bold" style={{ color: "#A2B29F" }}>
+                <span
+                  className="text-2xl font-bold"
+                  style={{ color: "#A2B29F" }}
+                >
                   THE TENT
                 </span>
               </a>
@@ -341,34 +344,38 @@ export default function BrandPartnership() {
                 <p className="text-lg md:text-xl mb-6">
                   Partnering with The Tent provides your brand with{" "}
                   <span className="font-semibold text-tent-purple">
-                    direct access to some of the most influential talent in the world
+                    direct access to some of the most influential talent in the
+                    world
                   </span>{" "}
-                  at affordable price points that deliver exceptional ROI. Our exclusive
-                  hospitality environment creates authentic, relaxed interactions between
-                  your products and top-tier artists, influencers, and industry professionals
-                  who shape culture and drive consumer trends.
+                  at affordable price points that deliver exceptional ROI. Our
+                  exclusive hospitality environment creates authentic, relaxed
+                  interactions between your products and top-tier artists,
+                  influencers, and industry professionals who shape culture and
+                  drive consumer trends.
                 </p>
                 <p className="text-lg md:text-xl mb-6">
                   Through our partnerships, brands gain access to{" "}
                   <span className="font-semibold text-tent-blue">
                     premium content opportunities
                   </span>{" "}
-                  that can be utilized across social media platforms to showcase products
-                  and services in organic, high-engagement settings. Our artists naturally
-                  create and share content featuring partner products, providing authentic
-                  endorsements and valuable user-generated content that resonates with
-                  millions of followers.
+                  that can be utilized across social media platforms to showcase
+                  products and services in organic, high-engagement settings.
+                  Our artists naturally create and share content featuring
+                  partner products, providing authentic endorsements and
+                  valuable user-generated content that resonates with millions
+                  of followers.
                 </p>
                 <p className="text-lg md:text-xl">
                   Beyond exposure, The Tent facilitates{" "}
                   <span className="font-semibold text-tent-pink">
                     direct product education opportunities
                   </span>{" "}
-                  where brands can personally introduce their innovations to influential
-                  talent in a premium, distraction-free environment. This hands-on approach
-                  ensures artists fully understand and appreciate your products, leading to
-                  more authentic advocacy and long-term brand relationships that extend far
-                  beyond festival grounds.
+                  where brands can personally introduce their innovations to
+                  influential talent in a premium, distraction-free environment.
+                  This hands-on approach ensures artists fully understand and
+                  appreciate your products, leading to more authentic advocacy
+                  and long-term brand relationships that extend far beyond
+                  festival grounds.
                 </p>
               </div>
             </div>
@@ -612,7 +619,10 @@ export default function BrandPartnership() {
                   alt="The Tent Logo"
                   className="w-6 h-6"
                 />
-                <span className="text-xl font-bold" style={{ color: "#A2B29F" }}>
+                <span
+                  className="text-xl font-bold"
+                  style={{ color: "#A2B29F" }}
+                >
                   THE TENT
                 </span>
               </a>

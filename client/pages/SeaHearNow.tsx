@@ -196,7 +196,10 @@ export default function SeaHearNow() {
                   style={{ backgroundColor: "#A2B29F" }}
                   asChild
                 >
-                  <a href="/artist-login" onClick={() => setIsMobileMenuOpen(false)}>
+                  <a
+                    href="/artist-login"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
                     Artist Login
                   </a>
                 </Button>
@@ -247,9 +250,9 @@ export default function SeaHearNow() {
               </div>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                 Experience music by the ocean with The Tent's beachside
-                hospitality sanctuary for artists and entertainers at this unique
-                coastal festival. Enjoy premium oceanfront amenities while the
-                sound of waves complements the rhythm of music.
+                hospitality sanctuary for artists and entertainers at this
+                unique coastal festival. Enjoy premium oceanfront amenities
+                while the sound of waves complements the rhythm of music.
               </p>
               <Button
                 size="lg"
@@ -282,8 +285,8 @@ export default function SeaHearNow() {
               Beachside Services
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Elevate your coastal festival experience with our premium oceanfront
-              hospitality services
+              Elevate your coastal festival experience with our premium
+              oceanfront hospitality services
             </p>
           </div>
 
@@ -333,9 +336,12 @@ export default function SeaHearNow() {
                   </div>
                 </div>
                 <CardContent className="p-4 pt-0">
-                  <h3 className="font-semibold mb-2">Coastal Experience {item}</h3>
+                  <h3 className="font-semibold mb-2">
+                    Coastal Experience {item}
+                  </h3>
                   <p className="text-sm text-muted-foreground">
-                    Premium beachside amenities and exclusive oceanfront services.
+                    Premium beachside amenities and exclusive oceanfront
+                    services.
                   </p>
                 </CardContent>
               </Card>
@@ -499,10 +505,10 @@ export default function SeaHearNow() {
                 Asbury Park Beach
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Located on the iconic Asbury Park coastline, The Tent provides an
-                unparalleled beachside festival experience. Our oceanfront location
-                offers stunning views of the Atlantic Ocean while you enjoy
-                world-class music and premium hospitality services.
+                Located on the iconic Asbury Park coastline, The Tent provides
+                an unparalleled beachside festival experience. Our oceanfront
+                location offers stunning views of the Atlantic Ocean while you
+                enjoy world-class music and premium hospitality services.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center">

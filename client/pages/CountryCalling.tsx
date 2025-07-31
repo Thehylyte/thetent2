@@ -125,7 +125,10 @@ export default function CountryCalling() {
                   alt="The Tent Logo"
                   className="w-8 h-8"
                 />
-                <span className="text-2xl font-bold" style={{ color: "#A2B29F" }}>
+                <span
+                  className="text-2xl font-bold"
+                  style={{ color: "#A2B29F" }}
+                >
                   THE TENT
                 </span>
               </div>
@@ -591,7 +594,10 @@ export default function CountryCalling() {
                   alt="The Tent Logo"
                   className="w-6 h-6"
                 />
-                <span className="text-xl font-bold" style={{ color: "#A2B29F" }}>
+                <span
+                  className="text-xl font-bold"
+                  style={{ color: "#A2B29F" }}
+                >
                   THE TENT
                 </span>
               </div>
