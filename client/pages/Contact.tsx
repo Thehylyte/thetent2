@@ -262,7 +262,7 @@ export default function Contact() {
       <section className="py-16 px-6" style={{ backgroundColor: "#6E6353" }}>
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "700" }}>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 uppercase" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "700" }}>
               Ways to Connect
             </h2>
           </div>
