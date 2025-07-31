@@ -417,19 +417,19 @@ export default function Index() {
                 <div className="flex flex-wrap gap-4">
                   <Badge
                     variant="outline"
-                    className="border-tent-blue/30 text-tent-blue"
+                    style={{ borderColor: "#6E6353", color: "#6E6353" }}
                   >
                     Premium Access
                   </Badge>
                   <Badge
                     variant="outline"
-                    className="border-tent-purple/30 text-tent-purple"
+                    style={{ borderColor: "#6E6353", color: "#6E6353" }}
                   >
                     24/7 Concierge
                   </Badge>
                   <Badge
                     variant="outline"
-                    className="border-tent-pink/30 text-tent-pink"
+                    style={{ borderColor: "#6E6353", color: "#6E6353" }}
                   >
                     Exclusive Events
                   </Badge>
