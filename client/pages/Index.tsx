@@ -209,12 +209,7 @@ export default function Index() {
         <section id="experience" className="py-16 px-6">
           <div className="container mx-auto">
             <div className="text-center mb-16">
-              <h2
-                className="text-4xl md:text-5xl font-bold mb-6 uppercase"
-                style={{ color: "#F8F5EE" }}
-              >
-                The Difference
-              </h2>
+
               <p
                 className="text-xl max-w-2xl mx-auto"
                 style={{ color: "#F8F5EE" }}
