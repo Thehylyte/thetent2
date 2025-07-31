@@ -265,9 +265,6 @@ export default function Contact() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "700" }}>
               Ways to Connect
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Choose the method that works best for you
-            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
