@@ -185,7 +185,7 @@ export default function Index() {
                       videoContainer.classList.add("hover:opacity-80");
                       const overlay = document.createElement("div");
                       overlay.innerHTML =
-                        '<div class="absolute inset-0 flex items-center justify-center bg-black/50"><div class="text-white text-xl font-bold">Click to Register</div></div>';
+                        '<div class="absolute inset-0 flex items-center justify-center bg-black/50"><div class="text-white text-xl font-bold uppercase" style="text-shadow: 0 0 4px white, 0 0 8px white; border: 2px solid white; padding: 8px 16px; border-radius: 4px;">CLICK TO REGISTER</div></div>';
                       overlay.className =
                         "absolute inset-0 pointer-events-none";
                       videoContainer.appendChild(
