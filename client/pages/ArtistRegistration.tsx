@@ -389,8 +389,8 @@ export default function ArtistRegistration() {
                 className="border-tent-blue/20 hover:border-tent-blue/40 transition-colors text-center"
               >
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-gradient-to-br from-tent-blue to-tent-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <perk.icon className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <perk.icon className="w-8 h-8" style={{ color: "#6E6353" }} />
                   </div>
                   <h3 className="text-xl font-bold mb-4">{perk.title}</h3>
                   <p className="text-muted-foreground">{perk.description}</p>
