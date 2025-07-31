@@ -201,10 +201,16 @@ export default function Founders() {
               <Users className="w-4 h-4 mr-2" />
               Meet the Team
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase" style={{ color: "#F8F5EE" }}>
+            <h1
+              className="text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase"
+              style={{ color: "#F8F5EE" }}
+            >
               Our Founders
             </h1>
-            <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-8" style={{ color: "#F8F5EE" }}>
+            <p
+              className="text-xl md:text-2xl max-w-3xl mx-auto mb-8"
+              style={{ color: "#F8F5EE" }}
+            >
               Meet the visionaries behind The Tent.
             </p>
           </div>
@@ -216,7 +222,10 @@ export default function Founders() {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 uppercase" style={{ color: "#2E2E2E" }}>
+              <h2
+                className="text-4xl md:text-5xl font-bold mb-6 uppercase"
+                style={{ color: "#2E2E2E" }}
+              >
                 The Story Behind The Tent
               </h2>
               <p className="text-lg mb-6" style={{ color: "#2E2E2E" }}>
@@ -312,17 +321,26 @@ export default function Founders() {
       <section className="py-16 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#F8F5EE" }}>
+            <h2
+              className="text-4xl md:text-5xl font-bold mb-6"
+              style={{ color: "#F8F5EE" }}
+            >
               Our Musical Inspirations
             </h2>
-            <p className="text-xl max-w-3xl mx-auto" style={{ color: "#F8F5EE" }}>
+            <p
+              className="text-xl max-w-3xl mx-auto"
+              style={{ color: "#F8F5EE" }}
+            >
               The artists who inspired us to create The Tent experience
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Jared Gladstone's Top 5 */}
-            <Card className="border-tent-blue/20 hover:border-tent-blue/40 transition-colors" style={{ backgroundColor: "#F8F5EE" }}>
+            <Card
+              className="border-tent-blue/20 hover:border-tent-blue/40 transition-colors"
+              style={{ backgroundColor: "#F8F5EE" }}
+            >
               <CardHeader>
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-tent-blue mb-2">
@@ -346,7 +364,10 @@ export default function Founders() {
                       key={index}
                       className="flex items-center p-4 rounded-lg bg-tent-blue/5 hover:bg-tent-blue/10 transition-colors"
                     >
-                      <div className="w-8 h-8 rounded-full flex items-center justify-center mr-4" style={{ backgroundColor: "#6E6353" }}>
+                      <div
+                        className="w-8 h-8 rounded-full flex items-center justify-center mr-4"
+                        style={{ backgroundColor: "#6E6353" }}
+                      >
                         <Music className="w-4 h-4 text-white" />
                       </div>
                       <span className="text-lg font-medium">{artist}</span>
@@ -357,7 +378,10 @@ export default function Founders() {
             </Card>
 
             {/* Chelsea Smith's Top 5 */}
-            <Card className="border-tent-pink/20 hover:border-tent-pink/40 transition-colors" style={{ backgroundColor: "#F8F5EE" }}>
+            <Card
+              className="border-tent-pink/20 hover:border-tent-pink/40 transition-colors"
+              style={{ backgroundColor: "#F8F5EE" }}
+            >
               <CardHeader>
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-tent-pink mb-2">
@@ -381,7 +405,10 @@ export default function Founders() {
                       key={index}
                       className="flex items-center p-4 rounded-lg bg-tent-pink/5 hover:bg-tent-pink/10 transition-colors"
                     >
-                      <div className="w-8 h-8 rounded-full flex items-center justify-center mr-4" style={{ backgroundColor: "#6E6353" }}>
+                      <div
+                        className="w-8 h-8 rounded-full flex items-center justify-center mr-4"
+                        style={{ backgroundColor: "#6E6353" }}
+                      >
                         <Music className="w-4 h-4 text-white" />
                       </div>
                       <span className="text-lg font-medium">{artist}</span>
@@ -398,7 +425,10 @@ export default function Founders() {
       <section className="py-16 px-6 overflow-hidden">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#F8F5EE" }}>
+            <h2
+              className="text-3xl md:text-4xl font-bold mb-4"
+              style={{ color: "#F8F5EE" }}
+            >
               Our Journey in Photos
             </h2>
             <p className="text-lg" style={{ color: "#F8F5EE" }}>
@@ -583,13 +613,34 @@ export default function Founders() {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 px-6" style={{ backgroundColor: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
+      <section
+        className="py-16 px-6"
+        style={{
+          backgroundColor: "#F8F5EE",
+          fontFamily: "Inter",
+          fontWeight: "300",
+        }}
+      >
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 uppercase" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "700" }}>
+            <h2
+              className="text-4xl md:text-5xl font-bold mb-6 uppercase"
+              style={{
+                color: "#2E2E2E",
+                fontFamily: "Inter",
+                fontWeight: "700",
+              }}
+            >
               Our Values
             </h2>
-            <p className="text-xl max-w-2xl mx-auto" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>
+            <p
+              className="text-xl max-w-2xl mx-auto"
+              style={{
+                color: "#2E2E2E",
+                fontFamily: "Inter",
+                fontWeight: "300",
+              }}
+            >
               The principles that guide everything we do at The Tent
             </p>
           </div>
@@ -600,8 +651,23 @@ export default function Founders() {
                 <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6">
                   <Heart className="w-8 h-8" style={{ color: "#6E6353" }} />
                 </div>
-                <h3 className="text-xl mb-4" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>Artist-First</h3>
-                <p style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>
+                <h3
+                  className="text-xl mb-4"
+                  style={{
+                    color: "#2E2E2E",
+                    fontFamily: "Inter",
+                    fontWeight: "300",
+                  }}
+                >
+                  Artist-First
+                </h3>
+                <p
+                  style={{
+                    color: "#2E2E2E",
+                    fontFamily: "Inter",
+                    fontWeight: "300",
+                  }}
+                >
                   Every decision we make puts the artist experience at the
                   center. Their comfort, recovery, and success drive our
                   innovation.
@@ -614,8 +680,23 @@ export default function Founders() {
                 <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6">
                   <Sparkles className="w-8 h-8" style={{ color: "#6E6353" }} />
                 </div>
-                <h3 className="text-xl mb-4" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>Excellence</h3>
-                <p style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>
+                <h3
+                  className="text-xl mb-4"
+                  style={{
+                    color: "#2E2E2E",
+                    fontFamily: "Inter",
+                    fontWeight: "300",
+                  }}
+                >
+                  Excellence
+                </h3>
+                <p
+                  style={{
+                    color: "#2E2E2E",
+                    fontFamily: "Inter",
+                    fontWeight: "300",
+                  }}
+                >
                   We set the highest standards for ourselves and deliver
                   unmatched quality in every aspect of our hospitality services.
                 </p>
@@ -627,8 +708,23 @@ export default function Founders() {
                 <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6">
                   <Music className="w-8 h-8" style={{ color: "#6E6353" }} />
                 </div>
-                <h3 className="text-xl mb-4" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>Music Community</h3>
-                <p style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>
+                <h3
+                  className="text-xl mb-4"
+                  style={{
+                    color: "#2E2E2E",
+                    fontFamily: "Inter",
+                    fontWeight: "300",
+                  }}
+                >
+                  Music Community
+                </h3>
+                <p
+                  style={{
+                    color: "#2E2E2E",
+                    fontFamily: "Inter",
+                    fontWeight: "300",
+                  }}
+                >
                   Supporting the culture that brings people together.
                 </p>
               </CardContent>
@@ -640,10 +736,16 @@ export default function Founders() {
       {/* CTA Section */}
       <section className="py-16 px-6">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 uppercase" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "700" }}>
+          <h2
+            className="text-4xl md:text-5xl font-bold mb-6 uppercase"
+            style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "700" }}
+          >
             Join Our Mission
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
+          <p
+            className="text-xl mb-8 max-w-2xl mx-auto"
+            style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}
+          >
             Whether you're an artist, festival organizer, or brand partner, we'd
             love to connect and explore how we can work together.
           </p>
