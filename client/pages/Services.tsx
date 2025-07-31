@@ -538,8 +538,8 @@ export default function Services() {
         {/* CTA Section */}
         <section className="py-16 px-6" style={{ backgroundColor: "#6E6353" }}>
           <div className="container mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 uppercase" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "700" }}>
-              Ready to Experience <span style={{ color: "#A2B29F", fontFamily: "Monument", fontWeight: "bold" }}>The Tent</span>?
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 uppercase flex flex-wrap items-center justify-center gap-2" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "700" }}>
+              Ready to Experience <img src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F3617430fab024488a01fb5e9d36427b1?format=webp&width=800" alt="The Tent" className="h-12 md:h-16 inline-block" />?
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
               Join hundreds of artists who have elevated their festival
