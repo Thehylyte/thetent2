@@ -348,7 +348,8 @@ export default function Services() {
                           className="flex items-center text-sm"
                         >
                           <CheckCircle
-                            className={`w-4 h-4 text-${service.color} mr-3 flex-shrink-0`}
+                            className="w-4 h-4 mr-3 flex-shrink-0"
+                            style={{ color: "#6E6353" }}
                           />
                           <span>{feature}</span>
                         </li>
