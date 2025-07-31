@@ -658,7 +658,7 @@ export default function ArtistRegistration() {
                     </h4>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium mb-2">
+                        <label className="block text-sm font-medium mb-2" style={{ color: "#F8F5EE" }}>
                           Genre *
                         </label>
                         <select
@@ -690,7 +690,7 @@ export default function ArtistRegistration() {
                         )}
                       </div>
                       <div>
-                        <label className="block text-sm font-medium mb-2">
+                        <label className="block text-sm font-medium mb-2" style={{ color: "#F8F5EE" }}>
                           Years Active *
                         </label>
                         <select
