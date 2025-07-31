@@ -37,7 +37,6 @@ export const useScrollFade = () => {
       // Scrolled state - fade to black
       return {
         backgroundColor: `rgba(0, 0, 0, ${opacity})`,
-        backdropFilter: scrollY > 100 ? "blur(12px)" : "blur(8px)",
         borderBottom: `1px solid rgba(255, 255, 255, ${Math.min(opacity * 0.2, 0.2)})`,
       };
     }
