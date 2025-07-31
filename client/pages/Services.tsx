@@ -458,7 +458,7 @@ export default function Services() {
         </section>
 
         {/* Brand Partners */}
-        <section className="py-16 px-6 bg-gradient-to-r from-tent-blue/10 via-tent-purple/10 to-tent-pink/10">
+        <section className="py-16 px-6" style={{ backgroundColor: "#6E6353" }}>
           <div className="container mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 uppercase" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "700" }}>
