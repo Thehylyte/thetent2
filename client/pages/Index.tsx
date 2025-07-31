@@ -576,7 +576,7 @@ export default function Index() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="ml-4 p-2 rounded-full hover:bg-tent-purple/10 transition-colors group"
-                  aria-label="Follow us on Instagram @accessthetent"
+                  aria-label="Follow us on Instagram @thetent.club"
                 >
                   <Instagram className="w-5 h-5 text-muted-foreground group-hover:text-tent-purple transition-colors" />
                 </a>
