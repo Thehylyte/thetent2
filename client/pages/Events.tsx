@@ -252,10 +252,8 @@ export default function Events() {
                 <Calendar className="w-4 h-4 mr-2" />
                 2025 Festival Season
               </Badge>
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight" style={{ color: "#F8F5EE" }}>
-                Upcoming
-                <br />
-                Events
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase" style={{ color: "#F8F5EE" }}>
+                Upcoming Events
               </h1>
               <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-8" style={{ color: "#F8F5EE" }}>
                 Join The Tent at the most prestigious music festivals across the
