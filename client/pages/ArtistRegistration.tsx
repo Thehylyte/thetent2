@@ -378,7 +378,7 @@ export default function ArtistRegistration() {
       <section className="pb-16 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-tent-purple to-tent-blue bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: "#F8F5EE" }}>
               Why Artists Choose The Tent
             </h2>
           </div>
