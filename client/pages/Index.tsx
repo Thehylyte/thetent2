@@ -69,7 +69,8 @@ export default function Index() {
                   Contact
                 </a>
                 <Button
-                  className="bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90"
+                  className="hover:opacity-90 transition-opacity"
+                  style={{ backgroundColor: "#A2B29F" }}
                   asChild
                 >
                   <a href="/artist-login">Artist Login</a>
@@ -129,7 +130,8 @@ export default function Index() {
                     Contact
                   </a>
                   <Button
-                    className="bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90 mt-2 mx-2"
+                    className="hover:opacity-90 transition-opacity mt-2 mx-2"
+                    style={{ backgroundColor: "#A2B29F" }}
                     asChild
                   >
                     <a
@@ -419,7 +421,8 @@ export default function Index() {
             </p>
             <Button
               size="lg"
-              className="bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90 text-lg px-12 py-6"
+              className="hover:opacity-90 transition-opacity text-lg px-12 py-6"
+              style={{ backgroundColor: "#A2B29F" }}
               asChild
             >
               <a href="/artist-login">
