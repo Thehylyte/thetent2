@@ -504,11 +504,11 @@ export default function Services() {
 
               {/* Featured Image */}
               <div className="max-w-2xl mx-auto mb-16">
-                <div className="aspect-video rounded-2xl overflow-hidden border border-border/50 shadow-lg">
+                <div className="rounded-2xl overflow-hidden border border-border/50 shadow-lg">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F587938ffd40c49819e45fb9d8216fd94?format=webp&width=800"
                     alt="Artist enjoying The Tent experience with exclusive products"
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto object-contain"
                   />
                 </div>
               </div>
