@@ -957,7 +957,8 @@ export default function ArtistRegistration() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-tent-blue to-tent-purple hover:from-tent-blue/90 hover:to-tent-purple/90 text-lg px-8 py-6"
+              className="text-lg px-8 py-6 hover:opacity-90 transition-opacity"
+              style={{ backgroundColor: "#A2B29F" }}
             >
               <Users className="w-5 h-5 mr-2" />
               Contact Artist Relations
