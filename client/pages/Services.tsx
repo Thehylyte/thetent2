@@ -389,8 +389,8 @@ export default function Services() {
                   </div>
                   <CardContent className="p-6">
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-tent-blue to-tent-purple rounded-xl flex items-center justify-center mr-4">
-                        <service.icon className="w-6 h-6 text-white" />
+                      <div className="w-12 h-12 flex items-center justify-center mr-4">
+                        <service.icon className="w-6 h-6" style={{ color: "#6E6353" }} />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold">{service.title}</h3>
