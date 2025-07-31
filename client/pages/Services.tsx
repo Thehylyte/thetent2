@@ -589,43 +589,48 @@ export default function Services() {
                   THE TENT
                 </span>
               </div>
-              <div className="flex space-x-6 text-muted-foreground">
-                <a href="/" className="hover:text-foreground transition-colors">
+              <div className="flex space-x-6" style={{ color: "#F8F5EE" }}>
+                <a href="/" className="transition-colors" style={{ color: "#F8F5EE" }}>
                   Home
                 </a>
                 <a
                   href="/events"
-                  className="hover:text-foreground transition-colors"
+                  className="transition-colors"
+                  style={{ color: "#F8F5EE" }}
                 >
                   Events
                 </a>
                 <a
                   href="/artist-registration"
-                  className="hover:text-foreground transition-colors"
+                  className="transition-colors"
+                  style={{ color: "#F8F5EE" }}
                 >
                   Artists
                 </a>
                 <a
                   href="/founders"
-                  className="hover:text-foreground transition-colors"
+                  className="transition-colors"
+                  style={{ color: "#F8F5EE" }}
                 >
                   Founders
                 </a>
                 <a
                   href="/contact"
-                  className="hover:text-foreground transition-colors"
+                  className="transition-colors"
+                  style={{ color: "#F8F5EE" }}
                 >
                   Contact
                 </a>
                 <a
                   href="/brand-partnership"
-                  className="hover:text-foreground transition-colors"
+                  className="transition-colors"
+                  style={{ color: "#F8F5EE" }}
                 >
                   Brand Partners
                 </a>
               </div>
             </div>
-            <div className="mt-8 text-center text-muted-foreground">
+            <div className="mt-8 text-center" style={{ color: "#F8F5EE" }}>
               <p>
                 &copy; 2024 The Tent. Elevating festival experiences worldwide.
               </p>
