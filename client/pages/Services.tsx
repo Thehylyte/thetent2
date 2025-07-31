@@ -522,7 +522,7 @@ export default function Services() {
                       {step.step}
                     </div>
                     {index < processSteps.length - 1 && (
-                      <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-tent-purple/30 to-tent-pink/30 -translate-x-8"></div>
+                      <div className="hidden md:block absolute top-8 left-full w-full h-0.5 -translate-x-8" style={{ backgroundColor: "#F8F5EE" }}></div>
                     )}
                   </div>
                   <h3 className="text-lg font-bold mb-3 uppercase" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>{step.title}</h3>
