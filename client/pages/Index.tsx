@@ -192,10 +192,16 @@ export default function Index() {
         <section id="experience" className="py-16 px-6">
           <div className="container mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#F8F5EE" }}>
+              <h2
+                className="text-4xl md:text-5xl font-bold mb-6"
+                style={{ color: "#F8F5EE" }}
+              >
                 The Difference
               </h2>
-              <p className="text-xl max-w-2xl mx-auto" style={{ color: "#F8F5EE" }}>
+              <p
+                className="text-xl max-w-2xl mx-auto"
+                style={{ color: "#F8F5EE" }}
+              >
                 Curated experiences designed exclusively for artists,
                 entertainers, and VIP guests
               </p>
@@ -205,9 +211,15 @@ export default function Index() {
               <Card className="border-tent-orange/20 hover:border-tent-orange/40 transition-colors bg-gradient-to-br from-tent-orange/5 to-transparent">
                 <CardContent className="p-8">
                   <div className="w-16 h-16 flex items-center justify-center mb-6">
-                    <Sparkles className="w-8 h-8" style={{ color: "#6E6353" }} />
+                    <Sparkles
+                      className="w-8 h-8"
+                      style={{ color: "#6E6353" }}
+                    />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4" style={{ color: "#2E2E2E" }}>
+                  <h3
+                    className="text-2xl font-bold mb-4"
+                    style={{ color: "#2E2E2E" }}
+                  >
                     Exclusive Products
                   </h3>
                   <p style={{ color: "#2E2E2E" }}>
@@ -222,7 +234,10 @@ export default function Index() {
                   <div className="w-16 h-16 flex items-center justify-center mb-6">
                     <Heart className="w-8 h-8" style={{ color: "#6E6353" }} />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4" style={{ color: "#2E2E2E" }}>
+                  <h3
+                    className="text-2xl font-bold mb-4"
+                    style={{ color: "#2E2E2E" }}
+                  >
                     Recovery & Wellness
                   </h3>
                   <p style={{ color: "#2E2E2E" }}>
@@ -238,7 +253,10 @@ export default function Index() {
                   <div className="w-16 h-16 flex items-center justify-center mb-6">
                     <Shield className="w-8 h-8" style={{ color: "#6E6353" }} />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4" style={{ color: "#2E2E2E" }}>
+                  <h3
+                    className="text-2xl font-bold mb-4"
+                    style={{ color: "#2E2E2E" }}
+                  >
                     Luxury Relaxation
                   </h3>
                   <p style={{ color: "#2E2E2E" }}>
@@ -358,12 +376,12 @@ export default function Index() {
                   <Star className="w-4 h-4 mr-2" />
                   Artist Endorsed
                 </Badge>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#2E2E2E" }}>
+                <h2
+                  className="text-4xl md:text-5xl font-bold mb-6"
+                  style={{ color: "#2E2E2E" }}
+                >
                   Where Music Legends
-                  <span style={{ color: "#2E2E2E" }}>
-                    {" "}
-                    Recharge
-                  </span>
+                  <span style={{ color: "#2E2E2E" }}> Recharge</span>
                 </h2>
                 <p className="text-xl mb-8" style={{ color: "#2E2E2E" }}>
                   Join the artists, entertainers, and industry professionals who
@@ -406,10 +424,20 @@ export default function Index() {
         {/* CTA Section */}
         <section className="py-16 px-6">
           <div className="container mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#F8F5EE" }}>
+            <h2
+              className="text-4xl md:text-5xl font-bold mb-6"
+              style={{ color: "#F8F5EE" }}
+            >
               Ready to Experience The Tent?
             </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
+            <p
+              className="text-xl mb-8 max-w-2xl mx-auto"
+              style={{
+                color: "#F8F5EE",
+                fontFamily: "Inter",
+                fontWeight: "300",
+              }}
+            >
               Join the exclusive community of artists and entertainers who've
               discovered the ultimate festival VIP experience.
             </p>
@@ -438,7 +466,10 @@ export default function Index() {
                   className="w-6 h-6"
                 />
               </div>
-              <div className="flex items-center space-x-6" style={{ color: "#F8F5EE" }}>
+              <div
+                className="flex items-center space-x-6"
+                style={{ color: "#F8F5EE" }}
+              >
                 <div className="flex space-x-6">
                   <a
                     href="#"
