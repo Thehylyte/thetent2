@@ -640,7 +640,7 @@ export default function Founders() {
       {/* CTA Section */}
       <section className="py-16 px-6">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 uppercase" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "700" }}>
             Join Our Mission
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
