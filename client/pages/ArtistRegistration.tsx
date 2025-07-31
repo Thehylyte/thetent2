@@ -402,7 +402,7 @@ export default function ArtistRegistration() {
       </section>
 
       {/* Registration Form */}
-      <section className="py-16 px-6 bg-gradient-to-r from-tent-purple/10 via-tent-blue/10 to-tent-pink/10">
+      <section className="py-16 px-6" style={{ backgroundColor: "#6E6353" }}>
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
