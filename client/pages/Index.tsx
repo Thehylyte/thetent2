@@ -244,10 +244,10 @@ export default function Index() {
                   <div className="w-16 h-16 bg-gradient-to-br from-tent-pink to-tent-purple rounded-2xl flex items-center justify-center mb-6">
                     <Shield className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-tent-pink">
+                  <h3 className="text-2xl font-bold mb-4" style={{ color: "#2E2E2E" }}>
                     Luxury Relaxation
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p style={{ color: "#2E2E2E" }}>
                     Private lounges, premium amenities, climate-controlled
                     spaces, and concierge services in an exclusive, secure
                     environment.
