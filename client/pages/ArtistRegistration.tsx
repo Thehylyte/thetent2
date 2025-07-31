@@ -842,7 +842,12 @@ export default function ArtistRegistration() {
                     />
                     <label
                       htmlFor="terms"
-                      className="text-sm text-muted-foreground"
+                      className="text-sm"
+                      style={{
+                        color: "#A2B29F",
+                        fontFamily: "Inter",
+                        fontWeight: "300",
+                      }}
                     >
                       I agree to The Tent's terms and conditions and understand
                       that registration is subject to verification of artist
