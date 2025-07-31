@@ -297,10 +297,10 @@ export default function Contact() {
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-tent-orange via-tent-pink to-tent-purple bg-clip-text text-transparent">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#F8F5EE" }}>
                 Send Us a Message
               </h2>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-xl" style={{ color: "#F8F5EE" }}>
                 Fill out the form below and we'll get back to you within 24
                 hours
               </p>
