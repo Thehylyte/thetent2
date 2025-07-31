@@ -427,7 +427,7 @@ export default function ArtistRegistration() {
 
             <Card className="border-tent-purple/20 bg-background/80 backdrop-blur-sm">
               <CardHeader>
-                <h3 className="text-2xl font-bold text-center">
+                <h3 className="text-2xl font-bold text-center" style={{ color: "#F8F5EE" }}>
                   Artist Information
                 </h3>
               </CardHeader>
@@ -483,7 +483,7 @@ export default function ArtistRegistration() {
                 <form onSubmit={handleSubmit} className="space-y-8">
                   {/* Personal Information */}
                   <div>
-                    <h4 className="text-lg font-semibold mb-4 text-tent-purple">
+                    <h4 className="text-lg font-semibold mb-4" style={{ color: "#F8F5EE" }}>
                       Personal Details
                     </h4>
                     <div className="grid md:grid-cols-2 gap-4">
@@ -653,7 +653,7 @@ export default function ArtistRegistration() {
 
                   {/* Performance Information */}
                   <div>
-                    <h4 className="text-lg font-semibold mb-4 text-tent-purple">
+                    <h4 className="text-lg font-semibold mb-4" style={{ color: "#F8F5EE" }}>
                       Performance Details
                     </h4>
                     <div className="grid md:grid-cols-2 gap-4">
@@ -724,7 +724,7 @@ export default function ArtistRegistration() {
 
                   {/* Festival Selection */}
                   <div>
-                    <h4 className="text-lg font-semibold mb-4 text-tent-purple">
+                    <h4 className="text-lg font-semibold mb-4" style={{ color: "#F8F5EE" }}>
                       Festival Reservations
                     </h4>
                     <p className="text-sm text-muted-foreground mb-4">
