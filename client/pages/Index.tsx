@@ -312,8 +312,8 @@ export default function Index() {
                     }}
                   />
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Fd919bb8a2bf143f596877bc377cdcf40?format=webp&width=800"
-                    alt="Jabra"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Fcb4c6f2d2852481f8b9a851dd58186f0?format=webp&width=800"
+                    alt="Rhone"
                     className="h-12 opacity-60 hover:opacity-100 transition-opacity"
                     style={{
                       filter:
@@ -388,8 +388,8 @@ export default function Index() {
                     }}
                   />
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Fd919bb8a2bf143f596877bc377cdcf40?format=webp&width=800"
-                    alt="Jabra"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Fcb4c6f2d2852481f8b9a851dd58186f0?format=webp&width=800"
+                    alt="Rhone"
                     className="h-12 opacity-60 hover:opacity-100 transition-opacity"
                     style={{
                       filter:
