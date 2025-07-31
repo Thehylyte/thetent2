@@ -340,7 +340,7 @@ export default function Index() {
                     }}
                   />
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F9b2feadc06144643ba476a6d6a5d2317?format=webp&width=800"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Ff02599c24a454514b980601d5178601a?format=webp&width=800"
                     alt="Funk's Barber Shop"
                     className="h-12 opacity-60 hover:opacity-100 transition-opacity"
                     style={{
@@ -416,7 +416,7 @@ export default function Index() {
                     }}
                   />
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F9b2feadc06144643ba476a6d6a5d2317?format=webp&width=800"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Ff02599c24a454514b980601d5178601a?format=webp&width=800"
                     alt="Funk's Barber Shop"
                     className="h-12 opacity-60 hover:opacity-100 transition-opacity"
                     style={{
