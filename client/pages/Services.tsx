@@ -287,12 +287,26 @@ export default function Services() {
                 <Crown className="w-4 h-4 mr-2" />
                 Premium Services
               </Badge>
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "700" }}>
+              <h1
+                className="text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase"
+                style={{
+                  color: "#F8F5EE",
+                  fontFamily: "Inter",
+                  fontWeight: "700",
+                }}
+              >
                 Elevate Your
                 <br />
                 Festival Experience
               </h1>
-              <p className="text-xl md:text-2xl max-w-4xl mx-auto mb-8" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
+              <p
+                className="text-xl md:text-2xl max-w-4xl mx-auto mb-8"
+                style={{
+                  color: "#F8F5EE",
+                  fontFamily: "Inter",
+                  fontWeight: "300",
+                }}
+              >
                 The Tent provides comprehensive hospitality services designed
                 specifically for artists, entertainers, and VIP guests at major
                 music festivals across the country.
@@ -316,10 +330,24 @@ export default function Services() {
         <section className="py-16 px-6" style={{ backgroundColor: "#A2B29F" }}>
           <div className="container mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 uppercase" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "700" }}>
+              <h2
+                className="text-4xl md:text-5xl font-bold mb-6 uppercase"
+                style={{
+                  color: "#2E2E2E",
+                  fontFamily: "Inter",
+                  fontWeight: "700",
+                }}
+              >
                 Core Services
               </h2>
-              <p className="text-xl max-w-3xl mx-auto" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>
+              <p
+                className="text-xl max-w-3xl mx-auto"
+                style={{
+                  color: "#2E2E2E",
+                  fontFamily: "Inter",
+                  fontWeight: "300",
+                }}
+              >
                 Our fundamental offerings that create the perfect hospitality
                 environment
               </p>
@@ -333,7 +361,10 @@ export default function Services() {
                 >
                   <CardHeader className="text-center pb-4">
                     <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <service.icon className="w-8 h-8" style={{ color: "#6E6353" }} />
+                      <service.icon
+                        className="w-8 h-8"
+                        style={{ color: "#6E6353" }}
+                      />
                     </div>
                     <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                     <p className="text-muted-foreground">
@@ -366,10 +397,24 @@ export default function Services() {
         <section className="py-16 px-6">
           <div className="container mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 uppercase" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "700" }}>
+              <h2
+                className="text-4xl md:text-5xl font-bold mb-6 uppercase"
+                style={{
+                  color: "#F8F5EE",
+                  fontFamily: "Inter",
+                  fontWeight: "700",
+                }}
+              >
                 Specialty Services
               </h2>
-              <p className="text-xl max-w-3xl mx-auto" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
+              <p
+                className="text-xl max-w-3xl mx-auto"
+                style={{
+                  color: "#F8F5EE",
+                  fontFamily: "Inter",
+                  fontWeight: "300",
+                }}
+              >
                 Curated experiences with our premium brand partners
               </p>
             </div>
@@ -390,7 +435,10 @@ export default function Services() {
                   <CardContent className="p-6">
                     <div className="flex items-center mb-4">
                       <div className="w-12 h-12 flex items-center justify-center mr-4">
-                        <service.icon className="w-6 h-6" style={{ color: "#6E6353" }} />
+                        <service.icon
+                          className="w-6 h-6"
+                          style={{ color: "#6E6353" }}
+                        />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold">{service.title}</h3>
