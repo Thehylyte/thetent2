@@ -544,47 +544,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Quick Stats */}
-      <section className="py-16 px-6">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-tent-purple to-tent-blue bg-clip-text text-transparent">
-              Why Artists Choose The Tent
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-tent-purple to-tent-pink rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold mb-2">24/7</h3>
-              <p className="text-muted-foreground">Concierge Support</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-tent-blue to-tent-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold mb-2">500+</h3>
-              <p className="text-muted-foreground">Artists Served</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-tent-pink to-tent-orange rounded-full flex items-center justify-center mx-auto mb-4">
-                <Calendar className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold mb-2">15+</h3>
-              <p className="text-muted-foreground">Festivals Annually</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-tent-orange to-tent-pink rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold mb-2">100%</h3>
-              <p className="text-muted-foreground">Satisfaction Rate</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="py-12 px-6 border-t border-border/50">
