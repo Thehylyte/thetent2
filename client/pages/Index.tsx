@@ -412,10 +412,10 @@ export default function Index() {
         {/* CTA Section */}
         <section className="py-16 px-6">
           <div className="container mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-tent-purple via-tent-blue to-tent-pink bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#F8F5EE" }}>
               Ready to Experience The Tent?
             </h2>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-xl mb-8 max-w-2xl mx-auto" style={{ color: "#F8F5EE" }}>
               Join the exclusive community of artists and entertainers who've
               discovered the ultimate festival VIP experience.
             </p>
