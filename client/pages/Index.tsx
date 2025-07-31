@@ -157,7 +157,7 @@ export default function Index() {
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F9e636fb1c64143d5a2e54ea7e5e98639?format=webp&width=800"
                 alt="The Tent Logo"
-                className="mb-6 mx-auto max-w-md md:max-w-lg"
+                className="mb-6 mx-auto max-w-lg md:max-w-2xl"
               />
               <p
                 className="text-xl md:text-2xl max-w-3xl mx-auto mb-8 uppercase"
