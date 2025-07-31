@@ -477,10 +477,10 @@ export default function Contact() {
       <section className="py-16 px-6" style={{ backgroundColor: "#A2B29F" }}>
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-tent-blue to-tent-purple bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>
               Our Locations
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl max-w-3xl mx-auto" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>
               We operate from key music industry hubs across the country
             </p>
           </div>
