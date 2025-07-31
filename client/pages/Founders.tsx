@@ -787,34 +787,37 @@ export default function Founders() {
                 THE TENT
               </span>
             </div>
-            <div className="flex space-x-6 text-muted-foreground">
-              <a href="/" className="hover:text-foreground transition-colors">
+            <div className="flex space-x-6">
+              <a href="/" className="transition-colors" style={{ color: "#2E2E2E" }}>
                 Home
               </a>
               <a
                 href="/events"
-                className="hover:text-foreground transition-colors"
+                className="transition-colors"
+                style={{ color: "#2E2E2E" }}
               >
                 Events
               </a>
               <a
                 href="/artist-registration"
-                className="hover:text-foreground transition-colors"
+                className="transition-colors"
+                style={{ color: "#2E2E2E" }}
               >
                 Artists
               </a>
               <a
                 href="/founders"
-                className="hover:text-foreground transition-colors"
+                className="transition-colors"
+                style={{ color: "#2E2E2E" }}
               >
                 Founders
               </a>
-              <a href="#" className="hover:text-foreground transition-colors">
+              <a href="#" className="transition-colors" style={{ color: "#2E2E2E" }}>
                 Contact
               </a>
             </div>
           </div>
-          <div className="mt-8 text-center text-muted-foreground">
+          <div className="mt-8 text-center" style={{ color: "#2E2E2E" }}>
             <p>
               &copy; 2024 The Tent. Elevating festival experiences worldwide.
             </p>
