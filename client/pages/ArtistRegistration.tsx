@@ -899,7 +899,7 @@ export default function ArtistRegistration() {
       <section className="py-16 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-tent-blue to-tent-purple bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 uppercase" style={{ color: "#F8F5EE" }}>
               What Happens Next?
             </h2>
           </div>
