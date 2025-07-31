@@ -186,14 +186,14 @@ export default function ArtistLogin() {
           <div className="max-w-md mx-auto">
             {/* Header */}
             <div className="text-center mb-8">
-              <Badge className="mb-6 bg-gradient-to-r from-tent-orange/10 to-tent-pink/10 text-tent-purple border-tent-purple/20 hover:from-tent-orange/20 hover:to-tent-pink/20">
-                <Crown className="w-4 h-4 mr-2" />
+              <Badge className="mb-6 border-tent-purple/20" style={{ backgroundColor: "transparent", color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
+                <Crown className="w-4 h-4 mr-2" style={{ color: "#F8F5EE" }} />
                 Artist Portal
               </Badge>
-              <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-tent-blue via-tent-purple to-tent-pink bg-clip-text text-transparent leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
                 Welcome Back
               </h1>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-xl" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
                 Access your dashboard and make reservations
               </p>
             </div>
