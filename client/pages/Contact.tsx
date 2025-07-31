@@ -246,9 +246,7 @@ export default function Contact() {
               Get In Touch
             </Badge>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "700" }}>
-              Contact
-              <br />
-              The Tent
+              Contact The Tent
             </h1>
             <p className="text-xl md:text-2xl max-w-4xl mx-auto mb-8" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
               Ready to elevate your festival experience? Let's connect and
