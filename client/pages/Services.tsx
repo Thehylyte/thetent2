@@ -287,12 +287,12 @@ export default function Services() {
                 <Crown className="w-4 h-4 mr-2" />
                 Premium Services
               </Badge>
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-tent-blue via-tent-purple to-tent-pink bg-clip-text text-transparent leading-tight">
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
                 Elevate Your
                 <br />
                 Festival Experience
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8">
+              <p className="text-xl md:text-2xl max-w-4xl mx-auto mb-8" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
                 The Tent provides comprehensive hospitality services designed
                 specifically for artists, entertainers, and VIP guests at major
                 music festivals across the country.
