@@ -337,8 +337,8 @@ export default function ArtistLogin() {
             {/* Benefits Preview */}
             <div className="mt-12 grid md:grid-cols-3 gap-6">
               <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-tent-blue to-tent-purple rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Crown className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Crown className="w-6 h-6" style={{ color: "#F8F5EE" }} />
                 </div>
                 <h3 className="font-semibold mb-2" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>Quick Reservations</h3>
                 <p className="text-sm" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
@@ -346,8 +346,8 @@ export default function ArtistLogin() {
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-tent-pink to-tent-orange rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Music className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Music className="w-6 h-6" style={{ color: "#F8F5EE" }} />
                 </div>
                 <h3 className="font-semibold mb-2" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>Festival Access</h3>
                 <p className="text-sm" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
@@ -355,8 +355,8 @@ export default function ArtistLogin() {
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-tent-purple to-tent-pink rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Star className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Star className="w-6 h-6" style={{ color: "#F8F5EE" }} />
                 </div>
                 <h3 className="font-semibold mb-2" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>Exclusive Benefits</h3>
                 <p className="text-sm" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
