@@ -438,29 +438,33 @@ export default function Index() {
                   className="w-6 h-6"
                 />
               </div>
-              <div className="flex items-center space-x-6 text-muted-foreground">
+              <div className="flex items-center space-x-6" style={{ color: "#F8F5EE" }}>
                 <div className="flex space-x-6">
                   <a
                     href="#"
-                    className="hover:text-foreground transition-colors"
+                    className="transition-colors"
+                    style={{ color: "#F8F5EE" }}
                   >
                     Privacy
                   </a>
                   <a
                     href="/brand-partnership"
-                    className="hover:text-foreground transition-colors"
+                    className="transition-colors"
+                    style={{ color: "#F8F5EE" }}
                   >
                     Become a Brand Partner
                   </a>
                   <a
                     href="#"
-                    className="hover:text-foreground transition-colors"
+                    className="transition-colors"
+                    style={{ color: "#F8F5EE" }}
                   >
                     Terms
                   </a>
                   <a
                     href="#"
-                    className="hover:text-foreground transition-colors"
+                    className="transition-colors"
+                    style={{ color: "#F8F5EE" }}
                   >
                     Contact
                   </a>
@@ -476,14 +480,15 @@ export default function Index() {
                 </a>
               </div>
             </div>
-            <div className="mt-8 text-center text-muted-foreground">
+            <div className="mt-8 text-center" style={{ color: "#F8F5EE" }}>
               <p>
                 &copy; 2024 The Tent. Elevating festival experiences worldwide.
               </p>
               <p className="text-xs mt-2">
                 <a
                   href="/admin/registrations"
-                  className="text-muted-foreground/60 hover:text-foreground transition-colors"
+                  className="transition-colors"
+                  style={{ color: "#F8F5EE", opacity: "0.6" }}
                 >
                   Admin
                 </a>
