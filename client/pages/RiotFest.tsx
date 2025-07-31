@@ -53,7 +53,7 @@ export default function RiotFest() {
                 alt="The Tent Logo"
                 className="w-8 h-8"
               />
-              <span className="text-2xl font-bold bg-gradient-to-r from-tent-blue via-tent-purple to-tent-pink bg-clip-text text-transparent">
+              <span className="text-2xl font-bold" style={{ color: "#A2B29F" }}>
                 THE TENT
               </span>
             </div>
@@ -581,7 +581,7 @@ export default function RiotFest() {
                 alt="The Tent Logo"
                 className="w-6 h-6"
               />
-              <span className="text-xl font-bold bg-gradient-to-r from-tent-blue via-tent-purple to-tent-pink bg-clip-text text-transparent">
+              <span className="text-xl font-bold" style={{ color: "#A2B29F" }}>
                 THE TENT
               </span>
             </div>
