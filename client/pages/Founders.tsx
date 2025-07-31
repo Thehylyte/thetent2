@@ -398,10 +398,10 @@ export default function Founders() {
       <section className="py-16 px-6 overflow-hidden">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-tent-blue to-tent-purple bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#F8F5EE" }}>
               Our Journey in Photos
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg" style={{ color: "#F8F5EE" }}>
               Behind the scenes moments from The Tent experience
             </p>
           </div>
