@@ -447,7 +447,7 @@ export default function Services() {
                         </p>
                       </div>
                     </div>
-                    <p className="text-muted-foreground">
+                    <p style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>
                       {service.description}
                     </p>
                   </CardContent>
