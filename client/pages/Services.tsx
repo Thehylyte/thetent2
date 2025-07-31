@@ -495,10 +495,10 @@ export default function Services() {
         <section className="py-16 px-6">
           <div className="container mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-tent-purple via-tent-blue to-tent-pink bg-clip-text text-transparent">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 uppercase" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "700" }}>
                 How It Works
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
+              <p className="text-xl max-w-3xl mx-auto mb-12" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
                 Your journey to the ultimate festival experience
               </p>
 
@@ -518,7 +518,7 @@ export default function Services() {
               {processSteps.map((step, index) => (
                 <div key={index} className="text-center relative">
                   <div className="relative mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-tent-purple to-tent-pink rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">
+                    <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg" style={{ backgroundColor: "#A2B29F" }}>
                       {step.step}
                     </div>
                     {index < processSteps.length - 1 && (
