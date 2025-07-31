@@ -259,10 +259,10 @@ export default function Contact() {
       </section>
 
       {/* Contact Methods */}
-      <section className="py-16 px-6 bg-gradient-to-r from-tent-purple/10 via-tent-blue/10 to-tent-pink/10">
+      <section className="py-16 px-6" style={{ backgroundColor: "#6E6353" }}>
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-tent-purple to-tent-blue bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "700" }}>
               Ways to Connect
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -278,10 +278,8 @@ export default function Contact() {
                 onClick={() => window.open(method.action, "_blank")}
               >
                 <CardContent className="p-8 text-center">
-                  <div
-                    className={`w-16 h-16 bg-gradient-to-br from-${method.color} to-${method.color === "tent-purple" ? "tent-pink" : method.color === "tent-blue" ? "tent-purple" : "tent-orange"} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}
-                  >
-                    <method.icon className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <method.icon className="w-8 h-8" style={{ color: "#6E6353" }} />
                   </div>
                   <h3 className="text-xl font-bold mb-3">{method.title}</h3>
                   <p className="text-muted-foreground mb-4">
