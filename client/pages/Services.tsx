@@ -441,13 +441,35 @@ export default function Services() {
                         />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "700" }}>{service.title}</h3>
-                        <p className="text-sm font-medium" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>
+                        <h3
+                          className="text-xl font-bold"
+                          style={{
+                            color: "#2E2E2E",
+                            fontFamily: "Inter",
+                            fontWeight: "700",
+                          }}
+                        >
+                          {service.title}
+                        </h3>
+                        <p
+                          className="text-sm font-medium"
+                          style={{
+                            color: "#2E2E2E",
+                            fontFamily: "Inter",
+                            fontWeight: "300",
+                          }}
+                        >
                           {service.provider}
                         </p>
                       </div>
                     </div>
-                    <p style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>
+                    <p
+                      style={{
+                        color: "#2E2E2E",
+                        fontFamily: "Inter",
+                        fontWeight: "300",
+                      }}
+                    >
                       {service.description}
                     </p>
                   </CardContent>
@@ -461,10 +483,24 @@ export default function Services() {
         <section className="py-16 px-6" style={{ backgroundColor: "#6E6353" }}>
           <div className="container mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 uppercase" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "700" }}>
+              <h2
+                className="text-4xl md:text-5xl font-bold mb-6 uppercase"
+                style={{
+                  color: "#F8F5EE",
+                  fontFamily: "Inter",
+                  fontWeight: "700",
+                }}
+              >
                 Brand Partners
               </h2>
-              <p className="text-xl max-w-3xl mx-auto" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
+              <p
+                className="text-xl max-w-3xl mx-auto"
+                style={{
+                  color: "#F8F5EE",
+                  fontFamily: "Inter",
+                  fontWeight: "300",
+                }}
+              >
                 We collaborate with industry-leading brands to provide exclusive
                 products and services
               </p>
@@ -495,10 +531,24 @@ export default function Services() {
         <section className="py-16 px-6">
           <div className="container mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 uppercase" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "700" }}>
+              <h2
+                className="text-4xl md:text-5xl font-bold mb-6 uppercase"
+                style={{
+                  color: "#F8F5EE",
+                  fontFamily: "Inter",
+                  fontWeight: "700",
+                }}
+              >
                 How It Works
               </h2>
-              <p className="text-xl max-w-3xl mx-auto mb-12" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
+              <p
+                className="text-xl max-w-3xl mx-auto mb-12"
+                style={{
+                  color: "#F8F5EE",
+                  fontFamily: "Inter",
+                  fontWeight: "300",
+                }}
+              >
                 Your journey to the ultimate festival experience
               </p>
 
@@ -518,15 +568,37 @@ export default function Services() {
               {processSteps.map((step, index) => (
                 <div key={index} className="text-center relative">
                   <div className="relative mb-6">
-                    <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg" style={{ backgroundColor: "#A2B29F" }}>
+                    <div
+                      className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg"
+                      style={{ backgroundColor: "#A2B29F" }}
+                    >
                       {step.step}
                     </div>
                     {index < processSteps.length - 1 && (
-                      <div className="hidden md:block absolute top-8 left-full w-full h-0.5 -translate-x-8" style={{ backgroundColor: "#F8F5EE" }}></div>
+                      <div
+                        className="hidden md:block absolute top-8 left-full w-full h-0.5 -translate-x-8"
+                        style={{ backgroundColor: "#F8F5EE" }}
+                      ></div>
                     )}
                   </div>
-                  <h3 className="text-lg font-bold mb-3 uppercase" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "700" }}>{step.title}</h3>
-                  <p className="text-sm" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
+                  <h3
+                    className="text-lg font-bold mb-3 uppercase"
+                    style={{
+                      color: "#F8F5EE",
+                      fontFamily: "Inter",
+                      fontWeight: "700",
+                    }}
+                  >
+                    {step.title}
+                  </h3>
+                  <p
+                    className="text-sm"
+                    style={{
+                      color: "#F8F5EE",
+                      fontFamily: "Inter",
+                      fontWeight: "300",
+                    }}
+                  >
                     {step.description}
                   </p>
                 </div>
@@ -538,10 +610,30 @@ export default function Services() {
         {/* CTA Section */}
         <section className="py-16 px-6" style={{ backgroundColor: "#6E6353" }}>
           <div className="container mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 uppercase flex flex-wrap items-center justify-center gap-2" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "700" }}>
-              Ready to Experience <img src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F3617430fab024488a01fb5e9d36427b1?format=webp&width=800" alt="The Tent" className="h-12 md:h-16 inline-block" />?
+            <h2
+              className="text-4xl md:text-5xl font-bold mb-6 uppercase flex flex-wrap items-center justify-center gap-2"
+              style={{
+                color: "#F8F5EE",
+                fontFamily: "Inter",
+                fontWeight: "700",
+              }}
+            >
+              Ready to Experience{" "}
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F3617430fab024488a01fb5e9d36427b1?format=webp&width=800"
+                alt="The Tent"
+                className="h-12 md:h-16 inline-block"
+              />
+              ?
             </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
+            <p
+              className="text-xl mb-8 max-w-2xl mx-auto"
+              style={{
+                color: "#F8F5EE",
+                fontFamily: "Inter",
+                fontWeight: "300",
+              }}
+            >
               Join hundreds of artists who have elevated their festival
               experience with our premium hospitality services.
             </p>
@@ -590,7 +682,11 @@ export default function Services() {
                 </span>
               </div>
               <div className="flex space-x-6" style={{ color: "#F8F5EE" }}>
-                <a href="/" className="transition-colors" style={{ color: "#F8F5EE" }}>
+                <a
+                  href="/"
+                  className="transition-colors"
+                  style={{ color: "#F8F5EE" }}
+                >
                   Home
                 </a>
                 <a

@@ -357,7 +357,6 @@ export default function Index() {
                         "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)",
                     }}
                   />
-
                 </div>
                 {/* Duplicate for seamless scroll */}
                 <div className="flex items-center space-x-24 min-w-full shrink-0">
@@ -425,7 +424,6 @@ export default function Index() {
                         "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)",
                     }}
                   />
-
                 </div>
               </div>
             </div>

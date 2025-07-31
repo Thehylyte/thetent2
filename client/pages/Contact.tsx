@@ -234,11 +234,24 @@ export default function Contact() {
       <section className="pt-24 pb-16 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "700" }}>
+            <h1
+              className="text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase"
+              style={{
+                color: "#F8F5EE",
+                fontFamily: "Inter",
+                fontWeight: "700",
+              }}
+            >
               Contact The Tent
             </h1>
-            <p className="text-xl md:text-2xl max-w-4xl mx-auto mb-8" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
+            <p
+              className="text-xl md:text-2xl max-w-4xl mx-auto mb-8"
+              style={{
+                color: "#F8F5EE",
+                fontFamily: "Inter",
+                fontWeight: "300",
+              }}
+            >
               Ready to elevate your festival experience? Let's connect and
               create something extraordinary together.
             </p>
@@ -250,7 +263,14 @@ export default function Contact() {
       <section className="py-16 px-6" style={{ backgroundColor: "#6E6353" }}>
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 uppercase" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "700" }}>
+            <h2
+              className="text-4xl md:text-5xl font-bold mb-6 uppercase"
+              style={{
+                color: "#F8F5EE",
+                fontFamily: "Inter",
+                fontWeight: "700",
+              }}
+            >
               Ways to Connect
             </h2>
           </div>
@@ -264,7 +284,10 @@ export default function Contact() {
               >
                 <CardContent className="p-8 text-center">
                   <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <method.icon className="w-8 h-8" style={{ color: "#6E6353" }} />
+                    <method.icon
+                      className="w-8 h-8"
+                      style={{ color: "#6E6353" }}
+                    />
                   </div>
                   <h3 className="text-xl font-bold mb-3">{method.title}</h3>
                   <p className="text-muted-foreground mb-4">
@@ -285,7 +308,10 @@ export default function Contact() {
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#F8F5EE" }}>
+              <h2
+                className="text-4xl md:text-5xl font-bold mb-6"
+                style={{ color: "#F8F5EE" }}
+              >
                 Send Us a Message
               </h2>
               <p className="text-xl" style={{ color: "#F8F5EE" }}>
@@ -457,8 +483,14 @@ export default function Contact() {
                       className="text-lg px-8 py-6 border-tent-blue/30 hover:bg-tent-blue/10"
                       asChild
                     >
-                      <a href="/artist-registration" style={{ color: "#F8F5EE" }}>
-                        <Crown className="w-5 h-5 mr-2" style={{ color: "#F8F5EE" }} />
+                      <a
+                        href="/artist-registration"
+                        style={{ color: "#F8F5EE" }}
+                      >
+                        <Crown
+                          className="w-5 h-5 mr-2"
+                          style={{ color: "#F8F5EE" }}
+                        />
                         Artist Registration
                       </a>
                     </Button>
@@ -474,10 +506,24 @@ export default function Contact() {
       <section className="py-16 px-6" style={{ backgroundColor: "#A2B29F" }}>
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 uppercase" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "700" }}>
+            <h2
+              className="text-4xl md:text-5xl font-bold mb-6 uppercase"
+              style={{
+                color: "#2E2E2E",
+                fontFamily: "Inter",
+                fontWeight: "700",
+              }}
+            >
               Our Locations
             </h2>
-            <p className="text-xl max-w-3xl mx-auto" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>
+            <p
+              className="text-xl max-w-3xl mx-auto"
+              style={{
+                color: "#2E2E2E",
+                fontFamily: "Inter",
+                fontWeight: "300",
+              }}
+            >
               We operate from key music industry hubs across the country
             </p>
           </div>
@@ -487,7 +533,9 @@ export default function Contact() {
               <Card
                 key={index}
                 className={`${location.isHeadquarters ? "border-tent-purple/40" : "border-tent-blue/20"} hover:shadow-lg transition-all duration-300`}
-                style={location.isHeadquarters ? { backgroundColor: "#F8F5EE" } : {}}
+                style={
+                  location.isHeadquarters ? { backgroundColor: "#F8F5EE" } : {}
+                }
               >
                 <CardContent className="p-6 text-center">
                   {location.city === "Chicago" && (
@@ -511,9 +559,15 @@ export default function Contact() {
                   <div className="flex items-center justify-center mb-4">
                     <div className="w-12 h-12 rounded-full flex items-center justify-center mr-3">
                       {location.isHeadquarters ? (
-                        <Building className="w-6 h-6" style={{ color: "#6E6353" }} />
+                        <Building
+                          className="w-6 h-6"
+                          style={{ color: "#6E6353" }}
+                        />
                       ) : (
-                        <MapPin className="w-6 h-6" style={{ color: "#6E6353" }} />
+                        <MapPin
+                          className="w-6 h-6"
+                          style={{ color: "#6E6353" }}
+                        />
                       )}
                     </div>
                     {location.isHeadquarters && (
@@ -541,7 +595,6 @@ export default function Contact() {
         </div>
       </section>
 
-
       {/* Footer */}
       <footer className="py-12 px-6 border-t border-border/50">
         <div className="container mx-auto">
@@ -558,7 +611,11 @@ export default function Contact() {
             </div>
             <div className="flex items-center space-x-6">
               <div className="flex space-x-6">
-                <a href="/" className="transition-colors" style={{ color: "#F8F5EE" }}>
+                <a
+                  href="/"
+                  className="transition-colors"
+                  style={{ color: "#F8F5EE" }}
+                >
                   Home
                 </a>
                 <a

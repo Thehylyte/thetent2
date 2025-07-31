@@ -186,12 +186,27 @@ export default function ArtistLogin() {
           <div className="max-w-md mx-auto">
             {/* Header */}
             <div className="text-center mb-8">
-              <Badge className="mb-6 border-tent-purple/20" style={{ backgroundColor: "transparent", color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
+              <Badge
+                className="mb-6 border-tent-purple/20"
+                style={{
+                  backgroundColor: "transparent",
+                  color: "#F8F5EE",
+                  fontFamily: "Inter",
+                  fontWeight: "300",
+                }}
+              >
                 <Crown className="w-4 h-4 mr-2" style={{ color: "#F8F5EE" }} />
                 Artist Portal
               </Badge>
 
-              <p className="text-xl" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
+              <p
+                className="text-xl"
+                style={{
+                  color: "#F8F5EE",
+                  fontFamily: "Inter",
+                  fontWeight: "300",
+                }}
+              >
                 Access your dashboard and make reservations
               </p>
             </div>
@@ -199,7 +214,10 @@ export default function ArtistLogin() {
             {/* Login Form */}
             <Card className="border-tent-blue/20 shadow-lg">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: "#2E2E2E" }}>
+                <div
+                  className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4"
+                  style={{ backgroundColor: "#2E2E2E" }}
+                >
                   <LogIn className="w-8 h-8 text-white" />
                 </div>
                 <h2 className="text-2xl font-bold">Artist Login</h2>
@@ -315,7 +333,10 @@ export default function ArtistLogin() {
                     <span className="w-full border-t border-border" />
                   </div>
                   <div className="relative flex justify-center text-sm">
-                    <span className="bg-background px-2" style={{ color: "#F8F5EE" }}>
+                    <span
+                      className="bg-background px-2"
+                      style={{ color: "#F8F5EE" }}
+                    >
                       Don't have an account?
                     </span>
                   </div>
@@ -341,8 +362,24 @@ export default function ArtistLogin() {
                 <div className="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Crown className="w-6 h-6" style={{ color: "#F8F5EE" }} />
                 </div>
-                <h3 className="font-semibold mb-2" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>Quick Reservations</h3>
-                <p className="text-sm" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
+                <h3
+                  className="font-semibold mb-2"
+                  style={{
+                    color: "#F8F5EE",
+                    fontFamily: "Inter",
+                    fontWeight: "300",
+                  }}
+                >
+                  Quick Reservations
+                </h3>
+                <p
+                  className="text-sm"
+                  style={{
+                    color: "#F8F5EE",
+                    fontFamily: "Inter",
+                    fontWeight: "300",
+                  }}
+                >
                   Book services instantly with saved preferences
                 </p>
               </div>
@@ -350,8 +387,24 @@ export default function ArtistLogin() {
                 <div className="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Music className="w-6 h-6" style={{ color: "#F8F5EE" }} />
                 </div>
-                <h3 className="font-semibold mb-2" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>Festival Access</h3>
-                <p className="text-sm" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
+                <h3
+                  className="font-semibold mb-2"
+                  style={{
+                    color: "#F8F5EE",
+                    fontFamily: "Inter",
+                    fontWeight: "300",
+                  }}
+                >
+                  Festival Access
+                </h3>
+                <p
+                  className="text-sm"
+                  style={{
+                    color: "#F8F5EE",
+                    fontFamily: "Inter",
+                    fontWeight: "300",
+                  }}
+                >
                   View all your upcoming festival reservations
                 </p>
               </div>
@@ -359,8 +412,24 @@ export default function ArtistLogin() {
                 <div className="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Star className="w-6 h-6" style={{ color: "#F8F5EE" }} />
                 </div>
-                <h3 className="font-semibold mb-2" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>Exclusive Benefits</h3>
-                <p className="text-sm" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
+                <h3
+                  className="font-semibold mb-2"
+                  style={{
+                    color: "#F8F5EE",
+                    fontFamily: "Inter",
+                    fontWeight: "300",
+                  }}
+                >
+                  Exclusive Benefits
+                </h3>
+                <p
+                  className="text-sm"
+                  style={{
+                    color: "#F8F5EE",
+                    fontFamily: "Inter",
+                    fontWeight: "300",
+                  }}
+                >
                   Access member-only services and perks
                 </p>
               </div>
