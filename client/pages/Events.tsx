@@ -316,6 +316,7 @@ export default function Events() {
                         <Button
                           variant="outline"
                           className="group/btn border-tent-blue/30 hover:bg-tent-blue/10"
+                          style={{ color: "#A2B29F" }}
                           asChild
                         >
                           <a href={getEventDetailUrl(event.name)}>
