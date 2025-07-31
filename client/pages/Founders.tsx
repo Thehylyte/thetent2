@@ -346,7 +346,7 @@ export default function Founders() {
                       key={index}
                       className="flex items-center p-4 rounded-lg bg-tent-blue/5 hover:bg-tent-blue/10 transition-colors"
                     >
-                      <div className="w-8 h-8 bg-gradient-to-br from-tent-blue to-tent-purple rounded-full flex items-center justify-center mr-4">
+                      <div className="w-8 h-8 rounded-full flex items-center justify-center mr-4" style={{ backgroundColor: "#6E6353" }}>
                         <Music className="w-4 h-4 text-white" />
                       </div>
                       <span className="text-lg font-medium">{artist}</span>
@@ -381,7 +381,7 @@ export default function Founders() {
                       key={index}
                       className="flex items-center p-4 rounded-lg bg-tent-pink/5 hover:bg-tent-pink/10 transition-colors"
                     >
-                      <div className="w-8 h-8 bg-gradient-to-br from-tent-pink to-tent-orange rounded-full flex items-center justify-center mr-4">
+                      <div className="w-8 h-8 rounded-full flex items-center justify-center mr-4" style={{ backgroundColor: "#6E6353" }}>
                         <Music className="w-4 h-4 text-white" />
                       </div>
                       <span className="text-lg font-medium">{artist}</span>
