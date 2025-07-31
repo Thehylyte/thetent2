@@ -525,8 +525,8 @@ export default function Services() {
                       <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-tent-purple/30 to-tent-pink/30 -translate-x-8"></div>
                     )}
                   </div>
-                  <h3 className="text-lg font-bold mb-3">{step.title}</h3>
-                  <p className="text-muted-foreground text-sm">
+                  <h3 className="text-lg font-bold mb-3 uppercase" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>{step.title}</h3>
+                  <p className="text-sm" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
                     {step.description}
                   </p>
                 </div>
