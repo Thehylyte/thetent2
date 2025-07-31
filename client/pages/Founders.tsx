@@ -349,7 +349,7 @@ export default function Founders() {
             >
               <CardHeader>
                 <div className="text-center">
-                  <h3 className="text-2xl font-bold text-tent-blue mb-2">
+                  <h3 className="text-2xl font-bold mb-2" style={{ color: "#000000" }}>
                     Jared Gladstone
                   </h3>
                   <p className="text-muted-foreground">
