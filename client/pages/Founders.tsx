@@ -599,8 +599,8 @@ export default function Founders() {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="text-center border-tent-blue/20 hover:border-tent-blue/40 transition-colors">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-tent-blue to-tent-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <Heart className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                  <Heart className="w-8 h-8" style={{ color: "#6E6353" }} />
                 </div>
                 <h3 className="text-xl mb-4" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>Artist-First</h3>
                 <p style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>
@@ -613,8 +613,8 @@ export default function Founders() {
 
             <Card className="text-center border-tent-purple/20 hover:border-tent-purple/40 transition-colors">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-tent-purple to-tent-pink rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <Sparkles className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                  <Sparkles className="w-8 h-8" style={{ color: "#6E6353" }} />
                 </div>
                 <h3 className="text-xl mb-4" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>Excellence</h3>
                 <p style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>
@@ -626,8 +626,8 @@ export default function Founders() {
 
             <Card className="text-center border-tent-pink/20 hover:border-tent-pink/40 transition-colors">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-tent-pink to-tent-orange rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <Music className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                  <Music className="w-8 h-8" style={{ color: "#6E6353" }} />
                 </div>
                 <h3 className="text-xl mb-4" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>Music Community</h3>
                 <p style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>
