@@ -234,10 +234,7 @@ export default function Contact() {
       <section className="pt-24 pb-16 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <Badge className="mb-6 bg-gradient-to-r from-tent-orange/10 to-tent-pink/10 text-tent-purple border-tent-purple/20 hover:from-tent-orange/20 hover:to-tent-pink/20">
-              <MessageSquare className="w-4 h-4 mr-2" />
-              Get In Touch
-            </Badge>
+
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "700" }}>
               Contact The Tent
             </h1>
