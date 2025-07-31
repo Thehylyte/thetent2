@@ -292,7 +292,8 @@ export default function ArtistLogin() {
                   <Button
                     type="submit"
                     disabled={isLoading}
-                    className="w-full bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90 text-lg py-6"
+                    className="w-full text-lg py-6 hover:opacity-90 transition-opacity"
+                    style={{ backgroundColor: "#A2B29F" }}
                   >
                     {isLoading ? (
                       <div className="flex items-center justify-center">
