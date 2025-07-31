@@ -155,7 +155,7 @@ export default function Index() {
           <div className="container mx-auto">
             <div className="text-center mb-16">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F9e636fb1c64143d5a2e54ea7e5e98639?format=webp&width=800"
+                src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Ffbdfe906275c4845873741793fd3b52c?format=webp&width=800"
                 alt="The Tent Logo"
                 className="mb-6 mx-auto w-full max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl px-4 sm:px-0"
               />
