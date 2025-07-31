@@ -357,15 +357,7 @@ export default function Index() {
                         "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)",
                     }}
                   />
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F33bb0dafba6c460ab2e7920634de4f4d?format=webp&width=800"
-                    alt="NormaTec"
-                    className="h-12 opacity-60 hover:opacity-100 transition-opacity"
-                    style={{
-                      filter:
-                        "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)",
-                    }}
-                  />
+
                 </div>
                 {/* Duplicate for seamless scroll */}
                 <div className="flex items-center space-x-24 min-w-full shrink-0">
@@ -433,15 +425,7 @@ export default function Index() {
                         "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)",
                     }}
                   />
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F33bb0dafba6c460ab2e7920634de4f4d?format=webp&width=800"
-                    alt="NormaTec"
-                    className="h-12 opacity-60 hover:opacity-100 transition-opacity"
-                    style={{
-                      filter:
-                        "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)",
-                    }}
-                  />
+
                 </div>
               </div>
             </div>
