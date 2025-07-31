@@ -357,7 +357,7 @@ export default function ArtistRegistration() {
               <Star className="w-4 h-4 mr-2" />
               Exclusive Artist Program
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-tent-blue via-tent-purple to-tent-pink bg-clip-text text-transparent leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase" style={{ color: "#F8F5EE" }}>
               Artist
               <br />
               Registration
