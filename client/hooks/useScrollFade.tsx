@@ -31,7 +31,6 @@ export const useScrollFade = () => {
       // Initial state - semi-transparent background with blur
       return {
         backgroundColor: `hsl(var(--background) / 0.8)`,
-        backdropFilter: "blur(12px)",
         borderBottom: "1px solid hsl(var(--border) / 0.5)",
       };
     } else {
