@@ -488,7 +488,7 @@ export default function ArtistRegistration() {
                     </h4>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium mb-2">
+                        <label className="block text-sm font-medium mb-2" style={{ color: "#F8F5EE" }}>
                           Artist/Stage Name
                         </label>
                         <input
@@ -514,7 +514,7 @@ export default function ArtistRegistration() {
                         )}
                       </div>
                       <div>
-                        <label className="block text-sm font-medium mb-2">
+                        <label className="block text-sm font-medium mb-2" style={{ color: "#F8F5EE" }}>
                           Legal Name
                         </label>
                         <input
@@ -542,7 +542,7 @@ export default function ArtistRegistration() {
                     </div>
                     <div className="grid md:grid-cols-2 gap-4 mt-4">
                       <div>
-                        <label className="block text-sm font-medium mb-2">
+                        <label className="block text-sm font-medium mb-2" style={{ color: "#F8F5EE" }}>
                           Email Address
                         </label>
                         <input
@@ -565,7 +565,7 @@ export default function ArtistRegistration() {
                         )}
                       </div>
                       <div>
-                        <label className="block text-sm font-medium mb-2">
+                        <label className="block text-sm font-medium mb-2" style={{ color: "#F8F5EE" }}>
                           Phone Number
                         </label>
                         <input
@@ -592,12 +592,12 @@ export default function ArtistRegistration() {
 
                   {/* Management Information */}
                   <div>
-                    <h4 className="text-lg font-semibold mb-4 text-tent-purple">
+                    <h4 className="text-lg font-semibold mb-4" style={{ color: "#F8F5EE" }}>
                       Management Contact
                     </h4>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium mb-2">
+                        <label className="block text-sm font-medium mb-2" style={{ color: "#F8F5EE" }}>
                           Manager/Agent Name *
                         </label>
                         <input
@@ -623,7 +623,7 @@ export default function ArtistRegistration() {
                         )}
                       </div>
                       <div>
-                        <label className="block text-sm font-medium mb-2">
+                        <label className="block text-sm font-medium mb-2" style={{ color: "#F8F5EE" }}>
                           Management Email *
                         </label>
                         <input
