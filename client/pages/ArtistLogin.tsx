@@ -190,9 +190,7 @@ export default function ArtistLogin() {
                 <Crown className="w-4 h-4 mr-2" style={{ color: "#F8F5EE" }} />
                 Artist Portal
               </Badge>
-              <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
-                Welcome Back
-              </h1>
+
               <p className="text-xl" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
                 Access your dashboard and make reservations
               </p>
