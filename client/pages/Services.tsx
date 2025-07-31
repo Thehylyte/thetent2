@@ -536,7 +536,7 @@ export default function Services() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-6 bg-gradient-to-r from-tent-purple/20 via-tent-blue/20 to-tent-pink/20">
+        <section className="py-16 px-6" style={{ backgroundColor: "#6E6353" }}>
           <div className="container mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 uppercase" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "700" }}>
               Ready to Experience The Tent?
@@ -548,7 +548,8 @@ export default function Services() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90 text-lg px-8 py-6"
+                className="text-lg px-8 py-6 hover:opacity-90 transition-opacity"
+                style={{ backgroundColor: "#A2B29F" }}
                 asChild
               >
                 <a href="/events">
