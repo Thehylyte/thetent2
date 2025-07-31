@@ -502,6 +502,15 @@ export default function Contact() {
                       />
                     </div>
                   )}
+                  {location.city === "Las Vegas" && (
+                    <div className="mb-4">
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Fcae8423f000f43d3bf8cf32a6540187b?format=webp&width=800"
+                        alt="Las Vegas welcome sign"
+                        className="w-full h-32 object-cover rounded-lg"
+                      />
+                    </div>
+                  )}
                   <div className="flex items-center justify-center mb-4">
                     <div className="w-12 h-12 rounded-full flex items-center justify-center mr-3">
                       {location.isHeadquarters ? (
