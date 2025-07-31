@@ -163,7 +163,7 @@ export default function Index() {
                 className="text-xl md:text-2xl max-w-3xl mx-auto mb-8 uppercase"
                 style={{ color: "#f8f5ee" }}
               >
-                the ultimate hospitality sanctuary
+                The Ultimate Artist Haven
               </p>
             </div>
 
