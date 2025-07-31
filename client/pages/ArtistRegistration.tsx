@@ -406,7 +406,7 @@ export default function ArtistRegistration() {
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-tent-pink to-tent-orange bg-clip-text text-transparent">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#F8F5EE" }}>
                 Register as an Artist
               </h2>
               <p className="text-xl text-muted-foreground mb-4">
