@@ -245,7 +245,7 @@ export default function Contact() {
               <MessageSquare className="w-4 h-4 mr-2" />
               Get In Touch
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "700" }}>
               Contact
               <br />
               The Tent
