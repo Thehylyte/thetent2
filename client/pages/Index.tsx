@@ -169,16 +169,25 @@ export default function Index() {
 
             {/* Hero Video */}
             <div className="relative w-full">
-              <div className="aspect-video overflow-hidden">
+              <div className="aspect-video overflow-hidden cursor-pointer" onClick={() => window.location.href = '/artist-registration'}>
                 <video
                   className="w-full h-full object-cover"
                   autoPlay
                   muted
-                  loop
                   playsInline
+                  onEnded={() => {
+                    const videoContainer = document.querySelector('.aspect-video');
+                    if (videoContainer) {
+                      videoContainer.classList.add('hover:opacity-80');
+                      const overlay = document.createElement('div');
+                      overlay.innerHTML = '<div class="absolute inset-0 flex items-center justify-center bg-black/50"><div class="text-white text-xl font-bold">Click to Register</div></div>';
+                      overlay.className = 'absolute inset-0 pointer-events-none';
+                      videoContainer.appendChild(overlay.firstChild as HTMLElement);
+                    }
+                  }}
                 >
                   <source
-                    src="https://cdn.builder.io/o/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F8438eca6c3a04d81adece5dcedfaa883?alt=media&token=de9839fc-593d-4536-8706-34ae9107fbbe&apiKey=669056b1b03f448b9ee2fa2d9e73b3a1"
+                    src="https://cdn.builder.io/o/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Faa99736f6cf34365a8b2f75075f9636d?alt=media&token=f16b8923-0dfd-4f2a-bac0-c6d9fa522355&apiKey=669056b1b03f448b9ee2fa2d9e73b3a1"
                     type="video/mp4"
                   />
                   Your browser does not support the video tag.
