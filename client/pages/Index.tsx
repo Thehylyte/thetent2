@@ -511,7 +511,7 @@ export default function Index() {
             >
               Ready to Experience{" "}
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F94a0a8d4b39e4e18a617f8209a4cc712?format=webp&width=800"
+                src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F3645552affe347c69fc155106fa14bdf?format=webp&width=800"
                 alt="The Tent"
                 className="h-12 md:h-16 inline-block"
               />
