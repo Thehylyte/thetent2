@@ -39,24 +39,16 @@ export default function Contact() {
       icon: Mail,
       title: "Email Us",
       description: "Get in touch via email for general inquiries",
-      contact: "hello@thetent.club",
-      action: "mailto:hello@thetent.club",
+      contact: "info@thetent.club",
+      action: "mailto:info@thetent.club",
       color: "tent-purple",
-    },
-    {
-      icon: Phone,
-      title: "Call Us",
-      description: "Speak directly with our team",
-      contact: "+1 (555) 123-TENT",
-      action: "tel:+15551234836",
-      color: "tent-blue",
     },
     {
       icon: Instagram,
       title: "Follow Us",
       description: "Stay updated on Instagram",
-      contact: "@accessthetent",
-      action: "https://instagram.com/accessthetent",
+      contact: "@thetent.club",
+      action: "https://instagram.com/thetent.club",
       color: "tent-pink",
     },
   ];
@@ -652,7 +644,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ml-4 p-2 rounded-full hover:bg-tent-purple/10 transition-colors group"
-                aria-label="Follow us on Instagram @accessthetent"
+                aria-label="Follow us on Instagram @thetent.club"
               >
                 <Instagram className="w-5 h-5 text-muted-foreground group-hover:text-tent-purple transition-colors" />
               </a>
