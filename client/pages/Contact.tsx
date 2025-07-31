@@ -454,7 +454,8 @@ export default function Contact() {
                     <Button
                       type="submit"
                       size="lg"
-                      className="bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90 text-lg px-8 py-6"
+                      className="text-lg px-8 py-6 hover:opacity-90 transition-opacity"
+                      style={{ backgroundColor: "#A2B29F" }}
                     >
                       <Send className="w-5 h-5 mr-2" />
                       Send Message
