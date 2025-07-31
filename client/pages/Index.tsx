@@ -506,10 +506,16 @@ export default function Index() {
         <section className="py-16 px-6">
           <div className="container mx-auto text-center">
             <h2
-              className="text-4xl md:text-5xl font-bold mb-6"
+              className="text-4xl md:text-5xl font-bold mb-6 flex items-center justify-center gap-3"
               style={{ color: "#F8F5EE" }}
             >
-              Ready to Experience The Tent?
+              Ready to Experience{" "}
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F94a0a8d4b39e4e18a617f8209a4cc712?format=webp&width=800"
+                alt="The Tent"
+                className="h-12 md:h-16 inline-block"
+              />
+              ?
             </h2>
             <p
               className="text-xl mb-8 max-w-2xl mx-auto"
