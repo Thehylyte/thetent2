@@ -216,7 +216,7 @@ export default function Founders() {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#2E2E2E" }}>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 uppercase" style={{ color: "#2E2E2E" }}>
                 The Story Behind The Tent
               </h2>
               <p className="text-lg mb-6" style={{ color: "#2E2E2E" }}>
