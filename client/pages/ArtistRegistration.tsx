@@ -353,8 +353,10 @@ export default function ArtistRegistration() {
       <section className="pt-24 pb-16 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase" style={{ color: "#F8F5EE" }}>
+            <h1
+              className="text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase"
+              style={{ color: "#F8F5EE" }}
+            >
               Artist Registration
             </h1>
             <p
@@ -373,7 +375,10 @@ export default function ArtistRegistration() {
       <section className="pb-16 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: "#F8F5EE" }}>
+            <h2
+              className="text-3xl md:text-4xl font-bold mb-6"
+              style={{ color: "#F8F5EE" }}
+            >
               Why Artists Choose The Tent
             </h2>
           </div>
@@ -385,7 +390,10 @@ export default function ArtistRegistration() {
               >
                 <CardContent className="p-8">
                   <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <perk.icon className="w-8 h-8" style={{ color: "#6E6353" }} />
+                    <perk.icon
+                      className="w-8 h-8"
+                      style={{ color: "#6E6353" }}
+                    />
                   </div>
                   <h3 className="text-xl font-bold mb-4">{perk.title}</h3>
                   <p className="text-muted-foreground">{perk.description}</p>
@@ -401,7 +409,10 @@ export default function ArtistRegistration() {
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#F8F5EE" }}>
+              <h2
+                className="text-4xl md:text-5xl font-bold mb-6"
+                style={{ color: "#F8F5EE" }}
+              >
                 Register as an Artist
               </h2>
               <p className="text-xl mb-4" style={{ color: "#F8F5EE" }}>
@@ -422,7 +433,10 @@ export default function ArtistRegistration() {
 
             <Card className="border-tent-purple/20 bg-background/80 backdrop-blur-sm">
               <CardHeader>
-                <h3 className="text-2xl font-bold text-center" style={{ color: "#F8F5EE" }}>
+                <h3
+                  className="text-2xl font-bold text-center"
+                  style={{ color: "#F8F5EE" }}
+                >
                   Artist Information
                 </h3>
               </CardHeader>
@@ -478,12 +492,18 @@ export default function ArtistRegistration() {
                 <form onSubmit={handleSubmit} className="space-y-8">
                   {/* Personal Information */}
                   <div>
-                    <h4 className="text-lg font-semibold mb-4" style={{ color: "#F8F5EE" }}>
+                    <h4
+                      className="text-lg font-semibold mb-4"
+                      style={{ color: "#F8F5EE" }}
+                    >
                       Personal Details
                     </h4>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium mb-2" style={{ color: "#F8F5EE" }}>
+                        <label
+                          className="block text-sm font-medium mb-2"
+                          style={{ color: "#F8F5EE" }}
+                        >
                           Artist/Stage Name
                         </label>
                         <input
@@ -509,7 +529,10 @@ export default function ArtistRegistration() {
                         )}
                       </div>
                       <div>
-                        <label className="block text-sm font-medium mb-2" style={{ color: "#F8F5EE" }}>
+                        <label
+                          className="block text-sm font-medium mb-2"
+                          style={{ color: "#F8F5EE" }}
+                        >
                           Legal Name
                         </label>
                         <input
@@ -537,7 +560,10 @@ export default function ArtistRegistration() {
                     </div>
                     <div className="grid md:grid-cols-2 gap-4 mt-4">
                       <div>
-                        <label className="block text-sm font-medium mb-2" style={{ color: "#F8F5EE" }}>
+                        <label
+                          className="block text-sm font-medium mb-2"
+                          style={{ color: "#F8F5EE" }}
+                        >
                           Email Address
                         </label>
                         <input
@@ -560,7 +586,10 @@ export default function ArtistRegistration() {
                         )}
                       </div>
                       <div>
-                        <label className="block text-sm font-medium mb-2" style={{ color: "#F8F5EE" }}>
+                        <label
+                          className="block text-sm font-medium mb-2"
+                          style={{ color: "#F8F5EE" }}
+                        >
                           Phone Number
                         </label>
                         <input
@@ -587,12 +616,18 @@ export default function ArtistRegistration() {
 
                   {/* Management Information */}
                   <div>
-                    <h4 className="text-lg font-semibold mb-4" style={{ color: "#F8F5EE" }}>
+                    <h4
+                      className="text-lg font-semibold mb-4"
+                      style={{ color: "#F8F5EE" }}
+                    >
                       Management Contact
                     </h4>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium mb-2" style={{ color: "#F8F5EE" }}>
+                        <label
+                          className="block text-sm font-medium mb-2"
+                          style={{ color: "#F8F5EE" }}
+                        >
                           Manager/Agent Name *
                         </label>
                         <input
@@ -618,7 +653,10 @@ export default function ArtistRegistration() {
                         )}
                       </div>
                       <div>
-                        <label className="block text-sm font-medium mb-2" style={{ color: "#F8F5EE" }}>
+                        <label
+                          className="block text-sm font-medium mb-2"
+                          style={{ color: "#F8F5EE" }}
+                        >
                           Management Email *
                         </label>
                         <input
@@ -648,12 +686,18 @@ export default function ArtistRegistration() {
 
                   {/* Performance Information */}
                   <div>
-                    <h4 className="text-lg font-semibold mb-4" style={{ color: "#F8F5EE" }}>
+                    <h4
+                      className="text-lg font-semibold mb-4"
+                      style={{ color: "#F8F5EE" }}
+                    >
                       Performance Details
                     </h4>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium mb-2" style={{ color: "#F8F5EE" }}>
+                        <label
+                          className="block text-sm font-medium mb-2"
+                          style={{ color: "#F8F5EE" }}
+                        >
                           Genre *
                         </label>
                         <select
@@ -685,7 +729,10 @@ export default function ArtistRegistration() {
                         )}
                       </div>
                       <div>
-                        <label className="block text-sm font-medium mb-2" style={{ color: "#F8F5EE" }}>
+                        <label
+                          className="block text-sm font-medium mb-2"
+                          style={{ color: "#F8F5EE" }}
+                        >
                           Years Active *
                         </label>
                         <select
@@ -719,7 +766,10 @@ export default function ArtistRegistration() {
 
                   {/* Festival Selection */}
                   <div>
-                    <h4 className="text-lg font-semibold mb-4" style={{ color: "#F8F5EE" }}>
+                    <h4
+                      className="text-lg font-semibold mb-4"
+                      style={{ color: "#F8F5EE" }}
+                    >
                       Festival Reservations
                     </h4>
                     <p className="text-sm text-muted-foreground mb-4">
@@ -795,7 +845,10 @@ export default function ArtistRegistration() {
 
                   {/* Additional Information */}
                   <div>
-                    <h4 className="text-lg font-semibold mb-4" style={{ color: "#2E2E2E" }}>
+                    <h4
+                      className="text-lg font-semibold mb-4"
+                      style={{ color: "#2E2E2E" }}
+                    >
                       Additional Information
                     </h4>
                     <div>
@@ -894,14 +947,20 @@ export default function ArtistRegistration() {
       <section className="py-16 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 uppercase" style={{ color: "#F8F5EE" }}>
+            <h2
+              className="text-4xl md:text-5xl font-bold mb-6 uppercase"
+              style={{ color: "#F8F5EE" }}
+            >
               What Happens Next?
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="text-center border-tent-blue/20">
               <CardContent className="p-8">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl" style={{ backgroundColor: "#2E2E2E" }}>
+                <div
+                  className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl"
+                  style={{ backgroundColor: "#2E2E2E" }}
+                >
                   1
                 </div>
                 <h3 className="text-xl font-bold mb-4">Verification</h3>
@@ -913,7 +972,10 @@ export default function ArtistRegistration() {
             </Card>
             <Card className="text-center border-tent-purple/20">
               <CardContent className="p-8">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl" style={{ backgroundColor: "#2E2E2E" }}>
+                <div
+                  className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl"
+                  style={{ backgroundColor: "#2E2E2E" }}
+                >
                   2
                 </div>
                 <h3 className="text-xl font-bold mb-4">Confirmation</h3>
@@ -925,7 +987,10 @@ export default function ArtistRegistration() {
             </Card>
             <Card className="text-center border-tent-pink/20">
               <CardContent className="p-8">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl" style={{ backgroundColor: "#2E2E2E" }}>
+                <div
+                  className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl"
+                  style={{ backgroundColor: "#2E2E2E" }}
+                >
                   3
                 </div>
                 <h3 className="text-xl font-bold mb-4">Experience</h3>
@@ -942,10 +1007,16 @@ export default function ArtistRegistration() {
       {/* CTA Section */}
       <section className="py-16 px-6 bg-gradient-to-r from-tent-purple/10 via-tent-blue/10 to-tent-pink/10">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#F8F5EE" }}>
+          <h2
+            className="text-4xl md:text-5xl font-bold mb-6"
+            style={{ color: "#F8F5EE" }}
+          >
             Questions About Registration?
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto" style={{ color: "#F8F5EE" }}>
+          <p
+            className="text-xl mb-8 max-w-2xl mx-auto"
+            style={{ color: "#F8F5EE" }}
+          >
             Our artist relations team is here to help with your registration and
             answer any questions about The Tent services.
           </p>
