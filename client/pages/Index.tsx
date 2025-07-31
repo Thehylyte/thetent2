@@ -169,20 +169,28 @@ export default function Index() {
 
             {/* Hero Video */}
             <div className="relative w-full">
-              <div className="aspect-video overflow-hidden cursor-pointer" onClick={() => window.location.href = '/artist-registration'}>
+              <div
+                className="aspect-video overflow-hidden cursor-pointer"
+                onClick={() => (window.location.href = "/artist-registration")}
+              >
                 <video
                   className="w-full h-full object-cover"
                   autoPlay
                   muted
                   playsInline
                   onEnded={() => {
-                    const videoContainer = document.querySelector('.aspect-video');
+                    const videoContainer =
+                      document.querySelector(".aspect-video");
                     if (videoContainer) {
-                      videoContainer.classList.add('hover:opacity-80');
-                      const overlay = document.createElement('div');
-                      overlay.innerHTML = '<div class="absolute inset-0 flex items-center justify-center bg-black/50"><div class="text-white text-xl font-bold">Click to Register</div></div>';
-                      overlay.className = 'absolute inset-0 pointer-events-none';
-                      videoContainer.appendChild(overlay.firstChild as HTMLElement);
+                      videoContainer.classList.add("hover:opacity-80");
+                      const overlay = document.createElement("div");
+                      overlay.innerHTML =
+                        '<div class="absolute inset-0 flex items-center justify-center bg-black/50"><div class="text-white text-xl font-bold">Click to Register</div></div>';
+                      overlay.className =
+                        "absolute inset-0 pointer-events-none";
+                      videoContainer.appendChild(
+                        overlay.firstChild as HTMLElement,
+                      );
                     }
                   }}
                 >
@@ -289,50 +297,74 @@ export default function Index() {
                     src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F932e0b5c87df4bf4aa16268253c67118?format=webp&width=800"
                     alt="AG1"
                     className="h-12 opacity-60 hover:opacity-100 transition-opacity"
-                    style={{ filter: "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)" }}
+                    style={{
+                      filter:
+                        "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)",
+                    }}
                   />
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F51edeafc13bb4a7a937d7bc9f6b491d9?format=webp&width=800"
                     alt="Baha Mar"
                     className="h-12 opacity-60 hover:opacity-100 transition-opacity"
-                    style={{ filter: "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)" }}
+                    style={{
+                      filter:
+                        "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)",
+                    }}
                   />
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Fd919bb8a2bf143f596877bc377cdcf40?format=webp&width=800"
                     alt="Jabra"
                     className="h-12 opacity-60 hover:opacity-100 transition-opacity"
-                    style={{ filter: "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)" }}
+                    style={{
+                      filter:
+                        "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)",
+                    }}
                   />
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F0e754eefabd0474e854fb4d5f99eccf0?format=webp&width=800"
                     alt="Nike"
                     className="h-12 opacity-60 hover:opacity-100 transition-opacity"
-                    style={{ filter: "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)" }}
+                    style={{
+                      filter:
+                        "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)",
+                    }}
                   />
 
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F6fa25cdebc2e4ef38ad36d822d724269?format=webp&width=800"
                     alt="Ving Vodka"
                     className="h-12 opacity-60 hover:opacity-100 transition-opacity"
-                    style={{ filter: "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)" }}
+                    style={{
+                      filter:
+                        "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)",
+                    }}
                   />
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F9b2feadc06144643ba476a6d6a5d2317?format=webp&width=800"
                     alt="Funk's Barber Shop"
                     className="h-12 opacity-60 hover:opacity-100 transition-opacity"
-                    style={{ filter: "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)" }}
+                    style={{
+                      filter:
+                        "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)",
+                    }}
                   />
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F0145eebebc4643b6b99f888015330b50?format=webp&width=800"
                     alt="Idle Hand Collective"
                     className="h-12 opacity-60 hover:opacity-100 transition-opacity"
-                    style={{ filter: "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)" }}
+                    style={{
+                      filter:
+                        "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)",
+                    }}
                   />
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F53b51afddcc74a39888aef9f2d67de28?format=webp&width=800"
                     alt="NormaTec"
                     className="h-12 opacity-60 hover:opacity-100 transition-opacity"
-                    style={{ filter: "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)" }}
+                    style={{
+                      filter:
+                        "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)",
+                    }}
                   />
                 </div>
                 {/* Duplicate for seamless scroll */}
@@ -341,50 +373,74 @@ export default function Index() {
                     src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F932e0b5c87df4bf4aa16268253c67118?format=webp&width=800"
                     alt="AG1"
                     className="h-12 opacity-60 hover:opacity-100 transition-opacity"
-                    style={{ filter: "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)" }}
+                    style={{
+                      filter:
+                        "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)",
+                    }}
                   />
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F51edeafc13bb4a7a937d7bc9f6b491d9?format=webp&width=800"
                     alt="Baha Mar"
                     className="h-12 opacity-60 hover:opacity-100 transition-opacity"
-                    style={{ filter: "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)" }}
+                    style={{
+                      filter:
+                        "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)",
+                    }}
                   />
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Fd919bb8a2bf143f596877bc377cdcf40?format=webp&width=800"
                     alt="Jabra"
                     className="h-12 opacity-60 hover:opacity-100 transition-opacity"
-                    style={{ filter: "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)" }}
+                    style={{
+                      filter:
+                        "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)",
+                    }}
                   />
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F0e754eefabd0474e854fb4d5f99eccf0?format=webp&width=800"
                     alt="Nike"
                     className="h-12 opacity-60 hover:opacity-100 transition-opacity"
-                    style={{ filter: "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)" }}
+                    style={{
+                      filter:
+                        "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)",
+                    }}
                   />
 
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F6fa25cdebc2e4ef38ad36d822d724269?format=webp&width=800"
                     alt="Ving Vodka"
                     className="h-12 opacity-60 hover:opacity-100 transition-opacity"
-                    style={{ filter: "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)" }}
+                    style={{
+                      filter:
+                        "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)",
+                    }}
                   />
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F9b2feadc06144643ba476a6d6a5d2317?format=webp&width=800"
                     alt="Funk's Barber Shop"
                     className="h-12 opacity-60 hover:opacity-100 transition-opacity"
-                    style={{ filter: "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)" }}
+                    style={{
+                      filter:
+                        "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)",
+                    }}
                   />
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F0145eebebc4643b6b99f888015330b50?format=webp&width=800"
                     alt="Idle Hand Collective"
                     className="h-12 opacity-60 hover:opacity-100 transition-opacity"
-                    style={{ filter: "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)" }}
+                    style={{
+                      filter:
+                        "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)",
+                    }}
                   />
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F53b51afddcc74a39888aef9f2d67de28?format=webp&width=800"
                     alt="NormaTec"
                     className="h-12 opacity-60 hover:opacity-100 transition-opacity"
-                    style={{ filter: "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)" }}
+                    style={{
+                      filter:
+                        "brightness(0) saturate(100%) invert(96%) sepia(10%) saturate(323%) hue-rotate(8deg) brightness(98%) contrast(94%)",
+                    }}
                   />
                 </div>
               </div>
