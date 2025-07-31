@@ -199,7 +199,7 @@ export default function ArtistLogin() {
             {/* Login Form */}
             <Card className="border-tent-blue/20 shadow-lg">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-tent-purple to-tent-pink rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: "#2E2E2E" }}>
                   <LogIn className="w-8 h-8 text-white" />
                 </div>
                 <h2 className="text-2xl font-bold">Artist Login</h2>
