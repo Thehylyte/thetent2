@@ -266,11 +266,7 @@ export default function Events() {
         {/* Featured Events */}
         <section className="pb-8 px-6">
           <div className="container mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-              <span className="bg-gradient-to-r from-tent-purple to-tent-blue bg-clip-text text-transparent">
-                Featured Festivals
-              </span>
-            </h2>
+
             <div className="grid lg:grid-cols-2 gap-8 mb-16">
               {events
                 .filter((event) => event.featured)
