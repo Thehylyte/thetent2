@@ -214,18 +214,14 @@ export default function Founders() {
       </section>
 
       {/* Origin Story */}
-      <section className="py-16 px-6 bg-gradient-to-r from-tent-purple/10 via-tent-blue/10 to-tent-pink/10">
+      <section className="py-16 px-6" style={{ backgroundColor: "#F8F5EE" }}>
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                The Story Behind
-                <span className="bg-gradient-to-r from-tent-blue to-tent-purple bg-clip-text text-transparent">
-                  {" "}
-                  The Tent
-                </span>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#2E2E2E" }}>
+                The Story Behind The Tent
               </h2>
-              <p className="text-lg text-muted-foreground mb-6">
+              <p className="text-lg mb-6" style={{ color: "#2E2E2E" }}>
                 Quickly after meeting several years ago in Nashville, Tennessee,
                 we discovered a shared passion for live music and unforgettable
                 experiences. After years of traveling to see our favorite
@@ -233,32 +229,32 @@ export default function Founders() {
                 backgrounds in hospitality and entertainment to give back to the
                 musicians who had created countless cherished memories for us.
               </p>
-              <p className="text-lg text-muted-foreground mb-6">
+              <p className="text-lg mb-6" style={{ color: "#2E2E2E" }}>
                 Through our industry connections, we had the privilege of
                 meeting and collaborating with some of our favorite musicians
                 and entertainers at various festivals. It was during these
                 events that we recognized a gap in the festival experience for
                 the artists on stage.
               </p>
-              <p className="text-lg text-muted-foreground mb-6">
+              <p className="text-lg mb-6" style={{ color: "#2E2E2E" }}>
                 We often witnessed bands arriving for soundchecks, only to spend
                 their downtime waiting in their buses or in underwhelming artist
                 lounges, where activities were minimal. This observation
                 inspired the creation of our tent.
               </p>
-              <p className="text-lg text-muted-foreground mb-6">
+              <p className="text-lg mb-6" style={{ color: "#2E2E2E" }}>
                 Music festivals offer amazing experiences for fans through brand
                 activations and interactive opportunities. We aimed to create a
                 similar, enjoyable environment for artists to enhance their
                 festival experience as well.
               </p>
-              <p className="text-lg text-muted-foreground mb-6">
+              <p className="text-lg mb-6" style={{ color: "#2E2E2E" }}>
                 That's when we realized the music industry was missing something
                 crucial – a dedicated space where artists could truly recharge,
                 access premium amenities, and connect with innovative brands
                 that understand their unique needs.
               </p>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-lg mb-8" style={{ color: "#2E2E2E" }}>
                 From that moment, The Tent was born. Not just as a business, but
                 as a mission to elevate the festival experience for the artists
                 who make the magic happen.
