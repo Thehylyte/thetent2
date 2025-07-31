@@ -362,7 +362,10 @@ export default function ArtistRegistration() {
               <br />
               Registration
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8">
+            <p
+              className="text-xl md:text-2xl max-w-3xl mx-auto mb-8"
+              style={{ color: "#F8F5EE" }}
+            >
               Join The Tent's exclusive artist program and secure your
               hospitality services at the festivals where you're performing.
               Priority access, premium amenities, and dedicated support.
