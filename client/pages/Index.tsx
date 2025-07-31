@@ -38,7 +38,7 @@ export default function Index() {
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F9415827adc79479ea84c8324db8a21db?format=webp&width=800"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Fd552d3dff3c64d3ca968ef25827c341c?format=webp&width=800"
                   alt="Logo"
                   className="w-8 h-8"
                 />
@@ -542,7 +542,7 @@ export default function Index() {
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="flex items-center space-x-2 mb-4 md:mb-0">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F9415827adc79479ea84c8324db8a21db?format=webp&width=800"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Fd552d3dff3c64d3ca968ef25827c341c?format=webp&width=800"
                   alt="Logo"
                   className="w-6 h-6"
                 />
