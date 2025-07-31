@@ -489,7 +489,8 @@ export default function Contact() {
             {officeLocations.map((location, index) => (
               <Card
                 key={index}
-                className={`${location.isHeadquarters ? "border-tent-purple/40 bg-tent-purple/5" : "border-tent-blue/20"} hover:shadow-lg transition-all duration-300`}
+                className={`${location.isHeadquarters ? "border-tent-purple/40" : "border-tent-blue/20"} hover:shadow-lg transition-all duration-300`}
+                style={location.isHeadquarters ? { backgroundColor: "#F8F5EE" } : {}}
               >
                 <CardContent className="p-6 text-center">
                   <div className="flex items-center justify-center mb-4">
