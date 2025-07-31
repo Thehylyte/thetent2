@@ -285,11 +285,11 @@ export default function Founders() {
                   <div className="absolute bottom-4 left-4 right-4">
                     <div className="bg-background/90 backdrop-blur-sm border border-border/50 rounded-lg px-4 py-2">
                       <p className="text-sm font-medium text-center">
-                        <span className="font-semibold" style={{ color: "#2E2E2E" }}>
+                        <span className="font-semibold" style={{ color: "#F8F5EE" }}>
                           Jared Gladstone
                         </span>{" "}
                         &{" "}
-                        <span className="font-semibold" style={{ color: "#2E2E2E" }}>
+                        <span className="font-semibold" style={{ color: "#F8F5EE" }}>
                           Chelsea Smith
                         </span>
                       </p>
