@@ -82,13 +82,13 @@ export default function Contact() {
       city: "Chicago",
       state: "IL",
       description: "Festival operations hub for Midwest events",
-      isHeadquarters: true,
+      isHeadquarters: false,
     },
     {
       city: "Las Vegas",
       state: "NV",
       description: "West Coast operations and entertainment partnerships",
-      isHeadquarters: false,
+      isHeadquarters: true,
     },
   ];
 
@@ -494,13 +494,11 @@ export default function Contact() {
               >
                 <CardContent className="p-6 text-center">
                   <div className="flex items-center justify-center mb-4">
-                    <div
-                      className={`w-12 h-12 bg-gradient-to-br ${location.isHeadquarters ? "from-tent-purple to-tent-pink" : "from-tent-blue to-tent-purple"} rounded-full flex items-center justify-center mr-3`}
-                    >
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center mr-3">
                       {location.isHeadquarters ? (
-                        <Building className="w-6 h-6 text-white" />
+                        <Building className="w-6 h-6" style={{ color: "#6E6353" }} />
                       ) : (
-                        <MapPin className="w-6 h-6 text-white" />
+                        <MapPin className="w-6 h-6" style={{ color: "#6E6353" }} />
                       )}
                     </div>
                     {location.isHeadquarters && (
