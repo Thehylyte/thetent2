@@ -800,7 +800,7 @@ export default function ArtistRegistration() {
 
                   {/* Additional Information */}
                   <div>
-                    <h4 className="text-lg font-semibold mb-4 text-tent-purple">
+                    <h4 className="text-lg font-semibold mb-4" style={{ color: "#2E2E2E" }}>
                       Additional Information
                     </h4>
                     <div>
