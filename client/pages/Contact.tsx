@@ -493,6 +493,15 @@ export default function Contact() {
                 style={location.isHeadquarters ? { backgroundColor: "#F8F5EE" } : {}}
               >
                 <CardContent className="p-6 text-center">
+                  {location.city === "Chicago" && (
+                    <div className="mb-4">
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F693ce03fd54e4817a7d58d6f3ed92365?format=webp&width=800"
+                        alt="Chicago skyline"
+                        className="w-full h-32 object-cover rounded-lg"
+                      />
+                    </div>
+                  )}
                   <div className="flex items-center justify-center mb-4">
                     <div className="w-12 h-12 rounded-full flex items-center justify-center mr-3">
                       {location.isHeadquarters ? (
