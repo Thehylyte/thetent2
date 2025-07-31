@@ -474,7 +474,7 @@ export default function Contact() {
       </section>
 
       {/* Office Locations */}
-      <section className="py-16 px-6 bg-gradient-to-r from-tent-blue/10 via-tent-purple/10 to-tent-pink/10">
+      <section className="py-16 px-6" style={{ backgroundColor: "#A2B29F" }}>
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-tent-blue to-tent-purple bg-clip-text text-transparent">
