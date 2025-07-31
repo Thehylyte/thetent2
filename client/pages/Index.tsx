@@ -415,7 +415,7 @@ export default function Index() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#F8F5EE" }}>
               Ready to Experience The Tent?
             </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto" style={{ color: "#F8F5EE" }}>
+            <p className="text-xl mb-8 max-w-2xl mx-auto" style={{ color: "#F8F5EE", fontFamily: "Inter", fontWeight: "300" }}>
               Join the exclusive community of artists and entertainers who've
               discovered the ultimate festival VIP experience.
             </p>
