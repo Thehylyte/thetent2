@@ -355,9 +355,7 @@ export default function ArtistRegistration() {
           <div className="text-center mb-16">
 
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase" style={{ color: "#F8F5EE" }}>
-              Artist
-              <br />
-              Registration
+              Artist Registration
             </h1>
             <p
               className="text-xl md:text-2xl max-w-3xl mx-auto mb-8"
