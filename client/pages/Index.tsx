@@ -157,7 +157,7 @@ export default function Index() {
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Ffbdfe906275c4845873741793fd3b52c?format=webp&width=800"
                 alt="The Tent Logo"
-                className="mb-6 mx-auto w-full max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl px-4 sm:px-0"
+                className="mb-6 mx-auto w-full max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-4xl px-4 sm:px-0"
               />
               <p
                 className="text-xl md:text-2xl max-w-3xl mx-auto mb-8 uppercase"
@@ -168,7 +168,7 @@ export default function Index() {
             </div>
 
             {/* Hero Video */}
-            <div className="relative w-full">
+            <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
               <div
                 className="aspect-video overflow-hidden cursor-pointer"
                 onClick={() => (window.location.href = "/artist-registration")}
