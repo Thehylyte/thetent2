@@ -47,11 +47,11 @@ export const useScrollFade = () => {
   // Get text color styles based on scroll position
   const getTextColor = () => {
     if (scrollY <= 50) {
-      // Initial state - default colors
-      return "text-foreground/80 hover:text-foreground";
+      // Initial state - default colors with custom hover
+      return "text-foreground/80 hover:text-[#A2B29F] active:text-[#A2B29F]";
     } else {
-      // Scrolled state - white text
-      return "text-white/80 hover:text-white";
+      // Scrolled state - white text with custom hover
+      return "text-white/80 hover:text-[#A2B29F] active:text-[#A2B29F]";
     }
   };
 
