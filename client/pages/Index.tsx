@@ -205,7 +205,7 @@ export default function Index() {
               <Card className="border-tent-orange/20 hover:border-tent-orange/40 transition-colors bg-gradient-to-br from-tent-orange/5 to-transparent">
                 <CardContent className="p-8">
                   <div className="w-16 h-16 bg-gradient-to-br from-tent-orange to-tent-yellow rounded-2xl flex items-center justify-center mb-6">
-                    <Sparkles className="w-8 h-8 text-white" />
+                    <Sparkles className="w-8 h-8" style={{ color: "#6E6353" }} />
                   </div>
                   <h3 className="text-2xl font-bold mb-4" style={{ color: "#2E2E2E" }}>
                     Exclusive Products
@@ -220,7 +220,7 @@ export default function Index() {
               <Card className="border-tent-blue/20 hover:border-tent-blue/40 transition-colors bg-gradient-to-br from-tent-blue/5 to-transparent">
                 <CardContent className="p-8">
                   <div className="w-16 h-16 bg-gradient-to-br from-tent-blue to-tent-purple rounded-2xl flex items-center justify-center mb-6">
-                    <Heart className="w-8 h-8 text-white" />
+                    <Heart className="w-8 h-8" style={{ color: "#6E6353" }} />
                   </div>
                   <h3 className="text-2xl font-bold mb-4" style={{ color: "#2E2E2E" }}>
                     Recovery & Wellness
@@ -236,7 +236,7 @@ export default function Index() {
               <Card className="border-tent-pink/20 hover:border-tent-pink/40 transition-colors bg-gradient-to-br from-tent-pink/5 to-transparent">
                 <CardContent className="p-8">
                   <div className="w-16 h-16 bg-gradient-to-br from-tent-pink to-tent-purple rounded-2xl flex items-center justify-center mb-6">
-                    <Shield className="w-8 h-8 text-white" />
+                    <Shield className="w-8 h-8" style={{ color: "#6E6353" }} />
                   </div>
                   <h3 className="text-2xl font-bold mb-4" style={{ color: "#2E2E2E" }}>
                     Luxury Relaxation
