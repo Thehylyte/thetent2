@@ -467,8 +467,8 @@ export default function Contact() {
                       className="text-lg px-8 py-6 border-tent-blue/30 hover:bg-tent-blue/10"
                       asChild
                     >
-                      <a href="/artist-registration">
-                        <Crown className="w-5 h-5 mr-2" />
+                      <a href="/artist-registration" style={{ color: "#F8F5EE" }}>
+                        <Crown className="w-5 h-5 mr-2" style={{ color: "#F8F5EE" }} />
                         Artist Registration
                       </a>
                     </Button>
