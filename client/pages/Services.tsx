@@ -316,10 +316,10 @@ export default function Services() {
         <section className="py-16 px-6" style={{ backgroundColor: "#A2B29F" }}>
           <div className="container mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-tent-purple to-tent-blue bg-clip-text text-transparent">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>
                 Core Services
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-xl max-w-3xl mx-auto" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>
                 Our fundamental offerings that create the perfect hospitality
                 environment
               </p>
