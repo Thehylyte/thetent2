@@ -405,12 +405,12 @@ export default function Events() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-6 bg-gradient-to-r from-tent-purple/10 via-tent-blue/10 to-tent-pink/10">
+        <section className="py-16 px-6" style={{ backgroundColor: "#F8F5EE" }}>
           <div className="container mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-tent-purple via-tent-blue to-tent-pink bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 uppercase" style={{ color: "#2E2E2E" }}>
               Don't Miss Out
             </h2>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-xl mb-8 max-w-2xl mx-auto" style={{ color: "#2E2E2E" }}>
               Secure your spot at The Tent for the upcoming festival season.
               Premium hospitality experiences are limited and fill up fast.
             </p>
