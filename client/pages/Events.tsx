@@ -386,7 +386,8 @@ export default function Events() {
                     <Button
                       variant="outline"
                       size="sm"
-                      className="w-full border-tent-purple/30 hover:bg-tent-purple/10 text-tent-purple"
+                      className="w-full border-tent-purple/30 hover:bg-tent-purple/10"
+                      style={{ color: "#A2B29F" }}
                       asChild
                     >
                       <a href={getEventDetailUrl(event.name)}>View Details</a>
