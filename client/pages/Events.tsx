@@ -248,7 +248,7 @@ export default function Events() {
         <section className="pt-24 pb-16 px-6">
           <div className="container mx-auto">
             <div className="text-center mb-16">
-              <Badge className="mb-6 bg-gradient-to-r from-tent-orange/10 to-tent-pink/10 text-tent-purple border-tent-purple/20 hover:from-tent-orange/20 hover:to-tent-pink/20">
+              <Badge className="mb-6 bg-gradient-to-r from-tent-orange/10 to-tent-pink/10 border-tent-purple/20 hover:from-tent-orange/20 hover:to-tent-pink/20" style={{ color: "#A2B29F" }}>
                 <Calendar className="w-4 h-4 mr-2" />
                 2025 Festival Season
               </Badge>
