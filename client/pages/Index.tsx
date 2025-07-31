@@ -160,7 +160,7 @@ export default function Index() {
                 className="mb-6 mx-auto w-full max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-4xl px-4 sm:px-0"
               />
               <p
-                className="text-xl md:text-2xl max-w-3xl mx-auto mb-8 uppercase"
+                className="text-lg md:text-2xl max-w-3xl mx-auto mb-8 uppercase"
                 style={{ color: "#f8f5ee" }}
               >
                 The Ultimate Artist Haven
