@@ -322,8 +322,8 @@ export default function ArtistLogin() {
 
                 {/* Register Link */}
                 <Button
-                  variant="outline"
-                  className="w-full border-tent-blue/30 hover:bg-tent-blue/10 text-lg py-6"
+                  className="w-full text-lg py-6 hover:opacity-90 transition-opacity"
+                  style={{ backgroundColor: "#A2B29F" }}
                   asChild
                 >
                   <a href="/artist-registration">
