@@ -79,22 +79,15 @@ export default function Contact() {
 
   const officeLocations = [
     {
-      city: "Nashville",
-      state: "Tennessee",
-      address: "Music Row District",
-      description: "Our founding headquarters in the heart of Music City",
+      city: "Chicago",
+      state: "IL",
+      description: "Festival operations hub for Midwest events",
       isHeadquarters: true,
     },
     {
-      city: "Chicago",
-      state: "Illinois",
-      description: "Festival operations hub for Midwest events",
-      isHeadquarters: false,
-    },
-    {
-      city: "New York",
-      state: "New York",
-      description: "East Coast partnerships and media relations",
+      city: "Las Vegas",
+      state: "NV",
+      description: "West Coast operations and entertainment partnerships",
       isHeadquarters: false,
     },
   ];
