@@ -906,7 +906,7 @@ export default function ArtistRegistration() {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="text-center border-tent-blue/20">
               <CardContent className="p-8">
-                <div className="w-12 h-12 bg-tent-blue rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl" style={{ backgroundColor: "#2E2E2E" }}>
                   1
                 </div>
                 <h3 className="text-xl font-bold mb-4">Verification</h3>
@@ -918,7 +918,7 @@ export default function ArtistRegistration() {
             </Card>
             <Card className="text-center border-tent-purple/20">
               <CardContent className="p-8">
-                <div className="w-12 h-12 bg-tent-purple rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl" style={{ backgroundColor: "#2E2E2E" }}>
                   2
                 </div>
                 <h3 className="text-xl font-bold mb-4">Confirmation</h3>
@@ -930,7 +930,7 @@ export default function ArtistRegistration() {
             </Card>
             <Card className="text-center border-tent-pink/20">
               <CardContent className="p-8">
-                <div className="w-12 h-12 bg-tent-pink rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl" style={{ backgroundColor: "#2E2E2E" }}>
                   3
                 </div>
                 <h3 className="text-xl font-bold mb-4">Experience</h3>
