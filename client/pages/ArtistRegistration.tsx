@@ -409,15 +409,16 @@ export default function ArtistRegistration() {
               <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: "#F8F5EE" }}>
                 Register as an Artist
               </h2>
-              <p className="text-xl text-muted-foreground mb-4">
+              <p className="text-xl mb-4" style={{ color: "#F8F5EE" }}>
                 Complete your registration to access The Tent at your upcoming
                 festival performances
               </p>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm" style={{ color: "#F8F5EE" }}>
                 Already registered?{" "}
                 <a
                   href="/artist-login"
-                  className="text-tent-purple hover:text-tent-pink transition-colors font-medium"
+                  className="transition-colors font-medium"
+                  style={{ color: "#F8F5EE" }}
                 >
                   Sign in to your dashboard
                 </a>
