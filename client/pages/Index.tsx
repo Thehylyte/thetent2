@@ -228,10 +228,10 @@ export default function Index() {
                   <div className="w-16 h-16 bg-gradient-to-br from-tent-blue to-tent-purple rounded-2xl flex items-center justify-center mb-6">
                     <Heart className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-tent-blue">
+                  <h3 className="text-2xl font-bold mb-4" style={{ color: "#2E2E2E" }}>
                     Recovery & Wellness
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p style={{ color: "#2E2E2E" }}>
                     Professional massage services, hydration stations, healthy
                     gourmet meals, and wellness amenities to keep you performing
                     at your best.
