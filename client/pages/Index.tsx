@@ -358,7 +358,7 @@ export default function Index() {
                     }}
                   />
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F53b51afddcc74a39888aef9f2d67de28?format=webp&width=800"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F33bb0dafba6c460ab2e7920634de4f4d?format=webp&width=800"
                     alt="NormaTec"
                     className="h-12 opacity-60 hover:opacity-100 transition-opacity"
                     style={{
@@ -434,7 +434,7 @@ export default function Index() {
                     }}
                   />
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F53b51afddcc74a39888aef9f2d67de28?format=webp&width=800"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F33bb0dafba6c460ab2e7920634de4f4d?format=webp&width=800"
                     alt="NormaTec"
                     className="h-12 opacity-60 hover:opacity-100 transition-opacity"
                     style={{
