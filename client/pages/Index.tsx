@@ -123,7 +123,7 @@ export default function Index() {
                   </a>
                   <a
                     href="/contact"
-                    className="text-foreground/80 hover:text-foreground transition-colors px-2 py-1"
+                    className="text-foreground/80 hover:text-[#A2B29F] active:text-[#A2B29F] transition-colors px-2 py-1"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Contact
