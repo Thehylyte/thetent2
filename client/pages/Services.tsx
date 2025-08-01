@@ -527,6 +527,164 @@ export default function Services() {
           </div>
         </section>
 
+        {/* Scrolling Gallery */}
+        <section className="py-16 px-6">
+          <div className="container mx-auto">
+            <div className="overflow-hidden">
+              <div className="flex animate-scroll-gallery">
+                <div className="flex space-x-6 min-w-full shrink-0">
+                  {/* Image 1 */}
+                  <div className="flex-shrink-0 w-80 h-60 rounded-2xl border border-border/50 overflow-hidden group hover:shadow-lg transition-all duration-300">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F6a25674a9ee24aca803fd78670a07a2b?format=webp&width=800"
+                      alt="The Tent exclusive service moment"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+
+                  {/* Image 2 */}
+                  <div className="flex-shrink-0 w-80 h-60 rounded-2xl border border-border/50 overflow-hidden group hover:shadow-lg transition-all duration-300">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F92e45cdc2d414733b49c7841af613365?format=webp&width=800"
+                      alt="The Tent VIP experience"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+
+                  {/* Image 3 */}
+                  <div className="flex-shrink-0 w-80 h-60 rounded-2xl border border-border/50 overflow-hidden group hover:shadow-lg transition-all duration-300">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F96d085abcea24cd2aaf23748cbf98bb5?format=webp&width=800"
+                      alt="The Tent hospitality service"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+
+                  {/* Image 4 */}
+                  <div className="flex-shrink-0 w-80 h-60 rounded-2xl border border-border/50 overflow-hidden group hover:shadow-lg transition-all duration-300">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Ff96ea201d95341fd948d047c509cec88?format=webp&width=800"
+                      alt="The Tent premium experience"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+
+                  {/* Image 5 */}
+                  <div className="flex-shrink-0 w-80 h-60 rounded-2xl border border-border/50 overflow-hidden group hover:shadow-lg transition-all duration-300">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Fc7bdb9354cc840d89414177c81cb880e?format=webp&width=800"
+                      alt="The Tent exclusive moments"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+
+                  {/* Image 6 */}
+                  <div className="flex-shrink-0 w-80 h-60 rounded-2xl border border-border/50 overflow-hidden group hover:shadow-lg transition-all duration-300">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Fadd824dc69bd460c9472d0607044688e?format=webp&width=800"
+                      alt="The Tent artist services"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+
+                  {/* Image 7 */}
+                  <div className="flex-shrink-0 w-80 h-60 rounded-2xl border border-border/50 overflow-hidden group hover:shadow-lg transition-all duration-300">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F07b9a7931d2a4ea18295d4578ac9dfba?format=webp&width=800"
+                      alt="The Tent hospitality experience"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+
+                  {/* Image 8 */}
+                  <div className="flex-shrink-0 w-80 h-60 rounded-2xl border border-border/50 overflow-hidden group hover:shadow-lg transition-all duration-300">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F3b40ffc2175f48ffaa0f8ef7dab8eea1?format=webp&width=800"
+                      alt="The Tent premium moments"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                </div>
+
+                {/* Duplicate the images for seamless loop */}
+                <div className="flex space-x-6 min-w-full shrink-0">
+                  {/* Duplicate Image 1 */}
+                  <div className="flex-shrink-0 w-80 h-60 rounded-2xl border border-border/50 overflow-hidden group hover:shadow-lg transition-all duration-300">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F6a25674a9ee24aca803fd78670a07a2b?format=webp&width=800"
+                      alt="The Tent exclusive service moment"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+
+                  {/* Duplicate Image 2 */}
+                  <div className="flex-shrink-0 w-80 h-60 rounded-2xl border border-border/50 overflow-hidden group hover:shadow-lg transition-all duration-300">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F92e45cdc2d414733b49c7841af613365?format=webp&width=800"
+                      alt="The Tent VIP experience"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+
+                  {/* Duplicate Image 3 */}
+                  <div className="flex-shrink-0 w-80 h-60 rounded-2xl border border-border/50 overflow-hidden group hover:shadow-lg transition-all duration-300">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F96d085abcea24cd2aaf23748cbf98bb5?format=webp&width=800"
+                      alt="The Tent hospitality service"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+
+                  {/* Duplicate Image 4 */}
+                  <div className="flex-shrink-0 w-80 h-60 rounded-2xl border border-border/50 overflow-hidden group hover:shadow-lg transition-all duration-300">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Ff96ea201d95341fd948d047c509cec88?format=webp&width=800"
+                      alt="The Tent premium experience"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+
+                  {/* Duplicate Image 5 */}
+                  <div className="flex-shrink-0 w-80 h-60 rounded-2xl border border-border/50 overflow-hidden group hover:shadow-lg transition-all duration-300">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Fc7bdb9354cc840d89414177c81cb880e?format=webp&width=800"
+                      alt="The Tent exclusive moments"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+
+                  {/* Duplicate Image 6 */}
+                  <div className="flex-shrink-0 w-80 h-60 rounded-2xl border border-border/50 overflow-hidden group hover:shadow-lg transition-all duration-300">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Fadd824dc69bd460c9472d0607044688e?format=webp&width=800"
+                      alt="The Tent artist services"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+
+                  {/* Duplicate Image 7 */}
+                  <div className="flex-shrink-0 w-80 h-60 rounded-2xl border border-border/50 overflow-hidden group hover:shadow-lg transition-all duration-300">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F07b9a7931d2a4ea18295d4578ac9dfba?format=webp&width=800"
+                      alt="The Tent hospitality experience"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+
+                  {/* Duplicate Image 8 */}
+                  <div className="flex-shrink-0 w-80 h-60 rounded-2xl border border-border/50 overflow-hidden group hover:shadow-lg transition-all duration-300">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F3b40ffc2175f48ffaa0f8ef7dab8eea1?format=webp&width=800"
+                      alt="The Tent premium moments"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Process Flow */}
         <section className="py-16 px-6">
           <div className="container mx-auto">
