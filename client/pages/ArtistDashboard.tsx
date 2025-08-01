@@ -347,7 +347,7 @@ export default function ArtistDashboard() {
           <div className="mb-12">
             <div className="flex items-center justify-between">
               <div>
-                <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-tent-blue via-tent-purple to-tent-pink bg-clip-text text-transparent">
+                <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: "#F8F5EE" }}>
                   Welcome, {artistName}!
                 </h1>
                 <p className="text-xl text-muted-foreground">
