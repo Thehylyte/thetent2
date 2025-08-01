@@ -367,8 +367,8 @@ export default function ArtistDashboard() {
               <div className="grid md:grid-cols-3 gap-6 mb-8">
                 <Card className="border-tent-blue/20">
                   <CardContent className="p-6 text-center">
-                    <div className="w-12 h-12 bg-gradient-to-br from-tent-blue to-tent-purple rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <Calendar className="w-6 h-6 text-white" />
+                    <div className="w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                      <Calendar className="w-6 h-6" style={{ color: "#6E6353" }} />
                     </div>
                     <h3 className="text-2xl font-bold mb-2">
                       {myReservations.length}
@@ -378,8 +378,8 @@ export default function ArtistDashboard() {
                 </Card>
                 <Card className="border-tent-pink/20">
                   <CardContent className="p-6 text-center">
-                    <div className="w-12 h-12 bg-gradient-to-br from-tent-pink to-tent-orange rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <Music className="w-6 h-6 text-white" />
+                    <div className="w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                      <Music className="w-6 h-6" style={{ color: "#6E6353" }} />
                     </div>
                     <h3 className="text-2xl font-bold mb-2">
                       {upcomingFestivals.length}
@@ -389,8 +389,8 @@ export default function ArtistDashboard() {
                 </Card>
                 <Card className="border-tent-purple/20">
                   <CardContent className="p-6 text-center">
-                    <div className="w-12 h-12 bg-gradient-to-br from-tent-purple to-tent-pink rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <Star className="w-6 h-6 text-white" />
+                    <div className="w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                      <Star className="w-6 h-6" style={{ color: "#6E6353" }} />
                     </div>
                     <h3 className="text-2xl font-bold mb-2">Premium</h3>
                     <p className="text-muted-foreground">Membership Status</p>
