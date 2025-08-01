@@ -287,8 +287,8 @@ export default function BrandPartnership() {
         {/* Benefits Section */}
         <section className="py-16 px-6 bg-gradient-to-r from-tent-purple/10 via-tent-blue/10 to-tent-pink/10">
           <div className="container mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-tent-purple to-tent-blue bg-clip-text text-transparent">
-              Partnership Benefits
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center" style={{ color: "white" }}>
+              THE PERKS
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <Card className="border-tent-blue/20 hover:border-tent-blue/40 transition-colors">
