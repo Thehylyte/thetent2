@@ -266,7 +266,7 @@ export default function BrandPartnership() {
                 <Building2 className="w-4 h-4 mr-2" />
                 Partnership Opportunities
               </Badge>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight" style={{ color: "#F8F5EE" }}>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight uppercase" style={{ color: "#F8F5EE" }}>
                 Become a Brand Partner
               </h1>
               <p className="text-xl md:text-2xl max-w-4xl mx-auto" style={{ color: "#A2B29F" }}>
