@@ -347,7 +347,10 @@ export default function ArtistDashboard() {
           <div className="mb-12">
             <div className="flex items-center justify-between">
               <div>
-                <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: "#F8F5EE" }}>
+                <h1
+                  className="text-4xl md:text-5xl font-bold mb-4"
+                  style={{ color: "#F8F5EE" }}
+                >
                   Welcome, {artistName}!
                 </h1>
                 <p className="text-xl text-muted-foreground">
@@ -368,7 +371,10 @@ export default function ArtistDashboard() {
                 <Card className="border-tent-blue/20">
                   <CardContent className="p-6 text-center">
                     <div className="w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                      <Calendar className="w-6 h-6" style={{ color: "#6E6353" }} />
+                      <Calendar
+                        className="w-6 h-6"
+                        style={{ color: "#6E6353" }}
+                      />
                     </div>
                     <h3 className="text-2xl font-bold mb-2">
                       {myReservations.length}
@@ -820,8 +826,12 @@ export default function ArtistDashboard() {
                     variant="outline"
                     className="w-full mt-4"
                     style={{ borderColor: "#A2B29F", color: "#A2B29F" }}
-                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#A2B29F10"}
-                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "transparent"}
+                    onMouseEnter={(e) =>
+                      (e.currentTarget.style.backgroundColor = "#A2B29F10")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.currentTarget.style.backgroundColor = "transparent")
+                    }
                   >
                     View All Reservations
                     <ArrowRight className="w-4 h-4 ml-2" />
