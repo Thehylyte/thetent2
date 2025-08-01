@@ -31,23 +31,6 @@ export default function Index() {
           </p>
         </div>
 
-        {/* Video Section */}
-        <div className="mb-16 w-full max-w-4xl">
-          <video
-            className="w-full rounded-lg shadow-lg"
-            autoPlay
-            muted
-            loop
-            playsInline
-          >
-            <source
-              src="https://cdn.builder.io/o/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F834d7b6d09e942f3b5ccd182ff4d048c?alt=media&token=d4c82bbd-e454-4da8-838e-0c5415cdca65&apiKey=669056b1b03f448b9ee2fa2d9e73b3a1"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
         {/* User Type Selection */}
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl w-full">
           {/* For Members Box */}
