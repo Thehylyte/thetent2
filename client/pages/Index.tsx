@@ -120,6 +120,15 @@ export default function Index() {
           </Card>
         </div>
 
+        {/* Logo Section */}
+        <div className="mt-16 mb-8 text-center">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Fb105518504984f3bac08daafa3abd1d0?format=webp&width=800"
+            alt="Logo"
+            className="mx-auto w-32 h-32 object-contain"
+          />
+        </div>
+
         {/* Footer */}
         <div className="mt-16 text-center">
           <p className="text-sm" style={{ color: "#F8F5EE", opacity: 0.7 }}>
