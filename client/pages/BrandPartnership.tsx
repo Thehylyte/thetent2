@@ -106,22 +106,7 @@ export default function BrandPartnership() {
       return;
     }
 
-    // Send form data via email
-    const subject = `${formData.companyName} interested in partnering with The Tent`;
-    const body = `Partnership Application Details:
-
-Company: ${formData.companyName}
-Product/Service: ${formData.product}
-Contact Name: ${formData.contactName}
-Contact Title: ${formData.contactTitle}
-Contact Phone: ${formData.contactPhone}
-Contact Email: ${formData.contactEmail}
-Selected Festivals: ${formData.selectedFestivals.join(", ")}
-Message: ${formData.message}`;
-
-    const mailtoLink = `mailto:jg@thetent.club?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.open(mailtoLink, '_blank');
-
+    // Here you would typically send the data to your backend
     console.log("Partnership application:", formData);
     alert(
       `Thank you ${formData.contactName}! Your brand partnership application for ${formData.companyName} has been submitted. We'll be in touch within 48 hours to discuss opportunities at ${formData.selectedFestivals.join(", ")}.`,
