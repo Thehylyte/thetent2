@@ -336,14 +336,14 @@ export default function BrandPartnership() {
           <div className="container mx-auto max-w-5xl">
             <div className="bg-gradient-to-r from-tent-purple/5 via-tent-blue/5 to-tent-pink/5 rounded-3xl p-8 md:p-12 border border-tent-purple/10">
               <div className="text-center mb-8">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-tent-purple to-tent-blue bg-clip-text text-transparent">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#F8F5EE" }}>
                   Why Partner with The Tent?
                 </h2>
               </div>
-              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
-                <p className="text-lg md:text-xl mb-6">
+              <div className="prose prose-lg max-w-none leading-relaxed" style={{ color: "#F8F5EE" }}>
+                <p className="text-lg md:text-xl mb-6" style={{ color: "#F8F5EE" }}>
                   Partnering with The Tent provides your brand with{" "}
-                  <span className="font-semibold text-tent-purple">
+                  <span className="font-semibold" style={{ color: "#F8F5EE" }}>
                     direct access to some of the most influential talent in the
                     world
                   </span>{" "}
@@ -353,9 +353,9 @@ export default function BrandPartnership() {
                   influencers, and industry professionals who shape culture and
                   drive consumer trends.
                 </p>
-                <p className="text-lg md:text-xl mb-6">
+                <p className="text-lg md:text-xl mb-6" style={{ color: "#F8F5EE" }}>
                   Through our partnerships, brands gain access to{" "}
-                  <span className="font-semibold text-tent-blue">
+                  <span className="font-semibold" style={{ color: "#F8F5EE" }}>
                     premium content opportunities
                   </span>{" "}
                   that can be utilized across social media platforms to showcase
@@ -365,9 +365,9 @@ export default function BrandPartnership() {
                   valuable user-generated content that resonates with millions
                   of followers.
                 </p>
-                <p className="text-lg md:text-xl">
+                <p className="text-lg md:text-xl" style={{ color: "#F8F5EE" }}>
                   Beyond exposure, The Tent facilitates{" "}
-                  <span className="font-semibold text-tent-pink">
+                  <span className="font-semibold" style={{ color: "#F8F5EE" }}>
                     direct product education opportunities
                   </span>{" "}
                   where brands can personally introduce their innovations to
