@@ -318,7 +318,8 @@ export default function Services() {
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F52bc3cb003404f31af2d590f8dfa04b5?format=webp&width=800"
                     alt="Luxury tent hospitality services interior"
-                    className="w-full h-auto object-contain"
+                    className="w-full object-cover"
+                    style={{ height: "300px", objectPosition: "center top" }}
                   />
                 </div>
               </div>
