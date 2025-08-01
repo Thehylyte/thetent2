@@ -17,7 +17,7 @@ export default function Index() {
         style={{ backgroundColor: "#2E2E2E" }}
       >
         {/* Logo Section */}
-        <div className="text-center mb-16 mt-12">
+        <div className="text-center mb-16 mt-20 md:mt-12">
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Ffbdfe906275c4845873741793fd3b52c?format=webp&width=800"
             alt="The Tent Logo"
