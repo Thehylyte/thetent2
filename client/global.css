@@ -213,7 +213,13 @@
   }
 
   .animate-scroll-gallery {
-    animation: scroll-gallery 40s linear infinite;
+    animation: scroll-gallery 25s linear infinite;
+  }
+
+  @media (max-width: 768px) {
+    .animate-scroll-gallery {
+      animation: scroll-gallery 15s linear infinite;
+    }
   }
 
   @keyframes scroll {
