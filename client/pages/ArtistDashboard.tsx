@@ -818,7 +818,10 @@ export default function ArtistDashboard() {
 
                   <Button
                     variant="outline"
-                    className="w-full mt-4 border-tent-blue/30 hover:bg-tent-blue/10"
+                    className="w-full mt-4"
+                    style={{ borderColor: "#A2B29F", color: "#A2B29F" }}
+                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#A2B29F10"}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "transparent"}
                   >
                     View All Reservations
                     <ArrowRight className="w-4 h-4 ml-2" />
