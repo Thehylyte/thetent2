@@ -269,7 +269,7 @@ export default function BrandPartnership() {
               <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-tent-blue via-tent-purple to-tent-pink bg-clip-text text-transparent leading-tight">
                 Become a Brand Partner
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto">
+              <p className="text-xl md:text-2xl max-w-4xl mx-auto" style={{ color: "#A2B29F" }}>
                 Join our exclusive network of premium brands and showcase your
                 products to artists, entertainers, and VIP guests at major music
                 festivals across the country.
