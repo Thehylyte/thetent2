@@ -27,6 +27,28 @@ export default function Index() {
         keywords="festival hospitality, VIP services, artist amenities, music festival, luxury hospitality"
         url="https://thetent.club"
       />
+
+      {/* Video Popup Overlay */}
+      {showVideoPopup && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
+          <div className="relative w-full max-w-4xl mx-4">
+            <video
+              className="w-full rounded-lg shadow-2xl"
+              autoPlay
+              muted
+              onEnded={handleVideoEnd}
+              playsInline
+            >
+              <source
+                src="https://cdn.builder.io/o/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F7443732fcbab45f0a86213f1eb33a5ac?alt=media&token=ff4af279-cdc7-4ac5-8ec0-e16c9d590b12&apiKey=669056b1b03f448b9ee2fa2d9e73b3a1"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      )}
+
       <div
         className="min-h-screen flex flex-col items-center justify-center px-6"
         style={{ backgroundColor: "#2E2E2E" }}
