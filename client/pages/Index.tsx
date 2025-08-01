@@ -2,8 +2,23 @@ import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
 import { Crown, Handshake } from "lucide-react";
 import SEO from "../components/SEO";
+import { useState, useEffect } from "react";
 
 export default function Index() {
+  const [showVideoPopup, setShowVideoPopup] = useState(false);
+
+  useEffect(() => {
+    // Check if video has been shown before
+    const hasSeenVideo = localStorage.getItem("tentVideoSeen");
+    if (!hasSeenVideo) {
+      setShowVideoPopup(true);
+    }
+  }, []);
+
+  const handleVideoEnd = () => {
+    setShowVideoPopup(false);
+    localStorage.setItem("tentVideoSeen", "true");
+  };
   return (
     <>
       <SEO
