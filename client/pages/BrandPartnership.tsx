@@ -266,10 +266,16 @@ export default function BrandPartnership() {
                 <Building2 className="w-4 h-4 mr-2" />
                 Partnership Opportunities
               </Badge>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight uppercase" style={{ color: "#F8F5EE" }}>
+              <h1
+                className="text-4xl md:text-6xl font-bold mb-6 leading-tight uppercase"
+                style={{ color: "#F8F5EE" }}
+              >
                 Become a Brand Partner
               </h1>
-              <p className="text-xl md:text-2xl max-w-4xl mx-auto" style={{ color: "#A2B29F" }}>
+              <p
+                className="text-xl md:text-2xl max-w-4xl mx-auto"
+                style={{ color: "#A2B29F" }}
+              >
                 Join our exclusive network of premium brands and showcase your
                 products to artists, entertainers, and VIP guests at major music
                 festivals across the country.
@@ -336,12 +342,21 @@ export default function BrandPartnership() {
           <div className="container mx-auto max-w-5xl">
             <div className="bg-gradient-to-r from-tent-purple/5 via-tent-blue/5 to-tent-pink/5 rounded-3xl p-8 md:p-12 border border-tent-purple/10">
               <div className="text-center mb-8">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#F8F5EE" }}>
+                <h2
+                  className="text-3xl md:text-4xl font-bold mb-4"
+                  style={{ color: "#F8F5EE" }}
+                >
                   Why Partner with The Tent?
                 </h2>
               </div>
-              <div className="prose prose-lg max-w-none leading-relaxed" style={{ color: "#F8F5EE" }}>
-                <p className="text-lg md:text-xl mb-6" style={{ color: "#F8F5EE" }}>
+              <div
+                className="prose prose-lg max-w-none leading-relaxed"
+                style={{ color: "#F8F5EE" }}
+              >
+                <p
+                  className="text-lg md:text-xl mb-6"
+                  style={{ color: "#F8F5EE" }}
+                >
                   Partnering with The Tent provides your brand with{" "}
                   <span className="font-semibold" style={{ color: "#F8F5EE" }}>
                     direct access to some of the most influential talent in the
@@ -353,7 +368,10 @@ export default function BrandPartnership() {
                   influencers, and industry professionals who shape culture and
                   drive consumer trends.
                 </p>
-                <p className="text-lg md:text-xl mb-6" style={{ color: "#F8F5EE" }}>
+                <p
+                  className="text-lg md:text-xl mb-6"
+                  style={{ color: "#F8F5EE" }}
+                >
                   Through our partnerships, brands gain access to{" "}
                   <span className="font-semibold" style={{ color: "#F8F5EE" }}>
                     premium content opportunities
