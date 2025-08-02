@@ -606,14 +606,7 @@ export default function Services() {
                     />
                   </div>
 
-                  {/* Image 8 */}
-                  <div className="flex-shrink-0 w-80 h-60 rounded-2xl border border-border/50 overflow-hidden group hover:shadow-lg transition-all duration-300">
-                    <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F3b40ffc2175f48ffaa0f8ef7dab8eea1?format=webp&width=800"
-                      alt="The Tent premium moments"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
+
                 </div>
 
                 {/* Duplicate the images for seamless loop */}
