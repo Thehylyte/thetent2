@@ -629,8 +629,6 @@ export default function Services() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-
-
                 </div>
 
                 {/* Duplicate the images for seamless loop */}
@@ -697,8 +695,6 @@ export default function Services() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-
-
                 </div>
               </div>
             </div>
