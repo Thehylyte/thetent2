@@ -165,7 +165,7 @@ export default function Services() {
         >
           <div className="container mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
-              <a href="/" className="flex items-center space-x-2">
+              <a href="/services" className="flex items-center space-x-2">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Fd552d3dff3c64d3ca968ef25827c341c?format=webp&width=800"
                   alt="The Tent Logo"
