@@ -120,9 +120,9 @@ export default function ArtistRegistration() {
       hubspotFormData.append('festivals_played', formData.festivalsPlayed.join(', '));
       hubspotFormData.append('upcoming_festivals', formData.upcomingFestivals.join(', '));
 
-      // Replace with your actual HubSpot Portal ID and Form ID
-      const HUBSPOT_PORTAL_ID = 'YOUR_PORTAL_ID';
-      const HUBSPOT_FORM_ID = 'YOUR_FORM_ID';
+      // HubSpot Portal ID and Form ID
+      const HUBSPOT_PORTAL_ID = '7562c805-0a9b-4527-af8c-ff1c0c895803';
+      const HUBSPOT_FORM_ID = '243491121';
 
       const hubspotResponse = await fetch(`https://forms.hubspot.com/uploads/form/v2/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_ID}`, {
         method: 'POST',
