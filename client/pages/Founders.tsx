@@ -220,7 +220,7 @@ export default function Founders() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2
-                className="text-4xl md:text-5xl font-bold mb-6 uppercase"
+                className="text-4xl md:text-5xl font-bold mb-6 uppercase whitespace-nowrap"
                 style={{ color: "#2E2E2E" }}
               >
                 The Story Behind The Tent
