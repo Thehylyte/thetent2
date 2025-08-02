@@ -197,7 +197,6 @@ export default function Founders() {
       <section className="pt-24 pb-16 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-
             <h1
               className="text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase"
               style={{ color: "#F8F5EE" }}
@@ -346,7 +345,10 @@ export default function Founders() {
             >
               <CardHeader>
                 <div className="text-center">
-                  <h3 className="text-2xl font-bold mb-2" style={{ color: "#000000" }}>
+                  <h3
+                    className="text-2xl font-bold mb-2"
+                    style={{ color: "#000000" }}
+                  >
                     Jared Gladstone
                   </h3>
                   <p className="text-muted-foreground">
@@ -387,7 +389,10 @@ export default function Founders() {
             >
               <CardHeader>
                 <div className="text-center">
-                  <h3 className="text-2xl font-bold mb-2" style={{ color: "black" }}>
+                  <h3
+                    className="text-2xl font-bold mb-2"
+                    style={{ color: "black" }}
+                  >
                     Chelsea Smith
                   </h3>
                   <p className="text-muted-foreground">
