@@ -537,6 +537,14 @@ export default function Services() {
                           className="w-full h-full object-contain"
                         />
                       </div>
+                    ) : partner.name === "Ving Vodka" ? (
+                      <div className="w-16 h-12 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                        <img
+                          src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F860b45bfa80841e3b24b39d784971c16?format=webp&width=800"
+                          alt="Ving Vodka Logo"
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
                     ) : (
                       <div className="w-12 h-12 bg-gradient-to-br from-tent-orange to-tent-pink rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
                         <Package className="w-6 h-6 text-white" />
