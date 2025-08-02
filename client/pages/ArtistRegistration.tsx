@@ -573,7 +573,7 @@ export default function ArtistRegistration() {
                               artistName: e.target.value,
                             })
                           }
-                          className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
+                          className={`w-full px-4 py-3 border rounded-lg bg-background text-white focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
                             formErrors.artistName
                               ? "border-red-500"
                               : "border-border"
@@ -602,7 +602,7 @@ export default function ArtistRegistration() {
                               legalName: e.target.value,
                             })
                           }
-                          className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
+                          className={`w-full px-4 py-3 border rounded-lg bg-background text-white focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
                             formErrors.legalName
                               ? "border-red-500"
                               : "border-border"
@@ -630,7 +630,7 @@ export default function ArtistRegistration() {
                           onChange={(e) =>
                             setFormData({ ...formData, email: e.target.value })
                           }
-                          className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
+                          className={`w-full px-4 py-3 border rounded-lg bg-background text-white focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
                             formErrors.email
                               ? "border-red-500"
                               : "border-border"
@@ -656,7 +656,7 @@ export default function ArtistRegistration() {
                           onChange={(e) =>
                             setFormData({ ...formData, phone: e.target.value })
                           }
-                          className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
+                          className={`w-full px-4 py-3 border rounded-lg bg-background text-white focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
                             formErrors.phone
                               ? "border-red-500"
                               : "border-border"
@@ -697,7 +697,7 @@ export default function ArtistRegistration() {
                               managerName: e.target.value,
                             })
                           }
-                          className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
+                          className={`w-full px-4 py-3 border rounded-lg bg-background text-white focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
                             formErrors.managerName
                               ? "border-red-500"
                               : "border-border"
@@ -726,7 +726,7 @@ export default function ArtistRegistration() {
                               managementEmail: e.target.value,
                             })
                           }
-                          className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
+                          className={`w-full px-4 py-3 border rounded-lg bg-background text-white focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
                             formErrors.managementEmail
                               ? "border-red-500"
                               : "border-border"
@@ -763,7 +763,7 @@ export default function ArtistRegistration() {
                           onChange={(e) =>
                             setFormData({ ...formData, genre: e.target.value })
                           }
-                          className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
+                          className={`w-full px-4 py-3 border rounded-lg bg-background text-white focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
                             formErrors.genre
                               ? "border-red-500"
                               : "border-border"
@@ -801,7 +801,7 @@ export default function ArtistRegistration() {
                               yearsActive: e.target.value,
                             })
                           }
-                          className={`w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
+                          className={`w-full px-4 py-3 border rounded-lg bg-background text-white focus:ring-2 focus:ring-tent-purple focus:border-transparent ${
                             formErrors.yearsActive
                               ? "border-red-500"
                               : "border-border"
@@ -922,7 +922,7 @@ export default function ArtistRegistration() {
                             specialRequests: e.target.value,
                           })
                         }
-                        className="w-full px-4 py-3 border border-border rounded-lg bg-background focus:ring-2 focus:ring-tent-purple focus:border-transparent resize-none"
+                        className="w-full px-4 py-3 border border-border rounded-lg bg-background text-white focus:ring-2 focus:ring-tent-purple focus:border-transparent resize-none"
                         placeholder="Any special dietary requirements, accessibility needs, or specific services you'd like to request..."
                       ></textarea>
                     </div>
