@@ -103,34 +103,7 @@ export default function ArtistRegistration() {
     setSubmitError("");
 
     try {
-      // Submit to HubSpot Forms API
-      const hubspotFormData = new FormData();
-
-      // Map form fields to HubSpot properties
-      hubspotFormData.append('firstname', formData.firstName);
-      hubspotFormData.append('lastname', formData.lastName);
-      hubspotFormData.append('email', formData.email);
-      hubspotFormData.append('phone', formData.phone);
-      hubspotFormData.append('artist_name', formData.artistName);
-      hubspotFormData.append('genre', formData.genre);
-      hubspotFormData.append('management_company', formData.managementCompany);
-      hubspotFormData.append('agent_name', formData.agentName);
-      hubspotFormData.append('agent_email', formData.agentEmail);
-      hubspotFormData.append('social_media_following', formData.socialMediaFollowing);
-      hubspotFormData.append('festivals_played', formData.festivalsPlayed.join(', '));
-      hubspotFormData.append('upcoming_festivals', formData.upcomingFestivals.join(', '));
-
-      // HubSpot Portal ID and Form ID
-      const HUBSPOT_PORTAL_ID = '7562c805-0a9b-4527-af8c-ff1c0c895803';
-      const HUBSPOT_FORM_ID = '243491121';
-
-      const hubspotResponse = await fetch(`https://forms.hubspot.com/uploads/form/v2/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_ID}`, {
-        method: 'POST',
-        body: hubspotFormData,
-        mode: 'no-cors'
-      });
-
-      // Also submit to your existing API (optional - for backup/additional processing)
+      // First submit to your existing API
       const response = await fetch("/api/artist-registration", {
         method: "POST",
         headers: {
@@ -138,6 +111,48 @@ export default function ArtistRegistration() {
         },
         body: JSON.stringify(formData),
       });
+
+      // If main API succeeds, try HubSpot integration
+      try {
+        const hubspotFormData = new FormData();
+
+        // Map form fields to HubSpot properties with null checking
+        if (formData.firstName) hubspotFormData.append('firstname', formData.firstName);
+        if (formData.lastName) hubspotFormData.append('lastname', formData.lastName);
+        if (formData.email) hubspotFormData.append('email', formData.email);
+        if (formData.phone) hubspotFormData.append('phone', formData.phone);
+        if (formData.artistName) hubspotFormData.append('artist_name', formData.artistName);
+        if (formData.genre) hubspotFormData.append('genre', formData.genre);
+        if (formData.managementCompany) hubspotFormData.append('management_company', formData.managementCompany);
+        if (formData.agentName) hubspotFormData.append('agent_name', formData.agentName);
+        if (formData.agentEmail) hubspotFormData.append('agent_email', formData.agentEmail);
+        if (formData.socialMediaFollowing) hubspotFormData.append('social_media_following', formData.socialMediaFollowing);
+
+        // Handle arrays safely
+        if (formData.festivalsPlayed && Array.isArray(formData.festivalsPlayed)) {
+          hubspotFormData.append('festivals_played', formData.festivalsPlayed.join(', '));
+        }
+        if (formData.upcomingFestivals && Array.isArray(formData.upcomingFestivals)) {
+          hubspotFormData.append('upcoming_festivals', formData.upcomingFestivals.join(', '));
+        }
+
+        // HubSpot Portal ID and Form ID
+        const HUBSPOT_PORTAL_ID = '7562c805-0a9b-4527-af8c-ff1c0c895803';
+        const HUBSPOT_FORM_ID = '243491121';
+
+        // Submit to HubSpot (non-blocking - if this fails, main registration still succeeds)
+        fetch(`https://forms.hubspot.com/uploads/form/v2/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_ID}`, {
+          method: 'POST',
+          body: hubspotFormData,
+          mode: 'no-cors'
+        }).catch(() => {
+          // Silently handle HubSpot errors - don't block the main registration
+          console.log('HubSpot sync failed, but registration completed successfully');
+        });
+      } catch (hubspotError) {
+        // Log HubSpot error but don't block main registration
+        console.log('HubSpot integration error:', hubspotError);
+      }
 
       if (!response.ok) {
         // Handle 404 - API endpoint not available
