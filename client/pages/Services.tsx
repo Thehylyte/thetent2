@@ -611,7 +611,7 @@ export default function Services() {
                   {/* Duplicate Image 1 */}
                   <div className="flex-shrink-0 w-80 h-60 rounded-2xl border border-border/50 overflow-hidden group hover:shadow-lg transition-all duration-300">
                     <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F6a25674a9ee24aca803fd78670a07a2b?format=webp&width=800"
+                      src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F7e2bd3cb789f477eaa3670f582d857f8?format=webp&width=800"
                       alt="The Tent exclusive service moment"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
