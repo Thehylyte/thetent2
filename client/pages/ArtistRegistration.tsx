@@ -103,6 +103,34 @@ export default function ArtistRegistration() {
     setSubmitError("");
 
     try {
+      // Submit to HubSpot Forms API
+      const hubspotFormData = new FormData();
+
+      // Map form fields to HubSpot properties
+      hubspotFormData.append('firstname', formData.firstName);
+      hubspotFormData.append('lastname', formData.lastName);
+      hubspotFormData.append('email', formData.email);
+      hubspotFormData.append('phone', formData.phone);
+      hubspotFormData.append('artist_name', formData.artistName);
+      hubspotFormData.append('genre', formData.genre);
+      hubspotFormData.append('management_company', formData.managementCompany);
+      hubspotFormData.append('agent_name', formData.agentName);
+      hubspotFormData.append('agent_email', formData.agentEmail);
+      hubspotFormData.append('social_media_following', formData.socialMediaFollowing);
+      hubspotFormData.append('festivals_played', formData.festivalsPlayed.join(', '));
+      hubspotFormData.append('upcoming_festivals', formData.upcomingFestivals.join(', '));
+
+      // Replace with your actual HubSpot Portal ID and Form ID
+      const HUBSPOT_PORTAL_ID = 'YOUR_PORTAL_ID';
+      const HUBSPOT_FORM_ID = 'YOUR_FORM_ID';
+
+      const hubspotResponse = await fetch(`https://forms.hubspot.com/uploads/form/v2/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_ID}`, {
+        method: 'POST',
+        body: hubspotFormData,
+        mode: 'no-cors'
+      });
+
+      // Also submit to your existing API (optional - for backup/additional processing)
       const response = await fetch("/api/artist-registration", {
         method: "POST",
         headers: {
