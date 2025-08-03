@@ -598,7 +598,15 @@ export default function ArtistRegistration() {
                 )}
 
                 <form onSubmit={handleSubmit} className="space-y-8">
-                  {/* Personal Information */}
+                  {/* HubSpot Embedded Form */}
+                  <div
+                    className="hs-form-frame"
+                    data-region="na2"
+                    data-form-id="7562c805-0a9b-4527-af8c-ff1c0c895803"
+                    data-portal-id="243491121"
+                  ></div>
+
+                  {/* Old form content hidden - Personal Information */}
                   <div>
                     <h4
                       className="text-lg font-semibold mb-4"
