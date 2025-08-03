@@ -115,58 +115,92 @@ export default function ArtistRegistration() {
       // If main API succeeds, try HubSpot integration
       try {
         // HubSpot Portal ID and Form ID
-        const HUBSPOT_PORTAL_ID = '243491121';
-        const HUBSPOT_FORM_ID = '7562c805-0a9b-4527-af8c-ff1c0c895803';
+        const HUBSPOT_PORTAL_ID = "243491121";
+        const HUBSPOT_FORM_ID = "7562c805-0a9b-4527-af8c-ff1c0c895803";
 
         // Prepare HubSpot submission data using URLSearchParams for proper encoding
         const hubspotData = new URLSearchParams();
 
         // Add required HubSpot context
-        hubspotData.append('hs_context', JSON.stringify({
-          hutk: document.cookie.replace(/(?:(?:^|.*;\s*)hubspotutk\s*\=\s*([^;]*).*$)|^.*$/, "$1"),
-          pageUri: window.location.href,
-          pageName: document.title
-        }));
+        hubspotData.append(
+          "hs_context",
+          JSON.stringify({
+            hutk: document.cookie.replace(
+              /(?:(?:^|.*;\s*)hubspotutk\s*\=\s*([^;]*).*$)|^.*$/,
+              "$1",
+            ),
+            pageUri: window.location.href,
+            pageName: document.title,
+          }),
+        );
 
         // Map form fields to HubSpot standard properties
-        if (formData.firstName) hubspotData.append('firstname', formData.firstName);
-        if (formData.lastName) hubspotData.append('lastname', formData.lastName);
-        if (formData.email) hubspotData.append('email', formData.email);
-        if (formData.phone) hubspotData.append('phone', formData.phone);
-        if (formData.artistName) hubspotData.append('company', formData.artistName); // Using company field for artist name
+        if (formData.firstName)
+          hubspotData.append("firstname", formData.firstName);
+        if (formData.lastName)
+          hubspotData.append("lastname", formData.lastName);
+        if (formData.email) hubspotData.append("email", formData.email);
+        if (formData.phone) hubspotData.append("phone", formData.phone);
+        if (formData.artistName)
+          hubspotData.append("company", formData.artistName); // Using company field for artist name
 
         // Add custom properties (these need to exist in your HubSpot form)
-        if (formData.genre) hubspotData.append('genre', formData.genre);
-        if (formData.managementCompany) hubspotData.append('management_company', formData.managementCompany);
-        if (formData.agentName) hubspotData.append('agent_name', formData.agentName);
-        if (formData.agentEmail) hubspotData.append('agent_email', formData.agentEmail);
-        if (formData.socialMediaFollowing) hubspotData.append('social_media_following', formData.socialMediaFollowing);
+        if (formData.genre) hubspotData.append("genre", formData.genre);
+        if (formData.managementCompany)
+          hubspotData.append("management_company", formData.managementCompany);
+        if (formData.agentName)
+          hubspotData.append("agent_name", formData.agentName);
+        if (formData.agentEmail)
+          hubspotData.append("agent_email", formData.agentEmail);
+        if (formData.socialMediaFollowing)
+          hubspotData.append(
+            "social_media_following",
+            formData.socialMediaFollowing,
+          );
 
         // Handle arrays safely
-        if (formData.festivalsPlayed && Array.isArray(formData.festivalsPlayed)) {
-          hubspotData.append('festivals_played', formData.festivalsPlayed.join(', '));
+        if (
+          formData.festivalsPlayed &&
+          Array.isArray(formData.festivalsPlayed)
+        ) {
+          hubspotData.append(
+            "festivals_played",
+            formData.festivalsPlayed.join(", "),
+          );
         }
-        if (formData.upcomingFestivals && Array.isArray(formData.upcomingFestivals)) {
-          hubspotData.append('upcoming_festivals', formData.upcomingFestivals.join(', '));
+        if (
+          formData.upcomingFestivals &&
+          Array.isArray(formData.upcomingFestivals)
+        ) {
+          hubspotData.append(
+            "upcoming_festivals",
+            formData.upcomingFestivals.join(", "),
+          );
         }
 
         // Submit to HubSpot with proper headers
-        const hubspotResponse = await fetch(`https://forms.hubspot.com/uploads/form/v2/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_ID}`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
+        const hubspotResponse = await fetch(
+          `https://forms.hubspot.com/uploads/form/v2/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_ID}`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: hubspotData.toString(),
           },
-          body: hubspotData.toString()
-        });
+        );
 
         if (hubspotResponse.ok) {
-          console.log('Successfully synced with HubSpot');
+          console.log("Successfully synced with HubSpot");
         } else {
-          console.log('HubSpot sync failed with status:', hubspotResponse.status);
+          console.log(
+            "HubSpot sync failed with status:",
+            hubspotResponse.status,
+          );
         }
       } catch (hubspotError) {
         // Log HubSpot error but don't block main registration
-        console.log('HubSpot integration error:', hubspotError);
+        console.log("HubSpot integration error:", hubspotError);
       }
 
       if (!response.ok) {
