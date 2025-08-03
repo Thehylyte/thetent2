@@ -194,7 +194,7 @@ export default function Founders() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-6">
+      <section className="pt-20 md:pt-24 pb-12 md:pb-16 px-4 md:px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h1
