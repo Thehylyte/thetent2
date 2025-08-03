@@ -91,7 +91,7 @@ export default function Index() {
                   fontWeight: "700",
                 }}
               >
-                For Members
+                For Artists
               </h2>
               <p
                 className="text-lg mb-6"
