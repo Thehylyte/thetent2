@@ -115,8 +115,8 @@ export default function ArtistRegistration() {
       // If main API succeeds, try HubSpot integration
       try {
         // HubSpot Portal ID and Form ID
-        const HUBSPOT_PORTAL_ID = '7562c805-0a9b-4527-af8c-ff1c0c895803';
-        const HUBSPOT_FORM_ID = '243491121';
+        const HUBSPOT_PORTAL_ID = '243491121';
+        const HUBSPOT_FORM_ID = '7562c805-0a9b-4527-af8c-ff1c0c895803';
 
         // Prepare HubSpot submission data using URLSearchParams for proper encoding
         const hubspotData = new URLSearchParams();
