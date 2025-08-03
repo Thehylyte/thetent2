@@ -77,9 +77,7 @@ export default function Index() {
             onClick={() => (window.location.href = "/artist-login")}
           >
             <CardContent className="p-12 text-center">
-              <div
-                className="w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
-              >
+              <div className="w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Music className="w-10 h-10" style={{ color: "#6E6353" }} />
               </div>
               <h2
@@ -119,9 +117,7 @@ export default function Index() {
             onClick={() => (window.location.href = "/brand-partnership")}
           >
             <CardContent className="p-12 text-center">
-              <div
-                className="w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
-              >
+              <div className="w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Handshake className="w-10 h-10" style={{ color: "#6E6353" }} />
               </div>
               <h2
