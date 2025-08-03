@@ -217,7 +217,7 @@ export default function Founders() {
       <section className="py-12 md:py-16 px-4 md:px-6" style={{ backgroundColor: "#F8F5EE" }}>
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div>
+            <div className="px-2 md:px-0">
               <h2
                 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 uppercase text-center md:text-left"
                 style={{ color: "#2E2E2E" }}
