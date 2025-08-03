@@ -602,7 +602,7 @@ export default function ArtistRegistration() {
                   <div
                     className="hs-form-frame"
                     data-region="na2"
-                    data-form-id="7562c805-0a9b-4527-af8c-ff1c0c895803"
+                    data-form-id="f103fea8-9071-4b53-8290-9a427742e643"
                     data-portal-id="243491121"
                   ></div>
 
