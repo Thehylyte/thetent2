@@ -1,6 +1,6 @@
 import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
-import { Crown, Handshake } from "lucide-react";
+import { Music, Handshake } from "lucide-react";
 import SEO from "../components/SEO";
 import { useState, useEffect } from "react";
 
