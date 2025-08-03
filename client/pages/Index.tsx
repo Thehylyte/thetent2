@@ -120,10 +120,9 @@ export default function Index() {
           >
             <CardContent className="p-12 text-center">
               <div
-                className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
-                style={{ backgroundColor: "#6E6353" }}
+                className="w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
               >
-                <Handshake className="w-10 h-10 text-white" />
+                <Handshake className="w-10 h-10" style={{ color: "#6E6353" }} />
               </div>
               <h2
                 className="text-3xl md:text-4xl font-bold mb-4 uppercase"
