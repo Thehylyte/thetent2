@@ -337,7 +337,7 @@ export default function Founders() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Jared Gladstone's Top 5 */}
             <Card
               className="border-tent-blue/20 hover:border-tent-blue/40 transition-colors"
