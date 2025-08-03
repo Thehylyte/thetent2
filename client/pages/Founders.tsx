@@ -214,7 +214,7 @@ export default function Founders() {
       </section>
 
       {/* Origin Story */}
-      <section className="py-16 px-6" style={{ backgroundColor: "#F8F5EE" }}>
+      <section className="py-12 md:py-16 px-4 md:px-6" style={{ backgroundColor: "#F8F5EE" }}>
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
