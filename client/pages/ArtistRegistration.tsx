@@ -607,7 +607,7 @@ export default function ArtistRegistration() {
                   ></div>
 
                   {/* Old form content hidden - Personal Information */}
-                  <div>
+                  <div style={{ display: 'none' }}>
                     <h4
                       className="text-lg font-semibold mb-4"
                       style={{ color: "#F8F5EE" }}
