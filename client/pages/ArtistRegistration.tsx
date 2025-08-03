@@ -174,6 +174,13 @@ export default function ArtistRegistration() {
           );
         }
 
+        // Debug: Log what we're sending to HubSpot
+        console.log("Sending to HubSpot:", {
+          portalId: HUBSPOT_PORTAL_ID,
+          formId: HUBSPOT_FORM_ID,
+          data: Object.fromEntries(hubspotData.entries())
+        });
+
         // Submit to HubSpot with proper headers
         const hubspotResponse = await fetch(
           `https://forms.hubspot.com/uploads/form/v2/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_ID}`,
