@@ -198,13 +198,13 @@ export default function Founders() {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h1
-              className="text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase"
+              className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight uppercase px-4"
               style={{ color: "#F8F5EE" }}
             >
               Our Founders
             </h1>
             <p
-              className="text-xl md:text-2xl max-w-3xl mx-auto mb-8"
+              className="text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-8 px-4"
               style={{ color: "#F8F5EE" }}
             >
               Meet the visionaries behind The Tent.
