@@ -390,7 +390,7 @@ export default function Founders() {
               <CardHeader>
                 <div className="text-center">
                   <h3
-                    className="text-2xl font-bold mb-2"
+                    className="text-xl md:text-2xl font-bold mb-2"
                     style={{ color: "black" }}
                   >
                     Chelsea Smith
