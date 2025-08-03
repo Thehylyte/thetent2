@@ -14,7 +14,7 @@ import {
   Menu,
   X,
 } from "lucide-react";
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function ArtistRegistration() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -266,22 +266,6 @@ export default function ArtistRegistration() {
       setIsSubmitting(false);
     }
   };
-
-  // Load HubSpot form script
-  React.useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://js-na2.hsforms.net/forms/embed/243491121.js';
-    script.defer = true;
-    document.head.appendChild(script);
-
-    return () => {
-      // Cleanup script on unmount
-      const existingScript = document.querySelector('script[src="https://js-na2.hsforms.net/forms/embed/243491121.js"]');
-      if (existingScript) {
-        existingScript.remove();
-      }
-    };
-  }, []);
 
   const festivals = [
     {
@@ -597,17 +581,9 @@ export default function ArtistRegistration() {
                   </div>
                 )}
 
-                <form onSubmit={(e) => e.preventDefault()} className="space-y-8">
-                  {/* HubSpot Embedded Form */}
-                  <div
-                    className="hs-form-frame"
-                    data-region="na2"
-                    data-form-id="f103fea8-9071-4b53-8290-9a427742e643"
-                    data-portal-id="243491121"
-                  ></div>
-
-                  {/* Old form content hidden - Personal Information */}
-                  <div style={{ display: 'none' }}>
+                <form onSubmit={handleSubmit} className="space-y-8">
+                  {/* Personal Information */}
+                  <div>
                     <h4
                       className="text-lg font-semibold mb-4"
                       style={{ color: "#F8F5EE" }}
