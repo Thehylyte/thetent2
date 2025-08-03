@@ -642,7 +642,7 @@ export default function Founders() {
               Our Values
             </h2>
             <p
-              className="text-xl max-w-2xl mx-auto"
+              className="text-lg md:text-xl max-w-2xl mx-auto px-4"
               style={{
                 color: "#2E2E2E",
                 fontFamily: "Inter",
