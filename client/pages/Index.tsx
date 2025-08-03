@@ -81,7 +81,7 @@ export default function Index() {
                 className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
                 style={{ backgroundColor: "#A2B29F" }}
               >
-                <Crown className="w-10 h-10 text-white" />
+                <Music className="w-10 h-10 text-white" />
               </div>
               <h2
                 className="text-3xl md:text-4xl font-bold mb-4 uppercase"
