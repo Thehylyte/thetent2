@@ -189,10 +189,18 @@ export default function ArtistRegistration() {
         if (hubspotResponse.ok) {
           console.log("Successfully synced with HubSpot");
         } else {
-          console.log(
-            "HubSpot sync failed with status:",
-            hubspotResponse.status,
-          );
+          console.error("HubSpot sync failed:", {
+            status: hubspotResponse.status,
+            statusText: hubspotResponse.statusText,
+            url: hubspotResponse.url
+          });
+          // Try to get the response text for more details
+          try {
+            const errorText = await hubspotResponse.text();
+            console.error("HubSpot error response:", errorText);
+          } catch (e) {
+            console.error("Could not read error response");
+          }
         }
       } catch (hubspotError) {
         // Log HubSpot error but don't block main registration
