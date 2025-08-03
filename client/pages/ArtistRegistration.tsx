@@ -597,7 +597,7 @@ export default function ArtistRegistration() {
                   </div>
                 )}
 
-                <form onSubmit={handleSubmit} className="space-y-8">
+                <form onSubmit={(e) => e.preventDefault()} className="space-y-8">
                   {/* HubSpot Embedded Form */}
                   <div
                     className="hs-form-frame"
