@@ -224,7 +224,7 @@ export default function Founders() {
               >
                 The Story Behind The Tent
               </h2>
-              <p className="text-lg mb-6" style={{ color: "#2E2E2E" }}>
+              <p className="text-base md:text-lg mb-4 md:mb-6 leading-relaxed px-2 md:px-0" style={{ color: "#2E2E2E" }}>
                 Quickly after meeting several years ago in Nashville, Tennessee,
                 we discovered a shared passion for live music and unforgettable
                 experiences. After years of traveling to see our favorite
