@@ -267,6 +267,22 @@ export default function ArtistRegistration() {
     }
   };
 
+  // Load HubSpot form script
+  React.useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://js-na2.hsforms.net/forms/embed/243491121.js';
+    script.defer = true;
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      const existingScript = document.querySelector('script[src="https://js-na2.hsforms.net/forms/embed/243491121.js"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, []);
+
   const festivals = [
     {
       name: "Lollapalooza",
