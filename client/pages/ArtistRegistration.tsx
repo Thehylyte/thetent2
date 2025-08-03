@@ -134,29 +134,25 @@ export default function ArtistRegistration() {
           }),
         );
 
-        // Map form fields to HubSpot standard properties
-        if (formData.firstName)
-          hubspotData.append("firstname", formData.firstName);
-        if (formData.lastName)
-          hubspotData.append("lastname", formData.lastName);
+        // Map actual form fields to HubSpot properties
+        if (formData.artistName)
+          hubspotData.append("firstname", formData.artistName); // Artist name as first name
+        if (formData.legalName)
+          hubspotData.append("lastname", formData.legalName); // Legal name as last name
         if (formData.email) hubspotData.append("email", formData.email);
         if (formData.phone) hubspotData.append("phone", formData.phone);
         if (formData.artistName)
-          hubspotData.append("company", formData.artistName); // Using company field for artist name
+          hubspotData.append("company", formData.artistName); // Artist name as company too
 
-        // Add custom properties (these need to exist in your HubSpot form)
+        // Management/Agent information
+        if (formData.managerName)
+          hubspotData.append("manager_name", formData.managerName);
+        if (formData.managementEmail)
+          hubspotData.append("management_email", formData.managementEmail);
+
+        // Career information
         if (formData.genre) hubspotData.append("genre", formData.genre);
-        if (formData.managementCompany)
-          hubspotData.append("management_company", formData.managementCompany);
-        if (formData.agentName)
-          hubspotData.append("agent_name", formData.agentName);
-        if (formData.agentEmail)
-          hubspotData.append("agent_email", formData.agentEmail);
-        if (formData.socialMediaFollowing)
-          hubspotData.append(
-            "social_media_following",
-            formData.socialMediaFollowing,
-          );
+        if (formData.yearsActive) hubspotData.append("years_active", formData.yearsActive);
 
         // Handle arrays safely
         if (
