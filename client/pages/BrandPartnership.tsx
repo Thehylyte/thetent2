@@ -274,10 +274,7 @@ export default function BrandPartnership() {
           {/* Overlaid Content */}
           <div className="relative z-10 container mx-auto px-6">
             <div className="text-center">
-              <Badge className="mb-6 bg-black/50 backdrop-blur-sm text-white border-white/20">
-                <Building2 className="w-4 h-4 mr-2" />
-                Partnership Opportunities
-              </Badge>
+
               <h1
                 className="text-4xl md:text-6xl font-bold mb-6 leading-tight uppercase drop-shadow-2xl"
                 style={{ color: "#F8F5EE" }}
