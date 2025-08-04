@@ -357,7 +357,7 @@ export default function BrandPartnership() {
               <div className="text-center mb-8">
                 <h2
                   className="text-3xl md:text-4xl font-bold mb-4 uppercase"
-                  style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}
+                  style={{ color: "#2E2E2E", fontFamily: "Monument", fontWeight: "bold" }}
                 >
                   Why Partner with The Tent?
                 </h2>
