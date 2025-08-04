@@ -376,8 +376,8 @@ export default function ArtistRegistration() {
         <div className="fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl border border-border/20">
             <div className="text-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-tent-purple to-tent-pink rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Key className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Key className="w-8 h-8" style={{ color: "#6E6353" }} />
               </div>
               <h2 className="text-2xl font-bold mb-2" style={{ color: "#2E2E2E" }}>
                 Invite Code Required
