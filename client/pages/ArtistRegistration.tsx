@@ -373,7 +373,7 @@ export default function ArtistRegistration() {
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-tent-blue/5">
       {/* Invite Code Overlay */}
       {showInviteOverlay && (
-        <div className="fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
+        <div className="fixed top-20 left-0 right-0 bottom-0 z-[100] bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl border border-border/20">
             <div className="text-center mb-6">
               <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
