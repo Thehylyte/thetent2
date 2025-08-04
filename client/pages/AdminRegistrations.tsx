@@ -132,9 +132,38 @@ export default function AdminRegistrations() {
     return new Date(timestamp).toLocaleString();
   };
 
-  const downloadExcel = () => {
-    // Create a new workbook
-    const workbook = XLSX.utils.book_new();
+  const downloadCSV = () => {
+    // Function to convert array of objects to CSV
+    const arrayToCSV = (data: any[], filename: string) => {
+      if (data.length === 0) return;
+
+      const headers = Object.keys(data[0]);
+      const csvContent = [
+        headers.join(','),
+        ...data.map(row =>
+          headers.map(header => {
+            const value = row[header] || '';
+            // Escape quotes and wrap in quotes if contains comma or quote
+            const escapedValue = String(value).replace(/"/g, '""');
+            return escapedValue.includes(',') || escapedValue.includes('"') || escapedValue.includes('\n')
+              ? `"${escapedValue}"`
+              : escapedValue;
+          }).join(',')
+        )
+      ].join('\n');
+
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const link = document.createElement('a');
+      if (link.download !== undefined) {
+        const url = URL.createObjectURL(blob);
+        link.setAttribute('href', url);
+        link.setAttribute('download', filename);
+        link.style.visibility = 'hidden';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    };
 
     // Prepare artist registrations data
     const artistData = registrations.map(reg => ({
@@ -146,7 +175,7 @@ export default function AdminRegistrations() {
       'Manager Email': reg.managementEmail,
       'Genre': reg.genre,
       'Years Active': reg.yearsActive,
-      'Selected Festivals': reg.selectedFestivals.join(', '),
+      'Selected Festivals': reg.selectedFestivals.join('; '),
       'Special Requests': reg.specialRequests,
       'Terms Agreed': reg.agreeToTerms ? 'Yes' : 'No',
       'Submission Date': formatDate(reg.timestamp),
@@ -161,23 +190,24 @@ export default function AdminRegistrations() {
       'Contact Title': partner.contactTitle,
       'Contact Email': partner.contactEmail,
       'Contact Phone': partner.contactPhone,
-      'Selected Festivals': partner.selectedFestivals.join(', '),
+      'Selected Festivals': partner.selectedFestivals.join('; '),
       'Message': partner.message,
       'Submission Date': formatDate(partner.timestamp),
       'Partner ID': partner.id
     }));
 
-    // Create worksheets
-    const artistWorksheet = XLSX.utils.json_to_sheet(artistData);
-    const partnerWorksheet = XLSX.utils.json_to_sheet(partnerData);
+    const dateStr = new Date().toISOString().split('T')[0];
 
-    // Add worksheets to workbook
-    XLSX.utils.book_append_sheet(workbook, artistWorksheet, 'Artist Registrations');
-    XLSX.utils.book_append_sheet(workbook, partnerWorksheet, 'Brand Partners');
+    // Download both files
+    if (artistData.length > 0) {
+      arrayToCSV(artistData, `The_Tent_Artist_Registrations_${dateStr}.csv`);
+    }
 
-    // Generate Excel file and download
-    const fileName = `The_Tent_Registrations_${new Date().toISOString().split('T')[0]}.xlsx`;
-    XLSX.writeFile(workbook, fileName);
+    if (partnerData.length > 0) {
+      setTimeout(() => {
+        arrayToCSV(partnerData, `The_Tent_Brand_Partners_${dateStr}.csv`);
+      }, 500); // Small delay to prevent download conflicts
+    }
   };
 
   return (
