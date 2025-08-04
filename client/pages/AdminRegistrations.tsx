@@ -21,7 +21,7 @@ import {
   Briefcase,
   Download,
 } from "lucide-react";
-import * as XLSX from 'xlsx';
+import XLSX from 'xlsx';
 import { useState, useEffect } from "react";
 
 interface Registration {
