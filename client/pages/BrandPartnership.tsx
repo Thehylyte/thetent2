@@ -357,7 +357,7 @@ export default function BrandPartnership() {
               <div className="text-center mb-8">
                 <h2
                   className="text-3xl md:text-4xl font-bold mb-4 uppercase"
-                  style={{ color: "#F8F5EE" }}
+                  style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}
                 >
                   Why Partner with The Tent?
                 </h2>
@@ -368,7 +368,7 @@ export default function BrandPartnership() {
               >
                 <p
                   className="text-lg md:text-xl mb-6"
-                  style={{ color: "#F8F5EE" }}
+                  style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}
                 >
                   Partnering with The Tent provides your brand with{" "}
                   <span className="font-semibold" style={{ color: "#F8F5EE" }}>
@@ -383,7 +383,7 @@ export default function BrandPartnership() {
                 </p>
                 <p
                   className="text-lg md:text-xl mb-6"
-                  style={{ color: "#F8F5EE" }}
+                  style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}
                 >
                   Through our partnerships, brands gain access to{" "}
                   <span className="font-semibold" style={{ color: "#F8F5EE" }}>
