@@ -274,7 +274,6 @@ export default function BrandPartnership() {
           {/* Overlaid Content */}
           <div className="relative z-10 container mx-auto px-6">
             <div className="text-center">
-
               <h1
                 className="text-4xl md:text-6xl font-bold mb-6 leading-tight uppercase drop-shadow-2xl"
                 style={{ color: "#F8F5EE" }}
@@ -286,7 +285,7 @@ export default function BrandPartnership() {
                 style={{
                   color: "#F8F5EE",
                   fontFamily: "Inter",
-                  fontWeight: "300"
+                  fontWeight: "300",
                 }}
               >
                 Join our exclusive network of premium brands and showcase your
@@ -300,7 +299,10 @@ export default function BrandPartnership() {
         {/* Benefits Section */}
         <section className="py-16 px-6 bg-gradient-to-r from-tent-purple/10 via-tent-blue/10 to-tent-pink/10">
           <div className="container mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center" style={{ color: "white" }}>
+            <h2
+              className="text-3xl md:text-4xl font-bold mb-12 text-center"
+              style={{ color: "white" }}
+            >
               THE PERKS
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
@@ -353,25 +355,47 @@ export default function BrandPartnership() {
         {/* Detailed Benefits Section */}
         <section className="py-16">
           <div className="w-full">
-            <div className="p-8 md:p-12 border-0" style={{ backgroundColor: "#A2B29F" }}>
+            <div
+              className="p-8 md:p-12 border-0"
+              style={{ backgroundColor: "#A2B29F" }}
+            >
               <div className="text-center mb-8">
                 <h2
                   className="text-3xl md:text-4xl font-bold mb-4 uppercase"
-                  style={{ color: "#2E2E2E", fontFamily: "Monument", fontWeight: "bold" }}
+                  style={{
+                    color: "#2E2E2E",
+                    fontFamily: "Monument",
+                    fontWeight: "bold",
+                  }}
                 >
                   Why Partner with The Tent?
                 </h2>
               </div>
               <div
                 className="prose prose-lg max-w-none leading-relaxed"
-                style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}
+                style={{
+                  color: "#2E2E2E",
+                  fontFamily: "Inter",
+                  fontWeight: "300",
+                }}
               >
                 <p
                   className="text-lg md:text-xl mb-6"
-                  style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}
+                  style={{
+                    color: "#2E2E2E",
+                    fontFamily: "Inter",
+                    fontWeight: "300",
+                  }}
                 >
                   Partnering with The Tent provides your brand with{" "}
-                  <span className="font-semibold" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>
+                  <span
+                    className="font-semibold"
+                    style={{
+                      color: "#2E2E2E",
+                      fontFamily: "Inter",
+                      fontWeight: "300",
+                    }}
+                  >
                     direct access to some of the most influential talent in the
                     world
                   </span>{" "}
@@ -383,10 +407,21 @@ export default function BrandPartnership() {
                 </p>
                 <p
                   className="text-lg md:text-xl mb-6"
-                  style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}
+                  style={{
+                    color: "#2E2E2E",
+                    fontFamily: "Inter",
+                    fontWeight: "300",
+                  }}
                 >
                   Through our partnerships, brands gain access to{" "}
-                  <span className="font-semibold" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>
+                  <span
+                    className="font-semibold"
+                    style={{
+                      color: "#2E2E2E",
+                      fontFamily: "Inter",
+                      fontWeight: "300",
+                    }}
+                  >
                     premium content opportunities
                   </span>{" "}
                   that can be utilized across social media platforms to showcase
@@ -396,9 +431,23 @@ export default function BrandPartnership() {
                   valuable user-generated content that resonates with millions
                   of followers.
                 </p>
-                <p className="text-lg md:text-xl" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>
+                <p
+                  className="text-lg md:text-xl"
+                  style={{
+                    color: "#2E2E2E",
+                    fontFamily: "Inter",
+                    fontWeight: "300",
+                  }}
+                >
                   Beyond exposure, The Tent facilitates{" "}
-                  <span className="font-semibold" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>
+                  <span
+                    className="font-semibold"
+                    style={{
+                      color: "#2E2E2E",
+                      fontFamily: "Inter",
+                      fontWeight: "300",
+                    }}
+                  >
                     direct product education opportunities
                   </span>{" "}
                   where brands can personally introduce their innovations to
