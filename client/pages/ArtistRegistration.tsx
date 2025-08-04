@@ -529,6 +529,7 @@ export default function ArtistRegistration() {
                       e.key === "Enter" && handleInviteCodeSubmit()
                     }
                     className="w-full pl-12 pr-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-tent-purple focus:border-transparent text-center font-mono tracking-wider"
+                    style={{ color: "#000000" }}
                     placeholder="ENTER-YOUR-CODE"
                     maxLength={20}
                   />
