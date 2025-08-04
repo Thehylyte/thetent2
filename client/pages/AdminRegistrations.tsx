@@ -56,11 +56,13 @@ interface PartnerRegistration {
 export default function AdminRegistrations() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [registrations, setRegistrations] = useState<Registration[]>([]);
-  const [partnerRegistrations, setPartnerRegistrations] = useState<PartnerRegistration[]>([]);
+  const [partnerRegistrations, setPartnerRegistrations] = useState<
+    PartnerRegistration[]
+  >([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [expandedCards, setExpandedCards] = useState<Set<string>>(new Set());
-  const [activeTab, setActiveTab] = useState<'artists' | 'partners'>('artists');
+  const [activeTab, setActiveTab] = useState<"artists" | "partners">("artists");
 
   const fetchRegistrations = async () => {
     setLoading(true);
@@ -70,11 +72,11 @@ export default function AdminRegistrations() {
       // Fetch both artist and partner registrations
       const [artistResponse, partnerResponse] = await Promise.allSettled([
         fetch("/api/artist-registrations"),
-        fetch("/api/partner-registrations")
+        fetch("/api/partner-registrations"),
       ]);
 
       // Handle artist registrations
-      if (artistResponse.status === 'fulfilled' && artistResponse.value.ok) {
+      if (artistResponse.status === "fulfilled" && artistResponse.value.ok) {
         const artistData = await artistResponse.value.json();
         if (artistData.success) {
           setRegistrations(artistData.registrations);
@@ -92,22 +94,25 @@ export default function AdminRegistrations() {
           contactPhone: "(555) 123-4567",
           contactEmail: "jane@examplebrand.com",
           selectedFestivals: ["Lollapalooza", "Riot Fest"],
-          message: "Interested in showcasing our premium beverage line at VIP areas.",
-          timestamp: new Date().toISOString()
-        }
+          message:
+            "Interested in showcasing our premium beverage line at VIP areas.",
+          timestamp: new Date().toISOString(),
+        },
       ]);
 
       // Check if any API failed
-      if (artistResponse.status === 'rejected' ||
-          (artistResponse.status === 'fulfilled' && !artistResponse.value.ok)) {
+      if (
+        artistResponse.status === "rejected" ||
+        (artistResponse.status === "fulfilled" && !artistResponse.value.ok)
+      ) {
         setError(
-          "Admin API is currently unavailable due to deployment configuration. Some registrations may not display. Contact jg@thetent.club for manual access."
+          "Admin API is currently unavailable due to deployment configuration. Some registrations may not display. Contact jg@thetent.club for manual access.",
         );
       }
     } catch (err) {
       console.error("Admin fetch error:", err);
       setError(
-        "Error connecting to server. API endpoints may not be available in this deployment configuration."
+        "Error connecting to server. API endpoints may not be available in this deployment configuration.",
       );
     } finally {
       setLoading(false);
@@ -139,26 +144,30 @@ export default function AdminRegistrations() {
 
       const headers = Object.keys(data[0]);
       const csvContent = [
-        headers.join(','),
-        ...data.map(row =>
-          headers.map(header => {
-            const value = row[header] || '';
-            // Escape quotes and wrap in quotes if contains comma or quote
-            const escapedValue = String(value).replace(/"/g, '""');
-            return escapedValue.includes(',') || escapedValue.includes('"') || escapedValue.includes('\n')
-              ? `"${escapedValue}"`
-              : escapedValue;
-          }).join(',')
-        )
-      ].join('\n');
+        headers.join(","),
+        ...data.map((row) =>
+          headers
+            .map((header) => {
+              const value = row[header] || "";
+              // Escape quotes and wrap in quotes if contains comma or quote
+              const escapedValue = String(value).replace(/"/g, '""');
+              return escapedValue.includes(",") ||
+                escapedValue.includes('"') ||
+                escapedValue.includes("\n")
+                ? `"${escapedValue}"`
+                : escapedValue;
+            })
+            .join(","),
+        ),
+      ].join("\n");
 
-      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-      const link = document.createElement('a');
+      const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+      const link = document.createElement("a");
       if (link.download !== undefined) {
         const url = URL.createObjectURL(blob);
-        link.setAttribute('href', url);
-        link.setAttribute('download', filename);
-        link.style.visibility = 'hidden';
+        link.setAttribute("href", url);
+        link.setAttribute("download", filename);
+        link.style.visibility = "hidden";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -166,37 +175,37 @@ export default function AdminRegistrations() {
     };
 
     // Prepare artist registrations data
-    const artistData = registrations.map(reg => ({
-      'Artist Name': reg.artistName,
-      'Legal Name': reg.legalName,
-      'Email': reg.email,
-      'Phone': reg.phone,
-      'Manager Name': reg.managerName,
-      'Manager Email': reg.managementEmail,
-      'Genre': reg.genre,
-      'Years Active': reg.yearsActive,
-      'Selected Festivals': reg.selectedFestivals.join('; '),
-      'Special Requests': reg.specialRequests,
-      'Terms Agreed': reg.agreeToTerms ? 'Yes' : 'No',
-      'Submission Date': formatDate(reg.timestamp),
-      'Registration ID': reg.id
+    const artistData = registrations.map((reg) => ({
+      "Artist Name": reg.artistName,
+      "Legal Name": reg.legalName,
+      Email: reg.email,
+      Phone: reg.phone,
+      "Manager Name": reg.managerName,
+      "Manager Email": reg.managementEmail,
+      Genre: reg.genre,
+      "Years Active": reg.yearsActive,
+      "Selected Festivals": reg.selectedFestivals.join("; "),
+      "Special Requests": reg.specialRequests,
+      "Terms Agreed": reg.agreeToTerms ? "Yes" : "No",
+      "Submission Date": formatDate(reg.timestamp),
+      "Registration ID": reg.id,
     }));
 
     // Prepare partner registrations data
-    const partnerData = partnerRegistrations.map(partner => ({
-      'Company Name': partner.companyName,
-      'Product/Service': partner.product,
-      'Contact Name': partner.contactName,
-      'Contact Title': partner.contactTitle,
-      'Contact Email': partner.contactEmail,
-      'Contact Phone': partner.contactPhone,
-      'Selected Festivals': partner.selectedFestivals.join('; '),
-      'Message': partner.message,
-      'Submission Date': formatDate(partner.timestamp),
-      'Partner ID': partner.id
+    const partnerData = partnerRegistrations.map((partner) => ({
+      "Company Name": partner.companyName,
+      "Product/Service": partner.product,
+      "Contact Name": partner.contactName,
+      "Contact Title": partner.contactTitle,
+      "Contact Email": partner.contactEmail,
+      "Contact Phone": partner.contactPhone,
+      "Selected Festivals": partner.selectedFestivals.join("; "),
+      Message: partner.message,
+      "Submission Date": formatDate(partner.timestamp),
+      "Partner ID": partner.id,
     }));
 
-    const dateStr = new Date().toISOString().split('T')[0];
+    const dateStr = new Date().toISOString().split("T")[0];
 
     // Download both files
     if (artistData.length > 0) {
@@ -320,22 +329,22 @@ export default function AdminRegistrations() {
             {/* Tab Navigation */}
             <div className="flex items-center justify-center gap-4 mb-8">
               <button
-                onClick={() => setActiveTab('artists')}
+                onClick={() => setActiveTab("artists")}
                 className={`px-6 py-3 rounded-lg font-medium transition-all ${
-                  activeTab === 'artists'
-                    ? 'bg-tent-purple text-white'
-                    : 'bg-white/10 text-muted-foreground hover:bg-white/20'
+                  activeTab === "artists"
+                    ? "bg-tent-purple text-white"
+                    : "bg-white/10 text-muted-foreground hover:bg-white/20"
                 }`}
               >
                 <Music className="w-4 h-4 mr-2 inline" />
                 Artist Registrations ({registrations.length})
               </button>
               <button
-                onClick={() => setActiveTab('partners')}
+                onClick={() => setActiveTab("partners")}
                 className={`px-6 py-3 rounded-lg font-medium transition-all ${
-                  activeTab === 'partners'
-                    ? 'bg-tent-purple text-white'
-                    : 'bg-white/10 text-muted-foreground hover:bg-white/20'
+                  activeTab === "partners"
+                    ? "bg-tent-purple text-white"
+                    : "bg-white/10 text-muted-foreground hover:bg-white/20"
                 }`}
               >
                 <Building2 className="w-4 h-4 mr-2 inline" />
@@ -347,7 +356,10 @@ export default function AdminRegistrations() {
               <div className="flex items-center">
                 <Users className="w-4 h-4 mr-2 text-tent-purple" />
                 <span className="font-medium">
-                  {activeTab === 'artists' ? registrations.length : partnerRegistrations.length} Total {activeTab === 'artists' ? 'Artists' : 'Partners'}
+                  {activeTab === "artists"
+                    ? registrations.length
+                    : partnerRegistrations.length}{" "}
+                  Total {activeTab === "artists" ? "Artists" : "Partners"}
                 </span>
               </div>
               <div className="flex items-center">
@@ -376,242 +388,258 @@ export default function AdminRegistrations() {
             </div>
           )}
 
-          {!loading && !error &&
-           ((activeTab === 'artists' && registrations.length === 0) ||
-            (activeTab === 'partners' && partnerRegistrations.length === 0)) && (
-            <div className="text-center py-12">
-              {activeTab === 'artists' ? (
-                <Music className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-              ) : (
-                <Building2 className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-              )}
-              <h3 className="text-xl font-semibold mb-2">
-                No {activeTab === 'artists' ? 'Artist' : 'Partner'} Registrations Yet
-              </h3>
-              <p className="text-muted-foreground">
-                {activeTab === 'artists' ? 'Artist' : 'Brand partner'} registrations will appear here once submitted.
-              </p>
-            </div>
-          )}
+          {!loading &&
+            !error &&
+            ((activeTab === "artists" && registrations.length === 0) ||
+              (activeTab === "partners" &&
+                partnerRegistrations.length === 0)) && (
+              <div className="text-center py-12">
+                {activeTab === "artists" ? (
+                  <Music className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
+                ) : (
+                  <Building2 className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
+                )}
+                <h3 className="text-xl font-semibold mb-2">
+                  No {activeTab === "artists" ? "Artist" : "Partner"}{" "}
+                  Registrations Yet
+                </h3>
+                <p className="text-muted-foreground">
+                  {activeTab === "artists" ? "Artist" : "Brand partner"}{" "}
+                  registrations will appear here once submitted.
+                </p>
+              </div>
+            )}
 
           {/* Artist Registrations */}
-          {!loading && !error && activeTab === 'artists' && registrations.length > 0 && (
-            <div className="space-y-6">
-              {registrations.map((registration) => (
-                <Card
-                  key={registration.id}
-                  className="border-tent-blue/20 hover:border-tent-blue/40 transition-colors"
-                >
-                  <CardHeader>
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <CardTitle className="text-xl font-bold">
-                          {registration.artistName}
-                        </CardTitle>
-                        <p className="text-muted-foreground">
-                          {registration.legalName}
-                        </p>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <Badge className="bg-tent-purple/20 text-tent-purple border-tent-purple/30">
-                          {registration.genre}
-                        </Badge>
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          onClick={() => toggleCardExpansion(registration.id)}
-                          className="border-tent-blue/30 hover:bg-tent-blue/10"
-                        >
-                          <Eye className="w-4 h-4 mr-1" />
-                          {expandedCards.has(registration.id) ? "Less" : "More"}
-                        </Button>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid md:grid-cols-2 gap-4 mb-4">
-                      <div className="flex items-center">
-                        <Mail className="w-4 h-4 mr-2 text-tent-blue" />
-                        <span className="text-sm">{registration.email}</span>
-                      </div>
-                      <div className="flex items-center">
-                        <Phone className="w-4 h-4 mr-2 text-tent-green" />
-                        <span className="text-sm">{registration.phone}</span>
-                      </div>
-                      <div className="flex items-center">
-                        <Music className="w-4 h-4 mr-2 text-tent-purple" />
-                        <span className="text-sm">
-                          {registration.yearsActive} years active
-                        </span>
-                      </div>
-                      <div className="flex items-center">
-                        <Calendar className="w-4 h-4 mr-2 text-tent-orange" />
-                        <span className="text-sm">
-                          {formatDate(registration.timestamp)}
-                        </span>
-                      </div>
-                    </div>
-
-                    {registration.selectedFestivals.length > 0 && (
-                      <div className="mb-4">
-                        <h4 className="font-medium mb-2">
-                          Selected Festivals:
-                        </h4>
-                        <div className="flex flex-wrap gap-2">
-                          {registration.selectedFestivals.map(
-                            (festival, index) => (
-                              <Badge
-                                key={index}
-                                className="bg-tent-orange/20 text-tent-orange border-tent-orange/30"
-                              >
-                                {festival}
-                              </Badge>
-                            ),
-                          )}
-                        </div>
-                      </div>
-                    )}
-
-                    {expandedCards.has(registration.id) && (
-                      <div className="border-t border-border/50 pt-4 space-y-4">
+          {!loading &&
+            !error &&
+            activeTab === "artists" &&
+            registrations.length > 0 && (
+              <div className="space-y-6">
+                {registrations.map((registration) => (
+                  <Card
+                    key={registration.id}
+                    className="border-tent-blue/20 hover:border-tent-blue/40 transition-colors"
+                  >
+                    <CardHeader>
+                      <div className="flex items-center justify-between">
                         <div>
-                          <h4 className="font-medium mb-2">
-                            Management Contact:
-                          </h4>
-                          <div className="grid md:grid-cols-2 gap-2 text-sm text-muted-foreground">
-                            <div>Manager: {registration.managerName}</div>
-                            <div>Email: {registration.managementEmail}</div>
-                          </div>
+                          <CardTitle className="text-xl font-bold">
+                            {registration.artistName}
+                          </CardTitle>
+                          <p className="text-muted-foreground">
+                            {registration.legalName}
+                          </p>
                         </div>
-
-                        {registration.specialRequests && (
-                          <div>
-                            <h4 className="font-medium mb-2">
-                              Special Requests:
-                            </h4>
-                            <p className="text-sm text-muted-foreground bg-background/50 p-3 rounded-lg">
-                              {registration.specialRequests}
-                            </p>
-                          </div>
-                        )}
-
-                        <div className="flex items-center justify-between text-xs text-muted-foreground">
-                          <span>Registration ID: {registration.id}</span>
-                          <span>
-                            Terms Agreed:{" "}
-                            {registration.agreeToTerms ? "✓" : "✗"}
+                        <div className="flex items-center space-x-2">
+                          <Badge className="bg-tent-purple/20 text-tent-purple border-tent-purple/30">
+                            {registration.genre}
+                          </Badge>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={() => toggleCardExpansion(registration.id)}
+                            className="border-tent-blue/30 hover:bg-tent-blue/10"
+                          >
+                            <Eye className="w-4 h-4 mr-1" />
+                            {expandedCards.has(registration.id)
+                              ? "Less"
+                              : "More"}
+                          </Button>
+                        </div>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="grid md:grid-cols-2 gap-4 mb-4">
+                        <div className="flex items-center">
+                          <Mail className="w-4 h-4 mr-2 text-tent-blue" />
+                          <span className="text-sm">{registration.email}</span>
+                        </div>
+                        <div className="flex items-center">
+                          <Phone className="w-4 h-4 mr-2 text-tent-green" />
+                          <span className="text-sm">{registration.phone}</span>
+                        </div>
+                        <div className="flex items-center">
+                          <Music className="w-4 h-4 mr-2 text-tent-purple" />
+                          <span className="text-sm">
+                            {registration.yearsActive} years active
+                          </span>
+                        </div>
+                        <div className="flex items-center">
+                          <Calendar className="w-4 h-4 mr-2 text-tent-orange" />
+                          <span className="text-sm">
+                            {formatDate(registration.timestamp)}
                           </span>
                         </div>
                       </div>
-                    )}
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          )}
 
-          {/* Partner Registrations */}
-          {!loading && !error && activeTab === 'partners' && partnerRegistrations.length > 0 && (
-            <div className="space-y-6">
-              {partnerRegistrations.map((partner) => (
-                <Card
-                  key={partner.id}
-                  className="border-tent-blue/20 hover:border-tent-blue/40 transition-colors"
-                >
-                  <CardHeader>
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <CardTitle className="text-xl font-bold">
-                          {partner.companyName}
-                        </CardTitle>
-                        <p className="text-muted-foreground">
-                          {partner.product}
-                        </p>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <Badge className="bg-tent-orange/20 text-tent-orange border-tent-orange/30">
-                          PARTNER
-                        </Badge>
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          onClick={() => toggleCardExpansion(partner.id)}
-                          className="border-tent-blue/30 hover:bg-tent-blue/10"
-                        >
-                          <Eye className="w-4 h-4 mr-1" />
-                          {expandedCards.has(partner.id) ? "Less" : "More"}
-                        </Button>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid md:grid-cols-2 gap-4 mb-4">
-                      <div className="flex items-center">
-                        <Mail className="w-4 h-4 mr-2 text-tent-blue" />
-                        <span className="text-sm">{partner.contactEmail}</span>
-                      </div>
-                      <div className="flex items-center">
-                        <Phone className="w-4 h-4 mr-2 text-tent-green" />
-                        <span className="text-sm">{partner.contactPhone}</span>
-                      </div>
-                      <div className="flex items-center">
-                        <Briefcase className="w-4 h-4 mr-2 text-tent-purple" />
-                        <span className="text-sm">
-                          {partner.contactName} - {partner.contactTitle}
-                        </span>
-                      </div>
-                      <div className="flex items-center">
-                        <Calendar className="w-4 h-4 mr-2 text-tent-orange" />
-                        <span className="text-sm">
-                          {formatDate(partner.timestamp)}
-                        </span>
-                      </div>
-                    </div>
-
-                    {partner.selectedFestivals.length > 0 && (
-                      <div className="mb-4">
-                        <h4 className="font-medium mb-2">
-                          Interested Festivals:
-                        </h4>
-                        <div className="flex flex-wrap gap-2">
-                          {partner.selectedFestivals.map(
-                            (festival, index) => (
-                              <Badge
-                                key={index}
-                                className="bg-tent-orange/20 text-tent-orange border-tent-orange/30"
-                              >
-                                {festival}
-                              </Badge>
-                            ),
-                          )}
+                      {registration.selectedFestivals.length > 0 && (
+                        <div className="mb-4">
+                          <h4 className="font-medium mb-2">
+                            Selected Festivals:
+                          </h4>
+                          <div className="flex flex-wrap gap-2">
+                            {registration.selectedFestivals.map(
+                              (festival, index) => (
+                                <Badge
+                                  key={index}
+                                  className="bg-tent-orange/20 text-tent-orange border-tent-orange/30"
+                                >
+                                  {festival}
+                                </Badge>
+                              ),
+                            )}
+                          </div>
                         </div>
-                      </div>
-                    )}
+                      )}
 
-                    {expandedCards.has(partner.id) && (
-                      <div className="border-t border-border/50 pt-4 space-y-4">
-                        {partner.message && (
+                      {expandedCards.has(registration.id) && (
+                        <div className="border-t border-border/50 pt-4 space-y-4">
                           <div>
                             <h4 className="font-medium mb-2">
-                              Partnership Message:
+                              Management Contact:
                             </h4>
-                            <p className="text-sm text-muted-foreground bg-background/50 p-3 rounded-lg">
-                              {partner.message}
-                            </p>
+                            <div className="grid md:grid-cols-2 gap-2 text-sm text-muted-foreground">
+                              <div>Manager: {registration.managerName}</div>
+                              <div>Email: {registration.managementEmail}</div>
+                            </div>
                           </div>
-                        )}
 
-                        <div className="flex items-center justify-between text-xs text-muted-foreground">
-                          <span>Partner ID: {partner.id}</span>
-                          <span>Type: Brand Partnership</span>
+                          {registration.specialRequests && (
+                            <div>
+                              <h4 className="font-medium mb-2">
+                                Special Requests:
+                              </h4>
+                              <p className="text-sm text-muted-foreground bg-background/50 p-3 rounded-lg">
+                                {registration.specialRequests}
+                              </p>
+                            </div>
+                          )}
+
+                          <div className="flex items-center justify-between text-xs text-muted-foreground">
+                            <span>Registration ID: {registration.id}</span>
+                            <span>
+                              Terms Agreed:{" "}
+                              {registration.agreeToTerms ? "✓" : "✗"}
+                            </span>
+                          </div>
+                        </div>
+                      )}
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            )}
+
+          {/* Partner Registrations */}
+          {!loading &&
+            !error &&
+            activeTab === "partners" &&
+            partnerRegistrations.length > 0 && (
+              <div className="space-y-6">
+                {partnerRegistrations.map((partner) => (
+                  <Card
+                    key={partner.id}
+                    className="border-tent-blue/20 hover:border-tent-blue/40 transition-colors"
+                  >
+                    <CardHeader>
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <CardTitle className="text-xl font-bold">
+                            {partner.companyName}
+                          </CardTitle>
+                          <p className="text-muted-foreground">
+                            {partner.product}
+                          </p>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <Badge className="bg-tent-orange/20 text-tent-orange border-tent-orange/30">
+                            PARTNER
+                          </Badge>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={() => toggleCardExpansion(partner.id)}
+                            className="border-tent-blue/30 hover:bg-tent-blue/10"
+                          >
+                            <Eye className="w-4 h-4 mr-1" />
+                            {expandedCards.has(partner.id) ? "Less" : "More"}
+                          </Button>
                         </div>
                       </div>
-                    )}
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          )}
+                    </CardHeader>
+                    <CardContent>
+                      <div className="grid md:grid-cols-2 gap-4 mb-4">
+                        <div className="flex items-center">
+                          <Mail className="w-4 h-4 mr-2 text-tent-blue" />
+                          <span className="text-sm">
+                            {partner.contactEmail}
+                          </span>
+                        </div>
+                        <div className="flex items-center">
+                          <Phone className="w-4 h-4 mr-2 text-tent-green" />
+                          <span className="text-sm">
+                            {partner.contactPhone}
+                          </span>
+                        </div>
+                        <div className="flex items-center">
+                          <Briefcase className="w-4 h-4 mr-2 text-tent-purple" />
+                          <span className="text-sm">
+                            {partner.contactName} - {partner.contactTitle}
+                          </span>
+                        </div>
+                        <div className="flex items-center">
+                          <Calendar className="w-4 h-4 mr-2 text-tent-orange" />
+                          <span className="text-sm">
+                            {formatDate(partner.timestamp)}
+                          </span>
+                        </div>
+                      </div>
+
+                      {partner.selectedFestivals.length > 0 && (
+                        <div className="mb-4">
+                          <h4 className="font-medium mb-2">
+                            Interested Festivals:
+                          </h4>
+                          <div className="flex flex-wrap gap-2">
+                            {partner.selectedFestivals.map(
+                              (festival, index) => (
+                                <Badge
+                                  key={index}
+                                  className="bg-tent-orange/20 text-tent-orange border-tent-orange/30"
+                                >
+                                  {festival}
+                                </Badge>
+                              ),
+                            )}
+                          </div>
+                        </div>
+                      )}
+
+                      {expandedCards.has(partner.id) && (
+                        <div className="border-t border-border/50 pt-4 space-y-4">
+                          {partner.message && (
+                            <div>
+                              <h4 className="font-medium mb-2">
+                                Partnership Message:
+                              </h4>
+                              <p className="text-sm text-muted-foreground bg-background/50 p-3 rounded-lg">
+                                {partner.message}
+                              </p>
+                            </div>
+                          )}
+
+                          <div className="flex items-center justify-between text-xs text-muted-foreground">
+                            <span>Partner ID: {partner.id}</span>
+                            <span>Type: Brand Partnership</span>
+                          </div>
+                        </div>
+                      )}
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            )}
         </div>
       </section>
 
