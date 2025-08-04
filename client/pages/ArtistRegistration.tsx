@@ -414,7 +414,8 @@ export default function ArtistRegistration() {
 
               <Button
                 onClick={handleInviteCodeSubmit}
-                className="w-full bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90 text-lg py-6"
+                className="w-full text-lg py-6"
+                style={{ backgroundColor: "#000000", color: "#FFFFFF" }}
               >
                 <ArrowRight className="w-5 h-5 mr-2" />
                 Access Registration
