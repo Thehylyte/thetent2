@@ -19,7 +19,9 @@ import {
   X,
   Building2,
   Briefcase,
+  Download,
 } from "lucide-react";
+import * as XLSX from 'xlsx';
 import { useState, useEffect } from "react";
 
 interface Registration {
@@ -130,6 +132,54 @@ export default function AdminRegistrations() {
     return new Date(timestamp).toLocaleString();
   };
 
+  const downloadExcel = () => {
+    // Create a new workbook
+    const workbook = XLSX.utils.book_new();
+
+    // Prepare artist registrations data
+    const artistData = registrations.map(reg => ({
+      'Artist Name': reg.artistName,
+      'Legal Name': reg.legalName,
+      'Email': reg.email,
+      'Phone': reg.phone,
+      'Manager Name': reg.managerName,
+      'Manager Email': reg.managementEmail,
+      'Genre': reg.genre,
+      'Years Active': reg.yearsActive,
+      'Selected Festivals': reg.selectedFestivals.join(', '),
+      'Special Requests': reg.specialRequests,
+      'Terms Agreed': reg.agreeToTerms ? 'Yes' : 'No',
+      'Submission Date': formatDate(reg.timestamp),
+      'Registration ID': reg.id
+    }));
+
+    // Prepare partner registrations data
+    const partnerData = partnerRegistrations.map(partner => ({
+      'Company Name': partner.companyName,
+      'Product/Service': partner.product,
+      'Contact Name': partner.contactName,
+      'Contact Title': partner.contactTitle,
+      'Contact Email': partner.contactEmail,
+      'Contact Phone': partner.contactPhone,
+      'Selected Festivals': partner.selectedFestivals.join(', '),
+      'Message': partner.message,
+      'Submission Date': formatDate(partner.timestamp),
+      'Partner ID': partner.id
+    }));
+
+    // Create worksheets
+    const artistWorksheet = XLSX.utils.json_to_sheet(artistData);
+    const partnerWorksheet = XLSX.utils.json_to_sheet(partnerData);
+
+    // Add worksheets to workbook
+    XLSX.utils.book_append_sheet(workbook, artistWorksheet, 'Artist Registrations');
+    XLSX.utils.book_append_sheet(workbook, partnerWorksheet, 'Brand Partners');
+
+    // Generate Excel file and download
+    const fileName = `The_Tent_Registrations_${new Date().toISOString().split('T')[0]}.xlsx`;
+    XLSX.writeFile(workbook, fileName);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-tent-blue/5">
       {/* Navigation */}
@@ -156,13 +206,23 @@ export default function AdminRegistrations() {
               >
                 Back to Site
               </a>
-              <Button
-                onClick={fetchRegistrations}
-                className="bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90"
-              >
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Refresh
-              </Button>
+              <div className="flex gap-2">
+                <Button
+                  onClick={fetchRegistrations}
+                  className="bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90"
+                >
+                  <RefreshCw className="w-4 h-4 mr-2" />
+                  Refresh
+                </Button>
+                <Button
+                  onClick={downloadExcel}
+                  variant="outline"
+                  className="border-tent-blue/30 hover:bg-tent-blue/10"
+                >
+                  <Download className="w-4 h-4 mr-2" />
+                  Download Excel
+                </Button>
+              </div>
             </div>
 
             {/* Mobile menu button */}
@@ -198,6 +258,17 @@ export default function AdminRegistrations() {
                 >
                   <RefreshCw className="w-4 h-4 mr-2" />
                   Refresh
+                </Button>
+                <Button
+                  onClick={() => {
+                    downloadExcel();
+                    setIsMobileMenuOpen(false);
+                  }}
+                  variant="outline"
+                  className="border-tent-blue/30 hover:bg-tent-blue/10 mx-2"
+                >
+                  <Download className="w-4 h-4 mr-2" />
+                  Download Excel
                 </Button>
               </div>
             </div>
