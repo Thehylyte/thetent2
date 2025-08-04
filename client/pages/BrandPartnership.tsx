@@ -364,14 +364,14 @@ export default function BrandPartnership() {
               </div>
               <div
                 className="prose prose-lg max-w-none leading-relaxed"
-                style={{ color: "#F8F5EE" }}
+                style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}
               >
                 <p
                   className="text-lg md:text-xl mb-6"
                   style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}
                 >
                   Partnering with The Tent provides your brand with{" "}
-                  <span className="font-semibold" style={{ color: "#F8F5EE" }}>
+                  <span className="font-semibold" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>
                     direct access to some of the most influential talent in the
                     world
                   </span>{" "}
@@ -386,7 +386,7 @@ export default function BrandPartnership() {
                   style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}
                 >
                   Through our partnerships, brands gain access to{" "}
-                  <span className="font-semibold" style={{ color: "#F8F5EE" }}>
+                  <span className="font-semibold" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>
                     premium content opportunities
                   </span>{" "}
                   that can be utilized across social media platforms to showcase
@@ -396,9 +396,9 @@ export default function BrandPartnership() {
                   valuable user-generated content that resonates with millions
                   of followers.
                 </p>
-                <p className="text-lg md:text-xl" style={{ color: "#F8F5EE" }}>
+                <p className="text-lg md:text-xl" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>
                   Beyond exposure, The Tent facilitates{" "}
-                  <span className="font-semibold" style={{ color: "#F8F5EE" }}>
+                  <span className="font-semibold" style={{ color: "#2E2E2E", fontFamily: "Inter", fontWeight: "300" }}>
                     direct product education opportunities
                   </span>{" "}
                   where brands can personally introduce their innovations to
