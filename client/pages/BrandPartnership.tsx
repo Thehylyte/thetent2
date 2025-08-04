@@ -280,7 +280,10 @@ export default function BrandPartnership() {
               </Badge>
               <h1
                 className="text-4xl md:text-6xl font-bold mb-6 leading-tight uppercase drop-shadow-2xl"
-                style={{ color: "#F8F5EE" }}
+                style={{
+                  color: "#F8F5EE",
+                  fontFamily: "Monument"
+                }}
               >
                 Become a Brand Partner
               </h1>
