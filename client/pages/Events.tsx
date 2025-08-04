@@ -250,25 +250,34 @@ export default function Events() {
         </nav>
 
         {/* Hero Section */}
-        <section className="pt-24 pb-16 px-6">
-          <div className="container mx-auto">
-            <div className="text-center mb-16">
-              <Badge
-                className="mb-6 bg-gradient-to-r from-tent-orange/10 to-tent-pink/10 border-tent-purple/20 hover:from-tent-orange/20 hover:to-tent-pink/20"
-                style={{ color: "#A2B29F" }}
-              >
-                <Calendar className="w-4 h-4 mr-2" />
-                2025 Festival Season
-              </Badge>
+        <section className="relative pt-32 pb-16 min-h-screen flex items-center">
+          {/* Full Width Background Image */}
+          <div className="absolute inset-0 z-0">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2F385904815cc648158dcbd0a3c251c628?format=webp&width=800"
+              alt="Festival scene with crowd and stage"
+              className="w-full h-full object-cover"
+            />
+            {/* Dark overlay for better text readability */}
+            <div className="absolute inset-0 bg-black/40"></div>
+          </div>
+
+          {/* Overlaid Content */}
+          <div className="relative z-10 container mx-auto px-6">
+            <div className="text-center">
               <h1
-                className="text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase"
+                className="text-4xl md:text-6xl font-bold mb-6 leading-tight uppercase drop-shadow-2xl"
                 style={{ color: "#F8F5EE" }}
               >
                 Upcoming Events
               </h1>
               <p
-                className="text-xl md:text-2xl max-w-3xl mx-auto mb-8"
-                style={{ color: "#F8F5EE" }}
+                className="text-xl md:text-2xl max-w-4xl mx-auto drop-shadow-lg"
+                style={{
+                  color: "#F8F5EE",
+                  fontFamily: "Inter",
+                  fontWeight: "300"
+                }}
               >
                 Join The Tent at the most prestigious music festivals across the
                 country. Your sanctuary awaits at every stage.
