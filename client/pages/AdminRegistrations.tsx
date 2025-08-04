@@ -17,6 +17,8 @@ import {
   Eye,
   Menu,
   X,
+  Building2,
+  Briefcase,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -36,43 +38,74 @@ interface Registration {
   agreeToTerms: boolean;
 }
 
+interface PartnerRegistration {
+  id: string;
+  companyName: string;
+  product: string;
+  contactName: string;
+  contactTitle: string;
+  contactPhone: string;
+  contactEmail: string;
+  selectedFestivals: string[];
+  message: string;
+  timestamp: string;
+}
+
 export default function AdminRegistrations() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [registrations, setRegistrations] = useState<Registration[]>([]);
+  const [partnerRegistrations, setPartnerRegistrations] = useState<PartnerRegistration[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [expandedCards, setExpandedCards] = useState<Set<string>>(new Set());
+  const [activeTab, setActiveTab] = useState<'artists' | 'partners'>('artists');
 
   const fetchRegistrations = async () => {
     setLoading(true);
     setError("");
 
     try {
-      const response = await fetch("/api/artist-registrations");
+      // Fetch both artist and partner registrations
+      const [artistResponse, partnerResponse] = await Promise.allSettled([
+        fetch("/api/artist-registrations"),
+        fetch("/api/partner-registrations")
+      ]);
 
-      if (!response.ok) {
-        if (response.status === 404) {
-          setError(
-            "Admin API is currently unavailable due to deployment configuration. Please check the DEPLOYMENT_FIX.md guide or contact technical support. Registrations are being handled manually at jg@thetent.club",
-          );
-          return;
+      // Handle artist registrations
+      if (artistResponse.status === 'fulfilled' && artistResponse.value.ok) {
+        const artistData = await artistResponse.value.json();
+        if (artistData.success) {
+          setRegistrations(artistData.registrations);
         }
-        throw new Error(`HTTP ${response.status}`);
       }
 
-      const data = await response.json();
+      // Handle partner registrations (mock data for now)
+      setPartnerRegistrations([
+        {
+          id: "partner-1",
+          companyName: "Example Brand Co.",
+          product: "Premium Beverages",
+          contactName: "Jane Smith",
+          contactTitle: "Marketing Director",
+          contactPhone: "(555) 123-4567",
+          contactEmail: "jane@examplebrand.com",
+          selectedFestivals: ["Lollapalooza", "Riot Fest"],
+          message: "Interested in showcasing our premium beverage line at VIP areas.",
+          timestamp: new Date().toISOString()
+        }
+      ]);
 
-      if (data.success) {
-        setRegistrations(data.registrations);
-      } else {
+      // Check if any API failed
+      if (artistResponse.status === 'rejected' ||
+          (artistResponse.status === 'fulfilled' && !artistResponse.value.ok)) {
         setError(
-          "Failed to fetch registrations: " + (data.message || "Unknown error"),
+          "Admin API is currently unavailable due to deployment configuration. Some registrations may not display. Contact jg@thetent.club for manual access."
         );
       }
     } catch (err) {
       console.error("Admin fetch error:", err);
       setError(
-        "Error connecting to server. API endpoints may not be available in this deployment configuration.",
+        "Error connecting to server. API endpoints may not be available in this deployment configuration."
       );
     } finally {
       setLoading(false);
@@ -177,16 +210,43 @@ export default function AdminRegistrations() {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-tent-blue via-tent-purple to-tent-pink bg-clip-text text-transparent">
-              Artist Registrations
+              Admin Dashboard
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-              View and manage all artist registration submissions
+              View and manage all registration submissions
             </p>
+
+            {/* Tab Navigation */}
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <button
+                onClick={() => setActiveTab('artists')}
+                className={`px-6 py-3 rounded-lg font-medium transition-all ${
+                  activeTab === 'artists'
+                    ? 'bg-tent-purple text-white'
+                    : 'bg-white/10 text-muted-foreground hover:bg-white/20'
+                }`}
+              >
+                <Music className="w-4 h-4 mr-2 inline" />
+                Artist Registrations ({registrations.length})
+              </button>
+              <button
+                onClick={() => setActiveTab('partners')}
+                className={`px-6 py-3 rounded-lg font-medium transition-all ${
+                  activeTab === 'partners'
+                    ? 'bg-tent-purple text-white'
+                    : 'bg-white/10 text-muted-foreground hover:bg-white/20'
+                }`}
+              >
+                <Building2 className="w-4 h-4 mr-2 inline" />
+                Brand Partners ({partnerRegistrations.length})
+              </button>
+            </div>
+
             <div className="flex items-center justify-center gap-6 text-sm">
               <div className="flex items-center">
                 <Users className="w-4 h-4 mr-2 text-tent-purple" />
                 <span className="font-medium">
-                  {registrations.length} Total Registrations
+                  {activeTab === 'artists' ? registrations.length : partnerRegistrations.length} Total {activeTab === 'artists' ? 'Artists' : 'Partners'}
                 </span>
               </div>
               <div className="flex items-center">
@@ -215,19 +275,26 @@ export default function AdminRegistrations() {
             </div>
           )}
 
-          {!loading && !error && registrations.length === 0 && (
+          {!loading && !error &&
+           ((activeTab === 'artists' && registrations.length === 0) ||
+            (activeTab === 'partners' && partnerRegistrations.length === 0)) && (
             <div className="text-center py-12">
-              <Users className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
+              {activeTab === 'artists' ? (
+                <Music className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
+              ) : (
+                <Building2 className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
+              )}
               <h3 className="text-xl font-semibold mb-2">
-                No Registrations Yet
+                No {activeTab === 'artists' ? 'Artist' : 'Partner'} Registrations Yet
               </h3>
               <p className="text-muted-foreground">
-                Artist registrations will appear here once submitted.
+                {activeTab === 'artists' ? 'Artist' : 'Brand partner'} registrations will appear here once submitted.
               </p>
             </div>
           )}
 
-          {!loading && !error && registrations.length > 0 && (
+          {/* Artist Registrations */}
+          {!loading && !error && activeTab === 'artists' && registrations.length > 0 && (
             <div className="space-y-6">
               {registrations.map((registration) => (
                 <Card
@@ -333,6 +400,109 @@ export default function AdminRegistrations() {
                             Terms Agreed:{" "}
                             {registration.agreeToTerms ? "✓" : "✗"}
                           </span>
+                        </div>
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          )}
+
+          {/* Partner Registrations */}
+          {!loading && !error && activeTab === 'partners' && partnerRegistrations.length > 0 && (
+            <div className="space-y-6">
+              {partnerRegistrations.map((partner) => (
+                <Card
+                  key={partner.id}
+                  className="border-tent-blue/20 hover:border-tent-blue/40 transition-colors"
+                >
+                  <CardHeader>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <CardTitle className="text-xl font-bold">
+                          {partner.companyName}
+                        </CardTitle>
+                        <p className="text-muted-foreground">
+                          {partner.product}
+                        </p>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Badge className="bg-tent-orange/20 text-tent-orange border-tent-orange/30">
+                          PARTNER
+                        </Badge>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          onClick={() => toggleCardExpansion(partner.id)}
+                          className="border-tent-blue/30 hover:bg-tent-blue/10"
+                        >
+                          <Eye className="w-4 h-4 mr-1" />
+                          {expandedCards.has(partner.id) ? "Less" : "More"}
+                        </Button>
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid md:grid-cols-2 gap-4 mb-4">
+                      <div className="flex items-center">
+                        <Mail className="w-4 h-4 mr-2 text-tent-blue" />
+                        <span className="text-sm">{partner.contactEmail}</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Phone className="w-4 h-4 mr-2 text-tent-green" />
+                        <span className="text-sm">{partner.contactPhone}</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Briefcase className="w-4 h-4 mr-2 text-tent-purple" />
+                        <span className="text-sm">
+                          {partner.contactName} - {partner.contactTitle}
+                        </span>
+                      </div>
+                      <div className="flex items-center">
+                        <Calendar className="w-4 h-4 mr-2 text-tent-orange" />
+                        <span className="text-sm">
+                          {formatDate(partner.timestamp)}
+                        </span>
+                      </div>
+                    </div>
+
+                    {partner.selectedFestivals.length > 0 && (
+                      <div className="mb-4">
+                        <h4 className="font-medium mb-2">
+                          Interested Festivals:
+                        </h4>
+                        <div className="flex flex-wrap gap-2">
+                          {partner.selectedFestivals.map(
+                            (festival, index) => (
+                              <Badge
+                                key={index}
+                                className="bg-tent-orange/20 text-tent-orange border-tent-orange/30"
+                              >
+                                {festival}
+                              </Badge>
+                            ),
+                          )}
+                        </div>
+                      </div>
+                    )}
+
+                    {expandedCards.has(partner.id) && (
+                      <div className="border-t border-border/50 pt-4 space-y-4">
+                        {partner.message && (
+                          <div>
+                            <h4 className="font-medium mb-2">
+                              Partnership Message:
+                            </h4>
+                            <p className="text-sm text-muted-foreground bg-background/50 p-3 rounded-lg">
+                              {partner.message}
+                            </p>
+                          </div>
+                        )}
+
+                        <div className="flex items-center justify-between text-xs text-muted-foreground">
+                          <span>Partner ID: {partner.id}</span>
+                          <span>Type: Brand Partnership</span>
                         </div>
                       </div>
                     )}
