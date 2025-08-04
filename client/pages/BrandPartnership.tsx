@@ -351,9 +351,9 @@ export default function BrandPartnership() {
         </section>
 
         {/* Detailed Benefits Section */}
-        <section className="py-16 px-6">
-          <div className="container mx-auto max-w-5xl">
-            <div className="rounded-3xl p-8 md:p-12 border border-tent-purple/10" style={{ backgroundColor: "#A2B29F" }}>
+        <section className="py-16">
+          <div className="w-full">
+            <div className="p-8 md:p-12 border-0" style={{ backgroundColor: "#A2B29F" }}>
               <div className="text-center mb-8">
                 <h2
                   className="text-3xl md:text-4xl font-bold mb-4 uppercase"
