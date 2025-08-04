@@ -169,7 +169,7 @@ export default function Index() {
             onClick={() => {
               const password = prompt("Enter admin password:");
               if (password === "admin123") {
-                window.location.href = "/admin-registrations";
+                window.location.href = "/admin/registrations";
               } else if (password !== null) {
                 alert("Incorrect password");
               }
