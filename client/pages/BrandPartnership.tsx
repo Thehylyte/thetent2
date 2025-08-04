@@ -296,17 +296,16 @@ export default function BrandPartnership() {
           </div>
         </section>
 
-        {/* Benefits Section - Floating Parallax Effect */}
-        <section className="relative -mt-32 mb-16 px-6 z-20">
+        {/* Benefits Section */}
+        <section className="py-16 px-6 bg-gradient-to-r from-tent-purple/10 via-tent-blue/10 to-tent-pink/10">
           <div className="container mx-auto">
-            <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 backdrop-blur-sm border border-white/20">
-              <h2
-                className="text-3xl md:text-4xl font-bold mb-12 text-center"
-                style={{ color: "#2E2E2E" }}
-              >
-                THE PERKS
-              </h2>
-              <div className="grid md:grid-cols-3 gap-8">
+            <h2
+              className="text-3xl md:text-4xl font-bold mb-12 text-center"
+              style={{ color: "white" }}
+            >
+              THE PERKS
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
               <Card className="border-tent-blue/20 hover:border-tent-blue/40 transition-colors">
                 <CardContent className="p-6 text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-tent-blue to-tent-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -349,7 +348,6 @@ export default function BrandPartnership() {
                   </p>
                 </CardContent>
               </Card>
-              </div>
             </div>
           </div>
         </section>
