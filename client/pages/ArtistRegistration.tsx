@@ -13,8 +13,39 @@ import {
   CheckCircle,
   Menu,
   X,
+  Key,
+  Lock,
 } from "lucide-react";
 import { useState } from "react";
+
+// List of 100 valid invite codes
+const VALID_INVITE_CODES = [
+  'TENT2024-A1B2C3', 'FEST-VIP001', 'ARTIST-PASS-001', 'STAGE-ACCESS-101', 'MUSIC-KEY-2024',
+  'VIP-ARTIST-007', 'BACKSTAGE-001', 'PERFORMER-GOLD', 'ARTIST-ELITE-001', 'TENT-PREMIUM-01',
+  'FESTIVAL-VIP-202', 'MUSIC-PASS-2024', 'ARTIST-GOLD-003', 'STAGE-PASS-404', 'VIP-CODE-2024',
+  'PERFORMER-001', 'ARTIST-KEY-007', 'BACKSTAGE-VIP-1', 'MUSIC-ELITE-24', 'FEST-ARTIST-100',
+  'TENT-ACCESS-201', 'VIP-MUSIC-2024', 'ARTIST-STAGE-01', 'PREMIUM-PASS-24', 'MUSIC-VIP-007',
+  'ARTIST-FEST-101', 'STAGE-VIP-2024', 'PERFORMER-KEY-1', 'BACKSTAGE-GOLD', 'VIP-ARTIST-24',
+  'MUSIC-ACCESS-01', 'FEST-PREMIUM-1', 'ARTIST-ELITE-24', 'STAGE-KEY-2024', 'VIP-PASS-101',
+  'PERFORMER-VIP-1', 'ARTIST-GOLD-24', 'BACKSTAGE-KEY', 'MUSIC-STAGE-01', 'FEST-VIP-2024',
+  'TENT-ARTIST-007', 'VIP-ELITE-2024', 'PERFORMER-GOLD-1', 'STAGE-ARTIST-24', 'MUSIC-PREMIUM',
+  'ARTIST-VIP-101', 'FEST-KEY-2024', 'BACKSTAGE-PASS', 'VIP-STAGE-007', 'PERFORMER-ACCESS',
+  'MUSIC-ARTIST-24', 'TENT-VIP-2024', 'STAGE-ELITE-01', 'ARTIST-ACCESS-1', 'VIP-PERFORMER-24',
+  'FEST-STAGE-2024', 'BACKSTAGE-VIP', 'MUSIC-KEY-101', 'ARTIST-PREMIUM', 'VIP-FEST-2024',
+  'PERFORMER-STAGE', 'TENT-KEY-2024', 'STAGE-VIP-101', 'ARTIST-BACKSTAGE', 'MUSIC-VIP-101',
+  'FEST-ARTIST-24', 'VIP-ACCESS-007', 'PERFORMER-KEY', 'STAGE-PREMIUM', 'ARTIST-VIP-007',
+  'BACKSTAGE-ELITE', 'MUSIC-FEST-24', 'TENT-PREMIUM', 'VIP-STAGE-101', 'PERFORMER-VIP',
+  'ARTIST-KEY-101', 'STAGE-ACCESS-24', 'MUSIC-ELITE-01', 'FEST-VIP-101', 'VIP-ARTIST-KEY',
+  'PERFORMER-GOLD', 'BACKSTAGE-007', 'TENT-STAGE-24', 'ARTIST-FEST-07', 'VIP-MUSIC-101',
+  'STAGE-PERFORMER', 'MUSIC-ACCESS-7', 'FEST-PREMIUM', 'ARTIST-STAGE-7', 'VIP-KEY-2024',
+  'PERFORMER-ELITE', 'BACKSTAGE-101', 'TENT-ARTIST-24', 'STAGE-VIP-007', 'MUSIC-PREMIUM-1',
+  'ARTIST-ACCESS-7', 'FEST-STAGE-101', 'VIP-PERFORMER', 'PERFORMER-007', 'BACKSTAGE-KEY-1',
+  'TENT-VIP-101', 'STAGE-ARTIST-7', 'MUSIC-VIP-007', 'ARTIST-ELITE-7', 'FEST-ACCESS-24',
+  'VIP-STAGE-007', 'PERFORMER-KEY-7', 'BACKSTAGE-VIP-7', 'TENT-PREMIUM-7', 'STAGE-KEY-101',
+  'MUSIC-ARTIST-7', 'ARTIST-VIP-024', 'FEST-ELITE-2024', 'VIP-ACCESS-101', 'PERFORMER-STAGE-7',
+  'BACKSTAGE-GOLD-7', 'TENT-KEY-101', 'STAGE-VIP-024', 'MUSIC-FEST-007', 'ARTIST-PREMIUM-7',
+  'VIP-PERFORMER-7', 'FEST-STAGE-007', 'PERFORMER-ACCESS-7', 'BACKSTAGE-ELITE-7', 'TENT-ARTIST-101'
+];
 
 export default function ArtistRegistration() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -25,6 +56,11 @@ export default function ArtistRegistration() {
     email: string;
     password: string;
   } | null>(null);
+
+  // Invite code state
+  const [showInviteOverlay, setShowInviteOverlay] = useState(true);
+  const [inviteCode, setInviteCode] = useState("");
+  const [inviteError, setInviteError] = useState("");
 
   // Form state
   const [formData, setFormData] = useState({
@@ -319,8 +355,83 @@ export default function ArtistRegistration() {
     },
   ];
 
+  const handleInviteCodeSubmit = () => {
+    if (!inviteCode.trim()) {
+      setInviteError("Please enter an invite code");
+      return;
+    }
+
+    if (VALID_INVITE_CODES.includes(inviteCode.trim().toUpperCase())) {
+      setShowInviteOverlay(false);
+      setInviteError("");
+    } else {
+      setInviteError("Invalid invite code. Please check your code and try again.");
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-tent-blue/5">
+      {/* Invite Code Overlay */}
+      {showInviteOverlay && (
+        <div className="fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl border border-border/20">
+            <div className="text-center mb-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-tent-purple to-tent-pink rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Key className="w-8 h-8 text-white" />
+              </div>
+              <h2 className="text-2xl font-bold mb-2" style={{ color: "#2E2E2E" }}>
+                Invite Code Required
+              </h2>
+              <p className="text-muted-foreground">
+                Please enter your exclusive invite code to access artist registration.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium mb-2" style={{ color: "#2E2E2E" }}>
+                  Invite Code
+                </label>
+                <div className="relative">
+                  <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                  <input
+                    type="text"
+                    value={inviteCode}
+                    onChange={(e) => {
+                      setInviteCode(e.target.value.toUpperCase());
+                      setInviteError("");
+                    }}
+                    onKeyPress={(e) => e.key === 'Enter' && handleInviteCodeSubmit()}
+                    className="w-full pl-12 pr-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-tent-purple focus:border-transparent text-center font-mono tracking-wider"
+                    placeholder="ENTER-YOUR-CODE"
+                    maxLength={20}
+                  />
+                </div>
+                {inviteError && (
+                  <p className="text-red-500 text-sm mt-2 text-center">{inviteError}</p>
+                )}
+              </div>
+
+              <Button
+                onClick={handleInviteCodeSubmit}
+                className="w-full bg-gradient-to-r from-tent-purple to-tent-pink hover:from-tent-purple/90 hover:to-tent-pink/90 text-lg py-6"
+              >
+                <ArrowRight className="w-5 h-5 mr-2" />
+                Access Registration
+              </Button>
+
+              <div className="text-center">
+                <p className="text-xs text-muted-foreground">
+                  Don't have an invite code? Contact your manager or{" "}
+                  <a href="/contact" className="text-tent-purple hover:underline">
+                    get in touch with us
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
         <div className="container mx-auto px-6 py-4">
