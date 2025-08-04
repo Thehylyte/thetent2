@@ -286,7 +286,11 @@ export default function BrandPartnership() {
               </h1>
               <p
                 className="text-xl md:text-2xl max-w-4xl mx-auto drop-shadow-lg"
-                style={{ color: "#F8F5EE" }}
+                style={{
+                  color: "#F8F5EE",
+                  fontFamily: "Inter",
+                  fontWeight: "300"
+                }}
               >
                 Join our exclusive network of premium brands and showcase your
                 products to artists, entertainers, and VIP guests at major music
