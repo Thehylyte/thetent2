@@ -245,12 +245,12 @@ export default function AdminRegistrations() {
                   Refresh
                 </Button>
                 <Button
-                  onClick={downloadExcel}
+                  onClick={downloadCSV}
                   variant="outline"
                   className="border-tent-blue/30 hover:bg-tent-blue/10"
                 >
                   <Download className="w-4 h-4 mr-2" />
-                  Download Excel
+                  Download CSV
                 </Button>
               </div>
             </div>
@@ -291,14 +291,14 @@ export default function AdminRegistrations() {
                 </Button>
                 <Button
                   onClick={() => {
-                    downloadExcel();
+                    downloadCSV();
                     setIsMobileMenuOpen(false);
                   }}
                   variant="outline"
                   className="border-tent-blue/30 hover:bg-tent-blue/10 mx-2"
                 >
                   <Download className="w-4 h-4 mr-2" />
-                  Download Excel
+                  Download CSV
                 </Button>
               </div>
             </div>
