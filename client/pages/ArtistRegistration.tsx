@@ -728,7 +728,7 @@ export default function ArtistRegistration() {
       </section>
 
       {/* Artist Perks */}
-      <section className="pb-16 px-6">
+      <section className="pt-16 pb-16 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2
