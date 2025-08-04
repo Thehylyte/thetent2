@@ -165,6 +165,20 @@ export default function Index() {
           <p className="text-sm" style={{ color: "#F8F5EE", opacity: 0.7 }}>
             © 2024 The Tent. Elevating festival experiences worldwide.
           </p>
+          <button
+            onClick={() => {
+              const password = prompt("Enter admin password:");
+              if (password === "admin123") {
+                window.location.href = "/admin-registrations";
+              } else if (password !== null) {
+                alert("Incorrect password");
+              }
+            }}
+            className="mt-4 text-xs opacity-50 hover:opacity-100 transition-opacity cursor-pointer bg-transparent border-none underline"
+            style={{ color: "#F8F5EE" }}
+          >
+            Admin
+          </button>
         </div>
       </div>
     </>
