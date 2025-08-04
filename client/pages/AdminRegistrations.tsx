@@ -21,7 +21,7 @@ import {
   Briefcase,
   Download,
 } from "lucide-react";
-import XLSX from 'xlsx';
+// Removed xlsx import - using native CSV download instead
 import { useState, useEffect } from "react";
 
 interface Registration {
