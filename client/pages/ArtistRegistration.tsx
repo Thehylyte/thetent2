@@ -716,7 +716,7 @@ export default function ArtistRegistration() {
               style={{
                 color: "#F8F5EE",
                 fontFamily: "Inter",
-                fontWeight: "300"
+                fontWeight: "300",
               }}
             >
               Join The Tent's exclusive artist program and secure your
