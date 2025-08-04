@@ -690,18 +690,34 @@ export default function ArtistRegistration() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-6">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
+      <section className="relative pt-32 pb-16 min-h-screen flex items-center">
+        {/* Full Width Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2F669056b1b03f448b9ee2fa2d9e73b3a1%2Fe148e56462fc40ad9588f859a82ac05d?format=webp&width=800"
+            alt="The Tent brand card on acoustic guitar"
+            className="w-full h-full object-cover"
+          />
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
+
+        {/* Overlaid Content */}
+        <div className="relative z-10 container mx-auto px-6">
+          <div className="text-center">
             <h1
-              className="text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase"
+              className="text-4xl md:text-6xl font-bold mb-6 leading-tight uppercase drop-shadow-2xl"
               style={{ color: "#F8F5EE" }}
             >
               Artist Registration
             </h1>
             <p
-              className="text-xl md:text-2xl max-w-3xl mx-auto mb-8"
-              style={{ color: "#F8F5EE" }}
+              className="text-xl md:text-2xl max-w-4xl mx-auto drop-shadow-lg"
+              style={{
+                color: "#F8F5EE",
+                fontFamily: "Inter",
+                fontWeight: "300"
+              }}
             >
               Join The Tent's exclusive artist program and secure your
               hospitality services at the festivals where you're performing.
